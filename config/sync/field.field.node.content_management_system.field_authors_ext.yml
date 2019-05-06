@@ -1,0 +1,21 @@
+uuid: c5db7133-c71b-44ca-b17d-9dc951b6c35f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_authors_ext
+    - node.type.content_management_system
+  module:
+    - text
+id: node.content_management_system.field_authors_ext
+field_name: field_authors_ext
+entity_type: node
+bundle: content_management_system
+label: authors_ext
+description: 'Enter other co-authors of this CMS portrait (that are not registered here, yet).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

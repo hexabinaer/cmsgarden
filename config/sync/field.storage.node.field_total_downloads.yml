@@ -1,0 +1,20 @@
+uuid: dbaebebd-aa82-4ba3-bb0f-8129c04cb26f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_total_downloads
+field_name: field_total_downloads
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 0
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

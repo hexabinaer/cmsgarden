@@ -1,0 +1,21 @@
+uuid: aacb828b-b3db-4db1-9708-8ba52d4f6a84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_programming_language
+    - node.type.content_management_system
+  module:
+    - options
+id: node.content_management_system.field_programming_language
+field_name: field_programming_language
+entity_type: node
+bundle: content_management_system
+label: 'Programming language'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

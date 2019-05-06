@@ -1,0 +1,21 @@
+uuid: aaf5d995-2909-4b95-8df9-25c0b5fea149
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_initial_release
+    - node.type.content_management_system
+  module:
+    - datetime
+id: node.content_management_system.field_initial_release
+field_name: field_initial_release
+entity_type: node
+bundle: content_management_system
+label: 'Initial release'
+description: 'The year the software has been published'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,23 @@
+uuid: 463e1e24-7d84-4449-8528-aad0b17dd646
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_core_contributors
+    - node.type.content_management_system
+id: node.content_management_system.field_core_contributors
+field_name: field_core_contributors
+entity_type: node
+bundle: content_management_system
+label: 'Core developers'
+description: 'If known, please enter the number of core developers resp. the size of the core team.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: '~ '
+  suffix: ''
+field_type: decimal

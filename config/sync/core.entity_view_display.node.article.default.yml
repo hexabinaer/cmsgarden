@@ -6,15 +6,159 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_article_type
     - field.field.node.article.field_image
+    - field.field.node.article.field_publish_date
     - field.field.node.article.field_tags
     - image.style.large
     - node.type.article
   module:
     - comment
+    - datetime
     - image
+    - layout_builder
+    - layout_discovery
+    - options
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 50-50
+        components:
+          062ee5e6-5c5c-4751-a7c7-1110f7c5312e:
+            uuid: 062ee5e6-5c5c-4751-a7c7-1110f7c5312e
+            region: first
+            configuration:
+              id: 'field_block:node:article:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          5e4fbe29-f1d7-45b7-9ed4-92a77e4ec6ff:
+            uuid: 5e4fbe29-f1d7-45b7-9ed4-92a77e4ec6ff
+            region: second
+            configuration:
+              id: 'field_block:node:article:field_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: medium
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          d070e57c-bccf-4d65-bf4b-1cbd5186c391:
+            uuid: d070e57c-bccf-4d65-bf4b-1cbd5186c391
+            region: first
+            configuration:
+              id: 'field_block:node:article:field_publish_date'
+              label: 'Date of publishing'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: datetime_custom
+                settings:
+                  timezone_override: ''
+                  date_format: Y-m-d
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          6339aab3-a6a4-411c-913f-f6ea37f026d1:
+            uuid: 6339aab3-a6a4-411c-913f-f6ea37f026d1
+            region: content
+            configuration:
+              id: 'field_block:node:article:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          6edc3252-fc77-4ef0-b8f9-b5d5bb29d9cf:
+            uuid: 6edc3252-fc77-4ef0-b8f9-b5d5bb29d9cf
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:article:field_publish_date'
+              formatter:
+                label: above
+                settings:
+                  format_type: medium
+                  timezone_override: ''
+                third_party_settings: {  }
+                type: datetime_default
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 50-50
+        components:
+          1433634f-be6e-491d-ab12-b52144594a71:
+            uuid: 1433634f-be6e-491d-ab12-b52144594a71
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:article:links'
+            additional: {  }
+            weight: 0
+          84b75822-dd71-407e-9036-c9f0b687d858:
+            uuid: 84b75822-dd71-407e-9036-c9f0b687d858
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:article:field_tags'
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.default
@@ -38,6 +182,13 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
+  field_article_type:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_image:
     type: image
     weight: -1
@@ -47,6 +198,15 @@ content:
       image_link: ''
     third_party_settings: {  }
     label: hidden
+  field_publish_date:
+    weight: 112
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: first
   field_tags:
     type: entity_reference_label
     weight: 10

@@ -1,0 +1,21 @@
+uuid: bda68887-eda2-4683-8798-a232c9b7ce39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_open_source_as_of
+    - node.type.content_management_system
+  module:
+    - datetime
+id: node.content_management_system.field_open_source_as_of
+field_name: field_open_source_as_of
+entity_type: node
+bundle: content_management_system
+label: 'Open source as of'
+description: 'The year the software has been first published under an open source license'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,24 @@
+uuid: 8bbb24fc-b2d8-4c13-86d2-38a08758f334
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_license
+    - node.type.content_management_system
+  module:
+    - text
+id: node.content_management_system.field_article_license
+field_name: field_article_license
+entity_type: node
+bundle: content_management_system
+label: 'Article license'
+description: 'The Creative Commons license for this CMS portrait.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Licensed by the authors for CMS Garden under <a href="creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.'
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text

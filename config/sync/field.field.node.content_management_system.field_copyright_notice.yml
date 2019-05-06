@@ -1,0 +1,21 @@
+uuid: 57b0f18c-14a1-4adc-a64f-55725c478aea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_copyright_notice
+    - node.type.content_management_system
+  module:
+    - text
+id: node.content_management_system.field_copyright_notice
+field_name: field_copyright_notice
+entity_type: node
+bundle: content_management_system
+label: 'Copyright notice'
+description: 'If necessary, add a comment concerning special copyrights (such as illustrations/logo disclaimers)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

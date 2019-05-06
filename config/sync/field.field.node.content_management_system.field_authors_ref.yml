@@ -1,0 +1,28 @@
+uuid: 75bd74da-ee0d-4ed1-ac91-63ae79c83b75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_authors_ref
+    - node.type.content_management_system
+id: node.content_management_system.field_authors_ref
+field_name: field_authors_ref
+entity_type: node
+bundle: content_management_system
+label: authors_ref
+description: 'Select the registered users that have co-authored and/or translated this CMS portrait.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

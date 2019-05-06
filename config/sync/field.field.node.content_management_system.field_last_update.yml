@@ -1,0 +1,21 @@
+uuid: addc1e0c-651a-48fc-94fd-9b37239c8b85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_update
+    - node.type.content_management_system
+  module:
+    - datetime
+id: node.content_management_system.field_last_update
+field_name: field_last_update
+entity_type: node
+bundle: content_management_system
+label: 'Last information update'
+description: 'Make sure to enter the current date <em>only</em> when you have made sure the complete content is up to date!'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

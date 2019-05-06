@@ -1,0 +1,20 @@
+uuid: 063af7cd-edf8-4dfc-af69-971170d4702b
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_open_source_as_of
+field_name: field_open_source_as_of
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

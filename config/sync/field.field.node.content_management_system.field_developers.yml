@@ -1,0 +1,23 @@
+uuid: f2c4f800-c4e9-427e-805c-ab8de414f2d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_developers
+    - node.type.content_management_system
+id: node.content_management_system.field_developers
+field_name: field_developers
+entity_type: node
+bundle: content_management_system
+label: Developers
+description: 'To give an impression of the community''s size, enter the number of code contributors (if available), rounded down.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: '> '
+  suffix: ''
+field_type: decimal

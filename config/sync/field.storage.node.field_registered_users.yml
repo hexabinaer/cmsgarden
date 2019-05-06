@@ -1,0 +1,20 @@
+uuid: 22a1f111-8bca-4046-be3b-f6d0400d2ea5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_registered_users
+field_name: field_registered_users
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 0
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

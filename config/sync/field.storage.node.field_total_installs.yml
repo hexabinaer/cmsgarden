@@ -1,0 +1,20 @@
+uuid: 7c0adfef-50ee-4608-bcee-af8a2767f373
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_total_installs
+field_name: field_total_installs
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 0
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

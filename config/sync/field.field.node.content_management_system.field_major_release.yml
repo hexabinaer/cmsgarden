@@ -1,0 +1,19 @@
+uuid: 4b2940c1-c773-4e21-9495-3c73297935cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_major_release
+    - node.type.content_management_system
+id: node.content_management_system.field_major_release
+field_name: field_major_release
+entity_type: node
+bundle: content_management_system
+label: 'Current major release'
+description: 'Please only indicate the <em>major</em> release number, without any minor version hints. For example, if the current Drupal release is 8.7.3 you simply enter 8.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

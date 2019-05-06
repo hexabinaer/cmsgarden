@@ -1,0 +1,23 @@
+uuid: 48aed3ed-ca9d-4b31-8f57-25fd3d3275d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_total_downloads
+    - node.type.content_management_system
+id: node.content_management_system.field_total_downloads
+field_name: field_total_downloads
+entity_type: node
+bundle: content_management_system
+label: 'Total downloads'
+description: "If available, number of downloads over all versions.\r\n(This field might be deprecated soon.)"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: '> '
+  suffix: ''
+field_type: decimal

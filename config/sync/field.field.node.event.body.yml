@@ -11,8 +11,8 @@ id: node.event.body
 field_name: body
 entity_type: node
 bundle: event
-label: Body
-description: ''
+label: Description
+description: "The main information. Please use h2/h3 for structuring.\r\nDo not forget to enter a summary for overview listings. "
 required: false
 translatable: true
 default_value: {  }

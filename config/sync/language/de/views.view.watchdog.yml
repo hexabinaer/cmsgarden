@@ -1,0 +1,16 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      fields:
+        type:
+          label: Typ
+        link:
+          label: Aktionen
+      filters:
+        type:
+          expose:
+            label: Typ

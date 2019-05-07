@@ -11,12 +11,12 @@ id: node.testimonial.body
 field_name: body
 entity_type: node
 bundle: testimonial
-label: Body
-description: ''
-required: false
+label: 'Testimonial text'
+description: 'Your <em>short</em> statement in favor of a certain CMS, CMS Garden, or free + open source software in general.'
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
 field_type: text_with_summary

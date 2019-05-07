@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Frequently asked question'
+name: FAQ
 type: frequently_asked_question
-description: ''
+description: 'A frequently asked question and the answer to it.'
 help: ''
 new_revision: true
 preview_mode: 1

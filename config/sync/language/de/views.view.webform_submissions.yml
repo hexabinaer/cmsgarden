@@ -1,0 +1,27 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      fields:
+        view_webform_submission:
+          label: Aktionen
+  embed_administer:
+    display_options:
+      fields:
+        operations:
+          label: Aktionen
+  embed_manage:
+    display_options:
+      fields:
+        view_webform_submission:
+          label: Aktionen
+        edit_webform_submission:
+          label: Aktionen
+  embed_review:
+    display_options:
+      fields:
+        view_webform_submission:
+          label: Aktionen

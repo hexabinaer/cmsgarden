@@ -1,0 +1,28 @@
+uuid: bb17bb82-1598-429e-a9c9-955ce2ac9f6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cited_person
+    - node.type.testimonial
+id: node.testimonial.field_cited_person
+field_name: field_cited_person
+entity_type: node
+bundle: testimonial
+label: 'Cited person'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

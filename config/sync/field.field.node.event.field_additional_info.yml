@@ -1,0 +1,21 @@
+uuid: 66108320-3f2e-43fd-afbc-122a6dbb25b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_info
+    - node.type.event
+  module:
+    - text
+id: node.event.field_additional_info
+field_name: field_additional_info
+entity_type: node
+bundle: event
+label: 'Additional info'
+description: 'Useful add-on information for visitors as well as for ambassadors. Please use h2/h3 for structuring.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

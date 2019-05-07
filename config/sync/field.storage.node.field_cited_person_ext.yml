@@ -1,0 +1,20 @@
+uuid: e14244ea-95ef-4a80-bee6-e440c140512c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_cited_person_ext
+field_name: field_cited_person_ext
+entity_type: node
+type: text
+settings:
+  max_length: 100
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

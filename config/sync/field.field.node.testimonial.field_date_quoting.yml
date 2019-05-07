@@ -1,0 +1,21 @@
+uuid: af21ae4c-a43a-49c7-b57e-b3d2a0768f02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_quoting
+    - node.type.testimonial
+  module:
+    - datetime
+id: node.testimonial.field_date_quoting
+field_name: field_date_quoting
+entity_type: node
+bundle: testimonial
+label: Date
+description: 'The year of the testimonial'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

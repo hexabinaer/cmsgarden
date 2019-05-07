@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.testimonial.body
+    - field.field.node.testimonial.field_cited_person
+    - field.field.node.testimonial.field_cited_person_ext
+    - field.field.node.testimonial.field_date_quoting
+    - field.field.node.testimonial.field_testimonial_relation
     - node.type.testimonial
   module:
+    - datetime
     - path
     - text
 id: node.testimonial.default
@@ -28,6 +33,38 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_cited_person:
+    weight: 123
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_cited_person_ext:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_date_quoting:
+    weight: 125
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_testimonial_relation:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 2

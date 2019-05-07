@@ -1,16 +1,16 @@
-uuid: 45f73992-0768-4eef-afe0-2fa6bbc9936a
+uuid: 25dabfd7-883d-41d8-8bab-ca6cdc691309
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.article
+    - node.type.testimonial
   module:
     - content_translation
 third_party_settings:
   content_translation:
     enabled: true
-id: node.article
+id: node.testimonial
 target_entity_type_id: node
-target_bundle: article
-default_langcode: authors_default
+target_bundle: testimonial
+default_langcode: site_default
 language_alterable: true

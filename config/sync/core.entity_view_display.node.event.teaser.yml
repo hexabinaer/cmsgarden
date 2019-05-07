@@ -5,9 +5,18 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
+    - field.field.node.event.field_additional_info
+    - field.field.node.event.field_event_banner
+    - field.field.node.event.field_event_cmsg_participation
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_type
     - field.field.node.event.field_representative
+    - field.field.node.event.field_website
     - node.type.event
   module:
+    - datetime_range
+    - image
     - text
     - user
 id: node.event.teaser
@@ -18,16 +27,40 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 3
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_event_banner:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_event_date:
+    type: daterange_default
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_additional_info: true
+  field_event_cmsg_participation: true
+  field_event_location: true
+  field_event_type: true
   field_representative: true
+  field_website: true
   langcode: true

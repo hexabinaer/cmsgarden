@@ -21,6 +21,7 @@ module:
   editor: 0
   entity_limit: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -34,19 +35,23 @@ module:
   locale: 0
   mailsystem: 0
   menu_ui: 0
+  metatag: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   quickedit: 0
   rdf: 0
+  redirect: 0
   search: 0
   shortcut: 0
+  svg_image: 0
   swiftmailer: 0
   system: 0
   taxonomy: 0
   telephone: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   update: 0
@@ -55,6 +60,7 @@ module:
   webform: 0
   webform_templates: 0
   webform_ui: 0
+  workflows: 0
   menu_link_content: 1
   content_translation: 10
   views: 10

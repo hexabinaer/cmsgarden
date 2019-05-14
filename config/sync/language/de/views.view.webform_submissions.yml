@@ -1,21 +1,49 @@
 display:
   default:
+    display_title: Master
     display_options:
+      exposed_form:
+        options:
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
       pager:
         options:
+          tags:
+            previous: ‹‹
+            next: ››
           expose:
+            items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
       fields:
+        created:
+          label: Erstellt
+        remote_addr:
+          label: IP-Adresse
         view_webform_submission:
           label: Aktionen
+      arguments:
+        in_draft:
+          exception:
+            title: Alle
   embed_administer:
     display_options:
       fields:
+        created:
+          label: Erstellt
+        remote_addr:
+          label: IP-Adresse
         operations:
           label: Aktionen
   embed_manage:
     display_options:
       fields:
+        created:
+          label: Erstellt
+        remote_addr:
+          label: IP-Adresse
         view_webform_submission:
           label: Aktionen
         edit_webform_submission:
@@ -23,5 +51,9 @@ display:
   embed_review:
     display_options:
       fields:
+        created:
+          label: Erstellt
+        remote_addr:
+          label: IP-Adresse
         view_webform_submission:
           label: Aktionen

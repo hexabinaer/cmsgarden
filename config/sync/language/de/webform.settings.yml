@@ -1,0 +1,5 @@
+settings:
+  default_submit_button_label: Absenden
+  default_reset_button_label: Zurücksetzen
+mail:
+  default_from_name: '[site:name]'

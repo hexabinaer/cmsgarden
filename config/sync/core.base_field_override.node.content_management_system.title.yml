@@ -1,0 +1,18 @@
+uuid: 0e645adf-d859-4897-af6c-614ec9b8b8f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.content_management_system
+id: node.content_management_system.title
+field_name: title
+entity_type: node
+bundle: content_management_system
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

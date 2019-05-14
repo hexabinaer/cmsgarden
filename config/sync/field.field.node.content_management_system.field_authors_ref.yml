@@ -9,7 +9,7 @@ id: node.content_management_system.field_authors_ref
 field_name: field_authors_ref
 entity_type: node
 bundle: content_management_system
-label: authors_ref
+label: Authors
 description: 'Select the registered users that have co-authored and/or translated this CMS portrait.'
 required: false
 translatable: false

@@ -11,7 +11,7 @@ id: node.content_management_system.field_authors_ext
 field_name: field_authors_ext
 entity_type: node
 bundle: content_management_system
-label: authors_ext
+label: 'Other authors'
 description: 'Enter other co-authors of this CMS portrait (that are not registered here, yet).'
 required: false
 translatable: false

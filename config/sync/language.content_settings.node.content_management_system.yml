@@ -1,0 +1,16 @@
+uuid: 4b431c64-197d-489c-9e5a-d52c7ec767e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.content_management_system
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.content_management_system
+target_entity_type_id: node
+target_bundle: content_management_system
+default_langcode: site_default
+language_alterable: true

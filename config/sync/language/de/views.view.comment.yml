@@ -4,6 +4,7 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Anwenden
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
@@ -17,10 +18,20 @@ display:
       fields:
         subject:
           label: Betreff
+          separator: ', '
+        uid:
+          separator: ', '
         name:
           label: Autor
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
         operations:
           label: Aktionen
+        name_1:
+          separator: ', '
       filters:
         subject:
           expose:
@@ -40,7 +51,17 @@ display:
       fields:
         subject:
           label: Betreff
+          separator: ', '
+        uid:
+          separator: ', '
         name:
           label: Autor
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
         operations:
           label: Aktionen
+        name_1:
+          separator: ', '

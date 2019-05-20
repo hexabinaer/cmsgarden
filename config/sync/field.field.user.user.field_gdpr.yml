@@ -1,0 +1,20 @@
+uuid: e5a76c73-8580-450e-8817-87d95f7ba8ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_gdpr
+  module:
+    - user
+id: user.user.field_gdpr
+field_name: field_gdpr
+entity_type: user
+bundle: user
+label: 'Privacy policy'
+description: "Please enter something like \"yes, I will\" in this field. By doing so, you accept the following:\r\n<ul>\r\n<li>You are expected to have read the <a href=\"/privacy\">Privacy policy</a> (we will use personaly data only in connection with our non-profit work) and it's okay that we store your data</li>\r\n<li>You abide by the <a href=\"/coc\">Code of Conduct</a></li>\r\n</ul>\r\nFor spam protection reasons this is not a checkbox. "
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

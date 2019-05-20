@@ -1,0 +1,30 @@
+uuid: d740b87c-d3ef-4cd7-bb99-c978d730cdad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_related_cms
+    - taxonomy.vocabulary.content_management_systems
+  module:
+    - user
+id: user.user.field_related_cms
+field_name: field_related_cms
+entity_type: user
+bundle: user
+label: 'Working with'
+description: 'Tick the CMS you''re working with in first place.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_management_systems: content_management_systems
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

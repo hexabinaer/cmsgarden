@@ -1,0 +1,20 @@
+uuid: 386dacb8-1234-4049-8593-a70284d73d82
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - user
+id: user.field_user_cmsg_participation
+field_name: field_user_cmsg_participation
+entity_type: user
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

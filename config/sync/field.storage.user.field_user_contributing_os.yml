@@ -1,0 +1,20 @@
+uuid: 46091f86-035b-4fb5-bbb7-ca05ad18d931
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - user
+id: user.field_user_contributing_os
+field_name: field_user_contributing_os
+entity_type: user
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

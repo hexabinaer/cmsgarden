@@ -19,12 +19,15 @@ display:
             previous: ‹‹
             next: ››
       fields:
+        nothing:
+          admin_label: Symbol
         type:
           label: Typ
         timestamp:
           label: Datum
         name:
           label: Benutzer
+          separator: ', '
         link:
           label: Aktionen
       filters:

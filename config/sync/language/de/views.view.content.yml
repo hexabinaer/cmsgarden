@@ -9,11 +9,19 @@ display:
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
+      pager:
+        options:
+          tags:
+            previous: '‹ Vorherige Seite'
+            next: 'Nächste Seite ›'
+            first: '« Anfang'
+            last: 'Ende »'
       fields:
         title:
           label: Titel
         type:
           label: Inhaltstyp
+          separator: ', '
         name:
           label: Autor
         operations:

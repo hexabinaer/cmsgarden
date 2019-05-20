@@ -1,0 +1,20 @@
+uuid: ac9d94f6-492d-4bc5-9d81-a1ee7a11378a
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_related_cms
+field_name: field_related_cms
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

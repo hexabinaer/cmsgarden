@@ -11,6 +11,9 @@ display:
           sort_desc_label: Absteigend
       pager:
         options:
+          tags:
+            previous: '‹ Vorherige Seite'
+            next: 'Nächste Seite ›'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
@@ -18,8 +21,11 @@ display:
       fields:
         filename:
           label: Name
+          separator: ', '
         filemime:
           label: MIME-Typ
+        filesize:
+          label: Größe
       filters:
         filemime:
           expose:
@@ -28,10 +34,16 @@ display:
     display_options:
       pager:
         options:
+          tags:
+            previous: '‹ Vorherige Seite'
+            next: 'Nächste Seite ›'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
+      fields:
+        entity_label:
+          label: Entität
       arguments:
         fid:
           exception:

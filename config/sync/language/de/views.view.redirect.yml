@@ -19,6 +19,7 @@ display:
       fields:
         redirect_source__path:
           label: Von
+          separator: ', '
         created:
           label: Erstellt
       filters:

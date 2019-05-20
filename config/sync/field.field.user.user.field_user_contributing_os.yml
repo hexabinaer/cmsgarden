@@ -1,0 +1,21 @@
+uuid: ceb6a120-6947-4fed-b7f4-ae1e599c2c13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_contributing_os
+  module:
+    - datetime
+    - user
+id: user.user.field_user_contributing_os
+field_name: field_user_contributing_os
+entity_type: user
+bundle: user
+label: 'Contributing to open source since'
+description: 'The year in which you started contributing in any reasonable way (it''s okay if you start today).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

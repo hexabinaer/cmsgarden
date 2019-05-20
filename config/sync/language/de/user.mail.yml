@@ -1,0 +1,27 @@
+cancel_confirm:
+  body: "[user:display-name],\r\n\r\nes wurde eine Anfrage zur Löschung deines Benutzerkontos auf [site:name] gestellt.\r\n\r\nDu kannst dein Konto auf [site:url-brief] jetzt durch Klick auf den folgenden Link löschen oder diesen alternativ in den Browser kopieren:\r\n\r\n[user:cancel-url]\r\n\r\nHINWEIS: Die Löschung Ihres Benutzerkontos kann nicht rückgängig gemacht werden und ist endgültig.\r\n\r\nDer Link ist einen Tag lang gültig und läuft automatisch aus, falls du ihn nicht verwendest.\r\n\r\n\r\nViele Grüße,\r\ndas Team vom CMS Garden"
+  subject: 'Löschung des Accounts auf [site:name] - bitte bestätigen'
+password_reset:
+  body: "[user:display-name],\r\n\r\nes wurde eine Anfrage zum Zurücksetzen des Passworts für dein Benutzerkonto auf [site:name] gestellt.\r\n\r\nDu kannst dich jetzt mit einem Klick auf folgenden Link anmelden oder diesen alternativ in den Browser kopieren:\r\n\r\n[user:one-time-login-url]\r\n\r\nDieser Link kann nur einmal verwendet werden und leitet dich zu einer Seite, auf der du ein neues Passwort festlegen kannst (solltest). Er ist einen Tag lang gültig und läuft automatisch aus, falls du ihn nicht verwendest.\r\n\r\n\r\nViele Grüße,\r\ndas Team vom CMS Garden"
+  subject: 'Behelfspasswort für [site:name]'
+register_admin_created:
+  body: "[user:display-name],\r\n\r\nauf [site:name] wurde ein Benutzerkonto für dich angelegt. Du kannst dich jetzt mit einem Klick auf den folgenden Link anmelden oder diesen alternativ in den Browser kopieren:\r\n\r\n[user:one-time-login-url]\r\n\r\nDieser Link kann nur einmal verwendet werden und leitet dich zu einer Seite, auf der du ein neues Passwort vergeben solltest.\r\n\r\nNachdem du dein Passwort festgelegt hast, kannst du dich zukünftig auf [site:login-url] mit den folgenden Zugangsdaten anmelden:\r\n\r\nBenutzername: [user:name]\r\nPasswort: (Dein Passwort)\r\n\r\n\r\nViele Grüße,\r\ndas Team vom CMS Garden"
+  subject: 'Dein Account auf [site:name]'
+register_no_approval_required:
+  body: "[user:display-name],\r\n\r\ndanke, dass du dich auf [site:name] registriert hast. Du kannst dich jetzt mit einem Klick auf den folgenden Link anmelden oder diesen alternativ in den Browser kopieren:\r\n\r\n[user:one-time-login-url]\r\n\r\nDieser Link kann nur einmal verwendet werden und leitet dich zu einer Seite, auf der du ein neues Passwort vergeben solltest.\r\n\r\nNachdem du dein Passwort festgelegt hast, kannst du dich zukünftig auf [site:login-url] mit den folgenden Zugangsdaten anmelden:\r\n\r\nBenutzername: [user:name]\r\nPasswort: (Dein Passwort)\r\n\r\n\r\nViele Grüße,\r\ndas Team vom CMS Garden"
+  subject: 'Deine Accountdetails auf [site:name]'
+register_pending_approval:
+  body: "[user:display-name],\r\n\r\ndanke, dass du ein Benutzerkonto auf [site:name] erstellt hast. Deine Registrierung wird momentan überprüft. Das dauert leider manchmal ein paar Tage. Sobald die Überprüfung abgeschlossen ist, erhältst du eine weitere E-Mail, die Informationen darüber enthält, wie du dich auf der Website einloggen, dein Passwort festlegen und weitere Angaben in deinem Benutzerkonto machen kannst.\r\n\r\n\r\nViele Grüße,\r\ndas Team vom CMS Garden"
+  subject: 'Deine Accountdetails auf [site:name] (Bestätigung ist in Bearbeitung)'
+register_pending_approval_admin:
+  body: "[user:display-name] hat einen Account auf [site:name] registriert.\r\n\r\nBitte prüfe, ob es sich dabei um einen echten User handelt. Falls ja, setze den Account bitte von \"gesperrt\" auf \"aktiv\":\r\n[user:edit-url]\r\n\r\nDankeschön sagt dein Team vom CMS Garden!"
+  subject: 'Neue Userregistrierung auf [site:name] (Prüfung/Bestätigung erforderlich)'
+status_activated:
+  body: "[user:display-name],\r\n\r\ndein Account auf [site:name] ist jetzt aktiv.\r\n\r\nDu kannst dich jetzt mit einem Klick auf den folgenden Link anmelden oder diesen alternativ in den Browser kopieren:\r\n\r\n[user:one-time-login-url]\r\n\r\nDieser Link kann nur einmal verwendet werden und leitet dich zu einer Seite, auf der du ein neues Passwort vergeben solltest.\r\n\r\nNachdem du dein Passwort festgelegt hast, kannst du dich zukünftig auf [site:login-url] mit den folgenden Zugangsdaten anmelden:\r\n\r\nBenutzername: [user:name]\r\nPasswort: (Dein Passwort)\r\n\r\n\r\nViele Grüße,\r\ndas Team vom CMS Garden"
+  subject: 'Accountdetails auf [site:name] (aktiviert)'
+status_blocked:
+  body: "[user:display-name],\r\n\r\ndein Account auf [site:name] wurde gesperrt.\r\n\r\nSollte dies ein Fehler unsererseits sein, kontaktiere uns bitte auf einem der anderen Kanäle.\r\n\r\n\r\nViele Grüße,\r\ndas Team vom CMS Garden"
+  subject: 'Accountdetails auf [site:name] (gesperrt)'
+status_canceled:
+  body: "[user:display-name],\r\n\r\ndein Account auf [site:name] wurde gesperrt.\r\n\r\nSollte dies ein Fehler unsererseits sein, kontaktiere uns bitte auf einem der anderen Kanäle.\r\n\r\n--  [site:name] team"
+  subject: 'Accountdetails auf [site:name] (gelöscht)'

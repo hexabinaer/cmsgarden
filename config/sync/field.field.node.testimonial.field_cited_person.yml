@@ -9,7 +9,7 @@ id: node.testimonial.field_cited_person
 field_name: field_cited_person
 entity_type: node
 bundle: testimonial
-label: 'Cited person'
+label: 'Cited person (user)'
 description: ''
 required: false
 translatable: false

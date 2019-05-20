@@ -1,0 +1,30 @@
+uuid: cccbb8c9-a583-49ec-81c0-5547cc1e2af4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_participation
+    - node.type.event
+  module:
+    - user
+id: user.user.field_user_participation
+field_name: field_user_participation
+entity_type: user
+bundle: user
+label: 'Involvement in activities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

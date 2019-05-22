@@ -24,6 +24,7 @@ display:
         sid:
           separator: ', '
         in_draft:
+          label: Entwurf
           separator: ', '
         created:
           label: Erstellt
@@ -43,6 +44,7 @@ display:
         sid:
           separator: ', '
         in_draft:
+          label: Entwurf
           separator: ', '
         sticky:
           separator: ', '
@@ -64,6 +66,7 @@ display:
         sid:
           separator: ', '
         in_draft:
+          label: Entwurf
           separator: ', '
         sticky:
           separator: ', '
@@ -87,6 +90,7 @@ display:
         sid:
           separator: ', '
         in_draft:
+          label: Entwurf
           separator: ', '
         sticky:
           separator: ', '

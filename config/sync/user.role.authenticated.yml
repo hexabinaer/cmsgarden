@@ -33,6 +33,7 @@ permissions:
   - 'translate testimonial node'
   - 'translate user'
   - 'use text format basic_html'
+  - 'use text format minimal_html'
   - 'view content_management_system revisions'
   - 'view own unpublished content'
   - 'view representative revisions'

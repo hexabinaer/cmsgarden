@@ -1,0 +1,26 @@
+uuid: 28a351fc-434f-4a7f-bebd-38d677221ebc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title.paragraphs_title
+    - paragraphs.paragraphs_type.title
+  enforced:
+    module:
+      - paragraphs_collection
+_core:
+  default_config_hash: kvtbQFF-LRm845NYTFPBea0X_aGmhCs2bWc9yXOreJ8
+id: paragraph.title.default
+targetEntityType: paragraph
+bundle: title
+mode: default
+content:
+  paragraphs_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

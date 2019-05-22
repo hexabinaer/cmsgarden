@@ -27,5 +27,12 @@ display:
           label: Aktionen
         mail:
           separator: ', '
+      filters:
+        roles_target_id:
+          expose:
+            label: Rolle
   page_1:
     display_title: Seite
+    display_options:
+      menu:
+        title: Liste

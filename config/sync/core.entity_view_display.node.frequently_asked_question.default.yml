@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.frequently_asked_question.body
+    - field.field.node.frequently_asked_question.field_title_html
     - node.type.frequently_asked_question
   module:
     - text
@@ -19,6 +20,13 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_title_html:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   links:
     weight: 100

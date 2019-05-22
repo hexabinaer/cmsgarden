@@ -1,0 +1,27 @@
+uuid: 112a89af-5b85-46ce-a15a-a9f81aa084ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.footer.paragraphs_text
+    - paragraphs.paragraphs_type.footer
+  enforced:
+    module:
+      - paragraphs_collection
+  module:
+    - text
+_core:
+  default_config_hash: sgM6R9YqnbV87XnxZ64zGTgJwyDlxEMkT0HgmA2Ul_g
+id: paragraph.footer.default
+targetEntityType: paragraph
+bundle: footer
+mode: default
+content:
+  paragraphs_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

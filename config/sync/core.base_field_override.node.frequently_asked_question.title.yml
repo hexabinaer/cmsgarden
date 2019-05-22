@@ -8,7 +8,7 @@ id: node.frequently_asked_question.title
 field_name: title
 entity_type: node
 bundle: frequently_asked_question
-label: 'Short question'
+label: 'Question title'
 description: ''
 required: true
 translatable: true

@@ -1,0 +1,14 @@
+uuid: 6fbb88f1-0e4c-438f-af88-2f5558f4ae82
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - paragraphs_collection
+_core:
+  default_config_hash: E8grAfpf5QF3w0ZjaJjnTai33l90B_oxZjhQKyBJuuA
+id: title
+label: Title
+icon_uuid: null
+description: 'Use <em>Title</em> to add a title text.'
+behavior_plugins: {  }

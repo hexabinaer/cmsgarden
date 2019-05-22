@@ -1,0 +1,20 @@
+uuid: 3adcd769-3d00-434a-8124-2c0ac693b180
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.content_management_systems
+  module:
+    - path
+id: taxonomy_term.content_management_systems.path
+field_name: path
+entity_type: taxonomy_term
+bundle: content_management_systems
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,14 @@
+uuid: c7d8f756-80d5-42a7-b45c-bc8d003a4b61
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - paragraphs_collection
+_core:
+  default_config_hash: jLZPeFfUiy7GpN00JfLMYm5JKq37trI__3Q_WTh8cCo
+id: quote
+label: Quote
+icon_uuid: null
+description: 'Use <em>Quote</em> to add a quote with its author.'
+behavior_plugins: {  }

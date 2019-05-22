@@ -1,0 +1,14 @@
+uuid: 94ffc3ef-6e66-4fac-8941-12cf7ea77c5f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - paragraphs_collection
+_core:
+  default_config_hash: w5mkT91BSt1iuWECEPsWcJvgP8DpKOAkeohgH-XpFf0
+id: separator
+label: Separator
+icon_uuid: null
+description: 'Use <em>Separator</em> to add a separator between paragraphs.'
+behavior_plugins: {  }

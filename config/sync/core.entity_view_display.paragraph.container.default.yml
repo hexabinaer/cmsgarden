@@ -1,0 +1,29 @@
+uuid: 966ccbe6-8af5-4cdc-a8a4-1dc4d02cfef2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.container.paragraphs_container_paragraphs
+    - paragraphs.paragraphs_type.container
+  enforced:
+    module:
+      - paragraphs_collection
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 0B9LlBwmU-lzuO2yDmxeokflNa4Qd-9E8Hn1phyTkX0
+id: paragraph.container.default
+targetEntityType: paragraph
+bundle: container
+mode: default
+content:
+  paragraphs_container_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

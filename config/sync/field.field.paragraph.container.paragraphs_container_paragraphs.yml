@@ -1,0 +1,30 @@
+uuid: 54b73519-7c65-4682-9569-68c6ff72d003
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.paragraphs_container_paragraphs
+    - paragraphs.paragraphs_type.container
+  enforced:
+    module:
+      - paragraphs_collection
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: MRVn0-a1O7gl_pe3DnIaQ4uo_nTrHJQSoVOH7hjjoe8
+id: paragraph.container.paragraphs_container_paragraphs
+field_name: paragraphs_container_paragraphs
+entity_type: paragraph
+bundle: container
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop: {  }
+field_type: entity_reference_revisions

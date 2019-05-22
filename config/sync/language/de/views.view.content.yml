@@ -24,6 +24,10 @@ display:
           separator: ', '
         name:
           label: Autor
+        status:
+          settings:
+            format_custom_true: Veröffentlicht
+            format_custom_false: 'Nicht veröffentlicht'
         operations:
           label: Aktionen
       filters:
@@ -33,6 +37,13 @@ display:
         type:
           expose:
             label: Inhaltstyp
+        status:
+          group_info:
+            group_items:
+              1:
+                title: Veröffentlicht
+              2:
+                title: 'Nicht veröffentlicht'
         langcode:
           expose:
             label: Sprache

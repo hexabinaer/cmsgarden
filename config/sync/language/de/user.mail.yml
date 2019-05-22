@@ -12,7 +12,7 @@ register_no_approval_required:
   subject: 'Deine Accountdetails auf [site:name]'
 register_pending_approval:
   body: "[user:display-name],\r\n\r\ndanke, dass du ein Benutzerkonto auf [site:name] erstellt hast. Deine Registrierung wird momentan überprüft. Das dauert leider manchmal ein paar Tage. Sobald die Überprüfung abgeschlossen ist, erhältst du eine weitere E-Mail, die Informationen darüber enthält, wie du dich auf der Website einloggen, dein Passwort festlegen und weitere Angaben in deinem Benutzerkonto machen kannst.\r\n\r\n\r\nViele Grüße,\r\ndas Team vom CMS Garden"
-  subject: 'Deine Accountdetails auf [site:name] (Bestätigung ist in Bearbeitung)'
+  subject: 'Neue Userregistrierung auf [site:name] (Prüfung/Bestätigung erforderlich)'
 register_pending_approval_admin:
   body: "[user:display-name] hat einen Account auf [site:name] registriert.\r\n\r\nBitte prüfe, ob es sich dabei um einen echten User handelt. Falls ja, setze den Account bitte von \"gesperrt\" auf \"aktiv\":\r\n[user:edit-url]\r\n\r\nDankeschön sagt dein Team vom CMS Garden!"
   subject: 'Neue Userregistrierung auf [site:name] (Prüfung/Bestätigung erforderlich)'

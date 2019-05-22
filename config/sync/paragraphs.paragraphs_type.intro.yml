@@ -1,0 +1,14 @@
+uuid: 1a59b9d5-b817-43e4-bb3c-d8f5edf647d9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - paragraphs_collection
+_core:
+  default_config_hash: gAQrr7gVyNWXWN2BOSfWCVgVIFnaYVt5NvYMARJ0w9E
+id: intro
+label: Intro
+icon_uuid: null
+description: 'Use <em>Intro</em> to add an intro text.'
+behavior_plugins: {  }

@@ -1,0 +1,20 @@
+uuid: a9371ad6-9578-4f15-b9cf-8d472886bbc8
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - paragraphs_collection
+  module:
+    - paragraphs_collection
+_core:
+  default_config_hash: 4dwZFPNmAUAkCb2PNd3g6ltTYWtzj9UE9yRZZ2Gk_nQ
+id: grid
+label: Grid
+icon_uuid: null
+description: 'Use <em>Grid</em> to add different paragraphs layouts.'
+behavior_plugins:
+  grid_layout:
+    enabled: true
+    paragraph_reference_field: paragraphs_container_paragraphs
+    available_grid_layouts: {  }

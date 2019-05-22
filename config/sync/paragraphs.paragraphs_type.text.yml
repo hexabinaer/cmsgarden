@@ -1,0 +1,14 @@
+uuid: 276c11e2-6d5f-4d93-9096-0a01e70eb41b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - paragraphs_collection
+_core:
+  default_config_hash: Q34DyV724UZ4KdMzzC5b1Pd3P3PCpQFYXbN1OWleGRk
+id: text
+label: Text
+icon_uuid: null
+description: 'Use <em>Text</em> to add a text.'
+behavior_plugins: {  }

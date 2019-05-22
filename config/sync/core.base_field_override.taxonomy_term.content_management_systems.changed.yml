@@ -1,0 +1,18 @@
+uuid: 8fbd24ff-30fb-4e1b-a59e-7933c4564bbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.content_management_systems
+id: taxonomy_term.content_management_systems.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: content_management_systems
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

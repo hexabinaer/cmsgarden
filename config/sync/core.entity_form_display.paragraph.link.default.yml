@@ -1,0 +1,31 @@
+uuid: 875bccd0-fa2c-4d36-bb1f-b4e340c1e35c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link.paragraphs_link
+    - paragraphs.paragraphs_type.link
+  enforced:
+    module:
+      - paragraphs_collection
+  module:
+    - link
+_core:
+  default_config_hash: qs2p8_3QPxrVb2i-BsXYSHQ7lDi1H-5jR7q9viwA2hE
+id: paragraph.link.default
+targetEntityType: paragraph
+bundle: link
+mode: default
+content:
+  paragraphs_link:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

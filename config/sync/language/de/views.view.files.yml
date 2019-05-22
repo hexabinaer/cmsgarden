@@ -26,6 +26,8 @@ display:
           label: MIME-Typ
         filesize:
           label: Größe
+        count:
+          label: 'Verwendet in'
       filters:
         filemime:
           expose:

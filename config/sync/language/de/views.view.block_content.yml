@@ -20,10 +20,21 @@ display:
             offset_label: Versatz
       fields:
         info:
+          label: Blockbeschreibung
           separator: ', '
         type:
+          label: Blocktyp
           separator: ', '
+        changed:
+          label: Aktualisiert
         operations:
           label: Aktionen
+      filters:
+        info:
+          expose:
+            label: Blockbeschreibung
+        type:
+          expose:
+            label: Blocktyp
   page_1:
     display_title: Seite

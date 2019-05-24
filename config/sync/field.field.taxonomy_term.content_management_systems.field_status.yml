@@ -1,0 +1,21 @@
+uuid: a1f4c919-e1e6-4e4f-a94a-87e9764b2a61
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_status
+    - taxonomy.vocabulary.content_management_systems
+  module:
+    - options
+id: taxonomy_term.content_management_systems.field_status
+field_name: field_status
+entity_type: taxonomy_term
+bundle: content_management_systems
+label: Status
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

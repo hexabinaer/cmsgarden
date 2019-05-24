@@ -1,3 +1,4 @@
+label: Dateien
 display:
   default:
     display_title: Master
@@ -19,6 +20,8 @@ display:
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
       fields:
+        fid:
+          label: Fid
         filename:
           label: Name
           separator: ', '
@@ -26,12 +29,25 @@ display:
           label: MIME-Typ
         filesize:
           label: Größe
+        status:
+          label: Status
         count:
           label: 'Verwendet in'
       filters:
+        filename:
+          expose:
+            label: Dateiname
         filemime:
           expose:
             label: MIME-Typ
+        status:
+          expose:
+            label: Status
+      title: Dateien
+  page_1:
+    display_options:
+      menu:
+        title: Dateien
   page_2:
     display_options:
       pager:
@@ -46,6 +62,10 @@ display:
       fields:
         entity_label:
           label: Entität
+        type:
+          label: Entitätstyp
+        count:
+          label: 'Anzahl der Verwendung'
       arguments:
         fid:
           exception:

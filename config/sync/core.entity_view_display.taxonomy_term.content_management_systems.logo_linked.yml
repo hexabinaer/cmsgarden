@@ -1,0 +1,66 @@
+uuid: f9cb6ca0-9ea2-4eae-b434-cfe39ba3a5e3
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.logo_linked
+    - field.field.taxonomy_term.content_management_systems.field_cms_logo
+    - taxonomy.vocabulary.content_management_systems
+  module:
+    - layout_builder
+    - layout_discovery
+    - svg_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          d9ef2228-98e6-4044-9ce9-54f9b1453e41:
+            uuid: d9ef2228-98e6-4044-9ce9-54f9b1453e41
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:content_management_systems:field_cms_logo'
+              label: Logo
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: medium
+                  image_link: content
+                  svg_render_as_image: 1
+                  svg_attributes:
+                    width: '220'
+                    height: '220'
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: taxonomy_term.content_management_systems.logo_linked
+targetEntityType: taxonomy_term
+bundle: content_management_systems
+mode: logo_linked
+content:
+  field_cms_logo:
+    weight: 0
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  description: true
+  langcode: true

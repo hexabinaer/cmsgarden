@@ -12,7 +12,7 @@ field_name: field_copyright_notice
 entity_type: node
 bundle: content_management_system
 label: 'Copyright notice'
-description: 'If necessary, add a comment concerning special copyrights (such as illustrations/logo disclaimers)'
+description: 'If applicable, enter copyright notices here (e. g. illustrations, logo, trademarks).'
 required: false
 translatable: false
 default_value: {  }

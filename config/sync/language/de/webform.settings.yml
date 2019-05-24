@@ -1,7 +1,34 @@
 settings:
+  default_form_exception_message: 'Dieses Webformular kann nicht angezeigt werden. Bitte kontaktieren Sie den Website-Administrator.'
   default_submit_button_label: Absenden
   default_reset_button_label: Zurücksetzen
+  default_form_confidential_message: 'Dieses Formular ist vertraulich. Um es abzuschicken, müssen Sie sich daher <a href="[site:login-url]/logout?destination=[current-page:url:relative]">abmelden</a>.'
+  default_wizard_prev_button_label: '< Vorherige Seite'
+  default_wizard_next_button_label: 'Nächste Seite >'
+  default_wizard_start_label: Beginn
+  default_wizard_confirmation_label: Vollständig
   default_preview_next_button_label: Vorschau
+  default_preview_prev_button_label: '< Zurück'
   default_preview_label: Vorschau
+  default_draft_button_label: 'Als Entwurf speichern'
+  default_draft_saved_message: 'Einsendung zwischengespeichert. Sie können später dieses Formular mit den jetzt gesicherten Inhalten wieder aufrufen.'
+  default_draft_loaded_message: 'Ein teilweise ausgefülltes Formular wurde gefunden. Bitte füllen Sie die restlichen Teile aus.'
+  default_confirmation_message: 'Neue Eingabe zu [webform:title] hinzugefügt.'
+  default_confirmation_back_label: 'Zurück zum Formular'
+  default_limit_total_message: 'Es sind keine weiteren Eingaben erlaubt.'
+  default_limit_user_message: 'Es sind keine weiteren Eingaben erlaubt.'
+  dialog_options:
+    narrow:
+      title: Schmal
+    normal:
+      title: Normal
+    wide:
+      title: Breit
+element:
+  default_more_title: Zusätzlich
+  default_section_title_tag: h2
 mail:
   default_from_name: '[site:name]'
+  default_subject: 'Webformular-Eingabe von: [webform_submission:source-entity]'
+  default_body_text: "Gesendet am: [webform_submission:created]\r\nGesendet von: [webform_submission:user]\r\n\r\nGesendete Eingaben:\r\n[webform_submission:values]\n"
+  default_body_html: "<p>Gesendet am: [webform_submission:created]</p>\r\n<p>Gesendet von: [webform_submission:user]</p>\r\n<p>Gesendete Eingaben:</p>\r\n[webform_submission:values]\n"

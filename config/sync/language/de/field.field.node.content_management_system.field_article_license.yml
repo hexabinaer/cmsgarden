@@ -1,0 +1,5 @@
+label: Artikel-Lizenz
+description: 'Die Creative-Commons-Lizenz, unter der dieses CMS-Portrait veröffentlicht wird.'
+default_value:
+  -
+    value: 'Lizensiert für CMS Garden unter <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.de">CC BY-SA 3.0</a>.'

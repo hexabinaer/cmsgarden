@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.testimonial.field_testimonial_relation
     - node.type.testimonial
   module:
-    - datetime
+    - datetime_extras
     - path
     - text
 id: node.testimonial.default
@@ -52,9 +52,13 @@ content:
     region: content
   field_date_quoting:
     weight: 4
-    settings: {  }
+    settings:
+      date_order: YMD
+      time_type: none
+      increment: '15'
+      date_year_range: '2000:2050'
     third_party_settings: {  }
-    type: datetime_default
+    type: datatime_extras_configurable_list
     region: content
   field_testimonial_relation:
     weight: 2

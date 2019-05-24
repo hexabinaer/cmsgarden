@@ -1,0 +1,13 @@
+title: Kontakt
+description: 'Einfaches E-Mail-Kontaktformular.'
+settings:
+  confirmation_message: 'Ihre Nachricht wurde gesendet.'
+handlers:
+  email_confirmation:
+    label: 'Bestätigung via E-Mail'
+    settings:
+      body: '[webform_submission:values:message:value]'
+  email_notification:
+    label: E-Mail-Benachrichtigung
+    settings:
+      body: '[webform_submission:values:message:value]'

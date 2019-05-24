@@ -1,0 +1,19 @@
+uuid: 26d0a7ec-b0e5-4390-9c1c-5a0b8fb8e059
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_machine_name
+    - taxonomy.vocabulary.content_management_systems
+id: taxonomy_term.content_management_systems.field_machine_name
+field_name: field_machine_name
+entity_type: taxonomy_term
+bundle: content_management_systems
+label: 'Machine name'
+description: 'Enter a machine-readable name. Only lower case and letters, no spaces, no special characters (except underscores). For example; the machine name for Joomla! would be <em>joomla</em>.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

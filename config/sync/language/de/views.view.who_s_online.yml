@@ -9,3 +9,8 @@ display:
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
+      filters:
+        access:
+          expose:
+            label: 'Letzter Zugriff'
+            description: 'Ein Benutzer gilt für diesen Zeitraum als „online“, nachdem er das letzte Mal eine Seite betrachtet hat.'

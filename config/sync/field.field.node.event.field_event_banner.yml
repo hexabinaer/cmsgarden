@@ -11,8 +11,8 @@ id: node.event.field_event_banner
 field_name: field_event_banner
 entity_type: node
 bundle: event
-label: 'Event logo or banner'
-description: 'Re-using images is prefered over unreflected uploading. <a href="/admin/content/files">Check first.</a>'
+label: 'Veranstaltungslogo oder -banner'
+description: "Wiederverwendung von Bildern wird bevorzugt. Bitte vor dem Upload \r\n<a href=\"/admin/content/files\">Bildarchiv prüfen</a>."
 required: false
 translatable: false
 default_value: {  }

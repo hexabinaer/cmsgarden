@@ -25,9 +25,12 @@ display:
         name:
           label: Autor
         status:
+          label: Status
           settings:
             format_custom_true: Veröffentlicht
             format_custom_false: 'Nicht veröffentlicht'
+        changed:
+          label: Aktualisiert
         operations:
           label: Aktionen
       filters:
@@ -38,6 +41,8 @@ display:
           expose:
             label: Inhaltstyp
         status:
+          expose:
+            label: Status
           group_info:
             group_items:
               1:
@@ -48,6 +53,9 @@ display:
           expose:
             label: Sprache
       title: Inhalt
+      empty:
+        area_text_custom:
+          content: 'Kein Inhalt verfügbar.'
     display_title: Master
   page_1:
     display_options:

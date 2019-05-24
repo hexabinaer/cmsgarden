@@ -12,12 +12,12 @@ field_name: field_article_license
 entity_type: node
 bundle: content_management_system
 label: 'Article license'
-description: 'The Creative Commons license for this CMS portrait.'
-required: false
+description: 'The Creative Commons license under which this article is published.'
+required: true
 translatable: false
 default_value:
   -
-    value: 'Licensed by the authors for CMS Garden under <a href="creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.'
+    value: 'Licensed by the authors for CMS Garden under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.'
     format: basic_html
 default_value_callback: ''
 settings: {  }

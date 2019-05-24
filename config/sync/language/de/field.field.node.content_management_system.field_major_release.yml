@@ -1,0 +1,2 @@
+label: 'Aktuelle Hauptversion'
+description: 'Bitte gib nur die <em>Haupt</em>versionsnummer (<span lang="en">major release</span>. Zum Beispiel: wenn die aktuelle Drupal-Version 8.7.3 ist, trägst du 8 ein. Bei WordPress 5.1.1 wäre die Hauptversion 5.1'

@@ -20,5 +20,7 @@ display:
             first: '« Anfang'
             last: 'Ende »'
     display_title: Master
+  feed_1:
+    display_title: Newsfeed
   page_1:
     display_title: Seite

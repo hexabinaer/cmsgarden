@@ -1,0 +1,39 @@
+uuid: b825d80b-65ef-4aca-af6c-505eec296f67
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.logo
+    - field.field.taxonomy_term.content_management_systems.field_cms_logo
+    - field.field.taxonomy_term.content_management_systems.field_machine_name
+    - image.style.medium
+    - taxonomy.vocabulary.content_management_systems
+  module:
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: taxonomy_term.content_management_systems.logo
+targetEntityType: taxonomy_term
+bundle: content_management_systems
+mode: logo
+content:
+  field_cms_logo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: '220'
+        height: '220'
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  description: true
+  field_machine_name: true
+  langcode: true

@@ -10,7 +10,7 @@ field_name: field_available_languages
 entity_type: node
 bundle: content_management_system
 label: 'Available languages'
-description: 'The number of available translations for the <em>back-end</em>.'
+description: 'The number of translations for the <em>back-end</em>.'
 required: false
 translatable: false
 default_value: {  }

@@ -14,7 +14,7 @@ bundle: content_management_system
 label: 'Last information update'
 description: 'Make sure to enter the current date <em>only</em> when you have made sure the complete content is up to date!'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,3 +1,4 @@
+label: Systemprotokoll
 display:
   default:
     display_title: Master
@@ -21,10 +22,14 @@ display:
       fields:
         nothing:
           admin_label: Symbol
+        severity:
+          label: Schweregrad
         type:
           label: Typ
         timestamp:
           label: Datum
+        message:
+          label: Nachricht
         name:
           label: Benutzer
           separator: ', '
@@ -34,5 +39,12 @@ display:
         type:
           expose:
             label: Typ
+        severity:
+          expose:
+            label: Schweregrad
+      empty:
+        area:
+          admin_label: 'Keine Protokollnachrichten verfügbar.'
+          content: 'Keine Protokollnachrichten verfügbar.'
   page:
     display_title: Seite

@@ -1,3 +1,4 @@
+label: Kommentare
 display:
   default:
     display_title: Master
@@ -11,11 +12,18 @@ display:
           sort_desc_label: Absteigend
       pager:
         options:
+          tags:
+            previous: '‹ vorherige Seite'
+            next: 'nächste Seite ›'
+            first: '« erste Seite'
+            last: 'letzte Seite »'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
       fields:
+        comment_bulk_form:
+          action_title: Aktion
         subject:
           label: Betreff
           separator: ', '
@@ -27,6 +35,7 @@ display:
         entity_id:
           separator: ', '
         changed:
+          label: Aktualisiert
           separator: ', '
         operations:
           label: Aktionen
@@ -39,16 +48,31 @@ display:
         langcode:
           expose:
             label: Sprache
+      title: Kommentare
+      empty:
+        area_text_custom:
+          content: 'Keine Kommentare verfügbar.'
+      use_more_text: mehr
+  page_published:
+    display_title: 'Veröffentlichte Kommentare'
+    display_options:
+      menu:
+        title: Kommentare
   page_unapproved:
     display_options:
       filters:
         subject:
           expose:
             label: Betreff
+        combine:
+          expose:
+            label: 'Name des Autors'
         langcode:
           expose:
             label: Sprache
       fields:
+        comment_bulk_form:
+          action_title: Aktion
         subject:
           label: Betreff
           separator: ', '
@@ -60,6 +84,7 @@ display:
         entity_id:
           separator: ', '
         changed:
+          label: Aktualisiert
           separator: ', '
         operations:
           label: Aktionen

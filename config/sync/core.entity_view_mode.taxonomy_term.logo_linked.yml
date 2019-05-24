@@ -1,0 +1,10 @@
+uuid: 5198a7fb-1ed6-4782-9a3c-efae13ba0a17
+langcode: de
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.logo_linked
+label: 'Logo linked to cms page'
+targetEntityType: taxonomy_term
+cache: true

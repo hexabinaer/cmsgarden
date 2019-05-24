@@ -10,8 +10,8 @@ field_name: field_major_release
 entity_type: node
 bundle: content_management_system
 label: 'Current major release'
-description: 'Please only indicate the <em>major</em> release number, without any minor version hints. For example, if the current Drupal release is 8.7.3 you simply enter 8.'
-required: false
+description: 'Please only indicate the <em>major</em> release number, without any minor version hints. For example, if the current Drupal release is 8.7.3 you simply enter 8. For WordPress 5.1.1 it would be 5.1'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

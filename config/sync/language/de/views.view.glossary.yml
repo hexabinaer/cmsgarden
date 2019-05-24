@@ -1,3 +1,4 @@
+label: Glossar
 display:
   default:
     display_title: Master
@@ -23,5 +24,12 @@ display:
           label: Titel
         name:
           label: Autor
+        changed:
+          label: 'Letzte Aktualisierung'
+  attachment_1:
+    display_title: Anhang
   page_1:
     display_title: Seite
+    display_options:
+      menu:
+        title: Glossar

@@ -1,0 +1,19 @@
+uuid: 902f516d-ddb8-4f10-b0df-6d73cbe533f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_collection
+id: webform
+label: Webform
+icon_uuid: null
+description: ''
+behavior_plugins:
+  grid_layout:
+    paragraph_reference_field: ''
+    available_grid_layouts: {  }
+  lockable: {  }
+  style:
+    groups: {  }
+  language:
+    enabled: true

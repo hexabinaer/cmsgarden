@@ -1,0 +1,10 @@
+uuid: 1286846f-f706-4bd2-8c32-1554074952a6
+langcode: en
+status: true
+dependencies: {  }
+id: cms_term_portrait
+label: 'CMS term portrait'
+enabled: true
+first_field: field_termref_logo
+second_field: field_noderef_cms
+bundles: {  }

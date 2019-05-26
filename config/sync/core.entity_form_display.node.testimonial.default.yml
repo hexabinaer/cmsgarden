@@ -7,7 +7,9 @@ dependencies:
     - field.field.node.testimonial.field_cited_person
     - field.field.node.testimonial.field_cited_person_ext
     - field.field.node.testimonial.field_date_quoting
-    - field.field.node.testimonial.field_testimonial_relation
+    - field.field.node.testimonial.field_organization
+    - field.field.node.testimonial.field_testimonial_relation_cms
+    - field.field.node.testimonial.field_testimonial_relation_gen
     - node.type.testimonial
   module:
     - datetime_extras
@@ -20,7 +22,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 4
     settings:
       rows: 9
       summary_rows: 3
@@ -29,12 +31,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_cited_person:
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -43,7 +45,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_cited_person_ext:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -51,23 +53,37 @@ content:
     type: text_textfield
     region: content
   field_date_quoting:
-    weight: 4
+    weight: 5
     settings:
-      date_order: YMD
+      date_order: 'Y'
       time_type: none
       increment: '15'
       date_year_range: '2000:2050'
     third_party_settings: {  }
     type: datatime_extras_configurable_list
     region: content
-  field_testimonial_relation:
-    weight: 2
+  field_organization:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_testimonial_relation_cms:
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_testimonial_relation_gen:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   langcode:
     type: language_select
@@ -78,7 +94,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -86,21 +102,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 12
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 16
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 13
     region: content
     third_party_settings: {  }
   title:
@@ -112,13 +128,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
@@ -126,7 +142,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 13
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }

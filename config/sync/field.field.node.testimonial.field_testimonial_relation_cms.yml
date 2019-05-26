@@ -1,0 +1,29 @@
+uuid: e7f547bf-9579-46df-8e44-67e7e6a601be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonial_relation_cms
+    - node.type.testimonial
+    - taxonomy.vocabulary.content_management_systems
+id: node.testimonial.field_testimonial_relation_cms
+field_name: field_testimonial_relation_cms
+entity_type: node
+bundle: testimonial
+label: 'CMS relation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_management_systems: content_management_systems
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

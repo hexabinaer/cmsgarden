@@ -1,0 +1,14 @@
+uuid: cbf7e09f-f453-44d4-8643-69e0504e1133
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: users
+label: Users
+type: 'canonical_entities:user'
+pattern: '/people/[user:field_user_first_name]-[user:field_user_last_name]'
+selection_criteria: {  }
+selection_logic: and
+weight: -6
+relationships: {  }

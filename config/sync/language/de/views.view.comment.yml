@@ -1,4 +1,5 @@
 label: Kommentare
+description: 'Kommentare finden und verwalten.'
 display:
   default:
     display_title: Master
@@ -33,6 +34,7 @@ display:
           label: Autor
           separator: ', '
         entity_id:
+          label: 'Erstellt in'
           separator: ', '
         changed:
           label: Aktualisiert
@@ -45,6 +47,9 @@ display:
         subject:
           expose:
             label: Betreff
+        combine:
+          expose:
+            label: 'Name des Autors'
         langcode:
           expose:
             label: Sprache
@@ -58,8 +63,15 @@ display:
     display_options:
       menu:
         title: Kommentare
+        description: 'Kommentare veröffentlicht'
+      display_description: 'Die Liste veröffentlichter Kommentare.'
   page_unapproved:
+    display_title: 'Nicht freigegebene Kommentare'
     display_options:
+      menu:
+        title: 'Nicht freigegebene Kommentare'
+        description: 'Unveröffentlichte Kommentare'
+      display_description: 'Die Liste unveröffentlichter Kommentare'
       filters:
         subject:
           expose:
@@ -82,6 +94,7 @@ display:
           label: Autor
           separator: ', '
         entity_id:
+          label: 'Erstellt in'
           separator: ', '
         changed:
           label: Aktualisiert

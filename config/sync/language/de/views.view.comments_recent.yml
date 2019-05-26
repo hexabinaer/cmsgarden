@@ -1,4 +1,5 @@
 label: 'Neueste Kommentare'
+description: 'Neueste Kommentare.'
 display:
   default:
     display_title: Master
@@ -11,3 +12,4 @@ display:
     display_title: Block
     display_options:
       block_description: 'Neueste Kommentare'
+      block_category: 'Listen (Ansichten)'

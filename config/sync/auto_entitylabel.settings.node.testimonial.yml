@@ -1,5 +1,5 @@
-status: '1'
-pattern: '[current-user:field_user_first_name] [current-user:field_user_last_name] [current-date:html_month]'
+status: '0'
+pattern: ''
 php: 0
 escape: 0
 dependencies:

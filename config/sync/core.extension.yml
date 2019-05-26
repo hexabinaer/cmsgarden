@@ -7,8 +7,6 @@ module:
   block_content: 0
   breakpoint: 0
   cer: 0
-  chosen: 0
-  chosen_field: 0
   chosen_lib: 0
   ckeditor: 0
   color: 0
@@ -17,6 +15,7 @@ module:
   config_translation: 0
   contact: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   datetime_extras: 0
   datetime_range: 0
@@ -67,6 +66,7 @@ module:
   tour: 0
   update: 0
   user: 0
+  viewfield: 0
   views_bulk_edit: 0
   views_bulk_operations: 0
   views_ui: 0
@@ -75,6 +75,7 @@ module:
   webform_ui: 0
   workflows: 0
   menu_link_content: 1
+  pathauto: 1
   content_translation: 10
   views: 10
   paragraphs: 11

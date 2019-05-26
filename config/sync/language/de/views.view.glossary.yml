@@ -1,4 +1,5 @@
 label: Glossar
+description: 'Gesamter Inhalt, alphabetisch'
 display:
   default:
     display_title: Master

@@ -1,4 +1,5 @@
 label: Dateien
+description: 'Dateien suchen und verwalten.'
 display:
   default:
     display_title: Master
@@ -31,6 +32,13 @@ display:
           label: Größe
         status:
           label: Status
+          settings:
+            format_custom_false: Temporär
+            format_custom_true: Dauerhaft
+        created:
+          label: Upload-Datum
+        changed:
+          label: Änderungsdatum
         count:
           label: 'Verwendet in'
       filters:
@@ -44,11 +52,16 @@ display:
           expose:
             label: Status
       title: Dateien
+      empty:
+        area_text_custom:
+          content: 'Keine Dateien verfügbar'
   page_1:
+    display_title: Dateiübersicht
     display_options:
       menu:
         title: Dateien
   page_2:
+    display_title: Dateinutzung
     display_options:
       pager:
         options:
@@ -64,9 +77,13 @@ display:
           label: Entität
         type:
           label: Entitätstyp
+        module:
+          label: 'Registrierendes Modul'
         count:
           label: 'Anzahl der Verwendung'
+      title: Dateinutzung
       arguments:
         fid:
           exception:
             title: Alle
+          title: 'Dateiverwendungsinformationen für {{ arguments.fid }}'

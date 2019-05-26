@@ -1,0 +1,85 @@
+uuid: c1d4cae7-7156-482e-ba7d-ec195cd7a8e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.page
+    - paragraphs.paragraphs_type.container
+    - paragraphs.paragraphs_type.grid
+    - paragraphs.paragraphs_type.link
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.separator
+    - paragraphs.paragraphs_type.subtitle
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.title
+    - paragraphs.paragraphs_type.views_block
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: page
+label: Paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text: text
+      quote: quote
+      title: title
+      subtitle: subtitle
+      link: link
+      webform: webform
+      views_block: views_block
+      separator: separator
+      container: container
+      grid: grid
+    target_bundles_drag_drop:
+      text:
+        enabled: true
+        weight: -27
+      quote:
+        enabled: true
+        weight: -26
+      title:
+        enabled: true
+        weight: -25
+      subtitle:
+        enabled: true
+        weight: -24
+      link:
+        enabled: true
+        weight: -23
+      webform:
+        enabled: true
+        weight: -22
+      views_block:
+        enabled: true
+        weight: -21
+      separator:
+        enabled: true
+        weight: -20
+      container:
+        enabled: true
+        weight: -19
+      grid:
+        enabled: true
+        weight: -18
+      footer:
+        weight: -17
+        enabled: false
+      intro:
+        weight: -16
+        enabled: false
+      user:
+        weight: -15
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,4 +1,5 @@
 label: Taxonomie-Begriff
+description: 'Inhalt, der zu einem bestimmten Taxonomie-Begriff gehört.'
 display:
   default:
     display_title: Master
@@ -23,6 +24,7 @@ display:
         tid:
           exception:
             title: Alle
+          title: '{{ arguments.tid }}'
   feed_1:
     display_title: Newsfeed
   page_1:

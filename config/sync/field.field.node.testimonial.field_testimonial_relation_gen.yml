@@ -1,0 +1,23 @@
+uuid: 68b7ab3b-b54a-47bf-a3d2-fe39f1a4120d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonial_relation_gen
+    - node.type.testimonial
+  module:
+    - options
+id: node.testimonial.field_testimonial_relation_gen
+field_name: field_testimonial_relation_gen
+entity_type: node
+bundle: testimonial
+label: 'Testimonial relation'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: cmsgarden
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
     - field.field.taxonomy_term.content_management_systems.field_machine_name
+    - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
     - image.style.thumbnail
     - taxonomy.vocabulary.content_management_systems
@@ -40,6 +41,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_noderef_cms:
+    weight: 8
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_status:
     weight: 6

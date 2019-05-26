@@ -1,0 +1,174 @@
+uuid: d1a934b2-2b57-4824-aef6-e7cccf2d62e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.testimonial.body
+    - field.field.node.testimonial.field_cited_person
+    - field.field.node.testimonial.field_cited_person_ext
+    - field.field.node.testimonial.field_date_quoting
+    - field.field.node.testimonial.field_organization
+    - field.field.node.testimonial.field_testimonial_relation_cms
+    - field.field.node.testimonial.field_testimonial_relation_gen
+    - node.type.testimonial
+  module:
+    - datetime
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          9b6544d0-46e7-4ca8-a598-6688c78e7445:
+            uuid: 9b6544d0-46e7-4ca8-a598-6688c78e7445
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:testimonial:links'
+            additional: {  }
+            weight: 0
+          9e5373b0-1819-4b6b-8c9a-0cc123fab750:
+            uuid: 9e5373b0-1819-4b6b-8c9a-0cc123fab750
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:testimonial:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          90813849-3638-46c2-9ebf-d8f3674cc730:
+            uuid: 90813849-3638-46c2-9ebf-d8f3674cc730
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:testimonial:field_cited_person'
+              formatter:
+                label: hidden
+                settings:
+                  view_mode: compact
+                  link: false
+                third_party_settings: {  }
+                type: entity_reference_entity_view
+            additional: {  }
+            weight: 2
+          e9b81642-a352-4051-a77d-8877dc9935c2:
+            uuid: e9b81642-a352-4051-a77d-8877dc9935c2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:testimonial:field_date_quoting'
+              formatter:
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: html_year
+                third_party_settings: {  }
+                type: datetime_default
+            additional: {  }
+            weight: 5
+          382cc7a0-9316-4488-8dd1-93ecddddcf3c:
+            uuid: 382cc7a0-9316-4488-8dd1-93ecddddcf3c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:testimonial:field_cited_person_ext'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 3
+          fb9906ef-8fce-427a-ae3c-7f51d5efdf2e:
+            uuid: fb9906ef-8fce-427a-ae3c-7f51d5efdf2e
+            region: content
+            configuration:
+              id: 'field_block:node:testimonial:field_organization'
+              label: Organization
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
+id: node.testimonial.full
+targetEntityType: node
+bundle: testimonial
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cited_person:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: compact
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_cited_person_ext:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_date_quoting:
+    weight: 5
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_year
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_organization:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_testimonial_relation_cms: true
+  field_testimonial_relation_gen: true
+  langcode: true

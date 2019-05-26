@@ -4,5 +4,13 @@ settings:
 handlers:
   email_confirmation:
     label: 'Bestätigung via E-Mail'
+    settings:
+      from_name: _default
+      subject: _default
+      body: '[webform_submission:values:comments:value]'
   email_notification:
     label: E-Mail-Benachrichtigung
+    settings:
+      from_name: '[webform_submission:values:name:raw]'
+      subject: _default
+      body: '[webform_submission:values:comments:value]'

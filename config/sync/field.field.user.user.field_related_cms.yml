@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.user.field_related_cms
+    - taxonomy.vocabulary.content_management_systems
   module:
     - user
 id: user.user.field_related_cms
@@ -17,10 +18,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: views
+  handler: 'default:taxonomy_term'
   handler_settings:
-    view:
-      view_name: cms_reference
-      display_name: er_cms__all
-      arguments: {  }
+    target_bundles:
+      content_management_systems: content_management_systems
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

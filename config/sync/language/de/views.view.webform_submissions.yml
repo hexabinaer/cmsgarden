@@ -1,4 +1,5 @@
 label: Webformular-Eingaben
+description: 'Standardansichten für die Anzeige von Webformular-Eingaben.'
 display:
   default:
     display_title: Master
@@ -48,8 +49,14 @@ display:
           exception:
             title: Alle
       title: Webformular-Eingaben
-  embed_administer:
+  embed_default:
+    display_title: 'Eingebettet: Standard'
     display_options:
+      display_description: 'Webformular-Eingaben anzeigen.'
+  embed_administer:
+    display_title: 'Eingebettet: Administrator'
+    display_options:
+      display_description: 'Webformular-Eingaben verwalten'
       fields:
         webform_submission_bulk_form:
           action_title: Aktion
@@ -87,7 +94,9 @@ display:
           expose:
             label: Gesperrt
   embed_manage:
+    display_title: 'Eingebettet: Verwalten'
     display_options:
+      display_description: 'Webformular-Eingaben verwalten'
       fields:
         webform_submission_bulk_form:
           action_title: Aktion
@@ -129,7 +138,9 @@ display:
           expose:
             label: Gesperrt
   embed_review:
+    display_title: 'Eingebettet: Überprüfung'
     display_options:
+      display_description: 'Webformular-Eingaben überprüfen'
       fields:
         sid:
           label: '#'

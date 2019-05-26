@@ -31,18 +31,19 @@ third_party_settings:
         - field_user_middle_name
         - field_user_last_name
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: html_element
       format_settings:
-        id: ''
-        classes: fullname
+        label: 'Full name'
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-      label: div
+        id: ''
+        classes: fullname
+      label: 'Full name'
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
 id: user.user.compact
@@ -76,7 +77,7 @@ content:
     third_party_settings: {  }
   user_picture:
     type: image
-    weight: 1
+    weight: 0
     region: content
     settings:
       image_style: thumbnail

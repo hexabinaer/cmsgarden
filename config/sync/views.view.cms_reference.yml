@@ -1,6 +1,6 @@
 uuid: 20567dc4-3387-4783-9cf9-d11ff06d748c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.taxonomy_term.field_cms_logo
@@ -348,9 +348,10 @@ display:
         type: entity_reference
         options:
           search_fields:
-            field_cms_logo: field_cms_logo
             name: name
+            field_cms_logo: '0'
       display_description: 'Entity reference with all CMS'
+      display_comment: 'Currently not working as expected, https://www.drupal.org/project/drupal/issues/2174633'
     cache_metadata:
       max-age: -1
       contexts:

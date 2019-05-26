@@ -1,1 +1,3 @@
 name: Content-Management-System
+description: 'Ein Artikel über ein teilnehmendes CMS.'
+help: 'Trage bitte einen eher maschinenlesbaren Namen ein. Großbuchstabe nur am Anfang, keine Sonderzeichen (Leerzeichen sind in Ordnung). Dieses Feld wird automatisch für vieles verwendet. Für die h1-Headline gibt es ein separates Feld.'

@@ -1,0 +1,28 @@
+uuid: 1e6575bb-59ff-4763-a630-4738e9a5ed03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_noderef_cms
+    - node.type.content_management_system
+    - taxonomy.vocabulary.content_management_systems
+id: taxonomy_term.content_management_systems.field_noderef_cms
+field_name: field_noderef_cms
+entity_type: taxonomy_term
+bundle: content_management_systems
+label: CMS-Portrait
+description: 'If a portrait of the CMS already exists you can link it here. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      content_management_system: content_management_system
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

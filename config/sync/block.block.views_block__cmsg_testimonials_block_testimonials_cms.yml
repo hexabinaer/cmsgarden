@@ -1,0 +1,32 @@
+uuid: 0ce80e43-217a-4db4-b038-54bd4f853c0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.cmsg_testimonials
+  module:
+    - node
+    - views
+  theme:
+    - bartik
+id: views_block__cmsg_testimonials_block_testimonials_cms
+theme: bartik
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:cmsg_testimonials-block_testimonials_cms'
+settings:
+  id: 'views_block:cmsg_testimonials-block_testimonials_cms'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      content_management_system: content_management_system
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

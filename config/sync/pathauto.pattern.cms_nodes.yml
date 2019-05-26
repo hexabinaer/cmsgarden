@@ -1,0 +1,22 @@
+uuid: 3cfabf62-a559-4f2a-8dc6-7d1ff73a9165
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: cms_nodes
+label: 'CMS Nodes'
+type: 'canonical_entities:node'
+pattern: '/cms/[node:field_termref_logo:entity:field_machine_name]'
+selection_criteria:
+  fa62f199-571c-460e-9767-a930ef735814:
+    id: node_type
+    bundles:
+      content_management_system: content_management_system
+    negate: false
+    context_mapping:
+      node: node
+    uuid: fa62f199-571c-460e-9767-a930ef735814
+selection_logic: and
+weight: -10
+relationships: {  }

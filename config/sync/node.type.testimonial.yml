@@ -11,7 +11,7 @@ third_party_settings:
 name: Testimonial
 type: testimonial
 description: ''
-help: ''
+help: 'The title is for internal use only. Please enter your name and the current year.'
 new_revision: true
 preview_mode: 1
 display_submitted: false

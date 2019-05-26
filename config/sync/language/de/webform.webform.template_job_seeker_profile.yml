@@ -6,3 +6,5 @@ handlers:
     label: E-Mail-Benachrichtigung
     settings:
       from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
+      subject: _default
+      body: _default

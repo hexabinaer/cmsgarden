@@ -1,3 +1,5 @@
+label: 'Bibliothek benutzerdefinierter Blöcke'
+description: 'Benutzerdefinierte Blöcke finden und verwalten.'
 display:
   default:
     display_title: Master
@@ -36,5 +38,12 @@ display:
         type:
           expose:
             label: Blocktyp
+      title: 'Bibliothek benutzerdefinierter Blöcke'
+      empty:
+        area_text_custom:
+          content: 'Es sind keine benutzerdefinierten Blöcke verfügbar.'
   page_1:
     display_title: Seite
+    display_options:
+      menu:
+        title: 'Bibliothek benutzerdefinierter Blöcke'

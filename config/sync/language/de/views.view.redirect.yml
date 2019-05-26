@@ -54,6 +54,9 @@ display:
                 title: '305 Use Proxy'
               7:
                 title: '307 Temporary Redirect'
+        language:
+          expose:
+            label: Originalsprache
       title: Umleiten
   page_1:
     display_title: Seite

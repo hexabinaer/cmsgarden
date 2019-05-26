@@ -1,16 +1,17 @@
-uuid: c36628a4-3035-4fac-b788-e83e03fab313
+uuid: 8c3f2a52-6fe2-42da-84d1-e92fc1296393
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_testimonial_relation
-field_name: field_testimonial_relation
+    - text
+id: node.field_organization
+field_name: field_organization
 entity_type: node
-type: entity_reference
+type: text
 settings:
-  target_type: node
-module: core
+  max_length: 255
+module: text
 locked: false
 cardinality: 1
 translatable: true

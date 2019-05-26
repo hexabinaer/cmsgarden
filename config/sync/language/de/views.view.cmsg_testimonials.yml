@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: 'Was andere sagen - über dieses Projekt, über Open Source oder über ihr bevorzugtes Content-Management-System.'
+            format: minimal_html

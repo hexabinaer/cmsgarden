@@ -10,8 +10,8 @@ third_party_settings:
     parent: ''
 name: 'Content Management System'
 type: content_management_system
-description: ''
-help: ''
+description: 'A portrait of a participating CMS. '
+help: 'Please enter a capitalized machine-readable name here, no special characters, not prefered capitalization. This field will be used for a lot of automation. There''s a separate field for the h1 headline.'
 new_revision: true
 preview_mode: 1
 display_submitted: false

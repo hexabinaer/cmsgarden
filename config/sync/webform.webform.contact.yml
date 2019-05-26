@@ -17,7 +17,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
+elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject_cmsg:\n  '#type': webform_select_other\n  '#title': Subject\n  '#options':\n    membership: Membership\n    involvement: 'I want to support CMS Garden'\n    press: 'Press/media contact'\n    book: 'CMS Gardener''s Guide'\n    abroad: 'CMS Garden in our country'\n    website: 'Website issues'\n  '#empty_option': '-- Please choose --'\n  '#required': true\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\nclevercaptcha:\n  '#type': textfield\n  '#title': 'Not a robot'\n  '#description': 'To avoid spam, please enter the project&#39;s name in this field.'\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#states':\n    enabled:\n      - ':input[name=\"clevercaptcha\"]':\n          value: 'CMS Garden'\n      - or\n      - ':input[name=\"clevercaptcha\"]':\n          value: 'cms garden'\n      - or\n      - ':input[name=\"clevercaptcha\"]':\n          value: CMS-Garden\n      - or\n      - ':input[name=\"clevercaptcha\"]':\n          value: cmsgarden\n  '#submit__label': 'Send message'"
 css: ''
 javascript: ''
 settings:
@@ -97,9 +97,9 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
-  confirmation_type: url_message
+  confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
+  confirmation_message: 'Your message has been sent. The response might take some days because all people on the team are volunteers and not always available. Thank you for your patience.'
   confirmation_url: '<front>'
   confirmation_attributes: {  }
   confirmation_back: true
@@ -178,7 +178,7 @@ handlers:
     handler_id: email_confirmation
     status: true
     conditions: {  }
-    weight: 1
+    weight: -50
     settings:
       states:
         - completed
@@ -193,7 +193,9 @@ handlers:
       from_name: _default
       subject: '[webform_submission:values:subject:raw]'
       body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
+      excluded_elements:
+        email: email
+        clevercaptcha: clevercaptcha
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
@@ -208,15 +210,27 @@ handlers:
       sender_name: ''
   email_notification:
     id: email
-    label: 'Email notification'
+    label: 'Email notification (all but exceptions)'
     handler_id: email_notification
     status: true
-    conditions: {  }
-    weight: 1
+    conditions:
+      disabled:
+        -
+          ':input[name="subject_cmsg[select]"]':
+            value: press
+        - or
+        -
+          ':input[name="subject_cmsg[select]"]':
+            value: book
+        - or
+        -
+          ':input[name="subject_cmsg[select]"]':
+            value: website
+    weight: -46
     settings:
       states:
         - completed
-      to_mail: _default
+      to_mail: board@association.cms-garden.org
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -227,7 +241,126 @@ handlers:
       from_name: '[webform_submission:values:name:raw]'
       subject: '[webform_submission:values:subject:raw]'
       body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
+      excluded_elements:
+        email: email
+        clevercaptcha: clevercaptcha
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+  email_notification_press:
+    id: email
+    label: 'Email notification press'
+    handler_id: email_notification_press
+    status: true
+    conditions:
+      enabled:
+        ':input[name="subject_cmsg[select]"]':
+          value: press
+    weight: -49
+    settings:
+      states:
+        - completed
+      to_mail: press@cms-garden.org
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:name:raw]'
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'
+      excluded_elements:
+        email: email
+        clevercaptcha: clevercaptcha
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+  email_notification_book:
+    id: email
+    label: 'Email notification editors'
+    handler_id: email_notification_book
+    status: true
+    conditions:
+      enabled:
+        ':input[name="subject_cmsg[select]"]':
+          value: book
+    weight: -48
+    settings:
+      states:
+        - completed
+      to_mail: editors@cms-garden.org
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:name:raw]'
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'
+      excluded_elements:
+        email: email
+        clevercaptcha: clevercaptcha
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+  email_notification_website:
+    id: email
+    label: 'Email notification webmaster'
+    handler_id: email_notification_website
+    status: true
+    conditions:
+      enabled:
+        ':input[name="subject_cmsg[select]"]':
+          value: website
+    weight: -47
+    settings:
+      states:
+        - completed
+      to_mail: webmaster@cms-garden.org
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:name:raw]'
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'
+      excluded_elements:
+        email: email
+        clevercaptcha: clevercaptcha
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false

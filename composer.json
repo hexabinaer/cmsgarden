@@ -21,6 +21,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/address": "^1.6",
+        "drupal/adminimal_theme": "^1.5",
         "drupal/auto_entitylabel": "^2.1@beta",
         "drupal/cer": "^4.0@alpha",
         "drupal/chosen": "^2.7",

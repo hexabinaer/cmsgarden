@@ -1,0 +1,8 @@
+uuid: 5fa3889b-7fb2-4789-8549-f2a011654bcc
+langcode: und
+status: true
+dependencies: {  }
+name: FAQ
+vid: faq
+description: 'FAQ category for grouping'
+weight: 0

@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.content_management_system.field_license
     - field.field.node.content_management_system.field_link
     - field.field.node.content_management_system.field_major_release
+    - field.field.node.content_management_system.field_meta_tags
     - field.field.node.content_management_system.field_open_source_as_of
     - field.field.node.content_management_system.field_programming_language
     - field.field.node.content_management_system.field_registered_users
@@ -30,6 +31,7 @@ dependencies:
     - datetime_extras
     - field_group
     - link
+    - metatag
     - paragraphs
     - path
     - text
@@ -41,7 +43,7 @@ third_party_settings:
         - group_resources
         - group_portrait
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: tabs
       format_settings:
         label: Sections
@@ -95,7 +97,7 @@ third_party_settings:
       children:
         - field_link
       parent_name: group_sections
-      weight: 9
+      weight: 8
       format_type: tab
       format_settings:
         id: ''
@@ -126,7 +128,7 @@ content:
     third_party_settings: {  }
   field_abschnitt:
     type: entity_reference_paragraphs
-    weight: 12
+    weight: 13
     settings:
       title: Seitenabschnitt
       title_plural: Seitenabschnitte
@@ -145,7 +147,7 @@ content:
     type: text_textfield
     region: content
   field_authors_ext:
-    weight: 38
+    weight: 39
     settings:
       rows: 5
       placeholder: ''
@@ -153,7 +155,7 @@ content:
     type: text_textarea
     region: content
   field_authors_ref:
-    weight: 37
+    weight: 38
     settings:
       match_operator: CONTAINS
       size: 60
@@ -162,7 +164,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_available_languages:
-    weight: 36
+    weight: 37
     settings:
       size: 10
       placeholder: ''
@@ -178,7 +180,7 @@ content:
     type: text_textarea
     region: content
   field_core_contributors:
-    weight: 33
+    weight: 34
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -235,6 +237,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_meta_tags:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_open_source_as_of:
     weight: 29
     settings:
@@ -276,14 +284,14 @@ content:
     type: text_textfield
     region: content
   field_total_downloads:
-    weight: 34
+    weight: 35
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_total_installs:
-    weight: 35
+    weight: 36
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -332,7 +340,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

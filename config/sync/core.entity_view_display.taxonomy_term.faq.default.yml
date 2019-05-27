@@ -1,0 +1,22 @@
+uuid: f6a1b616-b8a7-485b-ac4b-601443e04000
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq
+  module:
+    - text
+id: taxonomy_term.faq.default
+targetEntityType: taxonomy_term
+bundle: faq
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

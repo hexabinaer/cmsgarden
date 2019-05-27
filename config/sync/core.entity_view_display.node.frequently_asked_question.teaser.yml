@@ -5,10 +5,84 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.frequently_asked_question.body
+    - field.field.node.frequently_asked_question.field_category
+    - field.field.node.frequently_asked_question.field_question
+    - field.field.node.frequently_asked_question.field_weight
     - node.type.frequently_asked_question
   module:
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          ea7e5c96-a356-4975-9f36-b6ef06652d04:
+            uuid: ea7e5c96-a356-4975-9f36-b6ef06652d04
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:frequently_asked_question:field_question'
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 100
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          8f4d02c4-df71-41b1-afcd-180399e813d6:
+            uuid: 8f4d02c4-df71-41b1-afcd-180399e813d6
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:frequently_asked_question:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          124ee42a-8689-40de-945c-a3a3ac675e6a:
+            uuid: 124ee42a-8689-40de-945c-a3a3ac675e6a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:frequently_asked_question:links'
+            additional: {  }
+            weight: 3
+          e850fe59-8078-4d4c-9371-03e869388b64:
+            uuid: e850fe59-8078-4d4c-9371-03e869388b64
+            region: content
+            configuration:
+              id: 'field_block:node:frequently_asked_question:field_question'
+              label: Question
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.frequently_asked_question.teaser
 targetEntityType: node
 bundle: frequently_asked_question
@@ -17,15 +91,25 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_question:
+    type: text_summary_or_trimmed
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      trim_length: 100
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_category: true
+  field_weight: true
   langcode: true

@@ -1,0 +1,29 @@
+uuid: 1ab1848c-33c0-463a-9a71-563c4ee83464
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.frequently_asked_question
+    - taxonomy.vocabulary.faq
+id: node.frequently_asked_question.field_category
+field_name: field_category
+entity_type: node
+bundle: frequently_asked_question
+label: Category
+description: 'The FAQ page will group by this field. If none applicable, you can <a href="/admin/structure/taxonomy/manage/faq/add">add further categories</a>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      faq: faq
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

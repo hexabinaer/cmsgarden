@@ -5,11 +5,89 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.content_management_system.body
+    - field.field.node.content_management_system.field_abschnitt
+    - field.field.node.content_management_system.field_article_license
+    - field.field.node.content_management_system.field_authors_ext
+    - field.field.node.content_management_system.field_authors_ref
+    - field.field.node.content_management_system.field_available_languages
+    - field.field.node.content_management_system.field_copyright_notice
+    - field.field.node.content_management_system.field_core_contributors
+    - field.field.node.content_management_system.field_developers
+    - field.field.node.content_management_system.field_initial_release
+    - field.field.node.content_management_system.field_last_update
+    - field.field.node.content_management_system.field_license
+    - field.field.node.content_management_system.field_link
+    - field.field.node.content_management_system.field_major_release
+    - field.field.node.content_management_system.field_open_source_as_of
+    - field.field.node.content_management_system.field_programming_language
+    - field.field.node.content_management_system.field_registered_users
     - field.field.node.content_management_system.field_representative
+    - field.field.node.content_management_system.field_termref_logo
+    - field.field.node.content_management_system.field_title_html
+    - field.field.node.content_management_system.field_total_downloads
+    - field.field.node.content_management_system.field_total_installs
     - node.type.content_management_system
   module:
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 33-67
+        components:
+          83ce1002-9ac8-4e7d-a56a-281c5e88dc9d:
+            uuid: 83ce1002-9ac8-4e7d-a56a-281c5e88dc9d
+            region: first
+            configuration:
+              id: 'field_block:node:content_management_system:field_termref_logo'
+              label: Logo
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: logo_linked
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          08246f96-3b9e-4597-881e-77e711d31699:
+            uuid: 08246f96-3b9e-4597-881e-77e711d31699
+            region: second
+            configuration:
+              id: 'field_block:node:content_management_system:body'
+              label: Portrait
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 400
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          cea3916f-266a-4af2-9189-d5684a924116:
+            uuid: cea3916f-266a-4af2-9189-d5684a924116
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:content_management_system:links'
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.content_management_system.teaser
 targetEntityType: node
 bundle: content_management_system
@@ -18,18 +96,44 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_termref_logo:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_abschnitt: true
+  field_article_license: true
+  field_authors_ext: true
+  field_authors_ref: true
+  field_available_languages: true
+  field_copyright_notice: true
+  field_core_contributors: true
+  field_developers: true
+  field_initial_release: true
+  field_last_update: true
+  field_license: true
   field_link: true
   field_logo: true
+  field_major_release: true
+  field_open_source_as_of: true
+  field_programming_language: true
+  field_registered_users: true
   field_representative: true
+  field_title_html: true
+  field_total_downloads: true
+  field_total_installs: true
   langcode: true

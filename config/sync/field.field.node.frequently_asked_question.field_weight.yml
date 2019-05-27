@@ -1,0 +1,23 @@
+uuid: 74f54861-2464-425d-abac-c319eb99d51a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.frequently_asked_question
+  module:
+    - options
+id: node.frequently_asked_question.field_weight
+field_name: field_weight
+entity_type: node
+bundle: frequently_asked_question
+label: Weight
+description: 'Influence the sort order within the category. Negative number weigh less and the "heavier" the value, the farther it sinks to the bottom. By default (0) newer entries will be displayed below the older ones.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

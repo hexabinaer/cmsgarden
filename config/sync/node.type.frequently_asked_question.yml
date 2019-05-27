@@ -11,7 +11,7 @@ third_party_settings:
 name: FAQ
 type: frequently_asked_question
 description: 'A frequently asked question and the answer to it.'
-help: ''
+help: 'Please enter the shortened question twice - as the administrative title and in the question "summary" field.'
 new_revision: true
 preview_mode: 1
 display_submitted: false

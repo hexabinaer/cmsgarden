@@ -11,7 +11,7 @@ id: node.frequently_asked_question.body
 field_name: body
 entity_type: node
 bundle: frequently_asked_question
-label: Body
+label: Answer
 description: ''
 required: false
 translatable: true

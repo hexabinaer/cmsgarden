@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_article_type
     - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_publish_date
     - field.field.node.article.field_tags
     - image.style.large
@@ -15,10 +16,11 @@ dependencies:
   module:
     - comment
     - datetime
-    - image
     - layout_builder
     - layout_discovery
+    - metatag
     - options
+    - svg_image
     - text
     - user
 third_party_settings:
@@ -87,6 +89,21 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
+          a4d79cd6-5813-42db-8fa0-5f651206457c:
+            uuid: a4d79cd6-5813-42db-8fa0-5f651206457c
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:article:field_meta_tags'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: metatag_empty_formatter
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -198,6 +215,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     label: hidden
+  field_meta_tags:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: first
   field_publish_date:
     weight: 112
     label: above

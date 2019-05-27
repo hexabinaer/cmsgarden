@@ -1,0 +1,2 @@
+label: Gewicht
+description: 'Dieser Wert beeinflusst die Sortierreiheinfolge: Negative Zahlen "wiegen" weniger - je "schwerer" der Wert, desto weiter sinkt der Eintrag nach unten. Standardmäßig (0) werden neuere unter älteren Antworten aufgelistet.'

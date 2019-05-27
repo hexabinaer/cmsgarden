@@ -1,0 +1,14 @@
+entity_type_groups:
+  node:
+    article:
+      basic: basic
+      advanced: advanced
+    content_management_system:
+      basic: basic
+      advanced: advanced
+    event:
+      basic: basic
+      advanced: advanced
+  redirect:
+    redirect:
+      basic: basic

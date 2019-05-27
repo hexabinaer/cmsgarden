@@ -1,18 +1,16 @@
-uuid: 210dd0d5-6c65-42b8-a015-586d30ad7cb1
+uuid: e44a3a1e-4d3c-48cf-b21d-d0464c19c77d
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
+    - taxonomy.vocabulary.faq
   module:
     - content_translation
 third_party_settings:
   content_translation:
     enabled: true
-    bundle_settings:
-      untranslatable_fields_hide: '0'
-id: node.page
-target_entity_type_id: node
-target_bundle: page
+id: taxonomy_term.faq
+target_entity_type_id: taxonomy_term
+target_bundle: faq
 default_langcode: site_default
 language_alterable: true

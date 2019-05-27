@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.content_management_system.field_license
     - field.field.node.content_management_system.field_link
     - field.field.node.content_management_system.field_major_release
+    - field.field.node.content_management_system.field_meta_tags
     - field.field.node.content_management_system.field_open_source_as_of
     - field.field.node.content_management_system.field_programming_language
     - field.field.node.content_management_system.field_registered_users
@@ -32,6 +33,7 @@ dependencies:
     - layout_builder
     - layout_discovery
     - link
+    - metatag
     - options
     - text
     - user
@@ -422,6 +424,21 @@ third_party_settings:
                 type: text_default
             additional: {  }
             weight: 23
+          a06859b2-6c1c-4d92-9a58-c63f73277ff2:
+            uuid: a06859b2-6c1c-4d92-9a58-c63f73277ff2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:content_management_system:field_meta_tags'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: metatag_empty_formatter
+            additional: {  }
+            weight: 24
         third_party_settings: {  }
 id: node.content_management_system.default
 targetEntityType: node
@@ -547,6 +564,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_meta_tags:
+    weight: 124
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_open_source_as_of:
     weight: 107

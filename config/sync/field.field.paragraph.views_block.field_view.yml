@@ -20,6 +20,7 @@ default_value_callback: ''
 settings:
   force_default: 0
   allowed_views:
+    cmsg_cms_overview: cmsg_cms_overview
     cmsg_people: cmsg_people
     cmsg_testimonials: cmsg_testimonials
     cmsg_taxonomy_admin: 0

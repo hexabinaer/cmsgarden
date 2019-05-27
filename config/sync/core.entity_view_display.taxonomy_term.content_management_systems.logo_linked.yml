@@ -1,10 +1,13 @@
 uuid: f9cb6ca0-9ea2-4eae-b434-cfe39ba3a5e3
 langcode: de
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.logo_linked
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
+    - field.field.taxonomy_term.content_management_systems.field_machine_name
+    - field.field.taxonomy_term.content_management_systems.field_noderef_cms
+    - field.field.taxonomy_term.content_management_systems.field_status
     - taxonomy.vocabulary.content_management_systems
   module:
     - layout_builder
@@ -63,4 +66,7 @@ content:
     region: content
 hidden:
   description: true
+  field_machine_name: true
+  field_noderef_cms: true
+  field_status: true
   langcode: true

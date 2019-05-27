@@ -28,6 +28,7 @@ dependencies:
     - field.field.node.content_management_system.field_total_downloads
     - field.field.node.content_management_system.field_total_installs
     - node.type.content_management_system
+    - views.view.cmsg_testimonials
   module:
     - datetime
     - field_group
@@ -37,6 +38,7 @@ dependencies:
     - options
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -409,6 +411,19 @@ third_party_settings:
                 type: text_default
             additional: {  }
             weight: 6
+          d789e78b-ce50-41e4-959c-76d620aaba12:
+            uuid: d789e78b-ce50-41e4-959c-76d620aaba12
+            region: second
+            configuration:
+              id: 'views_block:cmsg_testimonials-block_testimonials_cms'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 13
         third_party_settings: {  }
       -
         layout_id: layout_onecol

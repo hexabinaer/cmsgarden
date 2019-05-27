@@ -1,6 +1,6 @@
 uuid: 0ce80e43-217a-4db4-b038-54bd4f853c0a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.cmsg_testimonials

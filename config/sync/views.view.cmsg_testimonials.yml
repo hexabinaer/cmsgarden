@@ -950,8 +950,8 @@ display:
             value: all
             title_enable: false
             title: All
-          title_enable: false
-          title: ''
+          title_enable: true
+          title: 'A testimonial for Drupal'
           default_argument_type: taxonomy_tid
           default_argument_options:
             node: true
@@ -984,6 +984,7 @@ display:
         pager: false
         style: false
         row: false
+        header: false
       display_description: ''
       pager:
         type: some
@@ -1004,6 +1005,7 @@ display:
           inline: {  }
           separator: ''
           hide_empty: false
+      header: {  }
     cache_metadata:
       max-age: 0
       contexts:
@@ -1030,7 +1032,22 @@ display:
       arguments: {  }
       defaults:
         arguments: false
+        header: false
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'What others say - about this project, about open source, or about their favorite content management system.'
+            format: minimal_html
+          plugin_id: text
     cache_metadata:
       max-age: 0
       contexts:

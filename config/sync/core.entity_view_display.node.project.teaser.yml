@@ -1,0 +1,65 @@
+uuid: 48b0f541-089c-41de-ba20-afd42551ace9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.project.body
+    - field.field.node.project.field_downloads
+    - field.field.node.project.field_external_links
+    - field.field.node.project.field_logo
+    - field.field.node.project.field_meta_tags
+    - field.field.node.project.field_project_partners
+    - field.field.node.project.field_title_html
+    - field.field.node.project.layout_builder__layout
+    - image.style.medium
+    - node.type.project
+  module:
+    - svg_image
+    - text
+    - user
+id: node.project.teaser
+targetEntityType: node
+bundle: project
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_logo:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: '220'
+        height: '220'
+    third_party_settings: {  }
+  field_title_html:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_downloads: true
+  field_external_links: true
+  field_meta_tags: true
+  field_project_partners: true
+  langcode: true
+  layout_builder__layout: true

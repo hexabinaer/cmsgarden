@@ -14,7 +14,7 @@ bundle: content_management_system
 label: 'External links'
 description: "Always set an appropriate title for the link. Standards are: \r\n<ul><li>Official website</li><li>Forum</li><li>Security information</li><li>Documentation</li><li>Events</li><li>User groups</li></ul>"
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

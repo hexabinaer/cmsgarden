@@ -12,6 +12,6 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<em lang> <code> <span lang class> <acronym> <abbr>'
+      allowed_html: '<em lang> <code> <span lang class> <acronym title class> <abbr title class>'
       filter_html_help: false
       filter_html_nofollow: false

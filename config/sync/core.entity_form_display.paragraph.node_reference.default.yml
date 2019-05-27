@@ -1,0 +1,35 @@
+uuid: ab34b0dc-74e1-4787-ae1b-d28b893993f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.node_reference.field_content_page
+    - field.field.paragraph.node_reference.field_section_title
+    - paragraphs.paragraphs_type.node_reference
+  module:
+    - text
+id: paragraph.node_reference.default
+targetEntityType: paragraph
+bundle: node_reference
+mode: default
+content:
+  field_content_page:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,21 @@
+uuid: 7a482974-f439-48d2-842e-8dcd350aaf71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_html
+    - node.type.project
+  module:
+    - text
+id: node.project.field_title_html
+field_name: field_title_html
+entity_type: node
+bundle: project
+label: 'HTML title'
+description: 'This is the rendered headline (h1). Write the CMS name how it is usually written (including special characters, capitals). You may add markup (such as em or span lang="fr") for accessibility here.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

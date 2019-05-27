@@ -14,7 +14,7 @@ bundle: event
 label: 'Event location'
 description: "Enter the address for visitors (may differ from postal address!).\r\nYou may enter a second address for e. g. a social event."
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     country_code: DE

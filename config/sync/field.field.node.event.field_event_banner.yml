@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_event_banner
     - node.type.event
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: node.event.field_event_banner
 field_name: field_event_banner
 entity_type: node
@@ -14,7 +21,7 @@ bundle: event
 label: 'Veranstaltungslogo oder -banner'
 description: "Wiederverwendung von Bildern wird bevorzugt. Bitte vor dem Upload \r\n<a href=\"/admin/content/files\">Bildarchiv prüfen</a>."
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

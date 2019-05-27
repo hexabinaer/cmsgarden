@@ -8,10 +8,10 @@ id: node.page.title
 field_name: title
 entity_type: node
 bundle: page
-label: Title
+label: 'Administrative title'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

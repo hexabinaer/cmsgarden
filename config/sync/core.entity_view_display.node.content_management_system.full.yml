@@ -18,11 +18,13 @@ dependencies:
     - field.field.node.content_management_system.field_license
     - field.field.node.content_management_system.field_link
     - field.field.node.content_management_system.field_major_release
+    - field.field.node.content_management_system.field_meta_tags
     - field.field.node.content_management_system.field_open_source_as_of
     - field.field.node.content_management_system.field_programming_language
     - field.field.node.content_management_system.field_registered_users
     - field.field.node.content_management_system.field_representative
     - field.field.node.content_management_system.field_termref_logo
+    - field.field.node.content_management_system.field_title_html
     - field.field.node.content_management_system.field_total_downloads
     - field.field.node.content_management_system.field_total_installs
     - node.type.content_management_system
@@ -41,12 +43,40 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: layout_onecol
-        layout_settings: {  }
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 50-50
         components:
+          97c7cf58-e85a-4355-a065-86d71b8c50d0:
+            uuid: 97c7cf58-e85a-4355-a065-86d71b8c50d0
+            region: first
+            configuration:
+              id: 'field_block:node:content_management_system:field_title_html'
+              label: 'HTML title'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          caa399f1-b133-4059-9c11-a575e5c60722:
+            uuid: caa399f1-b133-4059-9c11-a575e5c60722
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:content_management_system:links'
+            additional: {  }
+            weight: 0
           5d2e1b89-f5b6-4845-80d5-04406de3da18:
             uuid: 5d2e1b89-f5b6-4845-80d5-04406de3da18
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -60,20 +90,16 @@ third_party_settings:
                   link: false
                 third_party_settings: {  }
             additional: {  }
-            weight: 0
-          caa399f1-b133-4059-9c11-a575e5c60722:
-            uuid: caa399f1-b133-4059-9c11-a575e5c60722
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:content_management_system:links'
-            additional: {  }
             weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 75-25
+        components:
           3ff1ab6e-f2c1-4b17-a44e-4d0c1cd907ed:
             uuid: 3ff1ab6e-f2c1-4b17-a44e-4d0c1cd907ed
-            region: content
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -86,25 +112,28 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 2
-          08728f5a-065a-4bbe-b7b4-1b4cef666621:
-            uuid: 08728f5a-065a-4bbe-b7b4-1b4cef666621
-            region: content
+          70e74d1b-6714-4f81-8ec9-a0147fe1c5dc:
+            uuid: 70e74d1b-6714-4f81-8ec9-a0147fe1c5dc
+            region: first
             configuration:
+              id: 'field_block:node:content_management_system:field_last_update'
+              label: 'Last information update'
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: inline
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: html_date
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:content_management_system:field_representative'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
             additional: {  }
-            weight: 3
+            weight: 1
           278681c9-618d-461d-85ac-e20f33e0c444:
             uuid: 278681c9-618d-461d-85ac-e20f33e0c444
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -121,61 +150,48 @@ third_party_settings:
                 third_party_settings: {  }
                 type: link
             additional: {  }
-            weight: 4
-          70e74d1b-6714-4f81-8ec9-a0147fe1c5dc:
-            uuid: 70e74d1b-6714-4f81-8ec9-a0147fe1c5dc
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:content_management_system:field_last_update'
-              formatter:
-                label: above
-                settings:
-                  format_type: medium
-                  timezone_override: ''
-                third_party_settings: {  }
-                type: datetime_default
-            additional: {  }
-            weight: 5
+            weight: 0
           a04ab451-9056-4cc7-8eca-51fb2ad0e989:
             uuid: a04ab451-9056-4cc7-8eca-51fb2ad0e989
-            region: content
+            region: second
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:content_management_system:field_initial_release'
+              label: 'Initial release'
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: above
-                settings:
-                  format_type: medium
-                  timezone_override: ''
-                third_party_settings: {  }
                 type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: html_year
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
-            weight: 6
+            weight: 5
           a6ae02ac-ba41-4e59-9884-5157cd872113:
             uuid: a6ae02ac-ba41-4e59-9884-5157cd872113
-            region: content
+            region: second
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:content_management_system:field_open_source_as_of'
+              label: 'Open source as of'
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: above
-                settings:
-                  format_type: medium
-                  timezone_override: ''
-                third_party_settings: {  }
                 type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: html_year
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
-            weight: 7
+            weight: 6
           7f60f280-b33a-4edb-ad8b-f14522032216:
             uuid: 7f60f280-b33a-4edb-ad8b-f14522032216
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -187,10 +203,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: list_default
             additional: {  }
-            weight: 8
+            weight: 1
           1bc3ec43-96ef-485b-b564-b0ad3c29025d:
             uuid: 1bc3ec43-96ef-485b-b564-b0ad3c29025d
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -202,10 +218,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: text_default
             additional: {  }
-            weight: 9
+            weight: 3
           b1f2e9bf-ed4f-4763-bddb-a8364844fce2:
             uuid: b1f2e9bf-ed4f-4763-bddb-a8364844fce2
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -218,10 +234,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: string
             additional: {  }
-            weight: 10
+            weight: 4
           802bf1cb-a3ae-4d93-af81-b41f4b71d875:
             uuid: 802bf1cb-a3ae-4d93-af81-b41f4b71d875
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -237,10 +253,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: number_decimal
             additional: {  }
-            weight: 11
+            weight: 7
           31f9cc61-3182-4093-bd11-20b978b1b1d2:
             uuid: 31f9cc61-3182-4093-bd11-20b978b1b1d2
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -256,10 +272,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: number_decimal
             additional: {  }
-            weight: 12
+            weight: 8
           6141ba27-f319-40f0-b52a-c4420c91f277:
             uuid: 6141ba27-f319-40f0-b52a-c4420c91f277
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -275,10 +291,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: number_decimal
             additional: {  }
-            weight: 13
+            weight: 9
           306067ac-9ad8-4625-a38c-6e399a3fdf5a:
             uuid: 306067ac-9ad8-4625-a38c-6e399a3fdf5a
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -294,10 +310,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: number_decimal
             additional: {  }
-            weight: 14
+            weight: 10
           bba15f09-4598-4e33-b8e3-753a6412502f:
             uuid: bba15f09-4598-4e33-b8e3-753a6412502f
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -313,10 +329,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: number_decimal
             additional: {  }
-            weight: 15
+            weight: 11
           9555f83c-9427-4977-92e3-abbfe7a2137f:
             uuid: 9555f83c-9427-4977-92e3-abbfe7a2137f
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -329,10 +345,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: string
             additional: {  }
-            weight: 16
+            weight: 12
           b55512b4-1cb9-4612-8c41-a36fa013500d:
             uuid: b55512b4-1cb9-4612-8c41-a36fa013500d
-            region: content
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -345,25 +361,27 @@ third_party_settings:
                 third_party_settings: {  }
                 type: entity_reference_label
             additional: {  }
-            weight: 17
+            weight: 3
           59950291-deda-4841-b752-147025a96eaf:
             uuid: 59950291-deda-4841-b752-147025a96eaf
-            region: content
+            region: first
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:content_management_system:field_authors_ext'
+              label: 'Other authors'
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                label: above
+                label: visually_hidden
+                type: text_default
                 settings: {  }
                 third_party_settings: {  }
-                type: text_default
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
-            weight: 18
+            weight: 4
           61d175f5-f23b-4526-b5ad-d4c57df64cc7:
             uuid: 61d175f5-f23b-4526-b5ad-d4c57df64cc7
-            region: content
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -375,10 +393,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: text_default
             additional: {  }
-            weight: 19
+            weight: 5
           de768876-5982-4ede-92f9-6a2b683cb451:
             uuid: de768876-5982-4ede-92f9-6a2b683cb451
-            region: content
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -390,7 +408,28 @@ third_party_settings:
                 third_party_settings: {  }
                 type: text_default
             additional: {  }
-            weight: 20
+            weight: 6
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          08728f5a-065a-4bbe-b7b4-1b4cef666621:
+            uuid: 08728f5a-065a-4bbe-b7b4-1b4cef666621
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:content_management_system:field_representative'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 3
         third_party_settings: {  }
   field_group:
     group_characteristics:
@@ -593,4 +632,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_abschnitt: true
+  field_meta_tags: true
+  field_title_html: true
   langcode: true

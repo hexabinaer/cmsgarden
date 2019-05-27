@@ -462,8 +462,8 @@ display:
         title: FAQ
         description: 'Frequently asked questions'
         expanded: false
-        parent: ''
-        weight: 0
+        parent: 'menu_link_content:410b2a9d-7d9c-45e3-a9da-7e4a8d31dd4c'
+        weight: -50
         context: '0'
         menu_name: main
     cache_metadata:

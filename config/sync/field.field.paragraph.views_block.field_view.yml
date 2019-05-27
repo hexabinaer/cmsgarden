@@ -20,9 +20,11 @@ default_value_callback: ''
 settings:
   force_default: 0
   allowed_views:
+    cmsg_cms_contacts: cmsg_cms_contacts
     cmsg_cms_overview: cmsg_cms_overview
     cmsg_people: cmsg_people
     cmsg_testimonials: cmsg_testimonials
+    cmsg_faq: 0
     cmsg_taxonomy_admin: 0
     comment: 0
     content: 0
@@ -30,6 +32,7 @@ settings:
     block_content: 0
     files: 0
     frontpage: 0
+    moderated_content: 0
     user_admin_people: 0
     comments_recent: 0
     content_recent: 0
@@ -41,6 +44,7 @@ settings:
     who_s_online: 0
   allowed_display_types:
     block: block
+    attachment: 0
     embed: 0
     feed: 0
     default: 0

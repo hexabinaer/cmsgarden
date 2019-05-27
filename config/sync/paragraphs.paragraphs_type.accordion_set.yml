@@ -1,0 +1,18 @@
+uuid: afe86672-263f-435d-8717-8fe8beddfd6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_collection
+id: accordion_set
+label: 'Accordion set'
+icon_uuid: null
+description: ''
+behavior_plugins:
+  grid_layout:
+    paragraph_reference_field: ''
+    available_grid_layouts: {  }
+  lockable: {  }
+  style:
+    groups: {  }
+  language: {  }

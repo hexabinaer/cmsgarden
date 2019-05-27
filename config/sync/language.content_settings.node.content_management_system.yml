@@ -14,5 +14,5 @@ third_party_settings:
 id: node.content_management_system
 target_entity_type_id: node
 target_bundle: content_management_system
-default_langcode: site_default
+default_langcode: current_interface
 language_alterable: true

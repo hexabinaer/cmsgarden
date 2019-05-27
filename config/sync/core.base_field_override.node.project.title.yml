@@ -1,0 +1,18 @@
+uuid: 293bcf6f-f9e5-4c25-bbb0-0ac392f716d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node.project.title
+field_name: title
+entity_type: node
+bundle: project
+label: 'Administrative title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

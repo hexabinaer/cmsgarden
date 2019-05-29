@@ -1,4 +1,4 @@
-uuid: 3188010b-cc37-4ba6-b24d-c84efdc9e769
+uuid: 1828324e-e3d1-438d-88d8-2ab961087139
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ dependencies:
     - ctools
     - views
   theme:
-    - bootstrap_barrio_subtheme
-id: bootstrap_barrio_subtheme_views_block__cmsg_people_block_cms_people
-theme: bootstrap_barrio_subtheme
+    - cmsg_barrio
+id: cmsg_barrio_views_block__cmsg_people_block_cms_people
+theme: cmsg_barrio
 region: content
 weight: 0
 provider: null

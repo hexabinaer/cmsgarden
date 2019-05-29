@@ -1,4 +1,4 @@
-uuid: bbf17fb9-2696-4b6d-84b8-a9050b0c74f2
+uuid: 1ad79219-9e8a-4c3b-b53f-27523264f4e2
 langcode: en
 status: false
 dependencies:
@@ -8,9 +8,9 @@ dependencies:
     - node
     - views
   theme:
-    - bootstrap_barrio_subtheme
-id: bootstrap_barrio_subtheme_views_block__cmsg_testimonials_block_testimonials_cms
-theme: bootstrap_barrio_subtheme
+    - cmsg_barrio
+id: cmsg_barrio_views_block__cmsg_testimonials_block_testimonials_cms
+theme: cmsg_barrio
 region: content
 weight: -1
 provider: null

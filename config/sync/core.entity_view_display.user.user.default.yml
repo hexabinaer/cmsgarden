@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_gdpr
+    - field.field.user.user.field_member
     - field.field.user.user.field_related_cms
     - field.field.user.user.field_user_address
     - field.field.user.user.field_user_bio_short
@@ -21,6 +22,7 @@ dependencies:
   module:
     - field_group
     - layout_builder
+    - options
     - svg_image
     - text
     - user
@@ -54,6 +56,13 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_member:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_related_cms:
     weight: 3
     label: inline

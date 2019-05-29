@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_gdpr
+    - field.field.user.user.field_member
     - field.field.user.user.field_related_cms
     - field.field.user.user.field_user_address
     - field.field.user.user.field_user_bio_short
@@ -24,6 +25,7 @@ dependencies:
     - field_group
     - geolocation_address
     - geolocation_leaflet
+    - path
     - svg_image
     - text
     - user
@@ -52,7 +54,7 @@ third_party_settings:
         - field_user_address
         - field_user_geolocation
       parent_name: group_accordion
-      weight: 21
+      weight: 22
       format_type: accordion_item
       format_settings:
         id: ''
@@ -69,7 +71,7 @@ third_party_settings:
         - field_user_contributing_os
         - field_user_bio_short
       parent_name: group_accordion
-      weight: 22
+      weight: 23
       format_type: accordion_item
       format_settings:
         id: ''
@@ -83,7 +85,7 @@ third_party_settings:
         - field_user_cmsg_participation
         - field_user_participation
       parent_name: group_accordion
-      weight: 23
+      weight: 24
       format_type: accordion_item
       format_settings:
         id: ''
@@ -109,6 +111,19 @@ third_party_settings:
         required_fields: true
         description: ''
       label: Settings
+    group_administrative:
+      children:
+        - field_member
+      parent_name: ''
+      weight: 2
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: admin__only
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: Administrative
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
@@ -133,6 +148,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_member:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_related_cms:
     weight: 3
@@ -165,7 +186,7 @@ content:
     type: datatime_extras_configurable_list
     region: content
   field_user_contributing_os:
-    weight: 5
+    weight: 6
     settings:
       date_order: 'Y'
       time_type: none
@@ -702,6 +723,12 @@ content:
     region: content
   language:
     weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

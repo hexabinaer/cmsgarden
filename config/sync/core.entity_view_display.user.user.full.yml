@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.user.full
     - field.field.user.user.field_gdpr
+    - field.field.user.user.field_member
     - field.field.user.user.field_related_cms
     - field.field.user.user.field_user_address
     - field.field.user.user.field_user_bio_short
@@ -20,6 +21,7 @@ dependencies:
     - field.field.user.user.user_picture
     - filter.format.minimal_html
     - image.style.thumbnail
+    - views.view.cmsg_members_user
   module:
     - address
     - datetime
@@ -30,6 +32,7 @@ dependencies:
     - svg_image
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -89,9 +92,9 @@ third_party_settings:
             weight: 2
         third_party_settings: {  }
       -
-        layout_id: layout_twocol_section
+        layout_id: layout_threecol_section
         layout_settings:
-          column_widths: 50-50
+          column_widths: 33-34-33
         components:
           68f3162d-3757-42f3-8f04-8a30d192f6eb:
             uuid: 68f3162d-3757-42f3-8f04-8a30d192f6eb
@@ -129,6 +132,22 @@ third_party_settings:
                 type: text_default
             additional: {  }
             weight: 1
+          fe2866f4-15b5-4b6d-bf11-5adc3ef11107:
+            uuid: fe2866f4-15b5-4b6d-bf11-5adc3ef11107
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_related_cms'
+              formatter:
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 2
           74eff97f-9062-48f8-99b8-67adaa260679:
             uuid: 74eff97f-9062-48f8-99b8-67adaa260679
             region: second
@@ -186,30 +205,9 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 2
-          fe2866f4-15b5-4b6d-bf11-5adc3ef11107:
-            uuid: fe2866f4-15b5-4b6d-bf11-5adc3ef11107
-            region: second
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:user:user:field_related_cms'
-              formatter:
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 3
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
           2a404f56-b550-4728-a9fe-3aa2f8a25ac4:
             uuid: 2a404f56-b550-4728-a9fe-3aa2f8a25ac4
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -221,12 +219,25 @@ third_party_settings:
                 third_party_settings: {  }
                 type: text_default
             additional: {  }
+            weight: 3
+          9620a75d-6848-4975-b10e-8f82d9005712:
+            uuid: 9620a75d-6848-4975-b10e-8f82d9005712
+            region: third
+            configuration:
+              id: 'views_block:cmsg_members_user-block_member_badge'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
             weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
         layout_settings:
-          column_widths: 25-75
+          column_widths: 33-67
         components:
           ff807970-fd19-49b3-a07d-dc041298538d:
             uuid: ff807970-fd19-49b3-a07d-dc041298538d
@@ -728,12 +739,13 @@ third_party_settings:
             weight: 0
         third_party_settings: {  }
       -
-        layout_id: layout_onecol
-        layout_settings: {  }
+        layout_id: layout_threecol_section
+        layout_settings:
+          column_widths: 33-34-33
         components:
           5765e28d-52d8-4042-8efb-153ae89dcfd1:
             uuid: 5765e28d-52d8-4042-8efb-153ae89dcfd1
-            region: content
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -746,7 +758,7 @@ third_party_settings:
                 third_party_settings: {  }
                 type: entity_reference_label
             additional: {  }
-            weight: 12
+            weight: 0
         third_party_settings: {  }
   field_group:
     group_div_fullname:
@@ -1352,5 +1364,6 @@ content:
     label: hidden
 hidden:
   field_gdpr: true
+  field_member: true
   langcode: true
   member_for: true

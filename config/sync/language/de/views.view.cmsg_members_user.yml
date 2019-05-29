@@ -1,0 +1,15 @@
+display:
+  attachment_user_membership_cta:
+    display_options:
+      empty:
+        area:
+          content:
+            value: "<p class=\"among-us\">In deinem Profil fehlt ein Mitglieds-Badge.<br />\r\n<a href=\"/membership/application\">Werde heute noch Mitglied im CMS Garden!</a></p>\r\n"
+            format: basic_html
+  default:
+    display_options:
+      title: 'Mitglied des CMS Garden'
+      fields:
+        uid:
+          alter:
+            text: '<span lang="en">Badge</span>: {{ field_member_1 }} im CMS Garden e. V.'

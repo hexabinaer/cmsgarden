@@ -1,0 +1,18 @@
+uuid: d778ee5f-f6d1-4b7c-b2e4-688e8629910b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Organization
+type: organization
+description: 'Add a new organizational member or a non-profit, CMS-related, association (administrative staff only).'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,4 +1,4 @@
-uuid: 3622f54e-1010-4333-876d-b87ffe9b8d41
+uuid: e35e84d9-3feb-4db4-b94a-ab5660bb860d
 langcode: en
 status: true
 dependencies:
@@ -8,18 +8,18 @@ dependencies:
     - system
     - views
   theme:
-    - bootstrap_barrio_subtheme
-id: bootstrap_barrio_subtheme_front_cms_overview_block1
-theme: bootstrap_barrio_subtheme
+    - cmsg_barrio
+id: cmsg_barrio_front_cms_overview_block1
+theme: cmsg_barrio
 region: header
-weight: 0
+weight: -6
 provider: null
 plugin: 'views_block:cmsg_cms_overview-block_1'
 settings:
   id: 'views_block:cmsg_cms_overview-block_1'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:

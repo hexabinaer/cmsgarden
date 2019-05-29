@@ -1,0 +1,18 @@
+uuid: a6aec846-7e03-481e-9298-3c0af5b5a8aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.organization
+id: node.organization.title
+field_name: title
+entity_type: node
+bundle: organization
+label: 'Administrative title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

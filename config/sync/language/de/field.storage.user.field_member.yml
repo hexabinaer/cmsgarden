@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    -
+      label: 'Kein MItglied'
+    -
+      label: 'Ordentliches Mitglied'
+    -
+      label: Fördermitglied

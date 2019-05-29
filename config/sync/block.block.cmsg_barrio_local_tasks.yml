@@ -1,13 +1,13 @@
-uuid: f7fb78b7-2977-4e0b-b767-b7313b987056
+uuid: 94437d72-f2fd-4069-8024-15f03354cb26
 langcode: en
 status: true
 dependencies:
   theme:
-    - bootstrap_barrio_subtheme
+    - cmsg_barrio
 _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
-id: bootstrap_barrio_subtheme_local_tasks
-theme: bootstrap_barrio_subtheme
+id: cmsg_barrio_local_tasks
+theme: cmsg_barrio
 region: content
 weight: -5
 provider: null

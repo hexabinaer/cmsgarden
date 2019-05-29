@@ -18,12 +18,12 @@ dependencies:
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
     - filter.format.minimal_html
+    - image.style.medium
     - node.type.organization
   module:
     - address
     - geolocation
     - layout_builder
-    - layout_discovery
     - link
     - options
     - svg_image
@@ -59,12 +59,12 @@ content:
     region: content
     label: hidden
     settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
+      image_style: medium
       image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: '220'
+        height: '220'
     third_party_settings: {  }
   field_member:
     type: list_default
@@ -84,9 +84,10 @@ content:
     weight: 6
     label: inline
     settings:
-      link: true
+      view_mode: logo_linked
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_org_geolocation:
     weight: 9

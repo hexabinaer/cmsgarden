@@ -1,0 +1,30 @@
+uuid: 3622f54e-1010-4333-876d-b87ffe9b8d41
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.cmsg_cms_overview
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap_barrio_subtheme
+id: bootstrap_barrio_subtheme_front_cms_overview_block1
+theme: bootstrap_barrio_subtheme
+region: header
+weight: 0
+provider: null
+plugin: 'views_block:cmsg_cms_overview-block_1'
+settings:
+  id: 'views_block:cmsg_cms_overview-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

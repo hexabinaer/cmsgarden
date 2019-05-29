@@ -1,0 +1,32 @@
+uuid: bbf17fb9-2696-4b6d-84b8-a9050b0c74f2
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.cmsg_testimonials
+  module:
+    - node
+    - views
+  theme:
+    - bootstrap_barrio_subtheme
+id: bootstrap_barrio_subtheme_views_block__cmsg_testimonials_block_testimonials_cms
+theme: bootstrap_barrio_subtheme
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:cmsg_testimonials-block_testimonials_cms'
+settings:
+  id: 'views_block:cmsg_testimonials-block_testimonials_cms'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      content_management_system: content_management_system
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

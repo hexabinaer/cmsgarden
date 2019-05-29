@@ -24,6 +24,9 @@ module:
   diff: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_browser: 0
+  entity_browser_enhanced: 0
+  entity_browser_example: 0
   entity_limit: 0
   entity_reference_revisions: 0
   field: 0

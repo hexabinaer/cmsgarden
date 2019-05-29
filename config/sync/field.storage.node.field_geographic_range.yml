@@ -1,0 +1,30 @@
+uuid: 46046db3-299f-405c-8a04-807adc126753
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_geographic_range
+field_name: field_geographic_range
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: International
+    -
+      value: '1'
+      label: National
+    -
+      value: '2'
+      label: Local
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

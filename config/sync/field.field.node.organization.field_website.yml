@@ -1,0 +1,23 @@
+uuid: 254d1ffa-6e5e-449a-ad05-b28c44775078
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.organization
+  module:
+    - link
+id: node.organization.field_website
+field_name: field_website
+entity_type: node
+bundle: organization
+label: Website
+description: 'The official website of the organization. (If absolutely useful, you may enter another one.)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

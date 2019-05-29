@@ -1,8 +1,9 @@
-uuid: 0c54b3a6-6f2d-4a76-aa4d-34f98386161a
+uuid: 8f64056a-8a12-4002-a649-db26b77d3a92
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.organization.body
     - field.field.node.organization.field_associated_users
     - field.field.node.organization.field_geographic_range
@@ -16,46 +17,47 @@ dependencies:
     - field.field.node.organization.field_org_tagline
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
+    - filter.format.minimal_html
     - node.type.organization
   module:
     - address
-    - datetime
     - geolocation
+    - layout_builder
+    - layout_discovery
     - link
     - options
     - svg_image
     - text
     - user
-id: node.organization.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.organization.full
 targetEntityType: node
 bundle: organization
-mode: default
+mode: full
 content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   field_associated_users:
-    weight: 103
+    weight: 10
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_geographic_range:
-    weight: 110
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_logo:
-    weight: 113
-    label: above
+    type: image
+    weight: 2
+    region: content
+    label: hidden
     settings:
       svg_attributes:
         width: ''
@@ -64,72 +66,71 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
-    type: image
-    region: content
   field_member:
-    weight: 102
-    label: above
+    type: list_default
+    weight: 1
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
-    region: content
-  field_member_since:
-    weight: 112
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_membership_no:
-    weight: 111
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_org_address:
-    weight: 104
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_org_cms:
-    weight: 107
-    label: above
+    weight: 6
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_org_geolocation:
-    weight: 106
-    label: above
-    settings: {  }
+    weight: 9
+    label: hidden
+    settings:
+      title: ''
+      set_marker: '1'
+      common_map: '1'
+      data_provider_settings: {  }
+      map_provider_id: leaflet
+      centre:
+        fit_bounds:
+          enable: true
+          weight: -101
+          map_center_id: fit_bounds
+          settings:
+            reset_zoom: true
+      map_provider_settings: {  }
+      info_text:
+        value: ''
+        format: minimal_html
+      use_overridden_map_settings: 0
     third_party_settings: {  }
-    type: geolocation_latlng
+    type: geolocation_map
     region: content
   field_org_tagline:
-    weight: 108
-    label: above
+    type: text_default
+    weight: 4
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
-    region: content
   field_title_html:
-    weight: 105
-    label: above
+    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_website:
-    weight: 109
-    label: above
+    type: link
+    weight: 7
+    region: content
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -137,12 +138,13 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
-    region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_geographic_range: true
+  field_member_since: true
+  field_membership_no: true
   langcode: true

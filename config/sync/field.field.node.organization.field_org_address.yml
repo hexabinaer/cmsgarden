@@ -1,0 +1,47 @@
+uuid: 54611e36-fb12-4198-b0da-66743edbc463
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_address
+    - node.type.organization
+  module:
+    - address
+id: node.organization.field_org_address
+field_name: field_org_address
+entity_type: node
+bundle: organization
+label: Address
+description: 'You can enter up to 3 addresses here. If that''s not sufficient, please add a link to an appropriate page on your website to the profile text.'
+required: false
+translatable: false
+default_value:
+  -
+    langcode: ''
+    country_code: DE
+    administrative_area: null
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: ''
+    given_name: null
+    additional_name: null
+    family_name: null
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+  fields: {  }
+field_type: address

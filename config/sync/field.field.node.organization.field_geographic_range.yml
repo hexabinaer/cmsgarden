@@ -1,0 +1,21 @@
+uuid: 3557be1e-5899-4da5-b570-9e59b65d237d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geographic_range
+    - node.type.organization
+  module:
+    - options
+id: node.organization.field_geographic_range
+field_name: field_geographic_range
+entity_type: node
+bundle: organization
+label: 'Geographical range'
+description: 'The geographical range the organization focuses on. Only select multiple if the organization has dedicated sub-divisions.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

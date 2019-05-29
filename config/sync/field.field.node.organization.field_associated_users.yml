@@ -1,0 +1,28 @@
+uuid: 720fb4d2-1f9c-4204-8a3c-4ec5d1c21777
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_associated_users
+    - node.type.organization
+id: node.organization.field_associated_users
+field_name: field_associated_users
+entity_type: node
+bundle: organization
+label: 'CMS people associated with this organization'
+description: 'Pick the users associated with this organization. Note that users can also set a reference in their profile.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

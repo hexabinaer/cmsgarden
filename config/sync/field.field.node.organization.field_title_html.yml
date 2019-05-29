@@ -1,0 +1,21 @@
+uuid: 584b0fac-e945-4cb1-aa83-b1959a04fa94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_html
+    - node.type.organization
+  module:
+    - text
+id: node.organization.field_title_html
+field_name: field_title_html
+entity_type: node
+bundle: organization
+label: 'Organization''s full name'
+description: 'Just the name, no mission statements, please ;-)'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

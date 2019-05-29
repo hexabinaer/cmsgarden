@@ -1,0 +1,23 @@
+uuid: 4d5a9ef1-0aa9-4fb5-b645-ba420930f636
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_membership_no
+    - node.type.organization
+id: node.organization.field_membership_no
+field_name: field_membership_no
+entity_type: node
+bundle: organization
+label: 'Membership no.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

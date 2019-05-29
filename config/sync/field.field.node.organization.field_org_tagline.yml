@@ -1,0 +1,21 @@
+uuid: ebf33c4e-b7eb-4a8f-97f4-812e9449e5c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_tagline
+    - node.type.organization
+  module:
+    - text
+id: node.organization.field_org_tagline
+field_name: field_org_tagline
+entity_type: node
+bundle: organization
+label: Tagline
+description: 'The tagline or mission statement of the organization'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

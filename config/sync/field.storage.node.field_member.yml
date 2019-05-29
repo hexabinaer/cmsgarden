@@ -1,0 +1,30 @@
+uuid: 6a0f132c-9060-4a12-bab6-687238569f13
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_member
+field_name: field_member
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: no_member
+      label: 'No member'
+    -
+      value: member_full
+      label: 'Full member'
+    -
+      value: member_sust
+      label: Sustaining
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

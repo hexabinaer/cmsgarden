@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_associated_org
     - field.field.user.user.field_gdpr
     - field.field.user.user.field_member
+    - field.field.user.user.field_member_since
+    - field.field.user.user.field_membership_no
     - field.field.user.user.field_related_cms
     - field.field.user.user.field_user_address
     - field.field.user.user.field_user_bio_short
@@ -114,6 +117,8 @@ third_party_settings:
     group_administrative:
       children:
         - field_member
+        - field_membership_no
+        - field_member_since
       parent_name: ''
       weight: 2
       format_type: accordion_item
@@ -141,6 +146,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_associated_org:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_gdpr:
     weight: 1
     settings:
@@ -154,6 +168,23 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_member_since:
+    weight: 33
+    settings:
+      date_order: 'Y'
+      time_type: none
+      increment: '15'
+      date_year_range: '1900:2050'
+    third_party_settings: {  }
+    type: datatime_extras_configurable_list
+    region: content
+  field_membership_no:
+    weight: 32
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_related_cms:
     weight: 3

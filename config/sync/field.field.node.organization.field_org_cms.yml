@@ -1,0 +1,29 @@
+uuid: 0d4e2e21-25f1-455b-a89f-c88b4bab5f07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_cms
+    - node.type.organization
+    - taxonomy.vocabulary.content_management_systems
+id: node.organization.field_org_cms
+field_name: field_org_cms
+entity_type: node
+bundle: organization
+label: CMS
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_management_systems: content_management_systems
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,18 +1,18 @@
-uuid: 0750d787-4418-44e4-9cac-887eb170a02e
+uuid: cbeb013d-4c2b-4fc7-948a-1a964147e5d9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_member
+    - field.storage.node.field_member
+    - node.type.organization
   module:
     - options
-    - user
-id: user.user.field_member
+id: node.organization.field_member
 field_name: field_member
-entity_type: user
-bundle: user
+entity_type: node
+bundle: organization
 label: 'Member of CMS Garden'
-description: 'To be set be administrative staff.'
+description: ''
 required: true
 translatable: false
 default_value:

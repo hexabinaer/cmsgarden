@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.full
+    - field.field.user.user.field_associated_org
+    - field.field.user.user.field_field_mobile_phone_no
+    - field.field.user.user.field_field_telephone_no_office
     - field.field.user.user.field_gdpr
     - field.field.user.user.field_member
+    - field.field.user.user.field_member_since
+    - field.field.user.user.field_membership_no
     - field.field.user.user.field_related_cms
     - field.field.user.user.field_user_address
     - field.field.user.user.field_user_bio_short
@@ -100,21 +105,30 @@ third_party_settings:
             uuid: 68f3162d-3757-42f3-8f04-8a30d192f6eb
             region: first
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:user:user:user_picture'
+              label: Bild
+              provider: layout_builder
+              label_display: '0'
               formatter:
+                label: hidden
                 type: image
                 settings:
                   image_style: thumbnail
-                  image_link: content
+                  image_link: ''
+                  svg_render_as_image: 1
                   svg_attributes:
-                    width: ''
-                    height: ''
-                  svg_render_as_image: true
-                third_party_settings: {  }
-                label: hidden
+                    width: '220'
+                    height: '220'
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
             weight: 0
           64ab3c35-96d6-4332-a013-9f7ac0d479e4:
@@ -136,16 +150,26 @@ third_party_settings:
             uuid: fe2866f4-15b5-4b6d-bf11-5adc3ef11107
             region: first
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:user:user:field_related_cms'
+              label: 'Working with'
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: inline
+                type: entity_reference_entity_view
                 settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
+                  view_mode: logo_linked
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
             weight: 2
           74eff97f-9062-48f8-99b8-67adaa260679:
@@ -759,6 +783,24 @@ third_party_settings:
                 type: entity_reference_label
             additional: {  }
             weight: 0
+          87d88ffd-6605-4fd7-a7b8-b8f453079b1f:
+            uuid: 87d88ffd-6605-4fd7-a7b8-b8f453079b1f
+            region: second
+            configuration:
+              id: 'field_block:user:user:field_associated_org'
+              label: 'Associated with'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
   field_group:
     group_div_fullname:
@@ -1363,7 +1405,12 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_associated_org: true
+  field_field_mobile_phone_no: true
+  field_field_telephone_no_office: true
   field_gdpr: true
   field_member: true
+  field_member_since: true
+  field_membership_no: true
   langcode: true
   member_for: true

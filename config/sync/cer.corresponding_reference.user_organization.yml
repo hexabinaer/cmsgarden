@@ -1,0 +1,14 @@
+uuid: 8453eb0d-656d-43a2-b797-0ad5a07f79a3
+langcode: en
+status: true
+dependencies: {  }
+id: user_organization
+label: 'User <-> Organization'
+enabled: true
+first_field: field_associated_org
+second_field: field_associated_users
+bundles:
+  node:
+    - '*'
+  user:
+    - '*'

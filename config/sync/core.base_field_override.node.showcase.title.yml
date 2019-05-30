@@ -1,0 +1,18 @@
+uuid: 31dff2ee-53e2-4ce4-a989-81b641f7c1d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.showcase
+id: node.showcase.title
+field_name: title
+entity_type: node
+bundle: showcase
+label: 'Administrative title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

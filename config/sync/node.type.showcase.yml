@@ -1,4 +1,4 @@
-uuid: d778ee5f-f6d1-4b7c-b2e4-688e8629910b
+uuid: 37dece6a-7b94-456f-9719-1b5beb61c050
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Organization
-type: organization
-description: 'Add a new organizational member or a non-profit, CMS-related, association (administrative staff only).'
+name: Showcase
+type: showcase
+description: 'Add an outstanding project built with your open source CMS for general reference and to use in your CMS chapter.'
 help: ''
 new_revision: true
 preview_mode: 1

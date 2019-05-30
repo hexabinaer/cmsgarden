@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Testimonial
 type: testimonial
-description: ''
+description: 'Add a statement in favor of CMS Garden, open source, or a specific CMS.'
 help: 'The title is for internal use only. Please enter your name and the current year.'
 new_revision: true
 preview_mode: 1

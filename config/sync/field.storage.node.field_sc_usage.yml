@@ -1,0 +1,27 @@
+uuid: c8f6e558-9def-483a-8658-c0f725375186
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_sc_usage
+field_name: field_sc_usage
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: standalone
+      label: 'Use a standalone as a showcase project'
+    -
+      value: embedded
+      label: 'Use internally for a CMS chapter'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -7,4 +7,8 @@ label: 'CMS term portrait'
 enabled: true
 first_field: field_termref_logo
 second_field: field_noderef_cms
-bundles: {  }
+bundles:
+  node:
+    - '*'
+  taxonomy_term:
+    - '*'

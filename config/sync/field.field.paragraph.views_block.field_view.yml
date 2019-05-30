@@ -22,17 +22,22 @@ settings:
   allowed_views:
     cmsg_cms_contacts: cmsg_cms_contacts
     cmsg_cms_overview: cmsg_cms_overview
+    cmsg_events: cmsg_events
+    cmsg_faq: cmsg_faq
+    cmsg_magazine: cmsg_magazine
     cmsg_people: cmsg_people
     cmsg_testimonials: cmsg_testimonials
-    cmsg_faq: 0
+    cmsg_members_user: 0
     cmsg_taxonomy_admin: 0
     comment: 0
     content: 0
     content_management_system_events: 0
     block_content: 0
     files: 0
+    files_entity_browser: 0
     frontpage: 0
     moderated_content: 0
+    nodes_entity_browser: 0
     user_admin_people: 0
     comments_recent: 0
     content_recent: 0
@@ -46,6 +51,7 @@ settings:
     block: block
     attachment: 0
     embed: 0
+    entity_browser: 0
     feed: 0
     default: 0
     page: 0

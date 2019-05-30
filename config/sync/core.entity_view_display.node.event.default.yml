@@ -17,6 +17,7 @@ dependencies:
   module:
     - address
     - datetime_range
+    - ds
     - link
     - metatag
     - svg_image
@@ -47,6 +48,10 @@ content:
     settings:
       image_style: ''
       image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
     third_party_settings: {  }
     type: image
     region: content
@@ -54,10 +59,18 @@ content:
     weight: 2
     label: hidden
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
-    third_party_settings: {  }
+      format_type: html_date
+      separator: '-'
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: daterange_default
     region: content
   field_event_location:

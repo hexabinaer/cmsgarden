@@ -1,0 +1,40 @@
+uuid: 389ea2c9-0644-4838-a972-6e6f630b7546
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.showcase.body
+    - field.field.node.showcase.field_sc_cms
+    - field.field.node.showcase.field_sc_screenshot
+    - field.field.node.showcase.field_sc_usage
+    - field.field.node.showcase.field_title_html
+    - node.type.showcase
+  module:
+    - svg_image
+    - user
+id: node.showcase.teaser
+targetEntityType: node
+bundle: showcase
+mode: teaser
+content:
+  field_sc_screenshot:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_sc_cms: true
+  field_sc_usage: true
+  field_title_html: true
+  langcode: true
+  links: true

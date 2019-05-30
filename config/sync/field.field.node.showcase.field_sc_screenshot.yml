@@ -1,0 +1,38 @@
+uuid: 10d90c8c-42a4-4e30-a0ef-20fb069333d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sc_screenshot
+    - node.type.showcase
+  module:
+    - image
+id: node.showcase.field_sc_screenshot
+field_name: field_sc_screenshot
+entity_type: node
+bundle: showcase
+label: Screenshot
+description: 'Please enter a short description for accessibility. The title will be used as a caption to the image.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: showcase
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '6 MB'
+  max_resolution: 2560x1440
+  min_resolution: 600x400
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

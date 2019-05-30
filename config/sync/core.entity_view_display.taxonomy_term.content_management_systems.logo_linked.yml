@@ -8,65 +8,65 @@ dependencies:
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
+    - image.style.medium
     - taxonomy.vocabulary.content_management_systems
   module:
+    - ds
     - layout_builder
-    - layout_discovery
     - svg_image
 third_party_settings:
   layout_builder:
     allow_custom: false
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          d9ef2228-98e6-4044-9ce9-54f9b1453e41:
-            uuid: d9ef2228-98e6-4044-9ce9-54f9b1453e41
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:content_management_systems:field_cms_logo'
-              label: Logo
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: image
-                settings:
-                  image_style: medium
-                  image_link: content
-                  svg_render_as_image: 1
-                  svg_attributes:
-                    width: '220'
-                    height: '220'
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
+    enabled: false
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_cms_logo
+        - field_noderef_cms
 id: taxonomy_term.content_management_systems.logo_linked
 targetEntityType: taxonomy_term
 bundle: content_management_systems
 mode: logo_linked
 content:
   field_cms_logo:
-    weight: 0
-    label: above
-    settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
     type: image
+    weight: 0
     region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: '220'
+        height: '220'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_noderef_cms:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
 hidden:
   description: true
   field_machine_name: true
-  field_noderef_cms: true
   field_status: true
   langcode: true

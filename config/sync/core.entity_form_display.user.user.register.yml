@@ -1,8 +1,9 @@
-uuid: 93179b08-7521-4972-b57a-11c702958a68
+uuid: 29597736-2198-42f2-9f15-395a90f7df7a
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.user.register
     - field.field.user.user.field_associated_org
     - field.field.user.user.field_field_mobile_phone_no
     - field.field.user.user.field_field_telephone_no_office
@@ -52,20 +53,17 @@ third_party_settings:
         classes: ''
         effect: none
       label: Accordion
-      region: content
+      region: hidden
     group_personal:
       children:
-        - translation
-        - langcode
-        - user_picture
         - field_user_first_name
         - field_user_middle_name
         - field_user_last_name
+        - user_picture
         - field_user_address
         - field_user_geolocation
-        - field_user_bio_short
       parent_name: group_accordion
-      weight: 32
+      weight: 22
       format_type: accordion_item
       format_settings:
         id: ''
@@ -74,16 +72,17 @@ third_party_settings:
         required_fields: true
         description: ''
       label: Personal
-      region: content
+      region: hidden
     group_work:
       children:
         - field_user_main_profession
         - field_related_cms
         - field_user_opensourcesince
         - field_user_contributing_os
+        - field_user_bio_short
         - field_associated_org
       parent_name: group_accordion
-      weight: 33
+      weight: 23
       format_type: accordion_item
       format_settings:
         id: ''
@@ -92,13 +91,13 @@ third_party_settings:
         required_fields: true
         description: ''
       label: Work
-      region: content
+      region: hidden
     group_cms_garden:
       children:
         - field_user_cmsg_participation
         - field_user_participation
       parent_name: group_accordion
-      weight: 34
+      weight: 24
       format_type: accordion_item
       format_settings:
         id: ''
@@ -107,23 +106,26 @@ third_party_settings:
         required_fields: true
         description: ''
       label: 'CMS Garden'
-      region: content
+      region: hidden
     group_settings:
       children:
+        - langcode
+        - translation
         - account
         - language
-        - timezone
         - contact
+        - timezone
       parent_name: group_accordion
-      weight: 31
+      weight: 20
       format_type: accordion_item
       format_settings:
-        formatter: open
-        required_fields: true
         id: ''
         classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
       label: Settings
-      region: content
+      region: hidden
     group_administrative:
       children:
         - field_member
@@ -131,7 +133,7 @@ third_party_settings:
         - field_member_since
         - path
       parent_name: group_accordion
-      weight: 36
+      weight: 26
       format_type: accordion_item
       format_settings:
         id: ''
@@ -140,14 +142,13 @@ third_party_settings:
         required_fields: true
         description: ''
       label: Administrative
-      region: content
+      region: hidden
     group_internal_contact:
       children:
         - field_field_telephone_no_office
         - field_field_mobile_phone_no
-        - field_gdpr
       parent_name: group_accordion
-      weight: 35
+      weight: 25
       format_type: accordion_item
       format_settings:
         id: ''
@@ -156,26 +157,26 @@ third_party_settings:
         required_fields: true
         description: ''
       label: 'Only for internal use'
-      region: content
+      region: hidden
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
-id: user.user.default
+id: user.user.register
 targetEntityType: user
 bundle: user
-mode: default
+mode: register
 content:
   account:
-    weight: 28
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
   contact:
-    weight: 33
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }
   field_associated_org:
-    weight: 21
+    weight: 8
     settings:
       match_operator: CONTAINS
       size: 60
@@ -184,7 +185,7 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_field_mobile_phone_no:
-    weight: 17
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -192,7 +193,7 @@ content:
     type: string_textfield
     region: content
   field_field_telephone_no_office:
-    weight: 14
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -200,7 +201,7 @@ content:
     type: string_textfield
     region: content
   field_gdpr:
-    weight: 27
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -208,13 +209,13 @@ content:
     type: string_textfield
     region: content
   field_member:
-    weight: 15
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_member_since:
-    weight: 17
+    weight: 33
     settings:
       date_order: 'Y'
       time_type: none
@@ -224,26 +225,26 @@ content:
     type: datatime_extras_configurable_list
     region: content
   field_membership_no:
-    weight: 16
+    weight: 32
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_related_cms:
-    weight: 18
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_user_address:
-    weight: 34
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_user_bio_short:
-    weight: 36
+    weight: 7
     settings:
       rows: 5
       placeholder: ''
@@ -251,7 +252,7 @@ content:
     type: text_textarea
     region: content
   field_user_cmsg_participation:
-    weight: 19
+    weight: 6
     settings:
       date_order: MY
       time_type: none
@@ -261,7 +262,7 @@ content:
     type: datatime_extras_configurable_list
     region: content
   field_user_contributing_os:
-    weight: 20
+    weight: 6
     settings:
       date_order: 'Y'
       time_type: none
@@ -271,7 +272,7 @@ content:
     type: datatime_extras_configurable_list
     region: content
   field_user_first_name:
-    weight: 31
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -280,7 +281,7 @@ content:
     region: content
   field_user_geolocation:
     type: geolocation_leaflet
-    weight: 35
+    weight: 7
     region: content
     settings:
       centre:
@@ -760,7 +761,7 @@ content:
         button_position: topleft
         direction: one_way
   field_user_last_name:
-    weight: 33
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -768,7 +769,7 @@ content:
     type: string_textfield
     region: content
   field_user_main_profession:
-    weight: 17
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -776,7 +777,7 @@ content:
     type: text_textfield
     region: content
   field_user_middle_name:
-    weight: 32
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -784,7 +785,7 @@ content:
     type: string_textfield
     region: content
   field_user_opensourcesince:
-    weight: 19
+    weight: 5
     settings:
       date_order: 'Y'
       time_type: none
@@ -794,36 +795,36 @@ content:
     type: datatime_extras_configurable_list
     region: content
   field_user_participation:
-    weight: 20
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   langcode:
     type: language_select
-    weight: 1
+    weight: 21
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   language:
-    weight: 31
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 18
+    weight: 34
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 32
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 0
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -833,6 +834,6 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: 30
+    weight: 5
     region: content
 hidden: {  }

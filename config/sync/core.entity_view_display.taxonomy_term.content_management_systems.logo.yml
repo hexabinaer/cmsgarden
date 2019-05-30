@@ -6,15 +6,28 @@ dependencies:
     - core.entity_view_mode.taxonomy_term.logo
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
     - field.field.taxonomy_term.content_management_systems.field_machine_name
+    - field.field.taxonomy_term.content_management_systems.field_noderef_cms
+    - field.field.taxonomy_term.content_management_systems.field_status
     - image.style.medium
     - taxonomy.vocabulary.content_management_systems
   module:
+    - ds
     - layout_builder
     - svg_image
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_cms_logo
 id: taxonomy_term.content_management_systems.logo
 targetEntityType: taxonomy_term
 bundle: content_management_systems
@@ -36,4 +49,6 @@ content:
 hidden:
   description: true
   field_machine_name: true
+  field_noderef_cms: true
+  field_status: true
   langcode: true

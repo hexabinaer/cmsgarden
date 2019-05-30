@@ -24,6 +24,7 @@ dependencies:
     - address
     - geolocation
     - layout_builder
+    - layout_discovery
     - link
     - options
     - svg_image
@@ -32,7 +33,225 @@ dependencies:
 third_party_settings:
   layout_builder:
     allow_custom: false
-    enabled: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          656f39f1-922e-4fe4-92f1-140bf99b45b8:
+            uuid: 656f39f1-922e-4fe4-92f1-140bf99b45b8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:organization:field_title_html'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 1
+          fc743f38-af9c-45f3-8e7e-b75ab265ef8b:
+            uuid: fc743f38-af9c-45f3-8e7e-b75ab265ef8b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:organization:links'
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          column_widths: 33-34-33
+        components:
+          44025da7-2276-4bb0-8008-1e8e716e19ff:
+            uuid: 44025da7-2276-4bb0-8008-1e8e716e19ff
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:organization:field_logo'
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_style: medium
+                  image_link: ''
+                  svg_render_as_image: '1'
+                  svg_attributes:
+                    width: '220'
+                    height: '220'
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          353a7527-9634-460e-84f8-506b553194f0:
+            uuid: 353a7527-9634-460e-84f8-506b553194f0
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:organization:field_org_tagline'
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          aa01d3d3-7290-4ff4-a6d0-33d46e5bee82:
+            uuid: aa01d3d3-7290-4ff4-a6d0-33d46e5bee82
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:organization:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          db319e48-88e9-458e-8f4e-2c0a525f55ad:
+            uuid: db319e48-88e9-458e-8f4e-2c0a525f55ad
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:organization:field_org_cms'
+              formatter:
+                label: inline
+                settings:
+                  view_mode: logo_linked
+                  link: false
+                third_party_settings: {  }
+                type: entity_reference_entity_view
+            additional: {  }
+            weight: 1
+          6dec488a-d61f-4135-b1c4-21b720fc612b:
+            uuid: 6dec488a-d61f-4135-b1c4-21b720fc612b
+            region: third
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:organization:field_member'
+              formatter:
+                type: list_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          78c8d1f1-7629-42e3-8a4d-7267d59620c9:
+            uuid: 78c8d1f1-7629-42e3-8a4d-7267d59620c9
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:organization:field_website'
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 33-67
+        components:
+          ec76734e-bd0f-4d5a-9210-cf3374b502cf:
+            uuid: ec76734e-bd0f-4d5a-9210-cf3374b502cf
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:organization:field_org_address'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: address_default
+            additional: {  }
+            weight: 0
+          1b3e949a-74f3-428b-becd-80c67aa8cb56:
+            uuid: 1b3e949a-74f3-428b-becd-80c67aa8cb56
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:organization:field_org_geolocation'
+              formatter:
+                label: hidden
+                settings:
+                  title: ''
+                  set_marker: '1'
+                  common_map: '1'
+                  data_provider_settings: {  }
+                  map_provider_id: leaflet
+                  centre:
+                    fit_bounds:
+                      enable: true
+                      weight: -101
+                      map_center_id: fit_bounds
+                      settings:
+                        reset_zoom: true
+                  map_provider_settings: {  }
+                  info_text:
+                    value: ''
+                    format: minimal_html
+                  use_overridden_map_settings: 0
+                third_party_settings: {  }
+                type: geolocation_map
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          5dad463d-836c-4e07-a8d6-abc79111b0ef:
+            uuid: 5dad463d-836c-4e07-a8d6-abc79111b0ef
+            region: content
+            configuration:
+              id: 'field_block:node:organization:field_associated_users'
+              label: 'CMS people associated with this organization'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: compact
+                third_party_settings:
+                  ds:
+                    ds_limit: '12'
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 9
+        third_party_settings: {  }
 id: node.organization.full
 targetEntityType: node
 bundle: organization

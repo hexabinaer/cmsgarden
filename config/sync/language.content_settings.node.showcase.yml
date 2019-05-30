@@ -1,0 +1,16 @@
+uuid: 79e8230b-b98f-4f36-9fac-e60e209f7945
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.showcase
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.showcase
+target_entity_type_id: node
+target_bundle: showcase
+default_langcode: site_default
+language_alterable: true

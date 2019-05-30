@@ -1,0 +1,21 @@
+uuid: 27c6e660-99ef-4c29-bfab-5519191d1e9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_html
+    - node.type.showcase
+  module:
+    - text
+id: node.showcase.field_title_html
+field_name: field_title_html
+entity_type: node
+bundle: showcase
+label: 'HTML title'
+description: 'The project''s visible headline. You may use HTML for accessibility enhancements (e. g. span lang="en").'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

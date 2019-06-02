@@ -1,0 +1,14 @@
+uuid: 46390432-9431-4aa3-8623-01d3e124b9cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.ambassador
+  module:
+    - user
+id: user_remove_role_action.ambassador
+label: 'Remove the Ambassador role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: ambassador

@@ -18,8 +18,10 @@ dependencies:
     - field.field.node.organization.field_website
     - image.style.thumbnail
     - node.type.organization
+    - workflows.workflow.default_nodes
   module:
     - address
+    - content_moderation
     - datetime
     - field_group
     - geolocation
@@ -34,13 +36,14 @@ third_party_settings:
         - group_profile_information
         - group_administrative
       parent_name: ''
-      weight: 2
+      weight: 11
       format_type: accordion
       format_settings:
         id: ''
         classes: ''
         effect: none
       label: Accordion
+      region: content
     group_profile_information:
       children:
         - field_logo
@@ -63,6 +66,7 @@ third_party_settings:
         required_fields: true
         description: ''
       label: 'Profile information'
+      region: content
     group_administrative:
       children:
         - field_member
@@ -72,12 +76,12 @@ third_party_settings:
       weight: 22
       format_type: accordion_item
       format_settings:
-        label: Administrative
         formatter: closed
         required_fields: true
         id: ''
         classes: admin__only
       label: Administrative
+      region: content
 id: node.organization.default
 targetEntityType: node
 bundle: organization
@@ -85,7 +89,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 29
+    weight: 30
     settings:
       rows: 9
       summary_rows: 3
@@ -99,7 +103,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_associated_users:
-    weight: 30
+    weight: 31
     settings:
       match_operator: CONTAINS
       size: 60
@@ -108,7 +112,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_geographic_range:
-    weight: 25
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -122,32 +126,32 @@ content:
     type: image_image
     region: content
   field_member:
-    weight: 5
+    weight: 32
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_member_since:
-    weight: 7
+    weight: 34
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_membership_no:
-    weight: 6
+    weight: 33
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_org_address:
-    weight: 27
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_org_cms:
-    weight: 24
+    weight: 25
     settings:
       match_operator: CONTAINS
       size: 60
@@ -156,7 +160,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_org_geolocation:
-    weight: 28
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: geolocation_latlng
@@ -178,7 +182,7 @@ content:
     type: text_textfield
     region: content
   field_website:
-    weight: 26
+    weight: 27
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -187,10 +191,16 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 1
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path
@@ -228,13 +238,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60

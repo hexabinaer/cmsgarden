@@ -1,0 +1,14 @@
+uuid: 5a1be969-b235-4977-a7fd-eb954a241e84
+langcode: en
+status: true
+dependencies: {  }
+id: ambassador
+label: Ambassador
+weight: -8
+is_admin: null
+permissions:
+  - 'access in-place editing'
+  - 'delete own testimonial content'
+  - 'edit own article content'
+  - 'edit own event content'
+  - 'edit own showcase content'

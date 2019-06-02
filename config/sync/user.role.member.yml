@@ -1,0 +1,18 @@
+uuid: a700ac9a-e16e-4a38-928a-2d2773fa6e62
+langcode: en
+status: true
+dependencies: {  }
+id: member
+label: Member
+weight: -7
+is_admin: null
+permissions:
+  - 'access in-place editing'
+  - 'create showcase content'
+  - 'delete own testimonial content'
+  - 'edit any content_management_system content'
+  - 'edit own article content'
+  - 'edit own event content'
+  - 'edit own organization content'
+  - 'edit own project content'
+  - 'edit own showcase content'

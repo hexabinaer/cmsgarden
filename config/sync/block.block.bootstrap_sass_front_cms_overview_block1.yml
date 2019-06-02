@@ -1,4 +1,4 @@
-uuid: e35e84d9-3feb-4db4-b94a-ab5660bb860d
+uuid: 89e68843-c5a4-42ef-b194-bf18360bba94
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ dependencies:
     - system
     - views
   theme:
-    - cmsg_barrio
-id: cmsg_barrio_front_cms_overview_block1
-theme: cmsg_barrio
+    - bootstrap_sass
+id: bootstrap_sass_front_cms_overview_block1
+theme: bootstrap_sass
 region: top_header
 weight: -7
 provider: null

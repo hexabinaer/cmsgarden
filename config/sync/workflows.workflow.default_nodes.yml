@@ -1,0 +1,73 @@
+uuid: 8f359da2-721c-470c-a529-7170d157f5ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.content_management_system
+    - node.type.event
+    - node.type.frequently_asked_question
+    - node.type.organization
+    - node.type.page
+    - node.type.project
+    - node.type.showcase
+    - node.type.testimonial
+  module:
+    - content_moderation
+id: default_nodes
+label: 'Default content moderation'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+    review:
+      published: false
+      default_revision: false
+      label: 'To review'
+      weight: -1
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+        - review
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+        - review
+    review:
+      label: Review
+      from:
+        - draft
+        - published
+        - review
+      to: review
+      weight: 2
+  entity_types:
+    node:
+      - article
+      - content_management_system
+      - event
+      - frequently_asked_question
+      - organization
+      - page
+      - project
+      - showcase
+      - testimonial
+  default_moderation_state: draft

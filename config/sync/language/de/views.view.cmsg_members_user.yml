@@ -13,3 +13,9 @@ display:
         uid:
           alter:
             text: '<span lang="en">Badge</span>: {{ field_member_1 }} im CMS Garden e. V.'
+  block_member_badge:
+    display_options:
+      fields:
+        uid:
+          alter:
+            text: '<img src="/sites/default/files/logos/CMSG-Badge_{{ field_member }}_de.png" alt="Badge: {{ field_member_1 }} des CMS Garden e. V." />'

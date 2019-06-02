@@ -1,0 +1,14 @@
+uuid: 2d1d7cef-55b2-40d5-acca-ab4ac187f8b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.ambassador
+  module:
+    - user
+id: user_add_role_action.ambassador
+label: 'Add the Ambassador role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: ambassador

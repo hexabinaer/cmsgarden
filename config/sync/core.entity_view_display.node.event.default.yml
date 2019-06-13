@@ -35,6 +35,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_additional_info:
     weight: 6
     label: hidden
@@ -60,7 +65,7 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      format_type: html_date
+      format_type: cmsg_default_date
       separator: '-'
     third_party_settings:
       ds:

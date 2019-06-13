@@ -18,14 +18,14 @@ id: node.event.field_event_banner
 field_name: field_event_banner
 entity_type: node
 bundle: event
-label: 'Veranstaltungslogo oder -banner'
-description: "Wiederverwendung von Bildern wird bevorzugt. Bitte vor dem Upload \r\n<a href=\"/admin/content/files\">Bildarchiv prüfen</a>."
+label: 'Event logo or banner'
+description: 'Preferably re-use images. Try and find this event''s artwork in the <a href="/admin/content/files">files archive</a>.'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: events
+  file_directory: content-assets
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
   max_resolution: ''

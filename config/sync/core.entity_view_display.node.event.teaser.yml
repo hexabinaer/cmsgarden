@@ -17,69 +17,38 @@ dependencies:
     - image.style.medium
     - node.type.event
   module:
-    - address
     - datetime_range
     - ds
     - svg_image
-    - text
     - user
 third_party_settings:
   ds:
     layout:
-      id: layout_twocol_section
-      library: layout_builder/twocol_section
+      id: layout_onecol
+      library: layout_discovery/onecol
       disable_css: false
       entity_classes: all_classes
-      settings:
-        column_widths: 50-50
+      settings: {  }
     regions:
-      first:
+      content:
+        - content_moderation_control
+        - links
         - field_event_banner
-      second:
         - field_event_date
-        - node_title
-        - body
-        - field_event_location
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 2
-        label: hidden
-        formatter: default
-        settings:
-          link: true
-          wrapper: h3
-          class: ''
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    weight: 3
-    region: second
-    label: hidden
-    settings:
-      trim_length: 400
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_event_banner:
     type: image
-    weight: 0
-    region: first
+    weight: 2
+    region: content
     label: hidden
     settings:
       image_style: medium
@@ -98,12 +67,12 @@ content:
             classes: {  }
   field_event_date:
     type: daterange_default
-    weight: 1
-    region: second
+    weight: 3
+    region: content
     label: hidden
     settings:
       timezone_override: ''
-      format_type: html_date
+      format_type: cmsg_default_date
       separator: '-'
     third_party_settings:
       ds:
@@ -114,48 +83,18 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-  field_event_location:
-    type: address_plain
-    weight: 4
-    region: second
-    label: hidden
+  links:
+    weight: 1
+    region: content
     settings: {  }
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis: true
-            fis-el: span
-            fis-cl: address-line
-            fis-at: ''
-            fi: true
-            fi-el: span
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
-            fi-def-at: false
+    third_party_settings: {  }
 hidden:
+  body: true
   field_additional_info: true
   field_event_cmsg_participation: true
+  field_event_location: true
   field_event_type: true
   field_meta_tags: true
   field_representative: true
   field_website: true
   langcode: true
-  links: true

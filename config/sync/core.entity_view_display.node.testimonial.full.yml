@@ -118,6 +118,16 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 4
+          83c17978-2cd8-4325-9f47-0114290479b5:
+            uuid: 83c17978-2cd8-4325-9f47-0114290479b5
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:testimonial:content_moderation_control'
+            additional: {  }
+            weight: 6
         third_party_settings: {  }
 id: node.testimonial.full
 targetEntityType: node
@@ -128,6 +138,11 @@ content:
     label: hidden
     type: text_default
     weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
     settings: {  }
     third_party_settings: {  }
     region: content

@@ -18,7 +18,7 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: downloads
+  file_directory: content-assets
   file_extensions: 'pdf zip rar'
   max_filesize: '12 MB'
   description_field: true

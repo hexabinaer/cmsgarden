@@ -1,0 +1,8 @@
+uuid: d229361e-a861-43af-87b6-ff70465a605b
+langcode: en
+status: true
+dependencies: {  }
+id: cmsg_default_date
+label: 'CMSG default date'
+locked: false
+pattern: 'F j, Y'

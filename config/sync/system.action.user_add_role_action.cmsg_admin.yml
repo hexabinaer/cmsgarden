@@ -1,0 +1,14 @@
+uuid: b537d1fe-64a5-4f05-ac4f-37fac38ba2b6
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.cmsg_admin
+  module:
+    - user
+id: user_add_role_action.cmsg_admin
+label: 'Den ausgewählten Benutzern die Rolle CMSG Admin zuweisen'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: cmsg_admin

@@ -1,0 +1,9 @@
+uuid: 3e5e3387-1382-4fc0-bc86-d5e4a7532859
+langcode: de
+status: true
+dependencies: {  }
+id: cmsg_admin
+label: 'CMSG Admin'
+weight: -5
+is_admin: null
+permissions: {  }

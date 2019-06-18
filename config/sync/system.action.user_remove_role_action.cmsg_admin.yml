@@ -1,0 +1,14 @@
+uuid: d111194f-1ddc-46fe-a1ee-5565131274d8
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.cmsg_admin
+  module:
+    - user
+id: user_remove_role_action.cmsg_admin
+label: 'Den ausgewählten Benutzern die Rolle CMSG Admin entziehen'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: cmsg_admin

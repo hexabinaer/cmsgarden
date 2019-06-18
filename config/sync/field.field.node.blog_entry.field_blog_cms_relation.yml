@@ -1,0 +1,29 @@
+uuid: d65b2e01-4069-4c90-b57f-6a200c4de03d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_cms_relation
+    - node.type.blog_entry
+    - taxonomy.vocabulary.content_management_systems
+id: node.blog_entry.field_blog_cms_relation
+field_name: field_blog_cms_relation
+entity_type: node
+bundle: blog_entry
+label: 'Related CMS'
+description: 'If this post is related to one ore several specific CMS, please select.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_management_systems: content_management_systems
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

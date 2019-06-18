@@ -1,0 +1,10 @@
+uuid: 58e52fcc-bad7-420f-a6ce-f6109be333db
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.blog
+label: 'Blog author profile'
+targetEntityType: user
+cache: true

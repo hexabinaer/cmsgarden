@@ -1,0 +1,27 @@
+uuid: ab65c095-5ca9-4a62-b909-0aec7840943e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_download
+    - node.type.blog_entry
+  module:
+    - file
+id: node.blog_entry.field_blog_download
+field_name: field_blog_download
+entity_type: node
+bundle: blog_entry
+label: Material
+description: 'Downloadable files. '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: content-assets
+  file_extensions: 'txt pdf zip rar tar tar.gz'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

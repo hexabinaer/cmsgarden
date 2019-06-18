@@ -1,0 +1,29 @@
+uuid: 1bd25de3-9133-48d5-9df0-23310df6ffe9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.blog_entry
+id: node.blog_entry.field_author
+field_name: field_author
+entity_type: node
+bundle: blog_entry
+label: Author
+description: 'Enter your user name (autocomplete) and - if applicable - a co-author. This will be displayed on the blog pages. If you haven''t done so yet, <a href="/user">enter your author text in your profile</a>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: field_user_first_name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

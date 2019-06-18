@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_associated_org
+    - field.field.user.user.field_blog_author_profile
     - field.field.user.user.field_field_mobile_phone_no
     - field.field.user.user.field_field_telephone_no_office
     - field.field.user.user.field_gdpr
@@ -97,6 +98,7 @@ third_party_settings:
       children:
         - field_user_cmsg_participation
         - field_user_participation
+        - field_blog_author_profile
       parent_name: group_accordion
       weight: 34
       format_type: accordion_item
@@ -182,6 +184,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
+    region: content
+  field_blog_author_profile:
+    weight: 21
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_field_mobile_phone_no:
     weight: 17

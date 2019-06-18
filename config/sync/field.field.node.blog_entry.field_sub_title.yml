@@ -1,0 +1,21 @@
+uuid: 755a1661-07aa-436d-b8f0-35150fa1c9fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_title
+    - node.type.blog_entry
+  module:
+    - text
+id: node.blog_entry.field_sub_title
+field_name: field_sub_title
+entity_type: node
+bundle: blog_entry
+label: 'Sub title'
+description: 'The sub-headline.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

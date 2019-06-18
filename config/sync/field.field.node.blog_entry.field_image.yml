@@ -1,10 +1,10 @@
-uuid: 6478bfac-08aa-4bd8-8cec-408173b6fb7d
+uuid: eae14349-c198-4300-9b5d-9012e55462c0
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_image
-    - node.type.article
+    - node.type.blog_entry
   module:
     - content_translation
     - image
@@ -14,20 +14,18 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-_core:
-  default_config_hash: tgJzhA7Swh4M_gWU5FwFe5lPxPj5rebpMbvhpdNrERs
-id: node.article.field_image
+id: node.blog_entry.field_image
 field_name: field_image
 entity_type: node
-bundle: article
+bundle: blog_entry
 label: Image
-description: ''
+description: 'The main image. Will be used as teaser image, too (scaled + maybe cropped).'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: content-assets
+  file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
   max_resolution: ''

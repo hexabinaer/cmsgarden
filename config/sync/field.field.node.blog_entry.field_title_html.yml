@@ -1,0 +1,21 @@
+uuid: bf9e29aa-e9c4-4ed5-ae78-090bde76c76c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_html
+    - node.type.blog_entry
+  module:
+    - text
+id: node.blog_entry.field_title_html
+field_name: field_title_html
+entity_type: node
+bundle: blog_entry
+label: 'HTML title'
+description: 'This is the rendered headline (h1). Write the CMS name how it is usually written (including special characters, capitals). You may add markup (such as em or span lang="fr") for accessibility here.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,82 @@
+uuid: b86ab3b7-f74e-4c3f-8cf0-7b1d24f9382b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.blog_entry
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.accordion_set
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.blog_entry.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: blog_entry
+label: Paragraph
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text: text
+      accordion_set: accordion_set
+      accordion: accordion
+      quote: quote
+    target_bundles_drag_drop:
+      text:
+        enabled: true
+        weight: -33
+      accordion_set:
+        enabled: true
+        weight: -32
+      accordion:
+        enabled: true
+        weight: -31
+      quote:
+        enabled: true
+        weight: -30
+      container:
+        weight: -29
+        enabled: false
+      footer:
+        weight: -28
+        enabled: false
+      grid:
+        weight: -27
+        enabled: false
+      intro:
+        weight: -26
+        enabled: false
+      link:
+        weight: -25
+        enabled: false
+      node_reference:
+        weight: -24
+        enabled: false
+      separator:
+        weight: -23
+        enabled: false
+      subtitle:
+        weight: -22
+        enabled: false
+      title:
+        weight: -21
+        enabled: false
+      user:
+        weight: -20
+        enabled: false
+      views_block:
+        weight: -19
+        enabled: false
+      webform:
+        weight: -18
+        enabled: false
+field_type: entity_reference_revisions

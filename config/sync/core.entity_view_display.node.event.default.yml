@@ -69,7 +69,7 @@ content:
       separator: '-'
     third_party_settings:
       ds:
-        ds_limit: ''
+        ds_limit: '1'
         ft:
           id: minimal
           settings:

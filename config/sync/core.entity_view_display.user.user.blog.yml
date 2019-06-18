@@ -1,0 +1,133 @@
+uuid: b4ec7d35-e97c-46eb-9e54-d2483f0c7df9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.blog
+    - field.field.user.user.field_associated_org
+    - field.field.user.user.field_blog_author_profile
+    - field.field.user.user.field_field_mobile_phone_no
+    - field.field.user.user.field_field_telephone_no_office
+    - field.field.user.user.field_gdpr
+    - field.field.user.user.field_member
+    - field.field.user.user.field_member_since
+    - field.field.user.user.field_membership_no
+    - field.field.user.user.field_related_cms
+    - field.field.user.user.field_user_address
+    - field.field.user.user.field_user_bio_short
+    - field.field.user.user.field_user_cmsg_participation
+    - field.field.user.user.field_user_contributing_os
+    - field.field.user.user.field_user_first_name
+    - field.field.user.user.field_user_geolocation
+    - field.field.user.user.field_user_last_name
+    - field.field.user.user.field_user_main_profession
+    - field.field.user.user.field_user_middle_name
+    - field.field.user.user.field_user_opensourcesince
+    - field.field.user.user.field_user_participation
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - svg_image
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_div_fullname:
+      children:
+        - field_field_mobile_phone_no
+        - field_user_first_name
+        - field_user_middle_name
+      parent_name: ''
+      weight: 23
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: fullname
+      label: 'Full name'
+      region: hidden
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - user_picture
+        - 'dynamic_token_field:user-display_name'
+        - field_blog_author_profile
+    fields:
+      'dynamic_token_field:user-display_name':
+        plugin_id: 'dynamic_token_field:user-display_name'
+        weight: 1
+        label: hidden
+        formatter: default
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
+id: user.user.blog
+targetEntityType: user
+bundle: user
+mode: blog
+content:
+  field_blog_author_profile:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: content
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: '100'
+        height: '100'
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  field_associated_org: true
+  field_field_mobile_phone_no: true
+  field_field_telephone_no_office: true
+  field_gdpr: true
+  field_member: true
+  field_member_since: true
+  field_membership_no: true
+  field_related_cms: true
+  field_user_address: true
+  field_user_bio_short: true
+  field_user_cmsg_participation: true
+  field_user_contributing_os: true
+  field_user_first_name: true
+  field_user_geolocation: true
+  field_user_last_name: true
+  field_user_main_profession: true
+  field_user_middle_name: true
+  field_user_opensourcesince: true
+  field_user_participation: true
+  langcode: true
+  member_for: true

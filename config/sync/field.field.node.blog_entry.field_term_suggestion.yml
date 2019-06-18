@@ -1,0 +1,19 @@
+uuid: 38793357-7c0e-4115-9310-ff438cdb4596
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_suggestion
+    - node.type.blog_entry
+id: node.blog_entry.field_term_suggestion
+field_name: field_term_suggestion
+entity_type: node
+bundle: blog_entry
+label: 'Topic term suggestion'
+description: 'If the tag you''d pick is not available, please make a suggestion. Editors can add new terms during review.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

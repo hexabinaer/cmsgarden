@@ -1,20 +1,19 @@
-uuid: 9e094263-3b52-45b4-b441-5a1ccacf6ad4
+uuid: 40c8cdd0-c8f9-4aed-9906-fad33ef5e8e9
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
-    - node
     - text
+    - user
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_title_html
-field_name: field_title_html
-entity_type: node
-type: text
-settings:
-  max_length: 255
+id: user.field_blog_author_profile
+field_name: field_blog_author_profile
+entity_type: user
+type: text_long
+settings: {  }
 module: text
 locked: false
 cardinality: 1

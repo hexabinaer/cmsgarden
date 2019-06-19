@@ -50,6 +50,7 @@
         "drupal/registration_validation": "^1.2",
         "drupal/svg_image": "^1.9",
         "drupal/swiftmailer": "^1.0@beta",
+        "drupal/upgrade_status": "^1.0@alpha",
         "drupal/viewfield": "^3.0@alpha",
         "drupal/views_bulk_edit": "^2.3",
         "drupal/views_bulk_operations": "^3.2",

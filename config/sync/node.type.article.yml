@@ -12,7 +12,7 @@ _core:
   default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
 name: 'News article'
 type: article
-description: 'Publish news, official statements or a press release on behalf of CMS Garden. If your text comprises rather personal statements, use <em>blog entry</em> instead.'
+description: 'Publish news, official statements or a press release on behalf of CMS Garden. If your text comprises rather personal statements, write a <a href="/node/add/blog_entry">blog entry</a> instead.'
 help: ''
 new_revision: true
 preview_mode: 1

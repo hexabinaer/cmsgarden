@@ -6,4 +6,8 @@ id: cmsg_admin
 label: 'CMSG Admin'
 weight: -5
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access poll overview'
+  - 'administer polls'
+  - 'create polls'
+  - 'edit own polls'

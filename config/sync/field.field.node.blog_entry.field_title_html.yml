@@ -12,7 +12,7 @@ field_name: field_title_html
 entity_type: node
 bundle: blog_entry
 label: 'HTML title'
-description: 'This is the rendered headline (h1). Write the CMS name how it is usually written (including special characters, capitals). You may add markup (such as em or span lang="fr") for accessibility here.'
+description: 'This is the rendered headline (h1). You may add markup (such as em or span lang="fr") for accessibility here.'
 required: true
 translatable: true
 default_value: {  }

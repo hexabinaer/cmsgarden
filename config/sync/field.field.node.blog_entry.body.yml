@@ -12,7 +12,7 @@ field_name: body
 entity_type: node
 bundle: blog_entry
 label: Body
-description: ''
+description: 'The introduction or complete text. For better structuring/media handling, you can use the paragraphs below.'
 required: false
 translatable: true
 default_value: {  }

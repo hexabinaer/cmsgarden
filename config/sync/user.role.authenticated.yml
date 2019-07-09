@@ -11,11 +11,13 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access polls'
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'access user contact forms'
   - 'access user profiles'
   - 'cancel account'
+  - 'cancel own vote'
   - 'change own username'
   - 'configure geolocation'
   - 'create content_management_system content'

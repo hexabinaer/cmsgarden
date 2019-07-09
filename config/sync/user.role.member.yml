@@ -8,11 +8,14 @@ weight: -7
 is_admin: null
 permissions:
   - 'access in-place editing'
+  - 'access poll overview'
+  - 'create polls'
   - 'create showcase content'
   - 'delete own testimonial content'
   - 'edit any content_management_system content'
   - 'edit own article content'
   - 'edit own event content'
   - 'edit own organization content'
+  - 'edit own polls'
   - 'edit own project content'
   - 'edit own showcase content'

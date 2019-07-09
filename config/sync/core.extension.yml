@@ -58,6 +58,7 @@ module:
   paragraphs_collection: 0
   paragraphs_jquery_ui_accordion: 0
   path: 0
+  poll: 0
   quickedit: 0
   rdf: 0
   realname: 0

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.webform.field_poll
     - field.field.paragraph.webform.field_webform
     - paragraphs.paragraphs_type.webform
   module:
@@ -12,6 +13,12 @@ targetEntityType: paragraph
 bundle: webform
 mode: default
 content:
+  field_poll:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_webform:
     weight: 0
     settings:
@@ -19,6 +26,12 @@ content:
     third_party_settings: {  }
     type: webform_entity_reference_select
     region: content
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
 hidden:
   created: true
-  status: true

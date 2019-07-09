@@ -1,0 +1,37 @@
+uuid: 26d42b98-0799-41d2-9ce6-4bde5cc50f89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.editors_manual.body
+    - field.field.node.editors_manual.field_title_html
+    - node.type.editors_manual
+  module:
+    - text
+    - user
+id: node.editors_manual.default
+targetEntityType: node
+bundle: editors_manual
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_title_html:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

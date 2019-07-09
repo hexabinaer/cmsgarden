@@ -1,0 +1,17 @@
+uuid: 1070c578-dde1-49d2-aebc-504fb66b0a6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - poll
+id: poll.poll.default
+targetEntityType: poll
+bundle: poll
+mode: default
+content:
+  poll_votes:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

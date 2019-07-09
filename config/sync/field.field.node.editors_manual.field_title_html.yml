@@ -1,0 +1,21 @@
+uuid: dd0dfd02-2d09-4431-9a14-8dc3251d8d2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_html
+    - node.type.editors_manual
+  module:
+    - text
+id: node.editors_manual.field_title_html
+field_name: field_title_html
+entity_type: node
+bundle: editors_manual
+label: 'HTML title'
+description: 'This is the rendered headline (h1). You may add markup (such as em or span lang="fr") for accessibility here.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

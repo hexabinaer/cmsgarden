@@ -1,0 +1,22 @@
+uuid: 4af54f51-f980-4716-8f4a-553cb0e28dd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.session
+  module:
+    - text
+id: node.session.body
+field_name: body
+entity_type: node
+bundle: session
+label: Description
+description: 'Please click "Edit summary" to enter an abstract for overview lists'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

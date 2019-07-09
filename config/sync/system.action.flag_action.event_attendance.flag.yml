@@ -1,0 +1,13 @@
+uuid: 6f71c7fe-28e9-4f74-a29f-8454e4494482
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.event_attendance.flag
+label: 'I will attend'
+type: node
+plugin: 'flag_action:event_attendance.flag'
+configuration:
+  flag_id: event_attendance
+  flag_action: flag

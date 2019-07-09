@@ -1,0 +1,7 @@
+label: Veranstaltungsteilnahme
+flag_short: 'Ich nehme teil'
+unflag_short: 'Teilnahme zurückziehen'
+flag_long: 'Klicken, um anzuzeigen, dass du teilnehmen wirst.'
+unflag_long: 'Klicken, um anzuzeigen, dass du doch nicht teilnehmen wirst.'
+unflag_message: 'Deine Teilnahme wurde zurückgezogen.'
+unflag_denied_text: 'Dir fehlt leider die Berechtigung, deine Teilnahme zurückzuziehen.'

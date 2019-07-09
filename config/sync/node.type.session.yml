@@ -1,0 +1,17 @@
+uuid: 8be1daea-7a8f-4734-9a85-0f33583ce16e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Session proposal'
+type: session
+description: 'Propose a session for a specified barcamp'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

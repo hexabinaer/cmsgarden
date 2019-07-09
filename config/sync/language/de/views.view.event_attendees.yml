@@ -1,0 +1,13 @@
+label: Teilnehmer/innen
+display:
+  default:
+    display_options:
+      fields:
+        count:
+          format_plural_string: !!binary MSBUZWlsbmVobWVyKmluA0Bjb3VudCBUZWlsbmVobWVyKmlubmVu
+      title: Event-Teilnehmer/innen
+      header:
+        area:
+          content:
+            value: "<h3>{{ count }}</h3>\r\n"
+            format: basic_html

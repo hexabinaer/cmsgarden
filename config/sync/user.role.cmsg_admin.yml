@@ -8,6 +8,8 @@ weight: -5
 is_admin: null
 permissions:
   - 'access poll overview'
+  - 'administer flaggings'
+  - 'administer flags'
   - 'administer polls'
   - 'create polls'
   - 'edit own polls'

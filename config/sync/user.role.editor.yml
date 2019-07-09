@@ -13,6 +13,7 @@ permissions:
   - 'access poll overview'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer flaggings'
   - 'administer menu'
   - 'administer nodes'
   - 'administer polls'

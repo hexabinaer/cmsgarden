@@ -1,0 +1,13 @@
+uuid: 8324e2a9-ff38-4ad7-8b27-4bec5507274e
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.session_ratings.unflag
+label: 'I don''t like this topic any more'
+type: node
+plugin: 'flag_action:session_ratings.unflag'
+configuration:
+  flag_id: session_ratings
+  flag_action: unflag

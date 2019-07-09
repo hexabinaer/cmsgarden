@@ -1,0 +1,8 @@
+uuid: 3f114158-05ff-4408-b8fb-91c596afca25
+langcode: und
+status: true
+dependencies: {  }
+name: 'Lecture tags'
+vid: lecture_tags
+description: 'Free tagging for session proposals, lectures'
+weight: 0

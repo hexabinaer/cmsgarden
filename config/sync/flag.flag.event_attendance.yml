@@ -1,0 +1,29 @@
+uuid: 77cf5b07-d768-4f54-8921-17d3f0dbb2c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: event_attendance
+label: 'Event attendance'
+bundles: {  }
+entity_type: node
+global: false
+weight: 0
+flag_short: 'I will attend'
+flag_long: 'Click to indicate that you will attend this event.'
+flag_message: 'You will be attending'
+unflag_short: 'Withdraw attendance'
+unflag_long: 'Click to indicate that you will not attend any more.'
+unflag_message: 'Your attendance has been removed.'
+unflag_denied_text: 'Unfortunately you are lacking the permission to withdraw.'
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

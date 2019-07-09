@@ -1,0 +1,29 @@
+uuid: 60ddfd3e-8efb-4116-8cb8-a14c5ea0912b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_tags
+    - node.type.session
+    - taxonomy.vocabulary.lecture_tags
+id: node.session.field_session_tags
+field_name: field_session_tags
+entity_type: node
+bundle: session
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lecture_tags: lecture_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

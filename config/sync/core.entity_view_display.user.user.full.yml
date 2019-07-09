@@ -27,18 +27,16 @@ dependencies:
     - field.field.user.user.user_picture
     - filter.format.minimal_html
     - image.style.thumbnail
-    - views.view.cmsg_members_user
   module:
     - address
     - datetime
+    - ds
     - field_group
     - geolocation
     - layout_builder
-    - layout_discovery
     - svg_image
     - text
     - user
-    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -49,8 +47,9 @@ third_party_settings:
         - field_user_first_name
         - field_user_middle_name
         - field_user_last_name
+        - field_related_cms
       parent_name: ''
-      weight: 1
+      weight: 21
       format_type: html_element
       format_settings:
         id: ''
@@ -62,6 +61,7 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Full name'
+      region: hidden
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.full
@@ -70,22 +70,30 @@ bundle: user
 mode: full
 content:
   field_related_cms:
-    weight: 6
+    weight: 2
     label: inline
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
     type: entity_reference_label
     region: content
   field_user_address:
-    weight: 8
+    weight: 7
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_user_bio_short:
-    weight: 7
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -95,18 +103,32 @@ content:
     weight: 5
     label: inline
     settings:
-      format_type: medium
       timezone_override: ''
-    third_party_settings: {  }
+      format_type: html_month
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
     type: datetime_default
     region: content
   field_user_contributing_os:
     weight: 4
     label: inline
     settings:
-      format_type: medium
       timezone_override: ''
-    third_party_settings: {  }
+      format_type: html_year
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
     type: datetime_default
     region: content
   field_user_first_name:
@@ -119,7 +141,7 @@ content:
     region: content
   field_user_geolocation:
     type: geolocation_map
-    weight: 9
+    weight: 8
     region: content
     label: visually_hidden
     settings:
@@ -601,7 +623,7 @@ content:
     type: string
     region: content
   field_user_main_profession:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -619,13 +641,20 @@ content:
     weight: 3
     label: inline
     settings:
-      format_type: medium
       timezone_override: ''
-    third_party_settings: {  }
+      format_type: html_year
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
     type: datetime_default
     region: content
   field_user_participation:
-    weight: 10
+    weight: 9
     label: above
     settings:
       link: true
@@ -656,3 +685,4 @@ hidden:
   field_membership_no: true
   langcode: true
   member_for: true
+  realname: true

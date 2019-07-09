@@ -1,0 +1,23 @@
+uuid: de437308-c0ad-482d-8727-1ada4fa1d824
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expertise_level
+    - node.type.session
+  module:
+    - options
+id: node.session.field_expertise_level
+field_name: field_expertise_level
+entity_type: node
+bundle: session
+label: Level
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: basics
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,25 @@
+uuid: 94cde6ff-6ded-48d9-8422-0721da27bb02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_relation
+    - node.type.session
+id: node.session.field_event_relation
+field_name: field_event_relation
+entity_type: node
+bundle: session
+label: 'Related event'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: cmsg_events
+      display_name: er_events_upcoming
+      arguments: {  }
+field_type: entity_reference

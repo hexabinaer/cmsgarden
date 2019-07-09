@@ -1,0 +1,30 @@
+uuid: 45869006-7e0f-448c-8526-dbed4ac77269
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: session_ratings
+label: 'Session ratings'
+bundles:
+  - session
+entity_type: node
+global: false
+weight: 0
+flag_short: 'A topic I like'
+flag_long: ''
+flag_message: 'Added to like count'
+unflag_short: 'I don''t like this topic any more'
+unflag_long: ''
+unflag_message: 'Removed from like count'
+unflag_denied_text: 'Unfortunately you are lacking the permission to withdraw.'
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

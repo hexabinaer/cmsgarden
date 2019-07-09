@@ -1,0 +1,11 @@
+uuid: a789a677-c640-43be-a1ca-d7246be060fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.lecture_tags
+id: taxonomy_term.lecture_tags
+target_entity_type_id: taxonomy_term
+target_bundle: lecture_tags
+default_langcode: current_interface
+language_alterable: true

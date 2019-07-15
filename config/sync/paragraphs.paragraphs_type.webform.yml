@@ -7,7 +7,7 @@ dependencies:
 id: webform
 label: 'Webform or poll'
 icon_uuid: null
-description: ''
+description: 'Add an existing webform or poll to a page'
 behavior_plugins:
   grid_layout:
     paragraph_reference_field: ''

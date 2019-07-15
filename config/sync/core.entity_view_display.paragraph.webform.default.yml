@@ -15,7 +15,7 @@ mode: default
 content:
   field_poll:
     weight: 1
-    label: above
+    label: hidden
     settings:
       link: true
       view_mode: default

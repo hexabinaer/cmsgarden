@@ -12,7 +12,9 @@ dependencies:
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_type
     - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_org_geolocation
     - field.field.node.event.field_representative
+    - field.field.node.event.field_title_html
     - field.field.node.event.field_website
     - image.style.medium
     - node.type.event
@@ -31,23 +33,24 @@ third_party_settings:
       settings: {  }
     regions:
       content:
-        - content_moderation_control
-        - links
+        - node_links
         - field_event_banner
         - field_event_date
+        - links
+    fields:
+      node_links:
+        plugin_id: node_links
+        weight: 0
+        label: hidden
+        formatter: default
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  content_moderation_control:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_event_banner:
     type: image
-    weight: 2
+    weight: 1
     region: content
     label: hidden
     settings:
@@ -67,7 +70,7 @@ content:
             classes: {  }
   field_event_date:
     type: daterange_default
-    weight: 3
+    weight: 2
     region: content
     label: hidden
     settings:
@@ -84,17 +87,21 @@ content:
             lb-col: false
             classes: {  }
   links:
-    weight: 1
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
+  content_moderation_control: true
   field_additional_info: true
   field_event_cmsg_participation: true
   field_event_location: true
   field_event_type: true
   field_meta_tags: true
+  field_org_geolocation: true
   field_representative: true
+  field_title_html: true
   field_website: true
+  flag_event_attendance: true
   langcode: true

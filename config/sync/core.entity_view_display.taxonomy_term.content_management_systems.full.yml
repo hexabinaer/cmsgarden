@@ -7,9 +7,13 @@ dependencies:
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
     - field.field.taxonomy_term.content_management_systems.field_machine_name
+    - field.field.taxonomy_term.content_management_systems.field_noderef_cms
+    - field.field.taxonomy_term.content_management_systems.field_status
     - taxonomy.vocabulary.content_management_systems
   module:
+    - ctools
     - layout_builder
+    - layout_discovery
     - svg_image
     - text
 third_party_settings:
@@ -17,6 +21,24 @@ third_party_settings:
     allow_custom: false
     enabled: true
     sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          7355fca9-9b56-43bc-8846-01dba22b3a7e:
+            uuid: 7355fca9-9b56-43bc-8846-01dba22b3a7e
+            region: content
+            configuration:
+              id: 'entity_view:taxonomy_term'
+              label: 'Entity view (Logo linked)'
+              provider: ctools
+              label_display: visible
+              view_mode: logo_linked
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
       -
         layout_id: layout_twocol_section
         layout_settings:
@@ -90,4 +112,6 @@ content:
     region: content
 hidden:
   field_machine_name: true
+  field_noderef_cms: true
+  field_status: true
   langcode: true

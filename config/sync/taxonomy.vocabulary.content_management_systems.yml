@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Content Management Systems'
 vid: content_management_systems
-description: ''
+description: 'Popular FOSS CMS (providing Logos), no matter if participating or other'
 weight: 0

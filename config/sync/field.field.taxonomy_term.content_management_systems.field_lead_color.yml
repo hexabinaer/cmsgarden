@@ -1,0 +1,21 @@
+uuid: 561821d3-6450-476a-b905-2c7a99f94ffc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_lead_color
+    - taxonomy.vocabulary.content_management_systems
+id: taxonomy_term.content_management_systems.field_lead_color
+field_name: field_lead_color
+entity_type: taxonomy_term
+bundle: content_management_systems
+label: 'Lead color'
+description: 'Enter the CMS'' main color hex code. It will be used for color coding.'
+required: false
+translatable: false
+default_value:
+  -
+    value: '#ffffff'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -43,7 +43,14 @@ content:
       svg_attributes:
         width: '220'
         height: '220'
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: image
     region: content
 hidden:

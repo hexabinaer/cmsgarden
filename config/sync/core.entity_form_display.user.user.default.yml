@@ -41,6 +41,7 @@ third_party_settings:
       children:
         - group_settings
         - group_personal
+        - group_location
         - group_work
         - group_cms_garden
         - group_internal_contact
@@ -62,8 +63,6 @@ third_party_settings:
         - field_user_first_name
         - field_user_middle_name
         - field_user_last_name
-        - field_user_address
-        - field_user_geolocation
         - field_user_bio_short
       parent_name: group_accordion
       weight: 32
@@ -84,7 +83,7 @@ third_party_settings:
         - field_user_contributing_os
         - field_associated_org
       parent_name: group_accordion
-      weight: 33
+      weight: 34
       format_type: accordion_item
       format_settings:
         id: ''
@@ -100,7 +99,7 @@ third_party_settings:
         - field_user_participation
         - field_blog_author_profile
       parent_name: group_accordion
-      weight: 34
+      weight: 35
       format_type: accordion_item
       format_settings:
         id: ''
@@ -133,7 +132,7 @@ third_party_settings:
         - field_member_since
         - path
       parent_name: group_accordion
-      weight: 36
+      weight: 37
       format_type: accordion_item
       format_settings:
         id: ''
@@ -147,9 +146,8 @@ third_party_settings:
       children:
         - field_field_telephone_no_office
         - field_field_mobile_phone_no
-        - field_gdpr
       parent_name: group_accordion
-      weight: 35
+      weight: 36
       format_type: accordion_item
       format_settings:
         id: ''
@@ -158,6 +156,21 @@ third_party_settings:
         required_fields: true
         description: ''
       label: 'Only for internal use'
+      region: content
+    group_location:
+      children:
+        - field_user_address
+        - field_user_geolocation
+      parent_name: group_accordion
+      weight: 33
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: Location
       region: content
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -210,7 +223,7 @@ content:
     type: string_textfield
     region: content
   field_gdpr:
-    weight: 27
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -229,7 +242,7 @@ content:
       date_order: 'Y'
       time_type: none
       increment: '15'
-      date_year_range: '1900:2050'
+      date_year_range: '2013:2030'
     third_party_settings: {  }
     type: datatime_extras_configurable_list
     region: content

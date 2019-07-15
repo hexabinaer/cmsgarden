@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_form_mode.user.register
     - field.field.user.user.field_associated_org
+    - field.field.user.user.field_blog_author_profile
     - field.field.user.user.field_field_mobile_phone_no
     - field.field.user.user.field_field_telephone_no_office
     - field.field.user.user.field_gdpr
@@ -41,6 +42,7 @@ third_party_settings:
       children:
         - group_settings
         - group_personal
+        - group_location
         - group_work
         - group_cms_garden
         - group_internal_contact
@@ -53,17 +55,15 @@ third_party_settings:
         classes: ''
         effect: none
       label: Accordion
-      region: hidden
+      region: content
     group_personal:
       children:
         - field_user_first_name
         - field_user_middle_name
         - field_user_last_name
         - user_picture
-        - field_user_address
-        - field_user_geolocation
       parent_name: group_accordion
-      weight: 22
+      weight: 26
       format_type: accordion_item
       format_settings:
         id: ''
@@ -72,7 +72,7 @@ third_party_settings:
         required_fields: true
         description: ''
       label: Personal
-      region: hidden
+      region: content
     group_work:
       children:
         - field_user_main_profession
@@ -82,7 +82,7 @@ third_party_settings:
         - field_user_bio_short
         - field_associated_org
       parent_name: group_accordion
-      weight: 23
+      weight: 28
       format_type: accordion_item
       format_settings:
         id: ''
@@ -91,13 +91,13 @@ third_party_settings:
         required_fields: true
         description: ''
       label: Work
-      region: hidden
+      region: content
     group_cms_garden:
       children:
         - field_user_cmsg_participation
         - field_user_participation
       parent_name: group_accordion
-      weight: 24
+      weight: 29
       format_type: accordion_item
       format_settings:
         id: ''
@@ -106,7 +106,7 @@ third_party_settings:
         required_fields: true
         description: ''
       label: 'CMS Garden'
-      region: hidden
+      region: content
     group_settings:
       children:
         - langcode
@@ -116,7 +116,7 @@ third_party_settings:
         - contact
         - timezone
       parent_name: group_accordion
-      weight: 20
+      weight: 25
       format_type: accordion_item
       format_settings:
         id: ''
@@ -125,7 +125,7 @@ third_party_settings:
         required_fields: true
         description: ''
       label: Settings
-      region: hidden
+      region: content
     group_administrative:
       children:
         - field_member
@@ -133,7 +133,7 @@ third_party_settings:
         - field_member_since
         - path
       parent_name: group_accordion
-      weight: 26
+      weight: 31
       format_type: accordion_item
       format_settings:
         id: ''
@@ -142,13 +142,13 @@ third_party_settings:
         required_fields: true
         description: ''
       label: Administrative
-      region: hidden
+      region: content
     group_internal_contact:
       children:
         - field_field_telephone_no_office
         - field_field_mobile_phone_no
       parent_name: group_accordion
-      weight: 25
+      weight: 30
       format_type: accordion_item
       format_settings:
         id: ''
@@ -157,7 +157,22 @@ third_party_settings:
         required_fields: true
         description: ''
       label: 'Only for internal use'
-      region: hidden
+      region: content
+    group_location:
+      children:
+        - field_user_address
+        - field_user_geolocation
+      parent_name: group_accordion
+      weight: 27
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: Location
+      region: content
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.register
@@ -201,7 +216,7 @@ content:
     type: string_textfield
     region: content
   field_gdpr:
-    weight: 7
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -836,4 +851,5 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
-hidden: {  }
+hidden:
+  field_blog_author_profile: true

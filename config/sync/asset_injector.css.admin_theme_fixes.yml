@@ -1,0 +1,18 @@
+uuid: 725e194c-967a-409a-a1be-297623b8b125
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: admin_theme_fixes
+label: 'Admin theme fixes'
+code: ".ui-accordion .ui-icon, \r\n.ui-accordion .ui-accordion-header a {\r\n  display: inline-block;\r\n}\r\n\r\n\r\n/* unnecessary date fieldsets */\r\n\r\n.ui-accordion .ui-icon,\r\n.ui-accordion .ui-accordion-header a {\r\n display:inline-block;\r\n}\r\n\r\n.user-form .field--type-datetime fieldset {\r\n  padding: 0;\r\n  display: block;\r\n  background-color: #fff;\r\n  border: 0 none;\r\n}\r\n\r\n.user-form .field--type-datetime fieldset legend {\r\n  position: relative;\r\n  text-transform: none;\r\n  letter-spacing: normal;\r\n  margin: 0 0 0.2em;\r\n  top: 0;\r\n}\r\n\r\n.user-form .field--type-datetime fieldset .description {\r\n  margin-top: 0;\r\n}\r\n\r\n#edit-pass {\r\n  display: flex;\r\n  flex-flow: row wrap;\r\n}\r\n#edit-pass .form-type-password {\r\n  display: block;\r\n  flex: 1 1 50%;\r\n}\r\n#edit-pass .edit-pass--description {\r\n  flex: 1 1 100%;\r\n}"
+media: screen
+preprocess: true
+conditions:
+  current_theme:
+    id: current_theme
+    theme:
+      adminimal_theme: adminimal_theme
+    negate: false
+conditions_require_all: true

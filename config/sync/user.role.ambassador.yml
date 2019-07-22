@@ -15,3 +15,4 @@ permissions:
   - 'edit own event content'
   - 'edit own polls'
   - 'edit own showcase content'
+  - 'use text format basic_html'

@@ -1,0 +1,24 @@
+uuid: bae2bc6b-4064-4c89-b10a-fe42a04408c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.poll.teaser
+  content:
+    - 'file:file:a9014a37-a503-41bd-8bd6-ee80501acbb3'
+  module:
+    - entity_embed
+    - poll
+label: Poll
+id: poll
+type_id: entity
+type_settings:
+  entity_type: poll
+  bundles: {  }
+  display_plugins:
+    - 'view_mode:poll.teaser'
+    - 'entity_reference:entity_reference_label'
+  entity_browser: ''
+  entity_browser_settings:
+    display_review: false
+icon_uuid: a9014a37-a503-41bd-8bd6-ee80501acbb3

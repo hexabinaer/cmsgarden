@@ -19,6 +19,8 @@ settings:
           items:
             - Bold
             - Italic
+            - Strike
+            - Superscript
         -
           name: Linking
           items:
@@ -38,10 +40,15 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - Table
         -
           name: Tools
           items:
+            - RemoveFormat
+            - PasteFromWord
             - Source
+            - SpecialChar
+            - Language
   plugins:
     language:
       language_list: un

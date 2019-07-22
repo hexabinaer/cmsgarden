@@ -42,6 +42,12 @@ settings:
             - Table
             - HorizontalRule
         -
+          name: 'Entity embed'
+          items:
+            - node
+            - files
+            - poll
+        -
           name: 'Block Formatting'
           items:
             - Format
@@ -50,7 +56,12 @@ settings:
           items:
             - ShowBlocks
             - Source
+            - PasteFromWord
+            - SpecialChar
+            - Language
   plugins:
+    language:
+      language_list: un
     stylescombo:
       styles: ''
 image_upload:
@@ -59,5 +70,5 @@ image_upload:
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

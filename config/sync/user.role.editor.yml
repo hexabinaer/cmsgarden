@@ -75,6 +75,8 @@ permissions:
   - 'revert project revisions'
   - 'revert showcase revisions'
   - 'revert testimonial revisions'
+  - 'use text format basic_html'
+  - 'use text format full_html'
   - 'view all revisions'
   - 'view article revisions'
   - 'view content_management_system revisions'

@@ -1,0 +1,28 @@
+uuid: bef6111f-4975-4d47-bd66-128272cb740d
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.test_files_ajax
+  content:
+    - 'file:file:54505957-d15d-439c-bad5-f47414097bdd'
+  module:
+    - entity_embed
+    - file
+    - image
+    - svg_image
+label: Files
+id: files
+type_id: entity
+type_settings:
+  entity_type: file
+  bundles: {  }
+  display_plugins:
+    - 'image:image'
+    - 'image:image_url'
+    - 'entity_reference:entity_reference_label'
+    - 'file:file_url_plain'
+  entity_browser: test_files_ajax
+  entity_browser_settings:
+    display_review: true
+icon_uuid: 54505957-d15d-439c-bad5-f47414097bdd

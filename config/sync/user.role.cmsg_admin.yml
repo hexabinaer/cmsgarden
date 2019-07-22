@@ -13,3 +13,5 @@ permissions:
   - 'administer polls'
   - 'create polls'
   - 'edit own polls'
+  - 'use text format basic_html'
+  - 'use text format full_html'

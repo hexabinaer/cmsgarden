@@ -1219,7 +1219,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: cmsg-events
+      path: events
       display_description: ''
     cache_metadata:
       max-age: -1

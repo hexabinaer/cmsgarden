@@ -9,7 +9,7 @@ id: node.meetup.field_associated_users
 field_name: field_associated_users
 entity_type: node
 bundle: meetup
-label: 'Contact persons'
+label: Contact
 description: 'Add at least one person (autocomplete) as the organizer for this meetup.'
 required: false
 translatable: true

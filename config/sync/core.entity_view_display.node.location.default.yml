@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.location.field_event_location
+    - field.field.node.location.field_geolocation
     - field.field.node.location.field_location_notes
     - node.type.location
   module:
@@ -16,23 +17,24 @@ bundle: location
 mode: default
 content:
   field_event_location:
-    weight: 102
-    label: above
+    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_location_notes:
-    weight: 103
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_geolocation: true
   langcode: true

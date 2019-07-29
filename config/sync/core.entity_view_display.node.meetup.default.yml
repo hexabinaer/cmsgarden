@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.meetup.body
     - field.field.node.meetup.field_associated_users
     - field.field.node.meetup.field_event_banner
+    - field.field.node.meetup.field_meetup_date_ref
     - field.field.node.meetup.field_title_html
     - image.style.large
     - node.type.meetup
@@ -62,6 +63,43 @@ content:
             lb-col: false
             classes: {  }
     type: image
+    region: content
+  field_meetup_date_ref:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h2
+            lbw-cl: block-title
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_label
     region: content
   field_title_html:
     weight: 2

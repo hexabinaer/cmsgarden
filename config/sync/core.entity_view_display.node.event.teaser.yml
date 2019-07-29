@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.field_event_cmsg_participation
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_location_ref
     - field.field.node.event.field_event_type
     - field.field.node.event.field_meta_tags
     - field.field.node.event.field_org_geolocation
@@ -37,6 +38,7 @@ third_party_settings:
         - field_event_banner
         - field_event_date
         - links
+        - field_event_location_ref
     fields:
       node_links:
         plugin_id: node_links
@@ -80,6 +82,23 @@ content:
     third_party_settings:
       ds:
         ds_limit: '1'
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_event_location_ref:
+    type: entity_reference_entity_view
+    weight: 4
+    region: content
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
         ft:
           id: minimal
           settings:

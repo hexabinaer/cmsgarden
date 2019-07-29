@@ -11,7 +11,7 @@ id: node.location.field_location_notes
 field_name: field_location_notes
 entity_type: node
 bundle: location
-label: Remarks
+label: Notice
 description: 'If visitors should be aware of certain location-related circumstances (e. g. "second backyard"), please enter a short notice.'
 required: false
 translatable: false

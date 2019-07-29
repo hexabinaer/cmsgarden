@@ -23,7 +23,8 @@ visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
-      testimonial: testimonial
-    negate: true
+      blog_entry: blog_entry
+      frequently_asked_question: frequently_asked_question
+    negate: false
     context_mapping:
       node: '@node.node_route_context:node'

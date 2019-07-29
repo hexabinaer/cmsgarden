@@ -1,0 +1,22 @@
+uuid: 82194804-d7f9-4b67-8248-173e61bc0fb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: meetup_nodes
+label: 'Meetup nodes'
+type: 'canonical_entities:node'
+pattern: '/meetups/[node:title]'
+selection_criteria:
+  b086ec4b-482a-4c4c-96d2-f3c169437a41:
+    id: node_type
+    bundles:
+      meetup: meetup
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b086ec4b-482a-4c4c-96d2-f3c169437a41
+selection_logic: and
+weight: -5
+relationships: {  }

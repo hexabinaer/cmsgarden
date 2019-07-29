@@ -1,0 +1,29 @@
+uuid: 318a7759-c3b3-49d8-9618-3b970a44083c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meetup_location
+    - node.type.date
+    - node.type.location
+id: node.date.field_meetup_location
+field_name: field_meetup_location
+entity_type: node
+bundle: date
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: 9f71636d-9597-4a57-bf63-f56bc770d586
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Date
+type: date
+description: 'Announce date + time (+ location) for a meetup'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

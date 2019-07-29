@@ -1,0 +1,21 @@
+uuid: 4063fa35-b6b3-4a2e-92ff-8446779c01f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_notes
+    - node.type.location
+  module:
+    - text
+id: node.location.field_location_notes
+field_name: field_location_notes
+entity_type: node
+bundle: location
+label: Remarks
+description: 'If visitors should be aware of certain location-related circumstances (e. g. "second backyard"), please enter a short notice.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

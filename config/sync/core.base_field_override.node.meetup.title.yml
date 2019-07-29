@@ -1,0 +1,18 @@
+uuid: 4e4572f9-3881-4dca-9669-7be871fb40d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.meetup
+id: node.meetup.title
+field_name: title
+entity_type: node
+bundle: meetup
+label: 'Administrative title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,107 @@
+uuid: fa9c886a-33c2-48ec-b914-3eae2b94cb11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.meetup.body
+    - field.field.node.meetup.field_associated_users
+    - field.field.node.meetup.field_event_banner
+    - field.field.node.meetup.field_title_html
+    - image.style.large
+    - node.type.meetup
+  module:
+    - ds
+    - svg_image
+    - text
+    - user
+id: node.meetup.default
+targetEntityType: node
+bundle: meetup
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_associated_users:
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: compact
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_event_banner:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: ''
+        height: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+  field_title_html:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: h1
+            ow-cl: page-title
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: text_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

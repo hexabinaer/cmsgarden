@@ -1,0 +1,17 @@
+uuid: 3966bbb0-9fad-4550-8f90-0556db46faa7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Location
+type: location
+description: 'Add a (reusable) event location '
+help: 'Please enter a title that is useful for autocomplete searches. It will not be displayed.'
+new_revision: true
+preview_mode: 1
+display_submitted: false

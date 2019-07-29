@@ -1,0 +1,21 @@
+uuid: 2e1b23f6-5961-4984-9359-094936711ee8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_html
+    - node.type.meetup
+  module:
+    - text
+id: node.meetup.field_title_html
+field_name: field_title_html
+entity_type: node
+bundle: meetup
+label: 'HTML title'
+description: 'This is the rendered headline (h1). You may add markup (such as em or span lang="fr") for accessibility here.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

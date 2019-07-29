@@ -1,0 +1,38 @@
+uuid: c6e3c72c-abf0-425e-bb42-a3bcbadbd9bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.location.field_event_location
+    - field.field.node.location.field_location_notes
+    - node.type.location
+  module:
+    - address
+    - text
+    - user
+id: node.location.default
+targetEntityType: node
+bundle: location
+mode: default
+content:
+  field_event_location:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_location_notes:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -27,7 +27,6 @@ dependencies:
     - link
     - options
     - svg_image
-    - taxonomy
     - text
     - user
 third_party_settings:
@@ -66,9 +65,10 @@ third_party_settings:
       region: content
     group_event_program:
       children:
-        - flag_event_attendance
         - 'dynamic_block_field:node-event_attendees'
+        - flag_event_attendance
         - 'dynamic_block_field:node-event_session_proposals'
+        - 'dynamic_token_field:node-add_session_proposal'
       parent_name: group_accordion_set
       weight: 18
       format_type: accordion_item
@@ -112,15 +112,21 @@ third_party_settings:
         - body
         - field_website
         - group_accordion_set
-        - flag_event_attendance
         - field_event_location_ref
-        - group_general_information
         - 'dynamic_block_field:node-event_attendees'
+        - group_general_information
         - group_location
-        - 'dynamic_block_field:node-event_session_proposals'
+        - flag_event_attendance
         - group_event_program
+        - 'dynamic_block_field:node-event_session_proposals'
         - field_additional_info
+        - 'dynamic_token_field:node-add_session_proposal'
     fields:
+      'dynamic_token_field:node-add_session_proposal':
+        plugin_id: 'dynamic_token_field:node-add_session_proposal'
+        weight: 19
+        label: hidden
+        formatter: default
       'dynamic_block_field:node-event_attendees':
         plugin_id: 'dynamic_block_field:node-event_attendees'
         weight: 16
@@ -128,7 +134,7 @@ third_party_settings:
         formatter: default
       'dynamic_block_field:node-event_session_proposals':
         plugin_id: 'dynamic_block_field:node-event_session_proposals'
-        weight: 17
+        weight: 18
         label: hidden
         formatter: default
       switch_field:
@@ -260,12 +266,21 @@ content:
             lb-col: false
             classes: {  }
   field_event_type:
-    type: entity_reference_rss_category
+    type: entity_reference_label
     weight: 6
     region: content
     label: inline
-    settings: {  }
-    third_party_settings: {  }
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
   field_title_html:
     type: text_default
     weight: 2
@@ -329,7 +344,7 @@ content:
       url_plain: false
     third_party_settings: {  }
   flag_event_attendance:
-    weight: 15
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }

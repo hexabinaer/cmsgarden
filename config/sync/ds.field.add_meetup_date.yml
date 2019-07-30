@@ -1,9 +1,9 @@
 id: add_meetup_date
 label: 'Add meetup date'
-ui_limit: meetup|full
+ui_limit: "meetup|full\r\nmeetup|default"
 properties:
   content:
-    value: "<p><a class=\"add-content\" href=\"/node/add/date?edit[field_date_meetup_ref][widget][0][target_id]=[node:nid]\">Add a date</a></p>\r\n"
+    value: "<p><a class=\"add-content button\" href=\"/node/add/date?edit[field_date_meetup_ref][widget][0][target_id]=[node:nid]\">Add a date</a></p>\r\n"
     format: full_html
 type: token
 type_label: 'Token field'

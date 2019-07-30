@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.showcase.field_sc_cms
     - field.field.node.showcase.field_sc_screenshot
     - field.field.node.showcase.field_sc_usage
+    - field.field.node.showcase.field_showcase_date
     - field.field.node.showcase.field_title_html
     - node.type.showcase
   module:
@@ -93,4 +94,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  content_moderation_control: true
+  field_showcase_date: true

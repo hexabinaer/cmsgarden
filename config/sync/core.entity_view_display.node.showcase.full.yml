@@ -8,9 +8,11 @@ dependencies:
     - field.field.node.showcase.field_sc_cms
     - field.field.node.showcase.field_sc_screenshot
     - field.field.node.showcase.field_sc_usage
+    - field.field.node.showcase.field_showcase_date
     - field.field.node.showcase.field_title_html
     - node.type.showcase
   module:
+    - datetime
     - ds
     - layout_builder
     - svg_image
@@ -26,18 +28,13 @@ third_party_settings:
       settings: {  }
     regions:
       content:
+        - content_moderation_control
         - links
-        - 'bundle_field:node'
         - field_title_html
-        - body
         - field_sc_screenshot
+        - body
+        - field_showcase_date
         - field_sc_cms
-    fields:
-      'bundle_field:node':
-        plugin_id: 'bundle_field:node'
-        weight: 1
-        label: hidden
-        formatter: default
   layout_builder:
     allow_custom: false
     enabled: false
@@ -49,12 +46,17 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_sc_cms:
-    weight: 5
+    weight: 6
     label: inline
     settings:
       view_mode: logo_linked
@@ -70,7 +72,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_sc_screenshot:
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       svg_attributes:
@@ -82,6 +84,22 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_showcase_date:
+    type: datetime_default
+    weight: 5
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_year
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_title_html:
     weight: 2
     label: hidden
@@ -90,7 +108,7 @@ content:
     type: text_default
     region: content
   links:
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

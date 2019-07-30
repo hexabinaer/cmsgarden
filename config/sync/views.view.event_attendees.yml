@@ -263,7 +263,7 @@ display:
           entity_type: flagging
           entity_field: created
           plugin_id: date
-      title: ''
+      title: 'Attending CMS Gardeners'
       header:
         area:
           id: area

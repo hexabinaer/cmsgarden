@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.event.field_event_type
     - field.field.node.event.field_meta_tags
     - field.field.node.event.field_org_geolocation
-    - field.field.node.event.field_representative
     - field.field.node.event.field_title_html
     - field.field.node.event.field_website
     - image.style.medium
@@ -119,7 +118,6 @@ hidden:
   field_event_type: true
   field_meta_tags: true
   field_org_geolocation: true
-  field_representative: true
   field_title_html: true
   field_website: true
   flag_event_attendance: true

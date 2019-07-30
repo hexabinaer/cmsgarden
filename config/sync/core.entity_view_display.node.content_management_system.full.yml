@@ -22,7 +22,6 @@ dependencies:
     - field.field.node.content_management_system.field_open_source_as_of
     - field.field.node.content_management_system.field_programming_language
     - field.field.node.content_management_system.field_registered_users
-    - field.field.node.content_management_system.field_representative
     - field.field.node.content_management_system.field_termref_logo
     - field.field.node.content_management_system.field_title_html
     - field.field.node.content_management_system.field_total_downloads
@@ -452,23 +451,7 @@ third_party_settings:
       -
         layout_id: layout_onecol
         layout_settings: {  }
-        components:
-          08728f5a-065a-4bbe-b7b4-1b4cef666621:
-            uuid: 08728f5a-065a-4bbe-b7b4-1b4cef666621
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:content_management_system:field_representative'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 3
+        components: {  }
         third_party_settings: {  }
   field_group:
     group_characteristics:
@@ -629,14 +612,6 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_decimal
-    region: content
-  field_representative:
-    weight: 4
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_termref_logo:
     type: entity_reference_entity_view

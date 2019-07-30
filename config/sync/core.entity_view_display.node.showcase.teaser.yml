@@ -8,10 +8,12 @@ dependencies:
     - field.field.node.showcase.field_sc_cms
     - field.field.node.showcase.field_sc_screenshot
     - field.field.node.showcase.field_sc_usage
+    - field.field.node.showcase.field_showcase_date
     - field.field.node.showcase.field_title_html
     - node.type.showcase
   module:
     - svg_image
+    - text
     - user
 id: node.showcase.teaser
 targetEntityType: node
@@ -31,10 +33,18 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+  field_title_html:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   body: true
+  content_moderation_control: true
   field_sc_cms: true
   field_sc_usage: true
-  field_title_html: true
+  field_showcase_date: true
   langcode: true
   links: true

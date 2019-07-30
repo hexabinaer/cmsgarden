@@ -1,0 +1,10 @@
+uuid: 696538d9-c8f0-49c7-ad88-7888e87c09a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.chapter_illustration
+label: 'Chapter illustration'
+targetEntityType: node
+cache: true

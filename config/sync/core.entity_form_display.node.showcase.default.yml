@@ -7,10 +7,14 @@ dependencies:
     - field.field.node.showcase.field_sc_cms
     - field.field.node.showcase.field_sc_screenshot
     - field.field.node.showcase.field_sc_usage
+    - field.field.node.showcase.field_showcase_date
     - field.field.node.showcase.field_title_html
     - image.style.thumbnail
     - node.type.showcase
+    - workflows.workflow.default_nodes
   module:
+    - content_moderation
+    - datetime
     - path
     - svg_image
     - text
@@ -30,12 +34,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_sc_cms:
-    weight: 4
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -52,13 +56,19 @@ content:
     type: image_image
     region: content
   field_sc_usage:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_showcase_date:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_title_html:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -72,9 +82,15 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 16
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -82,39 +98,39 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 15
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 12
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 2
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 8
     settings:
       match_operator: CONTAINS
       size: 60
@@ -122,7 +138,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }

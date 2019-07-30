@@ -34,11 +34,11 @@ third_party_settings:
     regions:
       ds_content:
         - node_links
-        - node_submitted_by
         - field_session_category
         - node_title
         - body
         - field_session_tags
+        - node_submitted_by
         - flag_session_ratings
     fields:
       node_links:
@@ -48,22 +48,43 @@ third_party_settings:
         formatter: default
       node_title:
         plugin_id: node_title
-        weight: 3
+        weight: 2
         label: hidden
         formatter: default
         settings:
           link: true
-          wrapper: h4
+          wrapper: ''
           class: ''
         ft:
-          id: minimal
+          id: expert
           settings:
             lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: h4
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
             lb-col: false
-            classes: {  }
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
       node_submitted_by:
         plugin_id: node_submitted_by
-        weight: 1
+        weight: 5
         label: hidden
         formatter: ds_post_date_cmsg_default_date
 id: node.session.teaser
@@ -74,21 +95,21 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 4
+    weight: 3
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: ds_content
   field_session_category:
     type: list_key
-    weight: 2
+    weight: 1
     region: ds_content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_session_tags:
     type: entity_reference_label
-    weight: 5
+    weight: 4
     region: ds_content
     label: hidden
     settings:

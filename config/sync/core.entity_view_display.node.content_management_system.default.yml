@@ -21,7 +21,6 @@ dependencies:
     - field.field.node.content_management_system.field_open_source_as_of
     - field.field.node.content_management_system.field_programming_language
     - field.field.node.content_management_system.field_registered_users
-    - field.field.node.content_management_system.field_representative
     - field.field.node.content_management_system.field_termref_logo
     - field.field.node.content_management_system.field_title_html
     - field.field.node.content_management_system.field_total_downloads
@@ -281,5 +280,4 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_representative: true
   langcode: true

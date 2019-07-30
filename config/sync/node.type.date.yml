@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Date
 type: date
-description: 'Announce date + time (+ location) for a meetup'
+description: '(Embedded content) Announce a date/time and pick location for a meetup.'
 help: ''
 new_revision: true
 preview_mode: 1

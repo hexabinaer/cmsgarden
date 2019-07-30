@@ -5,7 +5,7 @@ display:
       fields:
         count:
           format_plural_string: !!binary MSBUZWlsbmVobWVyKmluA0Bjb3VudCBUZWlsbmVobWVyKmlubmVu
-      title: Event-Teilnehmer/innen
+      title: 'Teilnehmende CMS-Gärtner/innen'
       header:
         area:
           content:

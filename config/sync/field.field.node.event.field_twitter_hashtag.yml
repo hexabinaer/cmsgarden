@@ -1,0 +1,19 @@
+uuid: 4e3b80ed-a6de-461f-a513-98d3bdbaf5cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_twitter_hashtag
+    - node.type.event
+id: node.event.field_twitter_hashtag
+field_name: field_twitter_hashtag
+entity_type: node
+bundle: event
+label: 'Twitter hashtag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

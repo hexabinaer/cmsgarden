@@ -1,21 +1,21 @@
-uuid: b747e28d-bb3f-4ab2-a419-bbae28f0d144
+uuid: 3742e3e1-7323-4454-b614-27467a3167c4
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime_range
+    - datetime
     - field_permissions
     - node
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_event_date
-field_name: field_event_date
+id: node.field_showcase_date
+field_name: field_showcase_date
 entity_type: node
-type: daterange
+type: datetime
 settings:
-  datetime_type: datetime
-module: datetime_range
+  datetime_type: date
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

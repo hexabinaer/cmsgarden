@@ -21,13 +21,14 @@ dependencies:
     - field.field.node.content_management_system.field_open_source_as_of
     - field.field.node.content_management_system.field_programming_language
     - field.field.node.content_management_system.field_registered_users
-    - field.field.node.content_management_system.field_representative
     - field.field.node.content_management_system.field_termref_logo
     - field.field.node.content_management_system.field_title_html
     - field.field.node.content_management_system.field_total_downloads
     - field.field.node.content_management_system.field_total_installs
     - node.type.content_management_system
+    - workflows.workflow.default_nodes
   module:
+    - content_moderation
     - datetime_extras
     - field_group
     - link
@@ -304,6 +305,12 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 7
@@ -358,5 +365,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_representative: true
+hidden: {  }

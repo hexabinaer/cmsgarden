@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Location
 type: location
-description: 'Add a (reusable) event location '
+description: '(Embedded content) Add a reusable event location .'
 help: 'Please enter a title that is useful for autocomplete searches. It will not be displayed.'
 new_revision: true
 preview_mode: 1

@@ -1,12 +1,12 @@
-id: event_attendees
-label: 'Event attendees'
+id: event_session_proposals
+label: 'Event session proposals'
 ui_limit: "event|default\r\nevent|full"
 properties:
-  block: 'views_block:event_attendees-block_1'
-  use_block_title: false
+  block: 'views_block:cmsg_session_proposals-block_session_proposals'
+  use_block_title: true
   add_block_wrappers: true
   config:
-    id: 'views_block:event_attendees-block_1'
+    id: 'views_block:cmsg_session_proposals-block_session_proposals'
     label: ''
     provider: views
     label_display: visible

@@ -11,62 +11,124 @@ dependencies:
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_location_ref
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_has_sessions
     - field.field.node.event.field_meta_tags
     - field.field.node.event.field_org_geolocation
-    - field.field.node.event.field_representative
     - field.field.node.event.field_title_html
+    - field.field.node.event.field_twitter_hashtag
     - field.field.node.event.field_website
+    - image.style.large
     - node.type.event
   module:
     - datetime_range
     - ds
+    - field_group
     - layout_builder
     - link
     - options
     - svg_image
+    - taxonomy
     - text
     - user
 third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_accordion_set:
+      children:
+        - group_general_information
+        - group_location
+        - group_event_program
+      parent_name: ''
+      weight: 10
+      format_type: accordion
+      format_settings:
+        id: ''
+        classes: ''
+        effect: none
+        direction: vertical
+      label: 'Accordion set'
+      region: content
+    group_location:
+      children:
+        - field_event_location_ref
+        - field_additional_info
+      parent_name: group_accordion_set
+      weight: 17
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Location
+      region: content
+    group_event_program:
+      children:
+        - flag_event_attendance
+        - 'dynamic_block_field:node-event_attendees'
+        - 'dynamic_block_field:node-event_session_proposals'
+      parent_name: group_accordion_set
+      weight: 18
+      format_type: accordion_item
+      format_settings:
+        id: event-program
+        classes: ''
+        description: ''
+        formatter: closed
+      label: 'Sessions + Attendees'
+      region: content
+    group_general_information:
+      children:
+        - body
+      parent_name: group_accordion_set
+      weight: 16
+      format_type: accordion_item
+      format_settings:
+        formatter: open
+        id: event-info
+        classes: ''
+      label: 'General information'
+      region: content
   ds:
     layout:
-      id: ds_2col_stacked_fluid
-      library: ds/ds_2col_stacked_fluid
+      id: layout_onecol
+      library: layout_discovery/onecol
       disable_css: false
       entity_classes: all_classes
-      settings:
-        wrappers:
-          header: div
-          left: div
-          right: div
-          footer: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
+      settings: {  }
     regions:
-      header:
+      content:
         - content_moderation_control
         - switch_field
-        - links
         - field_title_html
-      left:
+        - links
         - field_event_date
         - field_event_banner
-        - body
-        - field_additional_info
-      right:
         - field_event_type
         - field_event_cmsg_participation
-        - field_event_location_ref
+        - field_twitter_hashtag
+        - body
         - field_website
-        - 'dynamic_block_field:node-event_attendees'
+        - group_accordion_set
         - flag_event_attendance
+        - field_event_location_ref
+        - group_general_information
+        - 'dynamic_block_field:node-event_attendees'
+        - group_location
+        - 'dynamic_block_field:node-event_session_proposals'
+        - group_event_program
+        - field_additional_info
     fields:
       'dynamic_block_field:node-event_attendees':
         plugin_id: 'dynamic_block_field:node-event_attendees'
-        weight: 12
+        weight: 16
+        label: hidden
+        formatter: default
+      'dynamic_block_field:node-event_session_proposals':
+        plugin_id: 'dynamic_block_field:node-event_session_proposals'
+        weight: 17
         label: hidden
         formatter: default
       switch_field:
@@ -74,9 +136,15 @@ third_party_settings:
         weight: 1
         label: hidden
         formatter: default
-  layout_builder:
-    allow_custom: false
-    enabled: false
+        settings:
+          vms:
+            teaser: ''
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -84,42 +152,67 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 6
-    region: left
+    weight: 9
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   content_moderation_control:
     weight: 0
-    region: header
+    region: content
     settings: {  }
     third_party_settings: {  }
   field_additional_info:
-    type: text_default
-    weight: 7
-    region: left
-    label: hidden
-    settings: {  }
+    type: text_trimmed
+    weight: 18
+    region: content
+    label: above
+    settings:
+      trim_length: 600
     third_party_settings: {  }
   field_event_banner:
     type: image
     weight: 5
-    region: left
+    region: content
     label: hidden
     settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
+      image_style: large
       image_link: ''
-    third_party_settings: {  }
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: '480'
+        height: '480'
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_event_cmsg_participation:
     type: list_default
-    weight: 9
-    region: right
+    weight: 7
+    region: content
     label: inline
     settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
+  field_event_date:
+    type: daterange_default
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: cmsg_default_date
+      separator: '-'
     third_party_settings:
       ds:
         ft:
@@ -127,48 +220,32 @@ content:
           settings:
             lb: ''
             prefix: ''
-            lbw: true
-            lbw-el: span
+            lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
-            lb-col: true
             ow: true
-            ow-el: div
-            ow-cl: ''
+            ow-el: h2
+            ow-cl: date--event
             ow-at: ''
-            fis: true
-            fis-el: span
+            fis-el: ''
             fis-cl: ''
             fis-at: ''
             fi-el: ''
             fi-cl: ''
             fi-at: ''
             suffix: ''
+            lbw: false
+            lb-col: false
             ow-def-at: false
             ow-def-cl: false
+            fis: false
             fis-def-at: false
             fi: false
             fi-def-at: false
-  field_event_date:
-    type: daterange_default
-    weight: 4
-    region: left
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: short
-      separator: '-'
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
   field_event_location_ref:
-    weight: 10
+    type: entity_reference_entity_view
+    weight: 15
+    region: content
     label: hidden
     settings:
       view_mode: full
@@ -182,79 +259,89 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: entity_reference_entity_view
-    region: right
   field_event_type:
-    type: entity_reference_label
-    weight: 8
-    region: right
+    type: entity_reference_rss_category
+    weight: 6
+    region: content
     label: inline
-    settings:
-      link: false
+    settings: {  }
+    third_party_settings: {  }
+  field_title_html:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
     third_party_settings:
       ds:
-        ds_limit: ''
         ft:
           id: expert
           settings:
             lb: ''
             prefix: ''
-            lbw: true
-            lbw-el: span
+            lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
-            lb-col: true
             ow: true
-            ow-el: span
-            ow-cl: ''
+            ow-el: h1
+            ow-cl: page-title
             ow-at: ''
-            ow-def-at: true
-            ow-def-cl: true
-            fis: true
-            fis-el: span
+            fis-el: ''
             fis-cl: ''
             fis-at: ''
-            fi: true
-            fi-el: span
+            fi-el: ''
             fi-cl: ''
             fi-at: ''
             suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-def-at: false
+            fi: false
             fi-def-at: false
-  field_title_html:
-    type: text_trimmed
-    weight: 3
-    region: header
-    label: hidden
+  field_twitter_hashtag:
+    type: string
+    weight: 8
+    region: content
+    label: inline
     settings:
-      trim_length: 600
-    third_party_settings: {  }
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
   field_website:
     type: link
-    weight: 11
-    region: right
-    label: hidden
+    weight: 9
+    region: content
+    label: above
     settings:
       trim_length: 80
-      url_only: false
-      url_plain: false
       rel: ''
       target: ''
+      url_only: false
+      url_plain: false
     third_party_settings: {  }
   flag_event_attendance:
-    weight: 13
-    region: right
+    weight: 15
+    region: content
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 2
-    region: header
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_event_location: true
+  field_has_sessions: true
   field_meta_tags: true
   field_org_geolocation: true
-  field_representative: true
   langcode: true
   layout_builder__layout: true

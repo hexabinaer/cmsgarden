@@ -1,0 +1,21 @@
+uuid: 8454e115-5d04-499e-942f-0e3033b6d41b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_showcase_date
+    - node.type.showcase
+  module:
+    - datetime
+id: node.showcase.field_showcase_date
+field_name: field_showcase_date
+entity_type: node
+bundle: showcase
+label: Year
+description: 'If known, add the year of the go-live.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

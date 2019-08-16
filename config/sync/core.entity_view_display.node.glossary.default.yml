@@ -1,0 +1,79 @@
+uuid: 705f5cfb-325b-4493-9230-c90ab8d1b64b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.glossary.body
+    - field.field.node.glossary.field_further_reading
+    - field.field.node.glossary.field_glossary_reference
+    - field.field.node.glossary.field_title_html
+    - field.field.node.glossary.field_wikipedia_link
+    - node.type.glossary
+  module:
+    - ds
+    - link
+    - text
+    - user
+id: node.glossary.default
+targetEntityType: node
+bundle: glossary
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_further_reading:
+    weight: 4
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_glossary_reference:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_wikipedia_link:
+    weight: 3
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: Wikipedia
+            lb-col: true
+            classes: {  }
+    type: link
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_title_html: true
+  langcode: true

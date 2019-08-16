@@ -1,0 +1,23 @@
+uuid: fed746ef-0b10-4d1f-8850-11225a9f3b90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_further_reading
+    - node.type.glossary
+  module:
+    - link
+id: node.glossary.field_further_reading
+field_name: field_further_reading
+entity_type: node
+bundle: glossary
+label: 'Further reading'
+description: 'If useful, enter an link that serves better understanding.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

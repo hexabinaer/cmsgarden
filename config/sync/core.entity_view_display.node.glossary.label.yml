@@ -1,0 +1,58 @@
+uuid: f84dfd94-2e6a-4ad2-8344-2bbb8e1deb2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.label
+    - field.field.node.glossary.body
+    - field.field.node.glossary.field_further_reading
+    - field.field.node.glossary.field_glossary_reference
+    - field.field.node.glossary.field_title_html
+    - field.field.node.glossary.field_wikipedia_link
+    - node.type.glossary
+  module:
+    - ds
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_title_html
+id: node.glossary.label
+targetEntityType: node
+bundle: glossary
+mode: label
+content:
+  field_title_html:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+hidden:
+  body: true
+  field_further_reading: true
+  field_glossary_reference: true
+  field_wikipedia_link: true
+  langcode: true
+  links: true

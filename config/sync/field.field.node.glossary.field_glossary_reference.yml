@@ -1,0 +1,23 @@
+uuid: 4c04fce9-76bc-4a45-98c9-a35a3083e563
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_glossary_reference
+    - node.type.glossary
+  module:
+    - link
+id: node.glossary.field_glossary_reference
+field_name: field_glossary_reference
+entity_type: node
+bundle: glossary
+label: 'Glossary reference'
+description: 'Refer to a different glossary entry.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 0
+field_type: link

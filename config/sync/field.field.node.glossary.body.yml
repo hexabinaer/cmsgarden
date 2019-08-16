@@ -1,0 +1,22 @@
+uuid: bd42646d-5c46-4025-a005-5ba0d6f2fcda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.glossary
+  module:
+    - text
+id: node.glossary.body
+field_name: body
+entity_type: node
+bundle: glossary
+label: Explanation
+description: 'Keep it short please. Will appear in future editions of the <em>CMS Gardener''s Guide</em> and most work without further links.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

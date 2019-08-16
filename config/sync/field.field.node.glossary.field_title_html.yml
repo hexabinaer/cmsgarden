@@ -1,0 +1,21 @@
+uuid: 33b4be53-3df8-4331-89f0-afb5068ad948
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_html
+    - node.type.glossary
+  module:
+    - text
+id: node.glossary.field_title_html
+field_name: field_title_html
+entity_type: node
+bundle: glossary
+label: Lemma
+description: 'The word or phrase to explain with this entry. Please do not forget to language attribute for screenreaders.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

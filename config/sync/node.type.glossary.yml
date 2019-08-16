@@ -1,0 +1,17 @@
+uuid: db5c08b4-1493-4aec-92fd-9a7bfd31b3df
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Glossary
+type: glossary
+description: 'Add an entry to the glossary'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

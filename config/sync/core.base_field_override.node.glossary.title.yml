@@ -1,0 +1,18 @@
+uuid: cb545561-4677-49b4-89af-0332ff446095
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.glossary
+id: node.glossary.title
+field_name: title
+entity_type: node
+bundle: glossary
+label: 'Administrative title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

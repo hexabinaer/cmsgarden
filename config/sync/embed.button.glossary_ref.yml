@@ -1,0 +1,23 @@
+uuid: 959a9168-2876-46b2-8d47-edf6a42f0196
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.label
+    - node.type.glossary
+  module:
+    - entity_embed
+    - node
+label: 'Glossary reference'
+id: glossary_ref
+type_id: entity
+type_settings:
+  entity_type: node
+  bundles:
+    - glossary
+  display_plugins:
+    - 'view_mode:node.label'
+  entity_browser: ''
+  entity_browser_settings:
+    display_review: false
+icon_uuid: null

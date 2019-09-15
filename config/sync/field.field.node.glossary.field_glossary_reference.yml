@@ -1,23 +1,27 @@
-uuid: 4c04fce9-76bc-4a45-98c9-a35a3083e563
+uuid: 70a8af60-0045-42b5-bb61-74408f17045e
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_glossary_reference
     - node.type.glossary
-  module:
-    - link
 id: node.glossary.field_glossary_reference
 field_name: field_glossary_reference
 entity_type: node
 bundle: glossary
 label: 'Glossary reference'
-description: 'Refer to a different glossary entry.'
+description: 'There should be a single explanation for every synonym. If this is a synonym of the major lemma, enter that one here.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 1
-  title: 0
-field_type: link
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      glossary: glossary
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

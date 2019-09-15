@@ -1,49 +1,31 @@
-uuid: 4896f6f2-5c71-43de-862b-7e9ff228359a
+uuid: 5746b98c-588a-4465-9dc5-59e693b22e83
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.chapter_illustration
     - core.entity_view_mode.node.teaser
-    - entity_browser.browser.test_nodes
-    - node.type.article
-    - node.type.blog_entry
-    - node.type.content_management_system
     - node.type.event
-    - node.type.frequently_asked_question
-    - node.type.organization
-    - node.type.page
     - node.type.project
-    - node.type.session
-    - node.type.showcase
     - node.type.testimonial
   content:
-    - 'file:file:40d94b40-af42-4d3d-ac32-b787f36fab3d'
+    - 'file:file:e12a496e-e1db-4da1-aadd-1d299ad669c1'
   module:
     - entity_embed
     - node
-_core:
-  default_config_hash: xgvZUh-eaMilacE1XYCQ9nLH-2-meOjCyofXSO82gqg
 label: Node
 id: node
 type_id: entity
 type_settings:
   entity_type: node
   bundles:
-    - page
-    - blog_entry
-    - content_management_system
     - event
-    - frequently_asked_question
-    - article
-    - organization
     - project
-    - session
-    - showcase
     - testimonial
   display_plugins:
+    - 'view_mode:node.chapter_illustration'
     - 'view_mode:node.teaser'
-    - 'entity_reference:entity_reference_label'
-  entity_browser: test_nodes
+  entity_browser: ''
   entity_browser_settings:
-    display_review: true
-icon_uuid: 40d94b40-af42-4d3d-ac32-b787f36fab3d
+    display_review: false
+icon_uuid: e12a496e-e1db-4da1-aadd-1d299ad669c1

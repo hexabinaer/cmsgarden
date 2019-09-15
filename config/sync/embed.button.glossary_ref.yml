@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.label
     - node.type.glossary
+  content:
+    - 'file:file:8628ff35-bfe2-425a-a0eb-f6a73018d9e9'
   module:
     - entity_embed
     - node
@@ -20,4 +22,4 @@ type_settings:
   entity_browser: ''
   entity_browser_settings:
     display_review: false
-icon_uuid: null
+icon_uuid: 8628ff35-bfe2-425a-a0eb-f6a73018d9e9

@@ -465,6 +465,7 @@ third_party_settings:
         open: false
         required_fields: false
       label: Characteristics
+      region: content
 id: node.content_management_system.full
 targetEntityType: node
 bundle: content_management_system

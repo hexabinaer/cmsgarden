@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.glossary.body
     - field.field.node.glossary.field_further_reading
-    - field.field.node.glossary.field_glossary_reference
     - field.field.node.glossary.field_title_html
     - field.field.node.glossary.field_wikipedia_link
     - node.type.glossary
@@ -104,18 +103,6 @@ content:
     weight: 5
     region: ds_content
     label: inline
-    settings:
-      trim_length: 80
-      rel: ''
-      target: ''
-      url_only: false
-      url_plain: false
-    third_party_settings: {  }
-  field_glossary_reference:
-    type: link_separate
-    weight: 2
-    region: ds_content
-    label: hidden
     settings:
       trim_length: 80
       rel: ''

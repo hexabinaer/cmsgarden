@@ -43,12 +43,13 @@ content:
     type: link_default
     region: content
   field_glossary_reference:
-    weight: 4
+    weight: 26
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: link_default
+    type: entity_reference_autocomplete
     region: content
   field_title_html:
     weight: 3

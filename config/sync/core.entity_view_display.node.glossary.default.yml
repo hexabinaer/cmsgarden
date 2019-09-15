@@ -39,16 +39,12 @@ content:
     type: link
     region: content
   field_glossary_reference:
-    weight: 1
-    label: hidden
+    weight: 5
+    label: above
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      link: true
     third_party_settings: {  }
-    type: link
+    type: entity_reference_label
     region: content
   field_wikipedia_link:
     weight: 3

@@ -39,27 +39,29 @@ settings:
           items:
             - Blockquote
             - DrupalImage
-            - Table
-            - HorizontalRule
         -
           name: 'Entity embed'
           items:
+            - media_entity_embed
+            - showcase_embed
             - node
-            - files
             - poll
             - glossary_ref
         -
           name: 'Block Formatting'
           items:
             - Format
+            - Table
+            - HorizontalRule
         -
           name: Tools
           items:
-            - ShowBlocks
-            - Source
             - PasteFromWord
             - SpecialChar
             - Language
+            - Source
+            - ShowBlocks
+            - Maximize
   plugins:
     language:
       language_list: un

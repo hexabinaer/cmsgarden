@@ -30,8 +30,7 @@ module:
   editor: 0
   embed: 0
   entity_browser: 0
-  entity_browser_enhanced: 0
-  entity_browser_example: 0
+  entity_browser_entity_form: 0
   entity_embed: 0
   entity_limit: 0
   entity_reference_revisions: 0
@@ -56,6 +55,8 @@ module:
   link: 0
   locale: 0
   mailsystem: 0
+  media: 0
+  media_entity_browser: 0
   menu_ui: 0
   metatag: 0
   node: 0

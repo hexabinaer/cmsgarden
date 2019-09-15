@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.label
     - field.field.node.glossary.body
     - field.field.node.glossary.field_further_reading
-    - field.field.node.glossary.field_glossary_reference
     - field.field.node.glossary.field_title_html
     - field.field.node.glossary.field_wikipedia_link
     - node.type.glossary
@@ -52,7 +51,6 @@ content:
 hidden:
   body: true
   field_further_reading: true
-  field_glossary_reference: true
   field_wikipedia_link: true
   langcode: true
   links: true

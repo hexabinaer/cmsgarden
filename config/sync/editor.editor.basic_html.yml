@@ -46,10 +46,18 @@ settings:
           items:
             - RemoveFormat
             - PasteFromWord
-            - Source
             - glossary_ref
             - SpecialChar
             - Language
+            - Source
+            - Maximize
+        -
+          name: 'Entity embed'
+          items:
+            - media_entity_embed
+            - showcase_embed
+            - node
+            - poll
   plugins:
     language:
       language_list: un

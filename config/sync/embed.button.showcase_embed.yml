@@ -1,0 +1,23 @@
+uuid: 530d2fcf-1d74-417d-b637-8e41f22b784e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.showcase
+  content:
+    - 'file:file:8b185c90-1805-4e8e-858f-12a6b761289e'
+  module:
+    - entity_embed
+    - node
+label: 'Showcase embed'
+id: showcase_embed
+type_id: entity
+type_settings:
+  entity_type: node
+  bundles:
+    - showcase
+  display_plugins: {  }
+  entity_browser: ''
+  entity_browser_settings:
+    display_review: false
+icon_uuid: 8b185c90-1805-4e8e-858f-12a6b761289e

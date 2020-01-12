@@ -45,7 +45,7 @@
         "drupal/field_group": "^3.0",
         "drupal/field_permissions": "^1.0@RC",
         "drupal/flag": "^4.0@alpha",
-        "drupal/geolocation": "3.0-rc1",
+        "drupal/geolocation": "3.0-rc4",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/material_admin": "^1.0@alpha",
         "drupal/media_entity_browser": "^2.0",
@@ -76,7 +76,6 @@
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "webflo/drupal-core-require-dev": "^8.6.0"
     },
     "conflict": {
         "drupal/drupal": "*"

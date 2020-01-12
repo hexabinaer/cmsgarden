@@ -1,22 +1,22 @@
-uuid: 53dbb303-4eab-4e23-8282-46832beaa94c
+uuid: 81299451-7f8c-4e4a-8174-acdaef009c53
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - material_admin
+    - bartik
 _core:
-  default_config_hash: FFp_FvC5FBjvUhAFzC449JS-sc6v5X6uDWmEkp1ST3c
-id: material_admin_breadcrumbs
-theme: material_admin
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: bartik_breadcrumbs
+theme: bartik
 region: breadcrumb
 weight: 0
 provider: null
 plugin: system_breadcrumb_block
 settings:
   id: system_breadcrumb_block
-  label: 'Breadcrumbs (Material Admin)'
+  label: Breadcrumbs
   provider: system
   label_display: '0'
 visibility: {  }

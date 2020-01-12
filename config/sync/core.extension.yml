@@ -20,6 +20,7 @@ module:
   content_moderation: 0
   contextual: 0
   ctools: 0
+  date_range_formatter: 0
   datetime: 0
   datetime_extras: 0
   datetime_range: 0
@@ -45,6 +46,7 @@ module:
   geolocation_address: 0
   geolocation_leaflet: 0
   git_deploy: 0
+  hacked: 0
   help: 0
   history: 0
   image: 0
@@ -115,7 +117,7 @@ theme:
   bootstrap_barrio: 0
   cmsg_barrio: 0
   bootstrap_sass: 0
-  material_admin: 0
+  bartik: 0
 profile: minimal
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

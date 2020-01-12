@@ -1,0 +1,30 @@
+uuid: a83fd8c6-2abf-491e-b510-d4f5eec4c298
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.cmsg_cms_overview
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: bartik_front_cms_overview_block1
+theme: bartik
+region: header
+weight: -7
+provider: null
+plugin: 'views_block:cmsg_cms_overview-block_1'
+settings:
+  id: 'views_block:cmsg_cms_overview-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

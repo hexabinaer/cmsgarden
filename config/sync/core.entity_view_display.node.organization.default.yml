@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.organization.field_org_cms
     - field.field.node.organization.field_org_geolocation
     - field.field.node.organization.field_org_tagline
+    - field.field.node.organization.field_organization_type
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
     - node.type.organization
@@ -35,6 +36,11 @@ content:
     label: hidden
     type: text_default
     weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -119,6 +125,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_organization_type:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_title_html:
     weight: 105

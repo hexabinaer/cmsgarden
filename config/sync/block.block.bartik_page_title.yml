@@ -1,0 +1,30 @@
+uuid: 44fc90a6-6e41-4773-97af-cfd35800c73b
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+  theme:
+    - bartik
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: bartik_page_title
+theme: bartik
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blog_entry: blog_entry
+      frequently_asked_question: frequently_asked_question
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

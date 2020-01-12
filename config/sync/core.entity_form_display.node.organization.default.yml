@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.organization.field_org_cms
     - field.field.node.organization.field_org_geolocation
     - field.field.node.organization.field_org_tagline
+    - field.field.node.organization.field_organization_type
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
     - image.style.thumbnail
@@ -69,6 +70,7 @@ third_party_settings:
       region: content
     group_administrative:
       children:
+        - field_organization_type
         - field_member
         - field_membership_no
         - field_member_since
@@ -126,19 +128,19 @@ content:
     type: image_image
     region: content
   field_member:
-    weight: 32
+    weight: 36
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_member_since:
-    weight: 34
+    weight: 38
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_membership_no:
-    weight: 33
+    weight: 37
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -172,6 +174,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
+    region: content
+  field_organization_type:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_title_html:
     weight: 22

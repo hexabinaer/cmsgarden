@@ -1,17 +1,17 @@
-uuid: 4f38e86d-7d88-4e54-90e6-e93c05b07ba1
+uuid: d18ec613-9332-4f62-aac1-4ab8a08e1011
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - material_admin
+    - bartik
 _core:
-  default_config_hash: NgLsbLszEUM6yHAE9EUvz8meZCPjf9g959hMEwrai6o
-id: material_admin_content
-theme: material_admin
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: bartik_content
+theme: bartik
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: system_main_block
 settings:

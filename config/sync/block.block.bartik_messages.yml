@@ -1,16 +1,16 @@
-uuid: af46f1dc-2bc2-4d34-8e47-d9a6aa62ac4f
+uuid: c1bffae5-7c27-497c-a65d-1b19b286197a
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - material_admin
+    - bartik
 _core:
-  default_config_hash: 6ANfHFYdqyPgGyd6fgurzphLbqLUVo2aa7rcjNyZ-_0
-id: material_admin_messages
-theme: material_admin
-region: status
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: bartik_messages
+theme: bartik
+region: highlighted
 weight: 0
 provider: null
 plugin: system_messages_block

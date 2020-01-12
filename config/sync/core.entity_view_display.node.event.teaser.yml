@@ -12,14 +12,16 @@ dependencies:
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_location_ref
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_has_sessions
     - field.field.node.event.field_meta_tags
     - field.field.node.event.field_org_geolocation
     - field.field.node.event.field_title_html
+    - field.field.node.event.field_twitter_hashtag
     - field.field.node.event.field_website
     - image.style.medium
     - node.type.event
   module:
-    - datetime_range
+    - date_range_formatter
     - ds
     - svg_image
     - user
@@ -70,17 +72,22 @@ content:
             lb-col: false
             classes: {  }
   field_event_date:
-    type: daterange_default
+    type: date_range_without_time
     weight: 2
     region: content
     label: hidden
     settings:
       timezone_override: ''
-      format_type: cmsg_default_date
+      single: 'd F Y'
+      single_all_day: 'd F Y'
+      one_day: 'd F Y'
+      one_month: 'd - {d} F Y'
+      several_months: 'd F - {d} {F} Y'
+      several_years: 'd F Y - {d} {F} {Y}'
       separator: '-'
+      date_format: 'Y-m-d\TH:i:s'
     third_party_settings:
       ds:
-        ds_limit: '1'
         ft:
           id: minimal
           settings:
@@ -116,9 +123,11 @@ hidden:
   field_event_cmsg_participation: true
   field_event_location: true
   field_event_type: true
+  field_has_sessions: true
   field_meta_tags: true
   field_org_geolocation: true
   field_title_html: true
+  field_twitter_hashtag: true
   field_website: true
   flag_event_attendance: true
   langcode: true

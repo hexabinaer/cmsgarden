@@ -113,10 +113,8 @@ theme:
   stable: 0
   classy: 0
   seven: 0
-  adminimal_theme: 0
   bootstrap_barrio: 0
   cmsg_barrio: 0
-  bootstrap_sass: 0
   bartik: 0
 profile: minimal
 _core:

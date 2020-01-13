@@ -20,7 +20,6 @@ description: 'Provides a logo list for CMS taxonomy term selection'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -718,6 +717,8 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -759,6 +760,8 @@ display:
               anonymous: '0'
               administrator: '0'
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -804,6 +807,8 @@ display:
               anonymous: '0'
               administrator: '0'
             reduce: true
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

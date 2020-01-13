@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.location.field_geolocation
     - field.field.node.location.field_location_notes
     - node.type.location
+    - workflows.workflow.default_nodes
   module:
     - address
     - content_moderation
@@ -580,6 +581,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:

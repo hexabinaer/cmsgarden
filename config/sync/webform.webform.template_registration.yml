@@ -80,6 +80,7 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
+  wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
@@ -127,6 +128,7 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  token_view: false
   token_update: false
 access:
   create:
@@ -204,12 +206,13 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme_name: ''
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''
+      parameters: {  }
 uuid: 3cce2d39-9cc0-4026-a5fa-98d6383fab05
 _core:
   default_config_hash: 0MPMA_5jirZY5pTgzS4iIncd2yqsMEw7045F2twPkA0

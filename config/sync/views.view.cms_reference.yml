@@ -18,7 +18,6 @@ description: 'Provides a logo list for CMS taxonomy term selection'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -210,6 +209,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         vid:
           id: vid
@@ -220,6 +221,9 @@ display:
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
       sorts:
         field_machine_name_value:
           id: field_machine_name_value
@@ -273,6 +277,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         vid:
           id: vid
@@ -283,6 +289,9 @@ display:
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         field_status_value:
           id: field_status_value
           table: taxonomy_term__field_status
@@ -308,6 +317,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

@@ -88,6 +88,7 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: true
+  wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: true
   wizard_confirmation: true
@@ -135,6 +136,7 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  token_view: false
   token_update: false
 access:
   create:
@@ -233,4 +235,5 @@ handlers:
       sender_mail: ''
       sender_name: ''
       theme_name: ''
+      parameters: {  }
 uuid: 215d1752-0c59-4f4c-8474-4228044b3366

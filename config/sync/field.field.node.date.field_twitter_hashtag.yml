@@ -1,0 +1,19 @@
+uuid: d302aed3-a5f5-411b-a704-d60641a3133c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_twitter_hashtag
+    - node.type.date
+id: node.date.field_twitter_hashtag
+field_name: field_twitter_hashtag
+entity_type: node
+bundle: date
+label: 'Twitter hashtag'
+description: 'Enter a date-specific hashtag here. Leave empty if the meetup/event series has a recurring hashtag.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

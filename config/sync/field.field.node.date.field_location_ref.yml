@@ -1,0 +1,29 @@
+uuid: ffbffecf-6af5-43ab-b7ea-9a038ea5b95f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_ref
+    - node.type.date
+    - node.type.location
+id: node.date.field_location_ref
+field_name: field_location_ref
+entity_type: node
+bundle: date
+label: Location
+description: "Pick a location (new locations <a href=\"/node/add/location\">can be added here</a>).\r\nIf required, you may add a second address (e. g. for the social event)."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

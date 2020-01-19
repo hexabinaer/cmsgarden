@@ -11,7 +11,7 @@ id: node.event.field_event_cmsg_participation
 field_name: field_event_cmsg_participation
 entity_type: node
 bundle: event
-label: 'CMS Garden on site'
+label: 'CMS Garden on site (DEPRECATED)'
 description: 'Will CMS Garden be present/participate?'
 required: false
 translatable: false

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
     - field.field.node.event.field_additional_info
+    - field.field.node.event.field_contact_ref
     - field.field.node.event.field_event_banner
     - field.field.node.event.field_event_cmsg_participation
     - field.field.node.event.field_event_date
@@ -120,6 +121,7 @@ hidden:
   body: true
   content_moderation_control: true
   field_additional_info: true
+  field_contact_ref: true
   field_event_cmsg_participation: true
   field_event_location: true
   field_event_type: true

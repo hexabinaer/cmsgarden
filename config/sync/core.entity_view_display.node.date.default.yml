@@ -4,14 +4,25 @@ status: true
 dependencies:
   config:
     - field.field.node.date.body
+    - field.field.node.date.field_cms_ref
+    - field.field.node.date.field_contact_ref
     - field.field.node.date.field_date_meetup_ref
+    - field.field.node.date.field_date_node_ref
+    - field.field.node.date.field_date_range
+    - field.field.node.date.field_event_cmsg_participation
+    - field.field.node.date.field_has_sessions
+    - field.field.node.date.field_location_ref
     - field.field.node.date.field_meetup_date
     - field.field.node.date.field_meetup_location
+    - field.field.node.date.field_twitter_hashtag
+    - field.field.node.date.field_user_ref
     - node.type.date
   module:
     - datetime
+    - datetime_range
     - ds
     - entity_reference_revisions
+    - options
     - text
     - user
 id: node.date.default
@@ -26,6 +37,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_cms_ref:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_contact_ref:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_date_meetup_ref:
     weight: 5
     label: above
@@ -34,6 +61,46 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
+  field_date_node_ref:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date_range:
+    weight: 6
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_event_cmsg_participation:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_has_sessions:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_location_ref:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_meetup_date:
     weight: 2
@@ -59,6 +126,22 @@ content:
             lb-col: false
             classes: {  }
     type: entity_reference_entity_view
+    region: content
+  field_twitter_hashtag:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_user_ref:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   langcode:
     type: language

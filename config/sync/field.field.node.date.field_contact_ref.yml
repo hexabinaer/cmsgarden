@@ -1,0 +1,35 @@
+uuid: e964549e-5dc5-4667-b7c6-9d7684994e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_ref
+    - node.type.date
+id: node.date.field_contact_ref
+field_name: field_contact_ref
+entity_type: node
+bundle: date
+label: Contact
+description: 'In case there is no default contact entered for this meetup/event series, select a contact for the upcoming date here.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: role
+      role:
+        ambassador: ambassador
+        member: '0'
+        editor: '0'
+        cmsg_admin: '0'
+        administrator: '0'
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_additional_info
+    - field.field.node.event.field_contact_ref
     - field.field.node.event.field_event_banner
     - field.field.node.event.field_event_cmsg_participation
     - field.field.node.event.field_event_date
@@ -97,7 +98,8 @@ third_party_settings:
       library: layout_discovery/onecol
       disable_css: false
       entity_classes: all_classes
-      settings: {  }
+      settings:
+        label: null
     regions:
       content:
         - content_moderation_control
@@ -176,6 +178,14 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+  field_contact_ref:
+    weight: 19
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_event_banner:
     type: image
     weight: 5

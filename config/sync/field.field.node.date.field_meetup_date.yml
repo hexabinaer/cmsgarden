@@ -11,7 +11,7 @@ id: node.date.field_meetup_date
 field_name: field_meetup_date
 entity_type: node
 bundle: date
-label: Date
+label: 'Date (DEPRECATED)'
 description: ''
 required: false
 translatable: false

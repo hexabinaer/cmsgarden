@@ -11,7 +11,7 @@ id: node.event.field_event_date
 field_name: field_event_date
 entity_type: node
 bundle: event
-label: Date
+label: 'Date (DEPRECATED)'
 description: 'Instead of copying a repeating event (identical place, information), <em>add</em> the upcoming here.'
 required: true
 translatable: false

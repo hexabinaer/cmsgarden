@@ -11,8 +11,8 @@ id: node.event.field_additional_info
 field_name: field_additional_info
 entity_type: node
 bundle: event
-label: 'Additional info'
-description: 'Useful add-on information for visitors as well as for ambassadors. Please use h2/h3 for structuring.'
+label: 'Good to know'
+description: 'Useful add-on (steady) information for visitors as well as for ambassadors. Please use h2/h3 for structuring.'
 required: false
 translatable: true
 default_value: {  }

@@ -10,7 +10,7 @@ id: node.date.field_meetup_location
 field_name: field_meetup_location
 entity_type: node
 bundle: date
-label: Location
+label: 'Location (DEPRECATED)'
 description: ''
 required: false
 translatable: false

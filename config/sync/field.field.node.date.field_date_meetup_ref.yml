@@ -12,7 +12,7 @@ id: node.date.field_date_meetup_ref
 field_name: field_date_meetup_ref
 entity_type: node
 bundle: date
-label: 'Related meetup'
+label: 'Related meetup (DEPRECATED)'
 description: ''
 required: false
 translatable: false

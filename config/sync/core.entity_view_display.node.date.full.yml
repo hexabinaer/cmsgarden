@@ -5,12 +5,21 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.date.body
+    - field.field.node.date.field_cms_ref
+    - field.field.node.date.field_contact_ref
     - field.field.node.date.field_date_meetup_ref
+    - field.field.node.date.field_date_node_ref
+    - field.field.node.date.field_date_range
+    - field.field.node.date.field_event_cmsg_participation
+    - field.field.node.date.field_has_sessions
+    - field.field.node.date.field_location_ref
     - field.field.node.date.field_meetup_date
     - field.field.node.date.field_meetup_location
+    - field.field.node.date.field_twitter_hashtag
+    - field.field.node.date.field_user_ref
     - node.type.date
   module:
-    - datetime
+    - datetime_range
     - ds
     - layout_builder
     - text
@@ -26,6 +35,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           left: div
           right: div
@@ -37,9 +47,10 @@ third_party_settings:
           layout_class: {  }
     regions:
       left:
-        - field_meetup_date
+        - field_date_range
         - links
         - body
+        - field_date_node_ref
       right:
         - field_meetup_location
 id: node.date.full
@@ -54,45 +65,41 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: left
-  field_meetup_date:
-    weight: 0
-    label: hidden
+  field_date_node_ref:
+    type: entity_reference_entity_view
+    weight: 3
+    region: left
+    label: above
     settings:
-      timezone_override: ''
-      format_type: long
+      view_mode: node_embedded
+      link: false
     third_party_settings:
       ds:
         ft:
-          id: expert
+          id: minimal
           settings:
             lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: strong
-            fi-cl: date-style
-            fi-at: ''
-            suffix: ''
-            lbw: false
             lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
-    type: datetime_default
+            classes: {  }
+  field_date_range:
+    type: daterange_custom
+    weight: 0
     region: left
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'd F Y'
+      separator: '-'
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_meetup_location:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       view_mode: full
@@ -113,5 +120,13 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_cms_ref: true
+  field_contact_ref: true
   field_date_meetup_ref: true
+  field_event_cmsg_participation: true
+  field_has_sessions: true
+  field_location_ref: true
+  field_meetup_date: true
+  field_twitter_hashtag: true
+  field_user_ref: true
   langcode: true

@@ -11,8 +11,8 @@ id: node.date.body
 field_name: body
 entity_type: node
 bundle: date
-label: 'Additional info'
-description: 'Basic info can be found in the meetup description. Please only add info related to this certain date, if necessary.'
+label: 'Date-related information'
+description: 'Please only add info related to this certain date, if necessary.'
 required: false
 translatable: true
 default_value: {  }

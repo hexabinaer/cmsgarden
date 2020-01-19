@@ -1,0 +1,31 @@
+uuid: de459fae-108d-4c5e-8e88-fb81301e87ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_node_ref
+    - node.type.date
+    - node.type.event
+    - node.type.meetup
+id: node.date.field_date_node_ref
+field_name: field_date_node_ref
+entity_type: node
+bundle: date
+label: 'About the event'
+description: 'Pick general event or meetup description from list.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+      meetup: meetup
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: event
+field_type: entity_reference

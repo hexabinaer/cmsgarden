@@ -1,7 +1,7 @@
-status: '1'
+status: 0
 pattern: 'Meetupdate-[node:field_meetup_date:date:html_week]'
 php: 0
-escape: 0
+escape: false
 dependencies:
   config:
     - node.type.date

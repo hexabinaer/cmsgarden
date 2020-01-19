@@ -1,1 +1,3 @@
-description: 'Eine Konferenz, Messe o. ä. Noch ist unklar, ob Meetups ein separater Inhaltstyp werden.'
+description: 'Eine Konferenz, Messe, Meetup oder wichtiges CMS-Community-Event. Hier werden Informationen gespeichert, die beim Anlegen eines <strong>Veranstaltungstermins</strong> einbezogen werden.'
+name: Event-Standardinformation
+help: 'Allgemeine Informationen über diese Veranstaltung(sserie) eintragen. Variable Informationen, die vom jeweiligen Veranstaltungstermin abhängen, werden hier <em>nicht</em> eintragen.'

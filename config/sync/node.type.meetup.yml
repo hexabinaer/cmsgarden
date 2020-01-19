@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Meetup
+name: 'Meetup (DEPRECATED)'
 type: meetup
 description: 'Basic information about a meetup or similar group that is regularly meeting'
 help: ''

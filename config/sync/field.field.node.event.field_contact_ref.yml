@@ -1,0 +1,35 @@
+uuid: 04690691-4e8f-4bc7-bf85-d83b14cb52c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_ref
+    - node.type.event
+id: node.event.field_contact_ref
+field_name: field_contact_ref
+entity_type: node
+bundle: event
+label: Contact
+description: "The default contact for this meetup/event series related to CMS Garden's involvement. \r\nLeave empty and enter along with the <strong>event date</strong> in case of changing contacts."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: role
+      role:
+        ambassador: ambassador
+        member: '0'
+        editor: '0'
+        cmsg_admin: '0'
+        administrator: '0'
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

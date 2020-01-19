@@ -4,15 +4,22 @@ status: true
 dependencies:
   config:
     - field.field.node.date.body
+    - field.field.node.date.field_cms_ref
+    - field.field.node.date.field_contact_ref
     - field.field.node.date.field_date_meetup_ref
+    - field.field.node.date.field_date_node_ref
+    - field.field.node.date.field_date_range
+    - field.field.node.date.field_event_cmsg_participation
+    - field.field.node.date.field_has_sessions
+    - field.field.node.date.field_location_ref
     - field.field.node.date.field_meetup_date
     - field.field.node.date.field_meetup_location
+    - field.field.node.date.field_twitter_hashtag
+    - field.field.node.date.field_user_ref
     - node.type.date
-    - workflows.workflow.default_nodes
   module:
     - content_moderation
-    - datetime
-    - entity_reference_revisions
+    - datetime_range
     - path
     - text
 id: node.date.default
@@ -36,21 +43,59 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_date_meetup_ref:
-    weight: 2
+  field_cms_ref:
+    weight: 28
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_autocomplete
     region: content
-  field_meetup_date:
+  field_contact_ref:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_date_node_ref:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_date_range:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
+    type: daterange_default
+    region: content
+  field_event_cmsg_participation:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_has_sessions:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_location_ref:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_meetup_location:
     weight: 4
@@ -59,6 +104,24 @@ content:
       size: 60
       placeholder: ''
       match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_twitter_hashtag:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_user_ref:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -71,7 +134,7 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 12
+    weight: 13
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -92,7 +155,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 14
     region: content
     third_party_settings: {  }
   sticky:
@@ -111,7 +174,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -126,8 +189,10 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_date_meetup_ref: true
+  field_meetup_date: true

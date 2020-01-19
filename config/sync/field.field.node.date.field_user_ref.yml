@@ -1,0 +1,34 @@
+uuid: e36afeb9-3df7-447b-931b-0b029a6a84ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_ref
+    - node.type.date
+id: node.date.field_user_ref
+field_name: field_user_ref
+entity_type: node
+bundle: date
+label: 'Ambassadors on site'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: role
+      role:
+        ambassador: ambassador
+        member: '0'
+        editor: '0'
+        cmsg_admin: '0'
+        administrator: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

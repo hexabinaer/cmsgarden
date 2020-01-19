@@ -1,0 +1,29 @@
+uuid: f0314d00-f555-44b3-ac68-6e629aaacdca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cms_ref
+    - node.type.date
+    - taxonomy.vocabulary.content_management_systems
+id: node.date.field_cms_ref
+field_name: field_cms_ref
+entity_type: node
+bundle: date
+label: 'CMS community on site'
+description: 'Pick the organiziting CMS resp. which CMS communities will participate.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_management_systems: content_management_systems
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

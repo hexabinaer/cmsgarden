@@ -10,7 +10,7 @@ field_name: field_twitter_hashtag
 entity_type: node
 bundle: event
 label: 'Twitter hashtag'
-description: ''
+description: 'Recurring hashtag for the meetup/event series. '
 required: false
 translatable: false
 default_value: {  }

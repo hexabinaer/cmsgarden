@@ -8,10 +8,10 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Event
+name: 'Event defaults'
 type: event
-description: 'A conference or trade fair. Meetups might be integrated or might be handled separately (WIP).'
-help: ''
+description: 'A conference, trade fair, meetup or major CMS community event. This type hold general information to be referenced from an <strong>event date</strong> entry.'
+help: 'Enter all general information about this event (series). Variable information related to the respective event date do <em>not</em> belong here.'
 new_revision: true
 preview_mode: 1
 display_submitted: false

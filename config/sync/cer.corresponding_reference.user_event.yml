@@ -1,0 +1,14 @@
+uuid: e779effe-6f2d-4750-a3e4-5a86d1919193
+langcode: en
+status: true
+dependencies: {  }
+id: user_event
+label: 'User <-> Event'
+enabled: true
+first_field: field_user_ref
+second_field: field_user_participation
+bundles:
+  node:
+    - '*'
+  user:
+    - '*'

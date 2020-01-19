@@ -1,0 +1,15 @@
+services:
+  cmsg_pager.ajax_subscriber:
+    class: Drupal\cmsg_base\EventSubscriber\AjaxResponseSubscriber
+    tags:
+      - { name: event_subscriber }
+  cmsg_base.taxonomy_term_breadcrumb:
+    class: Drupal\cmsg_base\TaxonomyTermBreadcrumbBuilder
+    arguments: ['@entity_type.manager', '@entity.repository']
+    tags:
+      - { name: breadcrumb_builder, priority: 1010 }
+  cmsg_base.node_breadcrumb:
+    class: Drupal\cmsg_base\NodeBreadcrumbBuilder
+    arguments: ['@entity_type.manager', '@plugin.manager.menu.link']
+    tags:
+      - { name: breadcrumb_builder, priority: 1010 }

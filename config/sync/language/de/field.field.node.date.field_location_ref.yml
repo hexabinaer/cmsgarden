@@ -1,2 +1,2 @@
 label: Veranstaltungsort
-description: "Veranstaltungsort auswählen (kann <a href=\"/node/add/location\">hier hinzugefügt</a> werden).\r\nFalls benötigt, kann ein weiterer Ort ausgewählt werden (z. B. für das Social Event)."
+description: "Veranstaltungsort auswählen oder <a href=\"/node/add/location\">neue Location hinzufügen</a>\r\nFalls benötigt, kann ein weiterer Ort ausgewählt werden (z. B. für das Social Event)."

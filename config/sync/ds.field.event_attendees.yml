@@ -1,6 +1,6 @@
 id: event_attendees
 label: 'Event attendees'
-ui_limit: "event|default\r\nevent|full"
+ui_limit: "date|default\r\ndate|full"
 properties:
   block: 'views_block:event_attendees-block_1'
   use_block_title: false

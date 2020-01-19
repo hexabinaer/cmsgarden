@@ -7,7 +7,7 @@ dependencies:
 id: event_attendance
 label: 'Event attendance'
 bundles:
-  - event
+  - date
 entity_type: node
 global: false
 weight: 0

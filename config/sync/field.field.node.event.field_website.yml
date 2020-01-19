@@ -11,8 +11,8 @@ id: node.event.field_website
 field_name: field_website
 entity_type: node
 bundle: event
-label: Links
-description: 'Useful links: the event''s website, direct link to an external ticketing tool, the location''s website ...'
+label: 'Web links'
+description: 'Useful general links: the event''s website, the location''s website ...'
 required: false
 translatable: true
 default_value: {  }

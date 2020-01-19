@@ -1,0 +1,60 @@
+uuid: 8b2df83f-7ce4-49af-99ac-3848bb16b79f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.node_embedded
+    - field.field.node.location.field_event_location
+    - field.field.node.location.field_geolocation
+    - field.field.node.location.field_location_notes
+    - field.field.node.location.field_location_website
+    - node.type.location
+  module:
+    - address
+    - layout_builder
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.location.node_embedded
+targetEntityType: node
+bundle: location
+mode: node_embedded
+content:
+  field_event_location:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_location_notes:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_location_website:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_geolocation: true
+  langcode: true

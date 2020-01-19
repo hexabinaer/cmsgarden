@@ -16,13 +16,14 @@ dependencies:
     - field.field.node.date.field_meetup_date
     - field.field.node.date.field_meetup_location
     - field.field.node.date.field_public_downloads
+    - field.field.node.date.field_title_html
     - field.field.node.date.field_twitter_hashtag
     - field.field.node.date.field_user_ref
+    - field.field.node.date.field_website
     - node.type.date
   module:
-    - datetime
+    - date_range_formatter
     - ds
-    - entity_reference_revisions
     - user
 third_party_settings:
   ds:
@@ -32,6 +33,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -42,41 +44,15 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - links
-        - field_meetup_date
-        - field_meetup_location
-        - field_date_meetup_ref
+        - field_date_range
+        - field_location_ref
+        - field_date_node_ref
 id: node.date.teaser
 targetEntityType: node
 bundle: date
 mode: teaser
 content:
-  field_date_meetup_ref:
-    type: entity_reference_revisions_entity_view
-    weight: 3
-    region: ds_content
-    label: hidden
-    settings:
-      view_mode: teaser
-      link: ''
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-  field_meetup_date:
-    type: datetime_default
-    weight: 1
-    region: ds_content
-    label: hidden
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-  field_meetup_location:
+  field_date_node_ref:
     type: entity_reference_entity_view
     weight: 2
     region: ds_content
@@ -92,21 +68,52 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-  links:
+  field_date_range:
+    type: date_range_without_time
     weight: 0
     region: ds_content
-    settings: {  }
+    label: hidden
+    settings:
+      separator: '-'
+      date_format: 'Y-m-d\TH:i:s'
+      timezone_override: ''
+      single: 'd F Y'
+      single_all_day: 'd F Y'
+      one_day: 'd F Y'
+      one_month: 'd - {d} F Y'
+      several_months: 'd F - {d} {F} Y'
+      several_years: 'd F Y - {d} {F} {Y}'
     third_party_settings: {  }
+  field_location_ref:
+    type: entity_reference_entity_view
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: '1'
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
   body: true
   field_cms_ref: true
   field_contact_ref: true
-  field_date_node_ref: true
-  field_date_range: true
+  field_date_meetup_ref: true
   field_event_cmsg_participation: true
   field_has_sessions: true
-  field_location_ref: true
+  field_meetup_date: true
+  field_meetup_location: true
   field_public_downloads: true
+  field_title_html: true
   field_twitter_hashtag: true
   field_user_ref: true
+  field_website: true
   langcode: true
+  links: true

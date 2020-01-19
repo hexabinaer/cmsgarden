@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="columns is-widescreen">
+    <div class="column is-10-widescreen is-offset-1-widescreen">
+      <div class="cmsg-article-title-wrapper clearfix">
+
+        <div class="cmsg-title-breadcrumb">
+          {{ breadcrumb }}
+
+          {% if type is empty and display_submitted %}
+            <footer class="node__meta">
+              <div class="node__date">
+                {{ date }}
+              </div>
+            </footer>
+          {% endif %}
+        </div>
+
+        {% if type is not empty %}
+          <footer class="node__meta cmsg-title-type">
+            <h3 class="node__type is-1">{{ type }}</h3>
+            {% if display_submitted %}
+              <div class="node__date">
+                {{ date }}
+              </div>
+            {% endif %}
+          </footer>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+  {{ tabs }}
+</div>

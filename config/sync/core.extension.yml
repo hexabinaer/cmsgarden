@@ -11,6 +11,7 @@ module:
   cer: 0
   chosen_lib: 0
   ckeditor: 0
+  cmsg_base: 0
   coffee: 0
   color: 0
   comment: 0

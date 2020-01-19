@@ -1,0 +1,23 @@
+uuid: 0888a9c5-a94d-4312-8007-1dd778580c7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.date
+  module:
+    - link
+id: node.date.field_website
+field_name: field_website
+entity_type: node
+bundle: date
+label: 'Web links'
+description: 'Links specific to this date: direct link to an external ticketing tool, to the current program, ...'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

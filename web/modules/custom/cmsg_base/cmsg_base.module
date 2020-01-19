@@ -1,0 +1,311 @@
+<?php
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\file\FileInterface;
+use Drupal\media\MediaInterface;
+use Drupal\profile\Entity\ProfileInterface;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_PLUGIN_alter(),
+ */
+function cmsg_base_views_plugins_display_alter(array &$info) {
+  if (isset($info["block"])) {
+    $info["block"]["class"] = '\Drupal\cmsg_base\Plugin\views\display\Block';
+  }
+}
+
+/**
+ * Implements hook_entity_display_build_alter().
+ */
+function cmsg_base_entity_display_build_alter(&$build, $context) {
+  // Depending on the language allow only fields with/without _en suffix.
+  /** @var \Drupal\profile\Entity\ProfileInterface $entity */
+  $entity = $context['entity'] ?: NULL;
+  if ($entity instanceof ProfileInterface) {
+    $multilang_fields = [];
+    $fields = $entity->getFields();
+    foreach ($fields as $field_name => $field) {
+      if (array_key_exists($field_name . '_en', $fields)) {
+        $multilang_fields[] = $field_name;
+      }
+    }
+
+    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    foreach ($multilang_fields as $field) {
+      if ($language == 'en') {
+        if (isset($build[$field])) {
+          unset($build[$field]);
+        }
+      }
+      else {
+        if (isset($build[$field . '_en'])) {
+          unset($build[$field . '_en']);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function cmsg_base_user_view(array &$build, EntityInterface $account, EntityViewDisplayInterface $display, $view_mode) {
+  if ($display->getComponent('realname')) {
+    $build["realname"]["#label_display"] = 'hidden';
+  }
+
+  if ($display->getComponent('cmsg_mail')) {
+    $mail = 'no mail';
+    if ($account instanceof UserInterface) {
+      $mail = $account->getEmail();
+    }
+
+    $label = t('E-Mail', [], ['context' => 'contact']);
+    $build['cmsg_mail'] = [
+      '#theme' => 'field',
+      '#title' => $label,
+      '#label_display' => 'inline',
+      '#view_mode' => '_custom',
+      '#field_name' => 'cmsg-mail',
+      '#field_type' => 'text',
+      '#field_translatable' => FALSE,
+      '#entity_type' => 'custom',
+      '#bundle' => 'custom',
+      '#object' => $account,
+      '#items' => [TRUE],
+      '#is_multiple' => FALSE,
+      0 => [
+        '#markup' => $mail,
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function cmsg_base_profile_update(ProfileInterface $profile) {
+  // Update realname when base profile is saved.
+  if ($profile->bundle() == 'base_de') {
+    $account = $profile->getOwner();
+    realname_update($account);
+  }
+}
+
+/**
+ * Implements hook_twig_theme().
+ */
+function cmsg_base_theme($existing, $type, $theme, $path) {
+  return [
+    'cmsg_title_block' => [
+      'variables' => [
+        'breadcrumb' => '',
+        'title' => '',
+        'menu' => '',
+        'tabs' => '',
+      ],
+    ],
+    'cmsg_article_title_block' => [
+      'variables' => [
+        'breadcrumb' => '',
+        'type' => '',
+        'tabs' => '',
+        'display_submitted' => '',
+        'date' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function cmsg_base_views_data_alter(array &$data) {
+  $data['node_field_data']['cmsg_langcode_fallback'] = array(
+    'title' => t('CMSG Langcode fallback'),
+    'filter' => array(
+      'title' => t('CMSG Langcode fallback'),
+      'help' => t('Fallback to source language if no translation exists'),
+      'field' => 'langcode',
+      'id' => 'cmsg_views_langcode_fallback'
+    ),
+  );
+
+  $data['node__field_issue_year']['field_issue_year_value_year']['filter'] = array(
+    'title' => t('CMSG Year'),
+    'help' => t('Date with year granuality'),
+    'field' => 'field_issue_year_value',
+    'id' => 'cmsg_views_year'
+  );
+}
+
+
+/**
+ * Implements template_preprocess_field_group_accordion_item().
+ */
+function cmsg_base_preprocess_field_group_accordion_item(array &$variables) {
+  // #131 Remove html tags from field group labels.
+  if (isset($variables['title'])) {
+    $variables['title'] = strip_tags($variables['title']);
+  }
+}
+
+
+/**
+ * Implementation of template_preprocess_views_view().
+ */
+function cmsg_base_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  $pager_id = $view->getPager()->definition['id'];
+  if ($pager_id == 'cmsg_pager') {
+    $variables['attributes']['class'][] = 'has-cmsg-pager';
+  }
+
+  $variables["exposed_enabled"] = isset($view->show_exposed_filteres) ? $view->show_exposed_filteres : FALSE;
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function cmsg_base_entity_extra_field_info() {
+  // Add file info fields to media displays.
+  $extra = [];
+  $media_bundles = [
+    'download_file_private',
+    'download_file_public',
+    'file',
+    'image',
+  ];
+
+  foreach ($media_bundles as $bundle) {
+    $extra['media'][$bundle]['display']['filesize'] = [
+      'label' => t('Filesize'),
+      'description' => t('Filesize from file field'),
+      'weight' => 100,
+      'visible' => FALSE,
+    ];
+    $extra['media'][$bundle]['display']['mime'] = [
+      'label' => t('Mimetype'),
+      'description' => t('Mimetype from file field'),
+      'weight' => 100,
+      'visible' => FALSE,
+    ];
+  }
+  $extra['user']['user']['display']['cmsg_mail'] = [
+    'label' => t('Mail'),
+    'description' => t('Account E-Mail'),
+    'weight' => 100,
+    'visible' => FALSE,
+  ];
+
+  $extra['media']['image']['display']['link'] = [
+    'label' => t('Link to image'),
+    'description' => t('Custom field to show the image title linked to the original image.'),
+    'weight' => 100,
+    'visible' => FALSE,
+  ];
+
+  $extra['node']['ip_issue']['display']['issue_formatted'] = [
+    'label' => t('Issue formatted'),
+    'description' => t('Custom field to show the issue year and number'),
+    'weight' => 100,
+    'visible' => FALSE,
+  ];
+
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function cmsg_base_media_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  // Fill in file info fields for media displays.
+  $fields = [
+    'field_media_file_private',
+    'field_media_file',
+    'field_media_image'
+  ];
+
+  foreach ($fields as $field) {
+    if ($entity->hasField($field)) {
+      /** @var \Drupal\file\FileInterface $file */
+      if ($file = $entity->get($field)->referencedEntities()) {
+        $file = $file[0];
+        $file->getMimeType();
+
+        if ($display->getComponent('filesize')) {
+          $build['filesize'] = [
+            '#type' => 'markup',
+            '#markup' => '<span>' . format_size($file->getSize()) . '</span>',
+          ];
+        }
+        if ($display->getComponent('mime')) {
+          $build['mime'] = [
+            '#type' => 'markup',
+            '#markup' => '<span>' . $file->getMimeType() . '</span>',
+          ];
+        }
+        if ($display->getComponent('link')) {
+          $title = !empty($entity->get('field_media_description')->value) ? $entity->get('field_media_description')->value : $file->get('filename')->value;
+          $build['link'] = [
+            '#theme' => 'file_link',
+            '#file' => $file,
+            '#description' => $title,
+            '#cache' => [
+              'tags' => $file->getCacheTags(),
+            ],
+          ];
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Prepares variables for slick.html.twig templates.
+ */
+function cmsg_base_preprocess_slick(&$variables) {
+  // We never want to unslick.
+  $variables['element']['#settings']["unslick"] = false;
+  $variables['element']['#settings']["count"] = 2;
+  $variables["recursive"] = false;
+  if (!$variables["recursive"]) {
+    $variables["recursive"] = true;
+    template_preprocess_slick($variables);
+    $variables['element']['#settings']["count"] = 1;
+    $variables['settings']["count"] = 1;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function cmsg_base_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+    /** @var \Drupal\media\MediaInterface $media */
+    $media = $entity->field_pdf_download->entity;
+    if (!($media instanceof MediaInterface)) {
+      return;
+    }
+    $public = $media->hasField('field_media_file');
+    $private = $media->hasField('field_media_file_private');
+
+    if ($public || $private) {
+      if ($public) {
+        $file = $media->field_media_file->entity;
+      }
+      else {
+        $file = $media->field_media_file_private->entity;
+      }
+      if ($file instanceof FileInterface) {
+        $current_file_url = file_create_url($file->uri->value);
+        $server = $entity->field_metis->server;
+        $new_file_url = Url::fromUri("https://$server/na/$code", ['query' => ['l' => $current_file_url]])->toString();
+        $file->setFileUri($new_file_url);
+      }
+    }
+
+}

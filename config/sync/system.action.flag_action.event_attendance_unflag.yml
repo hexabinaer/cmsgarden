@@ -2,12 +2,14 @@ uuid: 929ef609-6f0f-4f5d-adc8-79abb17f6486
 langcode: en
 status: true
 dependencies:
+  config:
+    - flag.flag.event_attendance
   module:
     - flag
-id: flag_action.event_attendance.unflag
+id: flag_action.event_attendance_unflag
 label: 'Withdraw attendance'
 type: node
-plugin: 'flag_action:event_attendance.unflag'
+plugin: 'flag_action:event_attendance_unflag'
 configuration:
   flag_id: event_attendance
   flag_action: unflag

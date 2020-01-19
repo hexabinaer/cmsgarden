@@ -1,0 +1,7 @@
+name: 'CMSG base'
+type: module
+description: 'Custom module for CMSG-specific code.'
+core: 8.x
+package: 'CMS Garden'
+depedencies:
+  - realname:realname

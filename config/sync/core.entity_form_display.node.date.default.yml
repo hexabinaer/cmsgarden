@@ -15,14 +15,88 @@ dependencies:
     - field.field.node.date.field_meetup_date
     - field.field.node.date.field_meetup_location
     - field.field.node.date.field_public_downloads
+    - field.field.node.date.field_title_html
     - field.field.node.date.field_twitter_hashtag
     - field.field.node.date.field_user_ref
+    - field.field.node.date.field_website
     - node.type.date
   module:
     - content_moderation
     - datetime_range
+    - entity_browser_entity_form
+    - field_group
+    - inline_entity_form
+    - link
     - path
     - text
+third_party_settings:
+  field_group:
+    group_accordion:
+      children:
+        - field_title_html
+        - group_basics
+        - group_override_event_defaults
+        - group_organizational
+      parent_name: ''
+      weight: 3
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: horizontal
+        id: ''
+        classes: ''
+      label: Tabs
+    group_organizational:
+      children:
+        - field_event_cmsg_participation
+        - field_cms_ref
+        - field_user_ref
+        - field_has_sessions
+        - field_public_downloads
+      parent_name: group_accordion
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: Organizational
+    group_basics:
+      children:
+        - field_date_range
+        - field_date_node_ref
+        - body
+      parent_name: group_accordion
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        required_fields: true
+        description: ''
+      label: Basics
+    group_override_event_defaults:
+      children:
+        - field_location_ref
+        - field_twitter_hashtag
+        - field_website
+        - field_contact_ref
+      parent_name: group_accordion
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Override event defaults'
 id: node.date.default
 targetEntityType: node
 bundle: date
@@ -30,7 +104,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 5
+    weight: 8
     settings:
       rows: 9
       summary_rows: 3
@@ -40,118 +114,144 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_cms_ref:
-    weight: 28
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_contact_ref:
-    weight: 30
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_date_node_ref:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
+    weight: 6
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      collapsible: true
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
     region: content
   field_date_range:
-    weight: 3
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
     region: content
   field_event_cmsg_participation:
-    weight: 26
+    type: options_select
+    weight: 9
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_has_sessions:
-    weight: 32
+    type: options_select
+    weight: 13
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_location_ref:
-    weight: 27
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: inline_entity_form_complex
+    weight: 7
     region: content
-  field_meetup_location:
-    weight: 4
     settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      collapsible: true
+      allow_new: true
+      allow_existing: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
+      override_labels: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
   field_public_downloads:
-    weight: 33
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+  field_title_html:
+    type: text_textfield
+    weight: 0
     region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_twitter_hashtag:
-    weight: 31
+    type: string_textfield
+    weight: 8
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_user_ref:
-    weight: 29
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+  field_website:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   langcode:
     type: language_select
-    weight: 0
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 13
+    weight: 0
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -159,39 +259,39 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 7
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 12
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 8
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 1
+    weight: 2
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -200,10 +300,11 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_date_meetup_ref: true
   field_meetup_date: true
+  field_meetup_location: true

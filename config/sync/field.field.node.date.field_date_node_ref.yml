@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_date_node_ref
     - node.type.date
     - node.type.event
-    - node.type.meetup
 id: node.date.field_date_node_ref
 field_name: field_date_node_ref
 entity_type: node
@@ -22,7 +21,6 @@ settings:
   handler_settings:
     target_bundles:
       event: event
-      meetup: meetup
     sort:
       field: title
       direction: ASC

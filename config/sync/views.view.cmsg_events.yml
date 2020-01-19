@@ -777,16 +777,16 @@ display:
         options:
           default_field_elements: true
           inline:
-            field_event_date: field_event_date
             title: title
-          separator: '-'
+            field_date_range: field_date_range
+          separator: ' // '
           hide_empty: false
       style:
         type: entity_reference
         options:
           search_fields:
             title: title
-            field_event_date: '0'
+            field_date_range: '0'
     cache_metadata:
       max-age: -1
       contexts:

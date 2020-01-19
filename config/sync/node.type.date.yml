@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Date
+name: 'Event date'
 type: date
-description: '(Embedded content) Announce a date/time and pick location for a meetup.'
+description: 'Announce a date/time and pick location for a meetup.'
 help: ''
 new_revision: true
 preview_mode: 1

@@ -19,3 +19,5 @@ permissions:
   - 'edit own polls'
   - 'edit own project content'
   - 'edit own showcase content'
+  - 'view field_internal_downloads'
+  - 'view field_internal_information'

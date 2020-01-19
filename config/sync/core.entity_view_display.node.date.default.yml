@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.date.field_location_ref
     - field.field.node.date.field_meetup_date
     - field.field.node.date.field_meetup_location
+    - field.field.node.date.field_public_downloads
     - field.field.node.date.field_twitter_hashtag
     - field.field.node.date.field_user_ref
     - node.type.date
@@ -126,6 +127,14 @@ content:
             lb-col: false
             classes: {  }
     type: entity_reference_entity_view
+    region: content
+  field_public_downloads:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_twitter_hashtag:
     weight: 13

@@ -5,10 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.storage.node.body
+    - field.storage.node.field_date_range
     - field.storage.node.field_event_banner
     - field.storage.node.field_event_date
     - field.storage.node.field_event_location
     - image.style.medium
+    - node.type.date
     - node.type.event
   module:
     - address
@@ -154,10 +156,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_event_date:
-          id: field_event_date
-          table: node__field_event_date
-          field: field_event_date
+        field_date_range:
+          id: field_date_range
+          table: node__field_date_range
+          field: field_date_range
           relationship: none
           group_type: group
           admin_label: ''
@@ -214,7 +216,7 @@ display:
             several_years: 'd F Y - {d} {F} {Y}'
           group_column: value
           group_columns: {  }
-          group_rows: false
+          group_rows: true
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
@@ -418,15 +420,44 @@ display:
           id: type
           table: node_field_data
           field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
-            event: event
+            date: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: node
           entity_field: type
           plugin_id: bundle
-          group: 1
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
         status:
           value: '1'
           table: node_field_data
@@ -440,10 +471,10 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        field_event_date_value:
-          id: field_event_date_value
-          table: node__field_event_date
-          field: field_event_date_value
+        field_date_range_end_value:
+          id: field_date_range_end_value
+          table: node__field_date_range
+          field: field_date_range_end_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -461,6 +492,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -470,8 +503,6 @@ display:
             placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -550,8 +581,8 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_date_range'
         - 'config:field.storage.node.field_event_banner'
-        - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_location'
   block_events_upcoming:
     display_plugin: block
@@ -594,8 +625,8 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_date_range'
         - 'config:field.storage.node.field_event_banner'
-        - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_location'
   er_events_upcoming:
     display_plugin: entity_reference
@@ -670,10 +701,10 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        field_event_date:
-          id: field_event_date
-          table: node__field_event_date
-          field: field_event_date
+        field_date_range:
+          id: field_date_range
+          table: node__field_date_range
+          field: field_date_range
           relationship: none
           group_type: group
           admin_label: ''
@@ -719,14 +750,18 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: daterange_default
+          type: date_range_without_time
           settings:
             timezone_override: ''
-            format_type: html_month
-            separator: '-'
+            single: 'd F'
+            single_all_day: 'd M'
+            one_day: 'd M'
+            one_month: 'd - {d} M'
+            several_months: 'd M - {d} {M}'
+            several_years: 'd M Y - {d} {M} {Y}'
           group_column: value
           group_columns: {  }
-          group_rows: false
+          group_rows: true
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
@@ -760,7 +795,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_event_date'
+        - 'config:field.storage.node.field_date_range'
   feed_events_upcoming:
     display_plugin: feed
     id: feed_events_upcoming
@@ -1212,8 +1247,79 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: field
+        field_date_range:
+          id: field_date_range
+          table: node__field_date_range
+          field: field_date_range
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: date_range_without_time
+          settings:
+            timezone_override: ''
+            single: 'd F Y'
+            single_all_day: 'd F Y'
+            one_day: 'd F Y'
+            one_month: 'd - {d} F Y'
+            several_months: 'd F - {d} {F} Y'
+            several_years: 'd F Y - {d} {F} {Y}'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       defaults:
         fields: false
+      display_comment: 'Needs rework after display changes (aggregate location info from 2 different sources)'
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -1223,6 +1329,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_date_range'
         - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_location'
   page_1:
@@ -1244,8 +1351,8 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_date_range'
         - 'config:field.storage.node.field_event_banner'
-        - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_location'
   page_2:
     display_plugin: page
@@ -1275,23 +1382,55 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
+        field_date_range_value:
+          id: field_date_range_value
+          table: node__field_date_range
+          field: field_date_range_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>'
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+          group: 1
+          exposed: false
           expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
-        field_event_date_value:
-          id: field_event_date_value
-          table: node__field_event_date
-          field: field_event_date_value
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_date_range_end_value:
+          id: field_date_range_end_value
+          table: node__field_date_range
+          field: field_date_range_end_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -1309,6 +1448,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -1318,8 +1459,6 @@ display:
             placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1333,6 +1472,19 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: datetime
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
         langcode:
           id: langcode
           table: node_field_data
@@ -1375,51 +1527,6 @@ display:
           entity_type: node
           entity_field: langcode
           plugin_id: language
-        field_event_date_end_value:
-          id: field_event_date_end_value
-          table: node__field_event_date
-          field: field_event_date_end_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '<'
-          value:
-            min: ''
-            max: ''
-            value: now
-            type: offset
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: datetime
       filter_groups:
         operator: AND
         groups:
@@ -1434,6 +1541,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_date_range'
         - 'config:field.storage.node.field_event_banner'
-        - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_location'

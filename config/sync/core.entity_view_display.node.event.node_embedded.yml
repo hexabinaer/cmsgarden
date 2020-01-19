@@ -14,8 +14,11 @@ dependencies:
     - field.field.node.event.field_event_location_ref
     - field.field.node.event.field_event_type
     - field.field.node.event.field_has_sessions
+    - field.field.node.event.field_internal_downloads
+    - field.field.node.event.field_internal_information
     - field.field.node.event.field_meta_tags
     - field.field.node.event.field_org_geolocation
+    - field.field.node.event.field_public_downloads
     - field.field.node.event.field_title_html
     - field.field.node.event.field_twitter_hashtag
     - field.field.node.event.field_website
@@ -194,8 +197,11 @@ hidden:
   field_event_location: true
   field_event_location_ref: true
   field_has_sessions: true
+  field_internal_downloads: true
+  field_internal_information: true
   field_meta_tags: true
   field_org_geolocation: true
+  field_public_downloads: true
   flag_event_attendance: true
   langcode: true
   layout_builder__layout: true

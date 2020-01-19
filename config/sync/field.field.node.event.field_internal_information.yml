@@ -1,0 +1,21 @@
+uuid: 3b7964f5-678c-4e0a-889e-8f84fe82e01b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_internal_information
+    - node.type.event
+  module:
+    - text
+id: node.event.field_internal_information
+field_name: field_internal_information
+entity_type: node
+bundle: event
+label: 'Internal information'
+description: 'Information for event organizers and ambassadors. For example, a suggestion for the exhibitors'' listing.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.date.field_location_ref
     - field.field.node.date.field_meetup_date
     - field.field.node.date.field_meetup_location
+    - field.field.node.date.field_public_downloads
     - field.field.node.date.field_twitter_hashtag
     - field.field.node.date.field_user_ref
     - node.type.date
@@ -105,6 +106,7 @@ hidden:
   field_event_cmsg_participation: true
   field_has_sessions: true
   field_location_ref: true
+  field_public_downloads: true
   field_twitter_hashtag: true
   field_user_ref: true
   langcode: true

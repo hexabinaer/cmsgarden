@@ -1,0 +1,21 @@
+uuid: f512b516-3ebf-434f-b71d-20f9b5c5eb05
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_relation
+    - node.type.organization
+id: node.organization.field_event_relation
+field_name: field_event_relation
+entity_type: node
+bundle: organization
+label: 'Related event'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

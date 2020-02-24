@@ -1,10 +1,10 @@
 # German translation of Paragraphs (8.x-1.8)
-# Copyright (c) 2019 by the German translation team
+# Copyright (c) 2020 by the German translation team
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Paragraphs (8.x-1.8)\n"
-"POT-Creation-Date: 2019-06-06 13:10+0000\n"
+"POT-Creation-Date: 2020-01-27 16:58+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -304,7 +304,7 @@ msgstr "Keine Berechtigung, Element @title hinzuzufügen."
 msgid "You did not add any @title types yet."
 msgstr "Es wurden noch keine Typen @title hinzugefügt."
 msgid "Entity browser"
-msgstr "Entity-Browser"
+msgstr "Entitäten-Browser"
 msgid "Revision create time"
 msgstr "Erstellungsdatum der Revision"
 msgid "Create New Draft"

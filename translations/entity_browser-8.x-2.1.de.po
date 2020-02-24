@@ -1,10 +1,10 @@
 # German translation of Entity Browser (8.x-2.1)
-# Copyright (c) 2019 by the German translation team
+# Copyright (c) 2020 by the German translation team
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Entity Browser (8.x-2.1)\n"
-"POT-Creation-Date: 2019-12-28 15:30+0000\n"
+"POT-Creation-Date: 2020-01-27 18:10+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -233,7 +233,7 @@ msgstr ""
 "Hiermit können Entitätsbrowser zum Erzeugen, Durchsuchen, Erstellen "
 "und Auswählen von Entitäten erstellt werden."
 msgid "Entity browser"
-msgstr "Entity-Browser"
+msgstr "Entitäten-Browser"
 msgid "Display plugin ID"
 msgstr "Anzeige Plugin-ID"
 msgid "Selection display plugin ID"

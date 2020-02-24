@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.organization.body
     - field.field.node.organization.field_associated_users
+    - field.field.node.organization.field_event_relation
     - field.field.node.organization.field_geographic_range
     - field.field.node.organization.field_logo
     - field.field.node.organization.field_member
@@ -46,6 +47,14 @@ content:
     region: content
   field_associated_users:
     weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_relation:
+    weight: 115
     label: above
     settings:
       link: true

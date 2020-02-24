@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.organization.body
     - field.field.node.organization.field_associated_users
+    - field.field.node.organization.field_event_relation
     - field.field.node.organization.field_geographic_range
     - field.field.node.organization.field_logo
     - field.field.node.organization.field_member
@@ -15,6 +16,7 @@ dependencies:
     - field.field.node.organization.field_org_cms
     - field.field.node.organization.field_org_geolocation
     - field.field.node.organization.field_org_tagline
+    - field.field.node.organization.field_organization_type
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
     - field.field.user.user.field_member_since
@@ -41,7 +43,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           656f39f1-922e-4fe4-92f1-140bf99b45b8:
             uuid: 656f39f1-922e-4fe4-92f1-140bf99b45b8
@@ -68,10 +71,21 @@ third_party_settings:
               id: 'extra_field_block:node:organization:links'
             additional: {  }
             weight: 0
+          b0ae0dfd-7a7e-4a52-b948-eb03412d408f:
+            uuid: b0ae0dfd-7a7e-4a52-b948-eb03412d408f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:organization:content_moderation_control'
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_threecol_section
         layout_settings:
+          label: ''
           column_widths: 33-34-33
         components:
           44025da7-2276-4bb0-8008-1e8e716e19ff:
@@ -231,6 +245,7 @@ third_party_settings:
       -
         layout_id: layout_twocol_section
         layout_settings:
+          label: ''
           column_widths: 33-67
         components:
           ec76734e-bd0f-4d5a-9210-cf3374b502cf:
@@ -283,7 +298,8 @@ third_party_settings:
         third_party_settings: {  }
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           5dad463d-836c-4e07-a8d6-abc79111b0ef:
             uuid: 5dad463d-836c-4e07-a8d6-abc79111b0ef
@@ -315,6 +331,11 @@ content:
     label: hidden
     type: text_default
     weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -418,7 +439,9 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_event_relation: true
   field_geographic_range: true
   field_member_since: true
   field_membership_no: true
+  field_organization_type: true
   langcode: true

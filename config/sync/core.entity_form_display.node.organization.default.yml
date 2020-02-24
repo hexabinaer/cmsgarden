@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.organization.body
     - field.field.node.organization.field_associated_users
+    - field.field.node.organization.field_event_relation
     - field.field.node.organization.field_geographic_range
     - field.field.node.organization.field_logo
     - field.field.node.organization.field_member
@@ -112,6 +113,16 @@ content:
       size: 60
       placeholder: ''
       match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_event_relation:
+    weight: 39
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content

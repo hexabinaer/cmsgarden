@@ -1,13 +1,13 @@
-uuid: e7f547bf-9579-46df-8e44-67e7e6a601be
+uuid: 3e36a0e0-7da6-4cac-820d-8c33776f528f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_testimonial_relation_cms
+    - field.storage.node.field_cms
     - node.type.testimonial
     - taxonomy.vocabulary.content_management_systems
-id: node.testimonial.field_testimonial_relation_cms
-field_name: field_testimonial_relation_cms
+id: node.testimonial.field_cms
+field_name: field_cms
 entity_type: node
 bundle: testimonial
 label: 'CMS relation'

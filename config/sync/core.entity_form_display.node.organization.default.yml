@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.organization.body
     - field.field.node.organization.field_associated_users
+    - field.field.node.organization.field_cms
     - field.field.node.organization.field_event_relation
     - field.field.node.organization.field_geographic_range
     - field.field.node.organization.field_logo
@@ -12,7 +13,6 @@ dependencies:
     - field.field.node.organization.field_member_since
     - field.field.node.organization.field_membership_no
     - field.field.node.organization.field_org_address
-    - field.field.node.organization.field_org_cms
     - field.field.node.organization.field_org_geolocation
     - field.field.node.organization.field_org_tagline
     - field.field.node.organization.field_organization_type
@@ -52,6 +52,7 @@ third_party_settings:
         - field_title_html
         - field_org_tagline
         - field_org_cms
+        - field_cms
         - field_geographic_range
         - field_website
         - field_org_address
@@ -116,6 +117,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_cms:
+    weight: 25
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_event_relation:
     weight: 39
     settings:
@@ -164,16 +175,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: address_default
-    region: content
-  field_org_cms:
-    weight: 25
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_org_geolocation:
     weight: 29

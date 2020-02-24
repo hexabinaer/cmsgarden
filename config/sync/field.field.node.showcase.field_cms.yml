@@ -1,17 +1,17 @@
-uuid: d65b2e01-4069-4c90-b57f-6a200c4de03d
+uuid: 038b45df-0baf-4edf-967d-fd35058a0da1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_blog_cms_relation
-    - node.type.blog_entry
+    - field.storage.node.field_cms
+    - node.type.showcase
     - taxonomy.vocabulary.content_management_systems
-id: node.blog_entry.field_blog_cms_relation
-field_name: field_blog_cms_relation
+id: node.showcase.field_cms
+field_name: field_cms
 entity_type: node
-bundle: blog_entry
+bundle: showcase
 label: 'Related CMS'
-description: 'If this post is related to one ore several specific CMS, please select.'
+description: ''
 required: false
 translatable: false
 default_value: {  }

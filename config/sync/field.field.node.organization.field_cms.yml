@@ -1,17 +1,17 @@
-uuid: 87007dd3-fd8b-4f78-a6cb-0f1e61fec158
+uuid: 79ac1035-4b4f-447f-975f-580307e0284a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sc_cms
-    - node.type.showcase
+    - field.storage.node.field_cms
+    - node.type.organization
     - taxonomy.vocabulary.content_management_systems
-id: node.showcase.field_sc_cms
-field_name: field_sc_cms
+id: node.organization.field_cms
+field_name: field_cms
 entity_type: node
-bundle: showcase
-label: 'CMS relation'
-description: 'Will be used for filtering, also in the image browser.'
+bundle: organization
+label: CMS
+description: ''
 required: false
 translatable: false
 default_value: {  }

@@ -6,9 +6,9 @@ dependencies:
     - field.field.node.testimonial.body
     - field.field.node.testimonial.field_cited_person
     - field.field.node.testimonial.field_cited_person_ext
+    - field.field.node.testimonial.field_cms
     - field.field.node.testimonial.field_date_quoting
     - field.field.node.testimonial.field_organization
-    - field.field.node.testimonial.field_testimonial_relation_cms
     - field.field.node.testimonial.field_testimonial_relation_gen
     - node.type.testimonial
     - workflows.workflow.default_nodes
@@ -24,7 +24,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -34,12 +34,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_cited_person:
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -49,15 +49,25 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_cited_person_ext:
-    weight: 7
+    weight: 8
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
+  field_cms:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_date_quoting:
-    weight: 5
+    weight: 6
     settings:
       date_order: 'Y'
       time_type: none
@@ -67,22 +77,12 @@ content:
     type: datatime_extras_configurable_list
     region: content
   field_organization:
-    weight: 8
+    weight: 9
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
-    region: content
-  field_testimonial_relation_cms:
-    weight: 3
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_testimonial_relation_gen:
     weight: 2
@@ -99,13 +99,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 18
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -113,21 +113,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 17
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 14
     region: content
     third_party_settings: {  }
   title:
@@ -139,13 +139,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 60
@@ -154,7 +154,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 15
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }

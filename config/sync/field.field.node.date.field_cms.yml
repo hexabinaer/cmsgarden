@@ -1,16 +1,16 @@
-uuid: 0d4e2e21-25f1-455b-a89f-c88b4bab5f07
+uuid: ca7c7829-0908-464c-8706-daedd8922900
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_org_cms
-    - node.type.organization
+    - field.storage.node.field_cms
+    - node.type.date
     - taxonomy.vocabulary.content_management_systems
-id: node.organization.field_org_cms
-field_name: field_org_cms
+id: node.date.field_cms
+field_name: field_cms
 entity_type: node
-bundle: organization
-label: CMS
+bundle: date
+label: 'CMS community on site'
 description: ''
 required: false
 translatable: false

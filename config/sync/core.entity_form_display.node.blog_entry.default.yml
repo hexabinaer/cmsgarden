@@ -5,9 +5,9 @@ dependencies:
   config:
     - field.field.node.blog_entry.body
     - field.field.node.blog_entry.field_author
-    - field.field.node.blog_entry.field_blog_cms_relation
     - field.field.node.blog_entry.field_blog_download
     - field.field.node.blog_entry.field_blog_topic_relation
+    - field.field.node.blog_entry.field_cms
     - field.field.node.blog_entry.field_image
     - field.field.node.blog_entry.field_paragraph
     - field.field.node.blog_entry.field_sub_title
@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.blog_entry.field_title_html
     - image.style.thumbnail
     - node.type.blog_entry
-    - workflows.workflow.default_nodes
   module:
     - content_moderation
     - field_group
@@ -60,7 +59,7 @@ third_party_settings:
       region: content
     group_additional_info:
       children:
-        - field_blog_cms_relation
+        - field_cms
         - field_blog_topic_relation
         - field_term_suggestion
       parent_name: group_accordion
@@ -105,16 +104,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_blog_cms_relation:
-    weight: 9
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_blog_download:
     weight: 8
     settings:
@@ -123,10 +112,24 @@ content:
     type: file_generic
     region: content
   field_blog_topic_relation:
-    weight: 10
-    settings: {  }
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_buttons
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_cms:
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
     region: content
   field_image:
     weight: 3
@@ -157,7 +160,7 @@ content:
     type: text_textfield
     region: content
   field_term_suggestion:
-    weight: 11
+    weight: 14
     settings:
       size: 60
       placeholder: ''

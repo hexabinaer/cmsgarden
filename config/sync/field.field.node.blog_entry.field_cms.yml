@@ -1,18 +1,17 @@
-uuid: d740b87c-d3ef-4cd7-bb99-c978d730cdad
+uuid: afa3333f-9121-477e-9c80-6e7953534e0a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_related_cms
+    - field.storage.node.field_cms
+    - node.type.blog_entry
     - taxonomy.vocabulary.content_management_systems
-  module:
-    - user
-id: user.user.field_related_cms
-field_name: field_related_cms
-entity_type: user
-bundle: user
-label: 'Working with'
-description: 'Tick the CMS you''re working with in first place.'
+id: node.blog_entry.field_cms
+field_name: field_cms
+entity_type: node
+bundle: blog_entry
+label: 'Related CMS'
+description: ''
 required: false
 translatable: false
 default_value: {  }

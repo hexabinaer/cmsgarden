@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.showcase.body
-    - field.field.node.showcase.field_sc_cms
+    - field.field.node.showcase.field_cms
     - field.field.node.showcase.field_sc_screenshot
     - field.field.node.showcase.field_sc_usage
     - field.field.node.showcase.field_showcase_date
@@ -25,7 +25,8 @@ third_party_settings:
       library: layout_discovery/onecol
       disable_css: false
       entity_classes: all_classes
-      settings: {  }
+      settings:
+        label: null
     regions:
       content:
         - content_moderation_control
@@ -34,6 +35,7 @@ third_party_settings:
         - field_sc_screenshot
         - body
         - field_showcase_date
+        - field_cms
         - field_sc_cms
   layout_builder:
     allow_custom: false
@@ -55,22 +57,23 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_sc_cms:
+  field_cms:
+    type: entity_reference_entity_view
     weight: 6
+    region: content
     label: inline
     settings:
       view_mode: logo_linked
       link: false
     third_party_settings:
       ds:
+        ds_limit: ''
         ft:
           id: minimal
           settings:
             lb: ''
             lb-col: false
             classes: {  }
-    type: entity_reference_entity_view
-    region: content
   field_sc_screenshot:
     weight: 3
     label: hidden

@@ -5,13 +5,13 @@ dependencies:
   config:
     - field.field.user.user.field_associated_org
     - field.field.user.user.field_blog_author_profile
+    - field.field.user.user.field_cms
     - field.field.user.user.field_field_mobile_phone_no
     - field.field.user.user.field_field_telephone_no_office
     - field.field.user.user.field_gdpr
     - field.field.user.user.field_member
     - field.field.user.user.field_member_since
     - field.field.user.user.field_membership_no
-    - field.field.user.user.field_related_cms
     - field.field.user.user.field_user_address
     - field.field.user.user.field_user_bio_short
     - field.field.user.user.field_user_cmsg_participation
@@ -72,6 +72,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_cms:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_field_mobile_phone_no:
     weight: 8
     label: above
@@ -94,14 +102,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
-    region: content
-  field_related_cms:
-    weight: 3
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_user_address:
     type: address_default
@@ -162,6 +162,7 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  cmsg_mail: true
   field_blog_author_profile: true
   field_gdpr: true
   field_member_since: true
@@ -173,3 +174,4 @@ hidden:
   field_user_participation: true
   langcode: true
   member_for: true
+  realname: true

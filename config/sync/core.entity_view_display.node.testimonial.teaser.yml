@@ -7,9 +7,9 @@ dependencies:
     - field.field.node.testimonial.body
     - field.field.node.testimonial.field_cited_person
     - field.field.node.testimonial.field_cited_person_ext
+    - field.field.node.testimonial.field_cms
     - field.field.node.testimonial.field_date_quoting
     - field.field.node.testimonial.field_organization
-    - field.field.node.testimonial.field_testimonial_relation_cms
     - field.field.node.testimonial.field_testimonial_relation_gen
     - node.type.testimonial
   module:
@@ -24,7 +24,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           11ee36d1-019e-4994-b4be-4f5189f4682c:
             uuid: 11ee36d1-019e-4994-b4be-4f5189f4682c
@@ -89,8 +90,8 @@ content:
 hidden:
   field_cited_person: true
   field_cited_person_ext: true
+  field_cms: true
   field_date_quoting: true
   field_organization: true
-  field_testimonial_relation_cms: true
   field_testimonial_relation_gen: true
   langcode: true

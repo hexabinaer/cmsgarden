@@ -6,9 +6,9 @@ dependencies:
     - field.field.node.testimonial.body
     - field.field.node.testimonial.field_cited_person
     - field.field.node.testimonial.field_cited_person_ext
+    - field.field.node.testimonial.field_cms
     - field.field.node.testimonial.field_date_quoting
     - field.field.node.testimonial.field_organization
-    - field.field.node.testimonial.field_testimonial_relation_cms
     - field.field.node.testimonial.field_testimonial_relation_gen
     - node.type.testimonial
   module:
@@ -28,6 +28,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_cited_person:
     weight: 2
     label: hidden
@@ -44,6 +49,14 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_cms:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_date_quoting:
     weight: 4
     label: hidden
@@ -59,14 +72,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_testimonial_relation_cms:
-    weight: 7
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_testimonial_relation_gen:
     weight: 5

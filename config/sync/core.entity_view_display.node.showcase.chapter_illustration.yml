@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.chapter_illustration
     - field.field.node.showcase.body
-    - field.field.node.showcase.field_sc_cms
+    - field.field.node.showcase.field_cms
     - field.field.node.showcase.field_sc_screenshot
     - field.field.node.showcase.field_sc_usage
     - field.field.node.showcase.field_showcase_date
@@ -66,7 +66,7 @@ content:
 hidden:
   body: true
   content_moderation_control: true
-  field_sc_cms: true
+  field_cms: true
   field_sc_usage: true
   field_showcase_date: true
   field_title_html: true

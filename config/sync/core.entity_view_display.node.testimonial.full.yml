@@ -7,9 +7,9 @@ dependencies:
     - field.field.node.testimonial.body
     - field.field.node.testimonial.field_cited_person
     - field.field.node.testimonial.field_cited_person_ext
+    - field.field.node.testimonial.field_cms
     - field.field.node.testimonial.field_date_quoting
     - field.field.node.testimonial.field_organization
-    - field.field.node.testimonial.field_testimonial_relation_cms
     - field.field.node.testimonial.field_testimonial_relation_gen
     - node.type.testimonial
   module:
@@ -25,7 +25,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           9b6544d0-46e7-4ca8-a598-6688c78e7445:
             uuid: 9b6544d0-46e7-4ca8-a598-6688c78e7445
@@ -36,7 +37,7 @@ third_party_settings:
                 entity: layout_builder.entity
               id: 'extra_field_block:node:testimonial:links'
             additional: {  }
-            weight: 0
+            weight: 1
           9e5373b0-1819-4b6b-8c9a-0cc123fab750:
             uuid: 9e5373b0-1819-4b6b-8c9a-0cc123fab750
             region: content
@@ -51,7 +52,7 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             additional: {  }
-            weight: 1
+            weight: 2
           90813849-3638-46c2-9ebf-d8f3674cc730:
             uuid: 90813849-3638-46c2-9ebf-d8f3674cc730
             region: content
@@ -68,7 +69,7 @@ third_party_settings:
                 third_party_settings: {  }
                 type: entity_reference_entity_view
             additional: {  }
-            weight: 2
+            weight: 3
           e9b81642-a352-4051-a77d-8877dc9935c2:
             uuid: e9b81642-a352-4051-a77d-8877dc9935c2
             region: content
@@ -85,7 +86,7 @@ third_party_settings:
                 third_party_settings: {  }
                 type: datetime_default
             additional: {  }
-            weight: 5
+            weight: 6
           382cc7a0-9316-4488-8dd1-93ecddddcf3c:
             uuid: 382cc7a0-9316-4488-8dd1-93ecddddcf3c
             region: content
@@ -100,7 +101,7 @@ third_party_settings:
                 third_party_settings: {  }
                 type: text_default
             additional: {  }
-            weight: 3
+            weight: 4
           fb9906ef-8fce-427a-ae3c-7f51d5efdf2e:
             uuid: fb9906ef-8fce-427a-ae3c-7f51d5efdf2e
             region: content
@@ -117,7 +118,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 4
+            weight: 5
           83c17978-2cd8-4325-9f47-0114290479b5:
             uuid: 83c17978-2cd8-4325-9f47-0114290479b5
             region: content
@@ -127,7 +128,59 @@ third_party_settings:
                 entity: layout_builder.entity
               id: 'extra_field_block:node:testimonial:content_moderation_control'
             additional: {  }
-            weight: 6
+            weight: 0
+          a34c05bd-3e78-4197-a788-27653de36d94:
+            uuid: a34c05bd-3e78-4197-a788-27653de36d94
+            region: content
+            configuration:
+              id: 'field_block:node:testimonial:field_testimonial_relation_gen'
+              label: 'Testimonial relation'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: list_default
+                settings: {  }
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 7
+          debc1261-c45b-448f-a316-579c003f7258:
+            uuid: debc1261-c45b-448f-a316-579c003f7258
+            region: content
+            configuration:
+              id: 'field_block:node:testimonial:field_cms'
+              label: 'Related CMS'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 8
         third_party_settings: {  }
 id: node.testimonial.full
 targetEntityType: node
@@ -184,6 +237,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_testimonial_relation_cms: true
+  field_cms: true
   field_testimonial_relation_gen: true
   langcode: true

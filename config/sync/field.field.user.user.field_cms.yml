@@ -1,17 +1,18 @@
-uuid: f0314d00-f555-44b3-ac68-6e629aaacdca
+uuid: 49e69028-aac9-4a65-a3a2-66e57d4a7b46
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_cms_ref
-    - node.type.date
+    - field.storage.user.field_cms
     - taxonomy.vocabulary.content_management_systems
-id: node.date.field_cms_ref
-field_name: field_cms_ref
-entity_type: node
-bundle: date
-label: 'CMS community on site'
-description: 'Pick the organiziting CMS resp. which CMS communities will participate.'
+  module:
+    - user
+id: user.user.field_cms
+field_name: field_cms
+entity_type: user
+bundle: user
+label: 'Working with'
+description: ''
 required: false
 translatable: false
 default_value: {  }

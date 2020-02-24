@@ -6,9 +6,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog_entry.body
     - field.field.node.blog_entry.field_author
-    - field.field.node.blog_entry.field_blog_cms_relation
     - field.field.node.blog_entry.field_blog_download
     - field.field.node.blog_entry.field_blog_topic_relation
+    - field.field.node.blog_entry.field_cms
     - field.field.node.blog_entry.field_image
     - field.field.node.blog_entry.field_paragraph
     - field.field.node.blog_entry.field_sub_title
@@ -17,10 +17,7 @@ dependencies:
     - node.type.blog_entry
   module:
     - ds
-    - field_group
-    - file
-    - paragraphs_jquery_ui_accordion
-    - taxonomy
+    - svg_image
     - text
     - user
 third_party_settings:
@@ -31,6 +28,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -41,21 +39,16 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - links
+        - field_image
         - field_title_html
         - field_sub_title
-        - group_author_relation
-        - node_post_date
-        - field_author
         - body
-        - field_blog_topic_relation
-        - field_paragraph
-        - field_blog_cms_relation
-        - field_blog_download
+        - field_author
+        - node_post_date
     fields:
       node_post_date:
         plugin_id: node_post_date
-        weight: 3
+        weight: 5
         label: hidden
         formatter: ds_post_date_cmsg_default_date
         ft:
@@ -64,28 +57,6 @@ third_party_settings:
             lb: ''
             lb-col: false
             classes: {  }
-  field_group:
-    group_author_relation:
-      children:
-        - node_post_date
-        - field_author
-        - field_blog_topic_relation
-        - field_blog_cms_relation
-      parent_name: ''
-      weight: 3
-      format_type: html_element
-      format_settings:
-        id: ''
-        classes: author_box
-        element: aside
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
-      label: Author_relation
-      region: hidden
 id: node.blog_entry.teaser
 targetEntityType: node
 bundle: blog_entry
@@ -94,7 +65,7 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 4
+    weight: 3
     settings:
       trim_length: 600
     third_party_settings: {  }
@@ -107,42 +78,18 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-  field_blog_cms_relation:
-    type: entity_reference_rss_category
-    weight: 6
+  field_image:
+    type: image
+    weight: 0
     region: ds_content
     label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_blog_download:
-    type: file_rss_enclosure
-    weight: 6
-    region: ds_content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_blog_topic_relation:
-    type: entity_reference_rss_category
-    weight: 5
-    region: ds_content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_paragraph:
-    type: paragraphs_jquery_ui_accordion_formatter
-    weight: 5
-    region: ds_content
-    label: hidden
     settings:
-      bundle: ''
-      title: ''
-      content: ''
-      active: 1
-      autoscroll: false
-      autoscroll_offset: ''
-      autoscroll_offset_toolbar: false
-      view_mode: default
-      simple_id: false
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
   field_sub_title:
     type: text_trimmed
@@ -160,12 +107,11 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-  links:
-    weight: 0
-    region: ds_content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
-  field_image: true
+  field_blog_download: true
+  field_blog_topic_relation: true
+  field_cms: true
+  field_paragraph: true
   field_term_suggestion: true
   langcode: true
+  links: true

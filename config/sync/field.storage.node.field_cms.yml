@@ -1,13 +1,17 @@
-uuid: ac9d94f6-492d-4bc5-9d81-a1ee7a11378a
+uuid: 7a7ab12f-a0e9-4bcd-a402-dce002e6c71d
 langcode: en
 status: true
 dependencies:
   module:
+    - field_permissions
+    - node
     - taxonomy
-    - user
-id: user.field_related_cms
-field_name: field_related_cms
-entity_type: user
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_cms
+field_name: field_cms
+entity_type: node
 type: entity_reference
 settings:
   target_type: taxonomy_term

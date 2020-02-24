@@ -5,16 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.date.body
-    - field.field.node.date.field_cms_ref
+    - field.field.node.date.field_cms
     - field.field.node.date.field_contact_ref
-    - field.field.node.date.field_date_meetup_ref
     - field.field.node.date.field_date_node_ref
     - field.field.node.date.field_date_range
     - field.field.node.date.field_event_cmsg_participation
     - field.field.node.date.field_has_sessions
     - field.field.node.date.field_location_ref
-    - field.field.node.date.field_meetup_date
-    - field.field.node.date.field_meetup_location
     - field.field.node.date.field_public_downloads
     - field.field.node.date.field_title_html
     - field.field.node.date.field_twitter_hashtag
@@ -101,15 +98,17 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+  flag_event_attendance:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   body: true
-  field_cms_ref: true
+  field_cms: true
   field_contact_ref: true
-  field_date_meetup_ref: true
   field_event_cmsg_participation: true
   field_has_sessions: true
-  field_meetup_date: true
-  field_meetup_location: true
   field_public_downloads: true
   field_title_html: true
   field_twitter_hashtag: true

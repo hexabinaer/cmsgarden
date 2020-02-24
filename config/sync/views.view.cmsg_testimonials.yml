@@ -1,16 +1,17 @@
 uuid: 5f2d5bae-ae3a-4db3-9084-c4f25a6966be
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_cited_person
     - field.storage.node.field_cited_person_ext
+    - field.storage.node.field_cms
     - field.storage.node.field_date_quoting
     - field.storage.node.field_organization
-    - field.storage.node.field_testimonial_relation_cms
     - field.storage.node.field_testimonial_relation_gen
     - node.type.testimonial
+    - system.menu.main
   module:
     - content_translation
     - contextual
@@ -1119,69 +1120,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_testimonial_relation_cms:
-          id: field_testimonial_relation_cms
-          table: node__field_testimonial_relation_cms
-          field: field_testimonial_relation_cms
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: h3
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: true
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -1299,6 +1237,69 @@ display:
           type: text_default
           settings: {  }
           group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_cms:
+          id: field_cms
+          table: node__field_cms
+          field: field_cms
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_view
+          settings:
+            view_mode: logo_linked
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -1846,6 +1847,15 @@ display:
             nid: '0'
           destination: true
           plugin_id: contextual_links
+      menu:
+        type: normal
+        title: Testimonials
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: 0
       contexts:
@@ -1858,7 +1868,7 @@ display:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_cited_person'
         - 'config:field.storage.node.field_cited_person_ext'
+        - 'config:field.storage.node.field_cms'
         - 'config:field.storage.node.field_date_quoting'
         - 'config:field.storage.node.field_organization'
-        - 'config:field.storage.node.field_testimonial_relation_cms'
         - 'config:field.storage.node.field_testimonial_relation_gen'

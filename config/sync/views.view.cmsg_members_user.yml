@@ -1,10 +1,9 @@
 uuid: 6c6feacb-c5ee-49c3-af5f-bc70ed1289c2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.user.field_member
-    - field.storage.user.field_related_cms
     - field.storage.user.field_user_first_name
     - field.storage.user.field_user_last_name
     - field.storage.user.field_user_middle_name
@@ -1556,69 +1555,6 @@ display:
           hide_alter_empty: true
           display_name: true
           plugin_id: country
-        field_related_cms:
-          id: field_related_cms
-          table: user__field_related_cms
-          field: field_related_cms
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Working with'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_view
-          settings:
-            view_mode: logo_linked
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_member_1:
           id: field_member_1
           table: user__field_member
@@ -1843,7 +1779,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.user.field_member'
-        - 'config:field.storage.user.field_related_cms'
         - 'config:field.storage.user.field_user_first_name'
         - 'config:field.storage.user.field_user_last_name'
         - 'config:field.storage.user.field_user_middle_name'
@@ -2556,69 +2491,6 @@ display:
           hide_alter_empty: true
           display_name: true
           plugin_id: country
-        field_related_cms:
-          id: field_related_cms
-          table: user__field_related_cms
-          field: field_related_cms
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Working with'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_view
-          settings:
-            view_mode: logo_linked
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_member_1:
           id: field_member_1
           table: user__field_member
@@ -2843,7 +2715,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.user.field_member'
-        - 'config:field.storage.user.field_related_cms'
         - 'config:field.storage.user.field_user_first_name'
         - 'config:field.storage.user.field_user_last_name'
         - 'config:field.storage.user.field_user_middle_name'

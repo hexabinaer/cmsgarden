@@ -6,13 +6,13 @@ dependencies:
     - core.entity_view_mode.user.blog
     - field.field.user.user.field_associated_org
     - field.field.user.user.field_blog_author_profile
+    - field.field.user.user.field_cms
     - field.field.user.user.field_field_mobile_phone_no
     - field.field.user.user.field_field_telephone_no_office
     - field.field.user.user.field_gdpr
     - field.field.user.user.field_member
     - field.field.user.user.field_member_since
     - field.field.user.user.field_membership_no
-    - field.field.user.user.field_related_cms
     - field.field.user.user.field_user_address
     - field.field.user.user.field_user_bio_short
     - field.field.user.user.field_user_cmsg_participation
@@ -110,14 +110,15 @@ content:
             lb-col: false
             classes: {  }
 hidden:
+  cmsg_mail: true
   field_associated_org: true
+  field_cms: true
   field_field_mobile_phone_no: true
   field_field_telephone_no_office: true
   field_gdpr: true
   field_member: true
   field_member_since: true
   field_membership_no: true
-  field_related_cms: true
   field_user_address: true
   field_user_bio_short: true
   field_user_cmsg_participation: true
@@ -131,3 +132,4 @@ hidden:
   field_user_participation: true
   langcode: true
   member_for: true
+  realname: true

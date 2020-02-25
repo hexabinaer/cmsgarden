@@ -28,7 +28,6 @@ dependencies:
     - node.type.content_management_system
   module:
     - datetime
-    - ds
     - entity_reference_revisions
     - layout_builder
     - link
@@ -48,7 +47,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 5
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -59,7 +58,7 @@ content:
     third_party_settings: {  }
   field_abschnitt:
     type: entity_reference_revisions_entity_view
-    weight: 22
+    weight: 20
     label: above
     settings:
       view_mode: default
@@ -67,21 +66,21 @@ content:
     third_party_settings: {  }
     region: content
   field_article_license:
-    weight: 20
+    weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_authors_ext:
-    weight: 19
+    weight: 17
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_authors_ref:
-    weight: 18
+    weight: 16
     label: above
     settings:
       link: true
@@ -89,7 +88,7 @@ content:
     type: entity_reference_label
     region: content
   field_available_languages:
-    weight: 17
+    weight: 15
     label: above
     settings:
       link_to_entity: false
@@ -97,14 +96,14 @@ content:
     type: string
     region: content
   field_copyright_notice:
-    weight: 21
+    weight: 19
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_core_contributors:
-    weight: 14
+    weight: 12
     label: above
     settings:
       thousand_separator: ''
@@ -115,7 +114,7 @@ content:
     type: number_decimal
     region: content
   field_developers:
-    weight: 13
+    weight: 11
     label: above
     settings:
       thousand_separator: ''
@@ -126,7 +125,7 @@ content:
     type: number_decimal
     region: content
   field_initial_release:
-    weight: 7
+    weight: 5
     label: above
     settings:
       format_type: medium
@@ -135,7 +134,7 @@ content:
     type: datetime_default
     region: content
   field_last_update:
-    weight: 4
+    weight: 2
     label: inline
     settings:
       format_type: medium
@@ -144,14 +143,14 @@ content:
     type: datetime_default
     region: content
   field_license:
-    weight: 10
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_link:
-    weight: 6
+    weight: 4
     label: above
     settings:
       trim_length: 80
@@ -163,7 +162,7 @@ content:
     type: link
     region: content
   field_major_release:
-    weight: 11
+    weight: 9
     label: above
     settings:
       link_to_entity: false
@@ -171,14 +170,14 @@ content:
     type: string
     region: content
   field_meta_tags:
-    weight: 23
+    weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_open_source_as_of:
-    weight: 8
+    weight: 6
     label: above
     settings:
       format_type: medium
@@ -187,14 +186,14 @@ content:
     type: datetime_default
     region: content
   field_programming_language:
-    weight: 9
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_registered_users:
-    weight: 12
+    weight: 10
     label: above
     settings:
       thousand_separator: ''
@@ -204,51 +203,8 @@ content:
     third_party_settings: {  }
     type: number_decimal
     region: content
-  field_termref_logo:
-    weight: 3
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_title_html:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: h1
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
-    type: text_default
-    region: content
   field_total_downloads:
-    weight: 15
+    weight: 13
     label: above
     settings:
       thousand_separator: ''
@@ -259,7 +215,7 @@ content:
     type: number_decimal
     region: content
   field_total_installs:
-    weight: 16
+    weight: 14
     label: above
     settings:
       thousand_separator: ''
@@ -280,4 +236,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_termref_logo: true
+  field_title_html: true
   langcode: true

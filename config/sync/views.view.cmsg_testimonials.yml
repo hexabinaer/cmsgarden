@@ -1,6 +1,6 @@
 uuid: 5f2d5bae-ae3a-4db3-9084-c4f25a6966be
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - field.storage.node.body
@@ -12,6 +12,7 @@ dependencies:
     - field.storage.node.field_testimonial_relation_gen
     - node.type.testimonial
     - system.menu.main
+    - taxonomy.vocabulary.content_management_systems
   module:
     - content_translation
     - contextual
@@ -547,7 +548,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<blockquote>{{ body }}</blockquote>\r\n<cite>{{ field_cited_person }}{{ field_cited_person_ext }} {{ field_organization }}{{ field_date_quoting }}\r\n</cite>"
+            text: "<blockquote>{{ body }}</blockquote>\r\n<p class=\"quotee\">{{ field_cited_person }}{{ field_cited_person_ext }} {{ field_organization }}{{ field_date_quoting }}\r\n</p>"
             make_link: false
             path: ''
             absolute: false
@@ -959,12 +960,12 @@ display:
             title_enable: false
             title: All
           title_enable: true
-          title: 'A testimonial for Drupal'
+          title: 'A testimonial for {{ arguments.tid }}'
           default_argument_type: taxonomy_tid
           default_argument_options:
-            node: true
+            term_page: '1'
             anyall: +
-            term_page: '0'
+            node: false
             limit: false
             vids: {  }
           default_argument_skip_url: false
@@ -977,11 +978,16 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
-            type: none
+            type: 'entity:taxonomy_term'
             fail: 'not found'
-          validate_options: {  }
+          validate_options:
+            bundles:
+              content_management_systems: content_management_systems
+            operation: view
+            multiple: 0
+            access: false
           break_phrase: false
           add_table: false
           require_value: false
@@ -993,6 +999,7 @@ display:
         style: false
         row: false
         header: false
+        relationships: false
       display_description: ''
       pager:
         type: some
@@ -1014,6 +1021,7 @@ display:
           separator: ''
           hide_empty: false
       header: {  }
+      relationships: {  }
     cache_metadata:
       max-age: 0
       contexts:

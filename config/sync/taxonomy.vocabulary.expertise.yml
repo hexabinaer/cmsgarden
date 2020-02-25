@@ -1,0 +1,8 @@
+uuid: 934a7308-7fd6-4764-87ef-8244b0661e81
+langcode: und
+status: true
+dependencies: {  }
+name: Expertise
+vid: expertise
+description: 'Areas of expertise for members'' directory'
+weight: 0

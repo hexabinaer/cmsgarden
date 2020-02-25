@@ -32,7 +32,7 @@ content:
     label: hidden
     settings:
       image_style: thumbnail
-      image_link: ''
+      image_link: content
       svg_render_as_image: '1'
       svg_attributes:
         width: '100'
@@ -45,25 +45,11 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-  field_noderef_cms:
-    type: entity_reference_label
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      link: true
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
 hidden:
   description: true
   field_lead_color: true
   field_machine_name: true
+  field_noderef_cms: true
   field_status: true
   field_title_html: true
   langcode: true

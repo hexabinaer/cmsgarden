@@ -13,7 +13,7 @@ entity_type: taxonomy_term
 bundle: lecture_tags
 label: 'HTML title'
 description: 'This is the rendered headline (h1).You may add markup (such as em or span lang="fr") for accessibility here.'
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

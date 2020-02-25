@@ -5,9 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.logo
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
+    - field.field.taxonomy_term.content_management_systems.field_lead_color
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
+    - field.field.taxonomy_term.content_management_systems.field_title_html
     - image.style.medium
     - taxonomy.vocabulary.content_management_systems
   module:
@@ -55,7 +57,9 @@ content:
     region: content
 hidden:
   description: true
+  field_lead_color: true
   field_machine_name: true
   field_noderef_cms: true
   field_status: true
+  field_title_html: true
   langcode: true

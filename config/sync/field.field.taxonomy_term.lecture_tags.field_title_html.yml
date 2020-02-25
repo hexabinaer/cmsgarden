@@ -1,0 +1,21 @@
+uuid: 60a92486-32fa-41c5-befb-5af7876ba6c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_title_html
+    - taxonomy.vocabulary.lecture_tags
+  module:
+    - text
+id: taxonomy_term.lecture_tags.field_title_html
+field_name: field_title_html
+entity_type: taxonomy_term
+bundle: lecture_tags
+label: 'HTML title'
+description: 'This is the rendered headline (h1).You may add markup (such as em or span lang="fr") for accessibility here.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

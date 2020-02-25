@@ -6,9 +6,11 @@ dependencies:
     - core.base_field_override.taxonomy_term.content_management_systems.description
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
+    - field.field.taxonomy_term.content_management_systems.field_lead_color
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
+    - field.field.taxonomy_term.content_management_systems.field_title_html
     - taxonomy.vocabulary.content_management_systems
   module:
     - ctools
@@ -23,7 +25,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           7355fca9-9b56-43bc-8846-01dba22b3a7e:
             uuid: 7355fca9-9b56-43bc-8846-01dba22b3a7e
@@ -42,6 +45,7 @@ third_party_settings:
       -
         layout_id: layout_twocol_section
         layout_settings:
+          label: ''
           column_widths: 50-50
         components:
           8f1eae6a-135c-4430-a72f-81e2014651d7:
@@ -111,7 +115,9 @@ content:
     type: image
     region: content
 hidden:
+  field_lead_color: true
   field_machine_name: true
   field_noderef_cms: true
   field_status: true
+  field_title_html: true
   langcode: true

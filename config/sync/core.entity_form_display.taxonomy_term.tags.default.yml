@@ -1,25 +1,25 @@
-uuid: 98d27607-2857-410b-9b04-4bdba15199e2
+uuid: fc6574ea-b0ce-48f6-b36b-3ed49aa22de9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.faq.field_title_html
-    - taxonomy.vocabulary.faq
+    - field.field.taxonomy_term.tags.field_title_html
+    - taxonomy.vocabulary.tags
   module:
     - path
     - text
-id: taxonomy_term.faq.default
+id: taxonomy_term.tags.default
 targetEntityType: taxonomy_term
-bundle: faq
+bundle: tags
 mode: default
 content:
   description:
-    type: text_textarea
-    weight: 2
+    type: text_textfield
+    weight: 0
     region: content
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_title_html:
     weight: 101
@@ -31,14 +31,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 0
+    weight: 2
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 1
+    weight: -5
     region: content
     settings:
       size: 60
@@ -46,7 +46,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 4
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -56,10 +56,5 @@ content:
       display_label: true
     weight: 100
     region: content
-    third_party_settings: {  }
-  translation:
-    weight: 3
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden: {  }

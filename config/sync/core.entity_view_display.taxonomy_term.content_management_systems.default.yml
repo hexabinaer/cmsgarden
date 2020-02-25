@@ -8,6 +8,7 @@ dependencies:
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
+    - field.field.taxonomy_term.content_management_systems.field_title_html
     - taxonomy.vocabulary.content_management_systems
   module:
     - options
@@ -68,6 +69,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_title_html:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   langcode:
     type: language

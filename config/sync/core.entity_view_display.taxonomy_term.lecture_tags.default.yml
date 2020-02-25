@@ -1,15 +1,15 @@
-uuid: f6a1b616-b8a7-485b-ac4b-601443e04000
+uuid: 778503c2-6c22-468b-9f22-2181afa93f58
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.faq.field_title_html
-    - taxonomy.vocabulary.faq
+    - field.field.taxonomy_term.lecture_tags.field_title_html
+    - taxonomy.vocabulary.lecture_tags
   module:
     - text
-id: taxonomy_term.faq.default
+id: taxonomy_term.lecture_tags.default
 targetEntityType: taxonomy_term
-bundle: faq
+bundle: lecture_tags
 mode: default
 content:
   description:

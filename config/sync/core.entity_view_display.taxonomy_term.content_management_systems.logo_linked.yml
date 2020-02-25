@@ -9,6 +9,7 @@ dependencies:
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
+    - field.field.taxonomy_term.content_management_systems.field_title_html
     - image.style.thumbnail
     - taxonomy.vocabulary.content_management_systems
   module:
@@ -64,4 +65,5 @@ hidden:
   field_lead_color: true
   field_machine_name: true
   field_status: true
+  field_title_html: true
   langcode: true

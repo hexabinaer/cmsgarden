@@ -27,7 +27,7 @@ dependencies:
     - image.style.thumbnail
   module:
     - address
-    - field_group
+    - ds
     - layout_builder
     - options
     - svg_image
@@ -37,26 +37,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-  field_group:
-    group_div_fullname:
-      children:
-        - field_user_first_name
-        - field_user_middle_name
-        - field_user_last_name
-      parent_name: ''
-      weight: 0
-      format_type: html_element
-      format_settings:
-        id: ''
-        classes: fullname
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-      label: div
-      region: content
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.default
@@ -73,12 +53,21 @@ content:
     type: entity_reference_label
     region: content
   field_cms:
-    weight: 10
+    weight: 3
     label: above
     settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+      view_mode: logo_linked
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
     region: content
   field_field_mobile_phone_no:
     weight: 8
@@ -117,22 +106,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_user_first_name:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_user_last_name:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_user_main_profession:
     weight: 2
     label: hidden
@@ -140,14 +113,11 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_user_middle_name:
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+  realname:
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   user_picture:
     type: image
     weight: 1
@@ -169,9 +139,11 @@ hidden:
   field_membership_no: true
   field_user_cmsg_participation: true
   field_user_contributing_os: true
+  field_user_first_name: true
   field_user_geolocation: true
+  field_user_last_name: true
+  field_user_middle_name: true
   field_user_opensourcesince: true
   field_user_participation: true
   langcode: true
   member_for: true
-  realname: true

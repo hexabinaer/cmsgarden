@@ -10,10 +10,10 @@ dependencies:
     - node
     - user
 id: event_attendees
-label: 'Event attendees'
+label: 'CMSG Event attendees'
 module: views
-description: ''
-tag: ''
+description: 'lists own barcamp attendees'
+tag: CMSG
 base_table: node_field_data
 base_field: nid
 display:

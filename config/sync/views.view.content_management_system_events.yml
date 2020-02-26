@@ -1,6 +1,6 @@
 uuid: 82b1236f-684d-42e8-b363-fbc4a4bb0a86
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.field_event_date
@@ -10,7 +10,7 @@ dependencies:
     - node
     - user
 id: content_management_system_events
-label: 'Content Management System Events'
+label: 'Content Management System Events - DEPRECATED'
 module: views
 description: ''
 tag: ''

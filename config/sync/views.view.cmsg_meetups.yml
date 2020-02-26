@@ -1,6 +1,6 @@
 uuid: 24af618c-4c04-43f0-b0f5-0265b3412fbc
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - node.type.meetup
@@ -8,7 +8,7 @@ dependencies:
     - node
     - user
 id: cmsg_meetups
-label: 'CMSG meetups'
+label: 'CMSG meetups - DEPRECATED'
 module: views
 description: ''
 tag: ''

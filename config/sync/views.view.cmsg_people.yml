@@ -843,6 +843,7 @@ display:
           offset: 0
       displays:
         page_cms_people: page_cms_people
+      enabled: true
     cache_metadata:
       max-age: 0
       contexts:
@@ -1640,10 +1641,10 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        field_related_cms_target_id:
-          id: field_related_cms_target_id
-          table: user__field_related_cms
-          field: field_related_cms_target_id
+        field_cms_target_id:
+          id: field_cms_target_id
+          table: user__field_cms
+          field: field_cms_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -1652,22 +1653,26 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_related_cms_target_id_op
-            label: 'Working with'
+            operator_id: field_cms_target_id_op
+            label: 'Working with (field_cms)'
             description: ''
             use_operator: false
-            operator: field_related_cms_target_id_op
-            identifier: field_related_cms_target_id
+            operator: field_cms_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: working_with
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              ambassador: '0'
+              member: '0'
+              editor: '0'
+              cmsg_admin: '0'
               administrator: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1680,11 +1685,11 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: textfield
+          reduce_duplicates: true
+          type: select
           limit: true
           vid: content_management_systems
-          hierarchy: false
+          hierarchy: true
           error_message: true
           plugin_id: taxonomy_index_tid
       defaults:

@@ -72,7 +72,7 @@
     "require-dev": {
         "drupal/asset_injector": "^2.6",
         "drupal/migrate_tools": "^4.5",
-        "drupal/upgrade_status": "^1.0@alpha"
+        "drupal/upgrade_status": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"

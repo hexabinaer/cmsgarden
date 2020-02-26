@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.faq.field_title_html
     - taxonomy.vocabulary.faq
   module:
     - path
@@ -15,20 +14,12 @@ mode: default
 content:
   description:
     type: text_textarea
-    weight: 3
+    weight: 2
     region: content
     settings:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
-  field_title_html:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
   langcode:
     type: language_select
     weight: 0
@@ -46,19 +37,12 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 6
-    region: content
-    third_party_settings: {  }
   translation:
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

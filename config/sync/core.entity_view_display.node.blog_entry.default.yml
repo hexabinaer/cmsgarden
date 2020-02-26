@@ -9,13 +9,11 @@ dependencies:
     - field.field.node.blog_entry.field_blog_topic_relation
     - field.field.node.blog_entry.field_cms
     - field.field.node.blog_entry.field_image
-    - field.field.node.blog_entry.field_paragraph
     - field.field.node.blog_entry.field_sub_title
     - field.field.node.blog_entry.field_term_suggestion
     - field.field.node.blog_entry.field_title_html
     - node.type.blog_entry
   module:
-    - entity_reference_revisions
     - file
     - svg_image
     - text
@@ -76,15 +74,6 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
-  field_paragraph:
-    weight: 5
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
     region: content
   field_sub_title:
     weight: 2

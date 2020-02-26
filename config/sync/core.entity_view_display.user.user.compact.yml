@@ -28,8 +28,47 @@ dependencies:
     - image.style.thumbnail
   module:
     - ds
+    - field_group
     - svg_image
     - user
+third_party_settings:
+  field_group:
+    group_div_fullname:
+      children:
+        - field_user_first_name
+        - field_user_middle_name
+        - field_field_mobile_phone_no
+      parent_name: ''
+      weight: 22
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: fullname
+      label: 'Full name'
+      region: hidden
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - user_picture
+        - 'dynamic_token_field:user-display_name'
+    fields:
+      'dynamic_token_field:user-display_name':
+        plugin_id: 'dynamic_token_field:user-display_name'
+        weight: 1
+        label: hidden
+        formatter: default
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
 id: user.user.compact
@@ -37,11 +76,6 @@ targetEntityType: user
 bundle: user
 mode: compact
 content:
-  realname:
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   user_picture:
     type: image
     weight: 0
@@ -86,3 +120,4 @@ hidden:
   field_user_participation: true
   langcode: true
   member_for: true
+  realname: true

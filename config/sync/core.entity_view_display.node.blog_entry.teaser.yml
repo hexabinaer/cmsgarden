@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.blog_entry.field_blog_topic_relation
     - field.field.node.blog_entry.field_cms
     - field.field.node.blog_entry.field_image
-    - field.field.node.blog_entry.field_paragraph
     - field.field.node.blog_entry.field_sub_title
     - field.field.node.blog_entry.field_term_suggestion
     - field.field.node.blog_entry.field_title_html
@@ -111,7 +110,6 @@ hidden:
   field_blog_download: true
   field_blog_topic_relation: true
   field_cms: true
-  field_paragraph: true
   field_term_suggestion: true
   langcode: true
   links: true

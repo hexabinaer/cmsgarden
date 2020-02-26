@@ -7,16 +7,16 @@ dependencies:
 id: cms_nodes
 label: 'CMS Nodes'
 type: 'canonical_entities:node'
-pattern: '/content/[node:field_termref_logo:entity:field_machine_name]'
+pattern: '/cms/[node:field_termref_logo:entity:field_machine_name]'
 selection_criteria:
-  359b817c-da6c-4f02-84c4-741673483032:
+  fa62f199-571c-460e-9767-a930ef735814:
     id: node_type
     bundles:
       content_management_system: content_management_system
     negate: false
     context_mapping:
       node: node
-    uuid: 359b817c-da6c-4f02-84c4-741673483032
+    uuid: fa62f199-571c-460e-9767-a930ef735814
 selection_logic: and
 weight: -10
 relationships: {  }

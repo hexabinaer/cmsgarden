@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.content_management_system.body
-    - field.field.node.content_management_system.field_abschnitt
     - field.field.node.content_management_system.field_article_license
     - field.field.node.content_management_system.field_authors_ext
     - field.field.node.content_management_system.field_authors_ref
@@ -39,6 +38,7 @@ third_party_settings:
       -
         layout_id: layout_twocol_section
         layout_settings:
+          label: ''
           column_widths: 33-67
         components:
           83ce1002-9ac8-4e7d-a56a-281c5e88dc9d:
@@ -130,7 +130,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_abschnitt: true
   field_article_license: true
   field_authors_ext: true
   field_authors_ref: true

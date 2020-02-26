@@ -3,24 +3,19 @@ langcode: de
 status: true
 dependencies:
   config:
+    - core.base_field_override.taxonomy_term.content_management_systems.description
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
-    - field.field.taxonomy_term.content_management_systems.field_lead_color
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
-    - field.field.taxonomy_term.content_management_systems.field_title_html
-    - image.style.medium
     - taxonomy.vocabulary.content_management_systems
-    - views.view.cmsg_people
-    - views.view.cmsg_testimonials
   module:
-    - ds
+    - ctools
     - layout_builder
     - layout_discovery
     - svg_image
     - text
-    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -28,128 +23,65 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings:
-          label: ''
+        layout_settings: {  }
         components:
-          ef473cab-56c6-4ab4-9a7b-d86f8bcd91a4:
-            uuid: ef473cab-56c6-4ab4-9a7b-d86f8bcd91a4
+          7355fca9-9b56-43bc-8846-01dba22b3a7e:
+            uuid: 7355fca9-9b56-43bc-8846-01dba22b3a7e
             region: content
             configuration:
-              label_display: '0'
+              id: 'entity_view:taxonomy_term'
+              label: 'Entity view (Logo linked)'
+              provider: ctools
+              label_display: visible
+              view_mode: logo_linked
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:taxonomy_term:content_management_systems:field_title_html'
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
             additional: {  }
             weight: 0
-          e4b35c9e-93f1-4ac7-85f8-b8caa72a4c29:
-            uuid: e4b35c9e-93f1-4ac7-85f8-b8caa72a4c29
-            region: content
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 50-50
+        components:
+          8f1eae6a-135c-4430-a72f-81e2014651d7:
+            uuid: 8f1eae6a-135c-4430-a72f-81e2014651d7
+            region: first
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:taxonomy_term:content_management_systems:field_cms_logo'
+              label: Logo
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: hidden
+                type: image
                 settings:
                   image_style: medium
                   image_link: ''
-                  svg_render_as_image: '1'
+                  svg_render_as_image: 1
                   svg_attributes:
                     width: '220'
                     height: '220'
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-                type: image
-            additional: {  }
-            weight: 1
-          26170081-21d7-4e38-bb23-0cdee7f9d4dc:
-            uuid: 26170081-21d7-4e38-bb23-0cdee7f9d4dc
-            region: content
-            configuration:
-              label_display: '0'
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:taxonomy_term:content_management_systems:field_noderef_cms'
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: full
-                  link: false
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-            additional: {  }
-            weight: 2
-        third_party_settings: {  }
-      -
-        layout_id: layout_threecol_section
-        layout_settings:
-          label: ''
-          column_widths: 33-34-33
-        components:
-          9bc4a9ef-aa21-424b-8d5f-81c1ed79fdf2:
-            uuid: 9bc4a9ef-aa21-424b-8d5f-81c1ed79fdf2
-            region: first
-            configuration:
-              id: 'views_block:cmsg_testimonials-block_testimonials_cms'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              offset: null
-              show_exposed_filters: null
-              dont_hide_if_unfiltered_empty: null
-              show_more_link: null
-              more_link_text: ''
-              pager_type: null
-              translatable_configuration:
-                '#en':
-                  use_more_text: null
-              link_url: null
-              context_mapping:
-                tid: layout_builder.entity
             additional: {  }
             weight: 0
-          165fd530-dfaf-44dd-b274-d27112f6d3bf:
-            uuid: 165fd530-dfaf-44dd-b274-d27112f6d3bf
+          80b21083-bb76-4268-ac9a-d83d07825009:
+            uuid: 80b21083-bb76-4268-ac9a-d83d07825009
             region: second
             configuration:
-              id: 'views_block:cmsg_people-block_cms_people'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: '5'
-              offset: null
-              show_exposed_filters: null
-              dont_hide_if_unfiltered_empty: null
-              show_more_link: null
-              more_link_text: ''
-              pager_type: null
-              translatable_configuration:
-                '#en':
-                  use_more_text: null
-              link_url: null
-              context_mapping: {  }
+              id: 'field_block:taxonomy_term:content_management_systems:description'
+              label: Description
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
             weight: 0
         third_party_settings: {  }
@@ -158,52 +90,28 @@ targetEntityType: taxonomy_term
 bundle: content_management_systems
 mode: full
 content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_cms_logo:
     weight: 1
     label: hidden
     settings:
-      image_style: medium
-      image_link: ''
-      svg_render_as_image: '1'
       svg_attributes:
-        width: '220'
-        height: '220'
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
     type: image
     region: content
-  field_noderef_cms:
-    type: entity_reference_entity_view
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      view_mode: full
-      link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-  field_title_html:
-    type: text_default
-    weight: 0
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
 hidden:
-  description: true
-  field_lead_color: true
   field_machine_name: true
+  field_noderef_cms: true
   field_status: true
   langcode: true

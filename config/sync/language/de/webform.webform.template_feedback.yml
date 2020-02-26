@@ -1,4 +1,6 @@
 title: Rückmeldung
+description: 'Eine grundlegende Feedback-Vorlage.'
+elements: "type:\r\n  '#title': 'Art der Rückmeldung'\r\n  '#type': webform_radios_other\r\n  '#required': true\r\n  '#options':\r\n    Comments: Kommentare\r\n    'Report a Bug': 'Report a Bug'\r\n    Questions: Fragen\r\n  '#options_display': side_by_side\r\ncomments:\r\n  '#title': 'Rückmeldung'\r\n  '#type': textarea\r\n  '#required': true\r\nname:\r\n  '#title': 'Name'\r\n  '#type': textfield\r\n  '#required': true\r\nemail:\r\n  '#title': 'Email'\r\n  '#type': email\r\n  '#required': true\r\nactions:\r\n  '#type': webform_actions\r\n  '#title': 'Submit button(s)'\r\n  '#submit__label': 'Rückmeldung senden'\n"
 settings:
   confirmation_message: 'Vielen Dank für Ihr Feedback.'
 handlers:

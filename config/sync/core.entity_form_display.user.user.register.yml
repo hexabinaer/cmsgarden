@@ -33,6 +33,7 @@ dependencies:
     - geolocation_address
     - geolocation_leaflet
     - path
+    - profile
     - svg_image
     - text
     - user
@@ -829,6 +830,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  main_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 34

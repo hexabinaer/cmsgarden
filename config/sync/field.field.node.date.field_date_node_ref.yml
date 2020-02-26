@@ -13,7 +13,7 @@ bundle: date
 label: 'About the event'
 description: 'Pick general event or meetup description from list.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

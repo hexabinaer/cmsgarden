@@ -14,7 +14,7 @@ bundle: meetup
 label: Description
 description: "The main information. Please use h2/h3 for structuring.\r\nDo not forget to enter a summary for overview listings. "
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

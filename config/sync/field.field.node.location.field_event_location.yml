@@ -14,7 +14,7 @@ bundle: location
 label: Address
 description: 'Please make sure this is the address visitors can navigate to (no postal address, delivery entrance etc.)'
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     langcode: ''

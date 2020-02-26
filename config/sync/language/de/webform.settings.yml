@@ -14,6 +14,7 @@ settings:
   default_preview_prev_button_label: '< Zurück'
   default_preview_label: Vorschau
   default_preview_title: '[webform:title]: Vorschau'
+  default_preview_message: 'Bitte überprüfen Sie Ihre Eingabe. Ihre Eingabe ist erst abgeschlossen, wenn Sie auf den Button "Senden" klicken!'
   default_draft_button_label: 'Als Entwurf speichern'
   default_draft_saved_message: 'Einsendung zwischengespeichert. Sie können später dieses Formular mit den jetzt gesicherten Inhalten wieder aufrufen.'
   default_draft_loaded_message: 'Ein teilweise ausgefülltes Formular wurde gefunden. Bitte füllen Sie die restlichen Teile aus.'

@@ -14,7 +14,7 @@ bundle: meetup
 label: 'HTML title'
 description: 'This is the rendered headline (h1). You may add markup (such as em or span lang="fr") for accessibility here.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

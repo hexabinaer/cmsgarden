@@ -17,7 +17,7 @@ bundle: event
 label: 'Internal downloads'
 description: 'Only accessible for CMS ambassadors etc. - for example, booth personnel guidelines, booth posters, checklists.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -6,14 +6,7 @@ dependencies:
     - field.storage.node.field_event_banner
     - node.type.meetup
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
 id: node.meetup.field_event_banner
 field_name: field_event_banner
 entity_type: node
@@ -21,7 +14,7 @@ bundle: meetup
 label: 'Meetup logo or banner'
 description: 'Should not contain dates.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

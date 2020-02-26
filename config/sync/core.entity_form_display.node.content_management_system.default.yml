@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.content_management_system.body
-    - field.field.node.content_management_system.field_abschnitt
     - field.field.node.content_management_system.field_article_license
     - field.field.node.content_management_system.field_authors_ext
     - field.field.node.content_management_system.field_authors_ref
@@ -33,7 +32,6 @@ dependencies:
     - field_group
     - link
     - metatag
-    - paragraphs
     - path
     - text
 third_party_settings:
@@ -132,18 +130,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_abschnitt:
-    type: entity_reference_paragraphs
-    weight: 13
-    settings:
-      title: Seitenabschnitt
-      title_plural: Seitenabschnitte
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    region: content
   field_article_license:
     weight: 42
     settings:

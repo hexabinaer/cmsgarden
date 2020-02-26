@@ -5,14 +5,12 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.field_paragraph
     - field.field.node.page.field_title_html
     - node.type.page
     - workflows.workflow.default_nodes
   module:
     - content_moderation
     - metatag
-    - paragraphs
     - path
     - text
 _core:
@@ -43,18 +41,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
-    region: content
-  field_paragraph:
-    type: entity_reference_paragraphs
-    weight: 13
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
     region: content
   field_title_html:
     weight: 2

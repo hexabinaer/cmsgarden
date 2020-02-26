@@ -7,16 +7,16 @@ dependencies:
 id: organization
 label: Organization
 type: 'canonical_entities:node'
-pattern: '/organizations/[node:title]'
+pattern: '/o/[node:title]'
 selection_criteria:
-  ca41b02c-c0aa-4295-a028-87e02fc90275:
+  89b7c8e1-0eb4-41f9-8cce-d9037ffed380:
     id: node_type
     bundles:
       organization: organization
     negate: false
     context_mapping:
       node: node
-    uuid: ca41b02c-c0aa-4295-a028-87e02fc90275
+    uuid: 89b7c8e1-0eb4-41f9-8cce-d9037ffed380
 selection_logic: and
 weight: -5
 relationships: {  }

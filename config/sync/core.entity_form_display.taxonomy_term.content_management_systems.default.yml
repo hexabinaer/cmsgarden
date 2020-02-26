@@ -9,7 +9,6 @@ dependencies:
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
-    - field.field.taxonomy_term.content_management_systems.field_title_html
     - taxonomy.vocabulary.content_management_systems
   module:
     - entity_browser
@@ -22,14 +21,14 @@ mode: default
 content:
   description:
     type: text_textarea
-    weight: 4
+    weight: 3
     region: content
     settings:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
   field_cms_logo:
-    weight: 5
+    weight: 4
     settings:
       entity_browser: media_entity_browser
       field_widget_replace: true
@@ -43,7 +42,7 @@ content:
     type: entity_browser_file
     region: content
   field_lead_color:
-    weight: 6
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -51,7 +50,7 @@ content:
     type: string_textfield
     region: content
   field_machine_name:
-    weight: 3
+    weight: 2
     settings:
       size: 20
       placeholder: ''
@@ -59,7 +58,7 @@ content:
     type: string_textfield
     region: content
   field_noderef_cms:
-    weight: 9
+    weight: 8
     settings:
       match_operator: CONTAINS
       size: 60
@@ -69,18 +68,10 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_status:
-    weight: 8
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_title_html:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
     region: content
   langcode:
     type: language_select
@@ -99,7 +90,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -107,7 +98,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 100
     region: content
     third_party_settings: {  }
 hidden: {  }

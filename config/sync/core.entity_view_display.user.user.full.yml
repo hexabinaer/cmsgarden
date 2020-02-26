@@ -31,6 +31,7 @@ dependencies:
     - address
     - datetime
     - ds
+    - field_group
     - geolocation
     - layout_builder
     - svg_image
@@ -40,6 +41,26 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
+  field_group:
+    group_div_fullname:
+      children:
+        - field_user_first_name
+        - field_user_middle_name
+        - field_user_last_name
+      parent_name: ''
+      weight: 23
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: fullname
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Full name'
+      region: hidden
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.full
@@ -49,9 +70,9 @@ mode: full
 content:
   field_cms:
     type: entity_reference_entity_view
-    weight: 3
+    weight: 1
     region: content
-    label: above
+    label: inline
     settings:
       view_mode: logo_linked
       link: false
@@ -65,21 +86,21 @@ content:
             lb-col: false
             classes: {  }
   field_user_address:
-    weight: 9
+    weight: 8
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_user_bio_short:
-    weight: 8
+    weight: 7
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_user_cmsg_participation:
-    weight: 7
+    weight: 6
     label: inline
     settings:
       timezone_override: ''
@@ -95,7 +116,7 @@ content:
     type: datetime_default
     region: content
   field_user_contributing_os:
-    weight: 6
+    weight: 5
     label: inline
     settings:
       timezone_override: ''
@@ -110,9 +131,17 @@ content:
             classes: {  }
     type: datetime_default
     region: content
+  field_user_first_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_user_geolocation:
     type: geolocation_map
-    weight: 10
+    weight: 9
     region: content
     label: visually_hidden
     settings:
@@ -585,15 +614,31 @@ content:
       common_map: '1'
       data_provider_settings: {  }
     third_party_settings: {  }
+  field_user_last_name:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_user_main_profession:
-    weight: 4
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
+  field_user_middle_name:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_user_opensourcesince:
-    weight: 5
+    weight: 4
     label: inline
     settings:
       timezone_override: ''
@@ -609,21 +654,16 @@ content:
     type: datetime_default
     region: content
   field_user_participation:
-    weight: 11
+    weight: 10
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  realname:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   user_picture:
     type: image
-    weight: 2
+    weight: 0
     region: content
     settings:
       image_style: thumbnail
@@ -644,8 +684,6 @@ hidden:
   field_member: true
   field_member_since: true
   field_membership_no: true
-  field_user_first_name: true
-  field_user_last_name: true
-  field_user_middle_name: true
   langcode: true
   member_for: true
+  realname: true

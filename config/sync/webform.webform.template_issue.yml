@@ -178,6 +178,7 @@ access:
     users: {  }
     permissions: {  }
 handlers: {  }
+variants: {  }
 uuid: de3a7b8e-37b6-4288-9430-6b697f262ebf
 _core:
   default_config_hash: _qhm63bsl200t4UeXBYseqeaFfoBIPsW8rYItnG4Kv4

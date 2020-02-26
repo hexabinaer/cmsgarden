@@ -226,6 +226,7 @@ handlers:
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: true
+      exclude_attachments: false
       html: true
       attachments: false
       twig: false
@@ -236,4 +237,5 @@ handlers:
       sender_name: ''
       theme_name: ''
       parameters: {  }
+variants: {  }
 uuid: 215d1752-0c59-4f4c-8474-4228044b3366

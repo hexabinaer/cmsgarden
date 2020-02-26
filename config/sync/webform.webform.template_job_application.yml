@@ -203,6 +203,7 @@ handlers:
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
+      exclude_attachments: false
       html: true
       attachments: false
       twig: false
@@ -213,6 +214,7 @@ handlers:
       sender_name: ''
       theme_name: ''
       parameters: {  }
+variants: {  }
 uuid: 6a55c3f2-34ed-4497-86e1-ab5aca048076
 _core:
   default_config_hash: B0keV52pt9c_sG950fxivA1Dkh8Ol_7dM6DHRBE1bVo

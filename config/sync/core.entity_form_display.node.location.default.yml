@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.location.field_location_notes
     - field.field.node.location.field_location_website
     - node.type.location
+    - workflows.workflow.default_nodes
   module:
     - address
     - content_moderation

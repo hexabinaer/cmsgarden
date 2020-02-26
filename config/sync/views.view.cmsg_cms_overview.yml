@@ -12,10 +12,10 @@ dependencies:
     - node
     - user
 id: cmsg_cms_overview
-label: 'CMSG CMS overview'
+label: 'CMSG CMS overview (DEPRECATED)'
 module: views
 description: 'Aggregates linked logos of the active CMS'
-tag: ''
+tag: CMSG
 base_table: node_field_data
 base_field: nid
 display:

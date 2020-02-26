@@ -16,10 +16,10 @@ dependencies:
     - text
     - user
 id: cmsg_cms_contacts
-label: 'CMSG CMS contact'
+label: 'CMSG CMS external links'
 module: views
 description: 'Aggregates community links of the CMS portraits'
-tag: ''
+tag: CMSG
 base_table: node_field_data
 base_field: nid
 display:
@@ -429,6 +429,7 @@ display:
       display_extenders: {  }
       display_description: ''
       block_description: 'CMS web links'
+      display_comment: "Aggregates all CMS's external links to place on a page. \r\nOriginally designed to show the current cms' links anywhere on the node page but this is done with layoutbulder now."
     cache_metadata:
       max-age: -1
       contexts:

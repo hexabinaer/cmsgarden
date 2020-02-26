@@ -61,8 +61,6 @@ permissions:
   - 'edit any testimonial content'
   - 'edit field_internal_downloads'
   - 'edit field_internal_information'
-  - 'edit field_member'
-  - 'edit field_member_since'
   - 'edit field_membership_no'
   - 'edit own article content'
   - 'edit own event content'

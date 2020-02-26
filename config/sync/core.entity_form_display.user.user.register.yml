@@ -187,6 +187,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  ambassador_profile_profiles:
+    type: profile_form
+    weight: 90
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
   contact:
     weight: 25
     region: content

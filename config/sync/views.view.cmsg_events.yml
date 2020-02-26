@@ -81,10 +81,12 @@ display:
       style:
         type: default
       row:
-        type: 'entity:node'
+        type: fields
         options:
-          relationship: none
-          view_mode: teaser
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
         field_event_banner:
           id: field_event_banner

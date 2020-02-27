@@ -1,0 +1,21 @@
+uuid: 179a24c0-4a0b-4772-8439-ae392040a228
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_member
+    - profile.type.membership
+  module:
+    - options
+id: profile.membership.field_member
+field_name: field_member
+entity_type: profile
+bundle: membership
+label: 'Member of CMS Garden e. V.'
+description: 'To be set by administrative staff.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

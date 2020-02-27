@@ -1,0 +1,42 @@
+uuid: 136e5c58-0d0f-4f06-8b93-d4a7eab891c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.membership.field_member
+    - field.field.profile.membership.field_member_since
+    - field.field.profile.membership.field_membership_no_
+    - profile.type.membership
+  module:
+    - datetime_extras
+id: profile.membership.default
+targetEntityType: profile
+bundle: membership
+mode: default
+content:
+  field_member:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_member_since:
+    weight: 1
+    settings:
+      date_order: YM
+      time_type: none
+      increment: '15'
+      date_year_range: '2013:2040'
+    third_party_settings: {  }
+    type: datatime_extras_configurable_list
+    region: content
+  field_membership_no_:
+    weight: 2
+    settings:
+      placeholder: '000'
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  is_default: true
+  langcode: true

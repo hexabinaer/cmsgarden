@@ -1,0 +1,24 @@
+uuid: e4aae611-f3b9-4680-aa4e-2df20abd7640
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.author_profile.field_bio_short
+    - profile.type.author_profile
+  module:
+    - text
+id: profile.author_profile.default
+targetEntityType: profile
+bundle: author_profile
+mode: default
+content:
+  field_bio_short:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    type: text_trimmed
+    region: content
+hidden:
+  langcode: true

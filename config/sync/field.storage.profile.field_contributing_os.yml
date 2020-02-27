@@ -1,0 +1,24 @@
+uuid: b599288c-dac7-4958-a18c-a18abd5a671b
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_contributing_os
+field_name: field_contributing_os
+entity_type: profile
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

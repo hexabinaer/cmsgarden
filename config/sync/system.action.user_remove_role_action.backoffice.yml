@@ -1,0 +1,14 @@
+uuid: 23eed8d8-4194-44a9-8b37-40dcee53bf62
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.backoffice
+  module:
+    - user
+id: user_remove_role_action.backoffice
+label: 'Remove the Back office role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: backoffice

@@ -1,0 +1,163 @@
+uuid: 9ef46b5e-ab1f-4318-a6a8-e7fbf6cc62af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.main.field_address
+    - field.field.profile.main.field_association
+    - field.field.profile.main.field_bio_short
+    - field.field.profile.main.field_cms
+    - field.field.profile.main.field_contributing_os
+    - field.field.profile.main.field_first_name
+    - field.field.profile.main.field_geolocation
+    - field.field.profile.main.field_last_name
+    - field.field.profile.main.field_main_profession
+    - field.field.profile.main.field_middle_name
+    - field.field.profile.main.field_user_picture
+    - field.field.profile.main.field_using_os
+    - profile.type.main
+  module:
+    - address
+    - datetime_extras
+    - geolocation_leaflet
+    - inline_entity_form
+    - text
+id: profile.main.default
+targetEntityType: profile
+bundle: main
+mode: default
+content:
+  field_address:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_association:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_bio_short:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_cms:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_contributing_os:
+    weight: 7
+    settings:
+      date_order: 'Y'
+      time_type: none
+      increment: '15'
+      date_year_range: '1970:2040'
+    third_party_settings: {  }
+    type: datatime_extras_configurable_list
+    region: content
+  field_first_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_geolocation:
+    weight: 10
+    settings:
+      centre:
+        fit_bounds:
+          enable: true
+      auto_client_location: ''
+      auto_client_location_marker: ''
+      allow_override_map_settings: 0
+      hide_textfield_form: false
+      leaflet_settings:
+        map_features:
+          leaflet_control_zoom:
+            enabled: true
+          leaflet_marker_popup:
+            enabled: true
+          leaflet_control_geocoder:
+            enabled: true
+            weight: -100
+        zoom: '10'
+        height: 400px
+        width: 100%
+    third_party_settings: {  }
+    type: geolocation_leaflet
+    region: content
+  field_last_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_main_profession:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_middle_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_user_picture:
+    weight: 8
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      collapsible: true
+      revision: false
+      override_labels: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+    region: content
+  field_using_os:
+    weight: 6
+    settings:
+      date_order: 'Y'
+      time_type: none
+      increment: '15'
+      date_year_range: '1970:2040'
+    third_party_settings: {  }
+    type: datatime_extras_configurable_list
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  is_default: true

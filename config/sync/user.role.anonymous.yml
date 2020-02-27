@@ -17,6 +17,7 @@ permissions:
   - 'configure geolocation'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view any ambassador_profile profile'
+  - 'view any author_profile profile'
   - 'view any main profile'
-  - 'view any profile'
   - 'view media'

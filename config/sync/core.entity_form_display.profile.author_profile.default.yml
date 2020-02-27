@@ -1,0 +1,36 @@
+uuid: 461acb47-40c2-4fc5-86be-ff85e3836300
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.author_profile.field_bio_short
+    - profile.type.author_profile
+  module:
+    - text
+id: profile.author_profile.default
+targetEntityType: profile
+bundle: author_profile
+mode: default
+content:
+  field_bio_short:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  is_default: true

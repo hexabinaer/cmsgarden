@@ -1,0 +1,40 @@
+uuid: e5e204e0-176b-4ef3-8c8e-bbbab1030fcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.internal_profile.field_mobile_phone
+    - field.field.profile.internal_profile.field_office_phone
+    - field.field.profile.internal_profile.field_private_phone
+    - profile.type.internal_profile
+id: profile.internal_profile.default
+targetEntityType: profile
+bundle: internal_profile
+mode: default
+content:
+  field_mobile_phone:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_office_phone:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_private_phone:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

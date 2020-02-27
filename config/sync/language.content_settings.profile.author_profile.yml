@@ -1,0 +1,18 @@
+uuid: 306c6730-ad9f-499a-a9cd-be6c033a8c79
+langcode: en
+status: true
+dependencies:
+  config:
+    - profile.type.author_profile
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: profile.author_profile
+target_entity_type_id: profile
+target_bundle: author_profile
+default_langcode: current_interface
+language_alterable: true

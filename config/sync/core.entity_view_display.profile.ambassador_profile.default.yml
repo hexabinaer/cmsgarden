@@ -1,0 +1,105 @@
+uuid: db0dff12-ab76-4d7d-aad3-76580f9181b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.ambassador_profile.field_activities
+    - field.field.profile.ambassador_profile.field_cmsg_participation
+    - profile.type.ambassador_profile
+  module:
+    - datetime
+    - ds
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'CMSG since'
+        components:
+          b45c215f-78d5-47ed-89d6-936629d65b9f:
+            uuid: b45c215f-78d5-47ed-89d6-936629d65b9f
+            region: content
+            configuration:
+              id: 'field_block:profile:ambassador_profile:field_cmsg_participation'
+              label: 'Participating in CMS Garden since'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: cmsg_year_month
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'CMSG Activities'
+          column_widths: 50-50
+        components:
+          73d41fa5-35c1-4b76-a573-43e5e545fa08:
+            uuid: 73d41fa5-35c1-4b76-a573-43e5e545fa08
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:profile:ambassador_profile:field_activities'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: profile.ambassador_profile.default
+targetEntityType: profile
+bundle: ambassador_profile
+mode: default
+content:
+  field_activities:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_cmsg_participation:
+    weight: 0
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: cmsg_year_month
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: datetime_default
+    region: content
+hidden:
+  langcode: true

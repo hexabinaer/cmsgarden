@@ -1,0 +1,13 @@
+uuid: 6ed52a1c-9782-4aae-8984-65245329d840
+langcode: en
+status: true
+dependencies: {  }
+id: internal_profile
+label: 'Internal profile'
+display_label: ''
+multiple: false
+registration: false
+roles:
+  authenticated: authenticated
+allow_revisions: false
+new_revision: false

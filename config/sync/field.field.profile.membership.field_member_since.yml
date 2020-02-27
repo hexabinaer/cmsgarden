@@ -1,0 +1,21 @@
+uuid: c8ae9b8f-64cb-4d5e-bbf9-259dec5b940e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_member_since
+    - profile.type.membership
+  module:
+    - datetime
+id: profile.membership.field_member_since
+field_name: field_member_since
+entity_type: profile
+bundle: membership
+label: 'Member since'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

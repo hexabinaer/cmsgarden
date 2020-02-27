@@ -1,0 +1,10 @@
+uuid: 33cd95f5-1316-4ad8-b0e5-492db87f333e
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.profession_only
+label: 'Profession only'
+targetEntityType: profile
+cache: true

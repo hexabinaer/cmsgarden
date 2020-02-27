@@ -1,0 +1,29 @@
+uuid: dd4f5488-49bd-4b29-a8c7-b5aeb5ef5de3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_association
+    - node.type.organization
+    - profile.type.main
+id: profile.main.field_association
+field_name: field_association
+entity_type: profile
+bundle: main
+label: 'Associated with'
+description: 'If you are a delegate of an organizational member of CMS Garden (for example, Contao Association), please indicate your association here.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

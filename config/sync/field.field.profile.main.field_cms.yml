@@ -1,0 +1,29 @@
+uuid: 061468cf-74f9-49a5-a43b-ea5aba6a7197
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_cms
+    - profile.type.main
+    - taxonomy.vocabulary.content_management_systems
+id: profile.main.field_cms
+field_name: field_cms
+entity_type: profile
+bundle: main
+label: 'Working with'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_management_systems: content_management_systems
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

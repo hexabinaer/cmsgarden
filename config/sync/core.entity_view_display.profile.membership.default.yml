@@ -1,0 +1,44 @@
+uuid: 0983b506-52b1-47aa-aed9-ccfb16fc0356
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.membership.field_member
+    - field.field.profile.membership.field_member_since
+    - field.field.profile.membership.field_membership_no_
+    - profile.type.membership
+  module:
+    - datetime
+    - options
+id: profile.membership.default
+targetEntityType: profile
+bundle: membership
+mode: default
+content:
+  field_member:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_member_since:
+    weight: 1
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_membership_no_:
+    weight: 2
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true

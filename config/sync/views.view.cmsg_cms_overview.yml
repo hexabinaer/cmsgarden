@@ -12,7 +12,7 @@ dependencies:
     - node
     - user
 id: cmsg_cms_overview
-label: 'CMSG CMS overview'
+label: 'CMSG CMS overview - DEPRECATED'
 module: views
 description: 'Aggregates linked logos of the active CMS'
 tag: ''
@@ -405,6 +405,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
+      block_description: 'CMS participating (DEPRECATED)'
     cache_metadata:
       max-age: -1
       contexts:
@@ -433,6 +434,7 @@ display:
         options:
           relationship: none
           view_mode: teaser
+      block_description: 'CMS teasers (nodes) - DEPRECATED'
     cache_metadata:
       max-age: -1
       contexts:

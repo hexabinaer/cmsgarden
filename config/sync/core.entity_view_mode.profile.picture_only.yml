@@ -1,0 +1,10 @@
+uuid: 00046cd1-49c2-494b-85dc-ddc9bb10145d
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.picture_only
+label: 'Picture only'
+targetEntityType: profile
+cache: true

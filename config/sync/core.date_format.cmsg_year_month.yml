@@ -1,0 +1,8 @@
+uuid: 279af2fc-58b0-45f7-bc55-e2d919d91793
+langcode: en
+status: true
+dependencies: {  }
+id: cmsg_year_month
+label: 'CMSG year/month'
+locked: false
+pattern: Y/m

@@ -1,0 +1,10 @@
+uuid: f47547a2-349d-42ec-b6d1-e48bd91bb1c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.user_picture
+label: 'User picture'
+targetEntityType: media
+cache: true

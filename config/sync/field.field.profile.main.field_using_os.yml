@@ -1,0 +1,21 @@
+uuid: 40688459-84dd-477e-9e82-39247f032a02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_using_os
+    - profile.type.main
+  module:
+    - datetime
+id: profile.main.field_using_os
+field_name: field_using_os
+entity_type: profile
+bundle: main
+label: 'Using Open Source since'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

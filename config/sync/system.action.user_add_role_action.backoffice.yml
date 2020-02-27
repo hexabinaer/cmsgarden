@@ -1,0 +1,14 @@
+uuid: da0c3a05-3444-4593-950a-294a61c995a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.backoffice
+  module:
+    - user
+id: user_add_role_action.backoffice
+label: 'Add the Back office role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: backoffice

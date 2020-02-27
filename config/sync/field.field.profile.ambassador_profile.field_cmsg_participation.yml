@@ -1,0 +1,21 @@
+uuid: be7ce33c-0cfb-4525-bd22-8d1e2dfd3923
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_cmsg_participation
+    - profile.type.ambassador_profile
+  module:
+    - datetime
+id: profile.ambassador_profile.field_cmsg_participation
+field_name: field_cmsg_participation
+entity_type: profile
+bundle: ambassador_profile
+label: 'Participating in CMS Garden since'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

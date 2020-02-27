@@ -1,0 +1,24 @@
+uuid: e88b5fd5-e0f9-4f2d-8996-ea5c1d54ae75
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_cmsg_participation
+field_name: field_cmsg_participation
+entity_type: profile
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,41 @@
+uuid: 69d07cc3-798a-472f-9add-6afacd771c45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.internal_profile.field_mobile_phone
+    - field.field.profile.internal_profile.field_office_phone
+    - field.field.profile.internal_profile.field_private_phone
+    - profile.type.internal_profile
+id: profile.internal_profile.default
+targetEntityType: profile
+bundle: internal_profile
+mode: default
+content:
+  field_mobile_phone:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: '+49 199 87654321'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_office_phone:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_private_phone:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  is_default: true
+  langcode: true

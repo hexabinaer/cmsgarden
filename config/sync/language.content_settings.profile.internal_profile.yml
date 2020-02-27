@@ -1,0 +1,18 @@
+uuid: 0a8578e3-95f9-4582-bb1b-56e35a2fe57a
+langcode: en
+status: true
+dependencies:
+  config:
+    - profile.type.internal_profile
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+id: profile.internal_profile
+target_entity_type_id: profile
+target_bundle: internal_profile
+default_langcode: current_interface
+language_alterable: true

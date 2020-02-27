@@ -1,0 +1,19 @@
+uuid: 7b4945c7-83d7-40da-9f36-a12e81cc9d59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_mobile_phone
+    - profile.type.internal_profile
+id: profile.internal_profile.field_mobile_phone
+field_name: field_mobile_phone
+entity_type: profile
+bundle: internal_profile
+label: 'Mobile phone'
+description: 'For internal use only - e. g. when an event organizer needs to contact you as an ambassador at that event. No abuse, promised.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

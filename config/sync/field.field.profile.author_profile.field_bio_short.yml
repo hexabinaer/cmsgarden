@@ -1,0 +1,21 @@
+uuid: e43a14dc-79f4-4fa2-8748-676342b7f0c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_bio_short
+    - profile.type.author_profile
+  module:
+    - text
+id: profile.author_profile.field_bio_short
+field_name: field_bio_short
+entity_type: profile
+bundle: author_profile
+label: 'Short bio'
+description: 'Characterize yourself as an author <em>very briefly</em> and in 3rd person.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

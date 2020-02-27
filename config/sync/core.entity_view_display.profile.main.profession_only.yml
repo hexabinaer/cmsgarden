@@ -1,0 +1,51 @@
+uuid: 04000405-4166-45b8-b68d-c58d2740587d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.profession_only
+    - field.field.profile.main.field_address
+    - field.field.profile.main.field_association
+    - field.field.profile.main.field_bio_short
+    - field.field.profile.main.field_cms
+    - field.field.profile.main.field_contributing_os
+    - field.field.profile.main.field_first_name
+    - field.field.profile.main.field_geolocation
+    - field.field.profile.main.field_last_name
+    - field.field.profile.main.field_main_profession
+    - field.field.profile.main.field_middle_name
+    - field.field.profile.main.field_user_picture
+    - field.field.profile.main.field_using_os
+    - profile.type.main
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: profile.main.profession_only
+targetEntityType: profile
+bundle: main
+mode: profession_only
+content:
+  field_main_profession:
+    weight: 5
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_address: true
+  field_association: true
+  field_bio_short: true
+  field_cms: true
+  field_contributing_os: true
+  field_first_name: true
+  field_geolocation: true
+  field_last_name: true
+  field_middle_name: true
+  field_user_picture: true
+  field_using_os: true
+  langcode: true

@@ -1,0 +1,18 @@
+uuid: 04c5b3c6-fd3c-4a6c-abd0-e1c7a919c65b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.meetup
+id: node.meetup.changed
+field_name: changed
+entity_type: node
+bundle: meetup
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

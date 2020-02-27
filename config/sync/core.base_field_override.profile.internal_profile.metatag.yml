@@ -1,0 +1,18 @@
+uuid: fb2ce86d-edce-45a1-8c23-2ef2876b5f8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - profile.type.internal_profile
+id: profile.internal_profile.metatag
+field_name: metatag
+entity_type: profile
+bundle: internal_profile
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

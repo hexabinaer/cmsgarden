@@ -1,0 +1,28 @@
+uuid: 8043f713-afe2-40e5-bca1-6331da2d5fc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_activities
+    - node.type.date
+    - profile.type.ambassador_profile
+id: profile.ambassador_profile.field_activities
+field_name: field_activities
+entity_type: profile
+bundle: ambassador_profile
+label: 'Involvement in activities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      date: date
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

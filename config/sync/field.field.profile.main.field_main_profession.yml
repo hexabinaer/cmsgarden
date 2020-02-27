@@ -1,0 +1,21 @@
+uuid: 89f7fcf5-cbe8-42c1-b87c-21f46c4c0a2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_main_profession
+    - profile.type.main
+  module:
+    - text
+id: profile.main.field_main_profession
+field_name: field_main_profession
+entity_type: profile
+bundle: main
+label: 'Main profession'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

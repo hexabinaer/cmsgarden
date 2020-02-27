@@ -1,0 +1,12 @@
+uuid: aa77136e-e3d2-400a-ab44-78d6af7d7d85
+langcode: en
+status: true
+dependencies: {  }
+id: main
+label: Main
+display_label: 'My main profile'
+multiple: false
+registration: true
+roles: {  }
+allow_revisions: true
+new_revision: true

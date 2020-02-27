@@ -1,0 +1,21 @@
+uuid: 0d65c721-feb7-4c39-8be4-5f31ed5bfd84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_contributing_os
+    - profile.type.main
+  module:
+    - datetime
+id: profile.main.field_contributing_os
+field_name: field_contributing_os
+entity_type: profile
+bundle: main
+label: 'Contributing to Open Source since'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

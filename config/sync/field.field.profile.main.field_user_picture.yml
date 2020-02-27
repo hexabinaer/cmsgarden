@@ -1,0 +1,28 @@
+uuid: a80334b9-9560-4c10-a194-5486e6a72132
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_user_picture
+    - media.type.image
+    - profile.type.main
+id: profile.main.field_user_picture
+field_name: field_user_picture
+entity_type: profile
+bundle: main
+label: Picture
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

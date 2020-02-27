@@ -1,0 +1,18 @@
+uuid: d5a3448f-b9fe-4658-bdb2-a310d452fd6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - profile.type.membership
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: profile.membership
+target_entity_type_id: profile
+target_bundle: membership
+default_langcode: site_default
+language_alterable: false

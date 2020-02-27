@@ -1,0 +1,37 @@
+uuid: e621771e-cec3-4823-813a-4352b5b960ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_member
+field_name: field_member
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: no_member
+      label: 'No member'
+    -
+      value: member_full
+      label: 'Full member'
+    -
+      value: member_sust
+      label: 'Sustaining member'
+    -
+      value: member_honor
+      label: 'Member of honor'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

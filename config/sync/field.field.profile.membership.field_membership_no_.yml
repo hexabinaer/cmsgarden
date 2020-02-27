@@ -1,0 +1,23 @@
+uuid: 767f914e-f3b8-4952-8e56-a47101723822
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_membership_no_
+    - profile.type.membership
+id: profile.membership.field_membership_no_
+field_name: field_membership_no_
+entity_type: profile
+bundle: membership
+label: 'Membership no.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

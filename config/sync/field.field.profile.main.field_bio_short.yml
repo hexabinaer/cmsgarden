@@ -1,0 +1,21 @@
+uuid: 5d8b4cd3-ea38-4a39-a2ac-f59edf615c6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_bio_short
+    - profile.type.main
+  module:
+    - text
+id: profile.main.field_bio_short
+field_name: field_bio_short
+entity_type: profile
+bundle: main
+label: 'Short bio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

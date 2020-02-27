@@ -1,0 +1,13 @@
+uuid: a34feb80-2d02-4d2f-89f8-3e379ef2f9dc
+langcode: en
+status: true
+dependencies: {  }
+id: author_profile
+label: 'Author profile'
+display_label: 'My author profile'
+multiple: false
+registration: false
+roles:
+  authenticated: authenticated
+allow_revisions: true
+new_revision: true

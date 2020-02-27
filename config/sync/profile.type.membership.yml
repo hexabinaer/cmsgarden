@@ -1,0 +1,13 @@
+uuid: 60388474-b718-46ec-a8da-6cca3913b16d
+langcode: en
+status: true
+dependencies: {  }
+id: membership
+label: Membership
+display_label: 'Member profile'
+multiple: false
+registration: false
+roles:
+  member: member
+allow_revisions: true
+new_revision: true

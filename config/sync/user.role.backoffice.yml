@@ -1,0 +1,20 @@
+uuid: ea64f88e-e252-4e70-aa85-c0d506fe01c3
+langcode: en
+status: true
+dependencies: {  }
+id: backoffice
+label: 'Back office'
+weight: -3
+is_admin: null
+permissions:
+  - 'create membership profile'
+  - 'edit field_internal_downloads'
+  - 'edit field_member'
+  - 'edit field_member_since'
+  - 'edit field_membership_no'
+  - 'update any membership profile'
+  - 'view any membership profile'
+  - 'view any profile'
+  - 'view field_member'
+  - 'view field_member_since'
+  - 'view field_membership_no'

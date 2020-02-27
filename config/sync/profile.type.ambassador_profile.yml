@@ -1,0 +1,12 @@
+uuid: 128f1104-9555-4089-a644-1f79fcc7cece
+langcode: en
+status: true
+dependencies: {  }
+id: ambassador_profile
+label: 'Ambassador profile'
+display_label: 'Ambassador profile'
+multiple: false
+registration: true
+roles: {  }
+allow_revisions: true
+new_revision: true

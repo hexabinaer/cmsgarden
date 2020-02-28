@@ -22,28 +22,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      ds_content:
-        - field_geolocation
-        - field_event_location
-        - field_location_website
-        - field_location_notes
 id: node.location.full
 targetEntityType: node
 bundle: location
@@ -55,7 +33,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: address_default
-    region: ds_content
+    region: content
   field_geolocation:
     weight: 0
     label: hidden
@@ -540,7 +518,7 @@ content:
             lb-col: false
             classes: {  }
     type: geolocation_map
-    region: ds_content
+    region: content
   field_location_notes:
     weight: 3
     label: above
@@ -575,11 +553,11 @@ content:
             fi: false
             fi-def-at: false
     type: text_default
-    region: ds_content
+    region: content
   field_location_website:
     type: link
     weight: 2
-    region: ds_content
+    region: content
     label: above
     settings:
       trim_length: 80

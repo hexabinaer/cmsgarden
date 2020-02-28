@@ -19,83 +19,40 @@ dependencies:
     - field.field.node.organization.field_organization_type
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
-    - image.style.thumbnail
+    - image.style.medium
     - node.type.organization
   module:
     - ds
     - svg_image
     - user
-third_party_settings:
-  ds:
-    layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings: {  }
-    regions:
-      content:
-        - field_logo
-        - node_links
-    fields:
-      node_links:
-        plugin_id: node_links
-        weight: 1
-        label: hidden
-        formatter: default
 id: node.organization.teaser
 targetEntityType: node
 bundle: organization
 mode: teaser
 content:
-  content_moderation_control:
-    weight: -20
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_logo:
     type: image
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: thumbnail
+      image_style: medium
       image_link: content
       svg_render_as_image: '1'
       svg_attributes:
-        width: '100'
-        height: '100'
+        width: '220'
+        height: '220'
     third_party_settings:
       ds:
         ft:
-          id: expert
+          id: minimal
           settings:
             lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: container
-            ow-at: ''
-            fis: true
-            fis-el: div
-            fis-cl: row
-            fis-at: ''
-            fi: true
-            fi-el: div
-            fi-cl: col-sm
-            fi-at: ''
-            suffix: ''
-            lbw: false
             lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
-            fi-def-at: false
+            classes: {  }
 hidden:
   body: true
+  content_moderation_control: true
   field_associated_users: true
   field_cms: true
   field_event_relation: true

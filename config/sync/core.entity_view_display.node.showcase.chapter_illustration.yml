@@ -18,17 +18,6 @@ dependencies:
     - svg_image
     - user
 third_party_settings:
-  ds:
-    layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings: {  }
-    regions:
-      content:
-        - links
-        - field_sc_screenshot
   layout_builder:
     allow_custom: false
     enabled: false

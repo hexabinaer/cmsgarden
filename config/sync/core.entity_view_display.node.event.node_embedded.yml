@@ -25,7 +25,6 @@ dependencies:
     - node.type.event
   module:
     - ds
-    - field_group
     - layout_builder
     - link
     - text
@@ -34,69 +33,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-  field_group:
-    group_accordion_set:
-      children: {  }
-      parent_name: ''
-      weight: 13
-      format_type: accordion
-      format_settings:
-        id: ''
-        classes: ''
-        effect: none
-        direction: vertical
-      label: 'Accordion set'
-      region: hidden
-    group_location:
-      children: {  }
-      parent_name: ''
-      weight: 8
-      format_type: accordion_item
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-      label: Location
-      region: hidden
-    group_event_program:
-      children: {  }
-      parent_name: ''
-      weight: 10
-      format_type: accordion_item
-      format_settings:
-        id: event-program
-        classes: ''
-        description: ''
-        formatter: closed
-      label: 'Sessions + Attendees'
-      region: hidden
-    group_general_information:
-      children: {  }
-      parent_name: ''
-      weight: 14
-      format_type: accordion_item
-      format_settings:
-        formatter: open
-        id: event-info
-        classes: ''
-      label: 'General information'
-      region: hidden
-  ds:
-    layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-    regions:
-      content:
-        - field_title_html
-        - body
-        - field_event_type
-        - field_website
-        - field_twitter_hashtag
 id: node.event.node_embedded
 targetEntityType: node
 bundle: event

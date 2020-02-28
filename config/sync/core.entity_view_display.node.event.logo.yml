@@ -33,42 +33,7 @@ dependencies:
 third_party_settings:
   layout_builder:
     allow_custom: false
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          c59d09a5-9c4b-471e-ad5c-8af9ccccd14b:
-            uuid: c59d09a5-9c4b-471e-ad5c-8af9ccccd14b
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:event:field_event_banner'
-              formatter:
-                type: image
-                label: hidden
-                settings:
-                  image_style: large
-                  image_link: ''
-                  svg_render_as_image: '1'
-                  svg_attributes:
-                    width: '480'
-                    height: '480'
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
+    enabled: false
 id: node.event.logo
 targetEntityType: node
 bundle: event

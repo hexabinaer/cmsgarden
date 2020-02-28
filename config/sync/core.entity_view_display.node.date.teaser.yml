@@ -22,28 +22,6 @@ dependencies:
     - date_range_formatter
     - ds
     - user
-third_party_settings:
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      ds_content:
-        - field_date_range
-        - field_location_ref
-        - field_date_node_ref
 id: node.date.teaser
 targetEntityType: node
 bundle: date
@@ -52,7 +30,7 @@ content:
   field_date_node_ref:
     type: entity_reference_entity_view
     weight: 2
-    region: ds_content
+    region: content
     label: hidden
     settings:
       view_mode: teaser
@@ -68,7 +46,7 @@ content:
   field_date_range:
     type: date_range_without_time
     weight: 0
-    region: ds_content
+    region: content
     label: hidden
     settings:
       separator: '-'
@@ -84,7 +62,7 @@ content:
   field_location_ref:
     type: entity_reference_entity_view
     weight: 1
-    region: ds_content
+    region: content
     label: hidden
     settings:
       view_mode: teaser
@@ -100,9 +78,9 @@ content:
             classes: {  }
   flag_event_attendance:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   body: true
   field_cms: true

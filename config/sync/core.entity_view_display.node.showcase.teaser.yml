@@ -10,8 +10,10 @@ dependencies:
     - field.field.node.showcase.field_sc_usage
     - field.field.node.showcase.field_showcase_date
     - field.field.node.showcase.field_title_html
+    - image.style.medium
     - node.type.showcase
   module:
+    - ds
     - svg_image
     - text
     - user
@@ -22,20 +24,28 @@ mode: teaser
 content:
   field_sc_screenshot:
     type: image
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
+      image_style: medium
       image_link: ''
-    third_party_settings: {  }
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: '220'
+        height: '220'
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_title_html:
     type: text_default
-    weight: 1
+    weight: 0
     region: content
     label: hidden
     settings: {  }

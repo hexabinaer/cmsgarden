@@ -19,43 +19,6 @@ dependencies:
     - svg_image
     - text
     - user
-third_party_settings:
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      ds_content:
-        - field_image
-        - field_title_html
-        - field_sub_title
-        - body
-        - field_author
-        - node_post_date
-    fields:
-      node_post_date:
-        plugin_id: node_post_date
-        weight: 5
-        label: hidden
-        formatter: ds_post_date_cmsg_default_date
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
 id: node.blog_entry.teaser
 targetEntityType: node
 bundle: blog_entry
@@ -68,19 +31,28 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    region: ds_content
+    region: content
   field_author:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     weight: 4
-    region: ds_content
+    region: content
     label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
+      view_mode: compact
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_image:
     type: image
-    weight: 0
-    region: ds_content
+    weight: 2
+    region: content
     label: above
     settings:
       svg_attributes:
@@ -92,16 +64,16 @@ content:
     third_party_settings: {  }
   field_sub_title:
     type: text_trimmed
-    weight: 2
-    region: ds_content
+    weight: 1
+    region: content
     label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
   field_title_html:
     type: text_trimmed
-    weight: 1
-    region: ds_content
+    weight: 0
+    region: content
     label: hidden
     settings:
       trim_length: 600

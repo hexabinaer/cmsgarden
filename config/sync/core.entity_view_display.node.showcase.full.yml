@@ -15,28 +15,11 @@ dependencies:
     - datetime
     - ds
     - layout_builder
+    - options
     - svg_image
     - text
     - user
 third_party_settings:
-  ds:
-    layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: null
-    regions:
-      content:
-        - content_moderation_control
-        - links
-        - field_title_html
-        - field_sc_screenshot
-        - body
-        - field_showcase_date
-        - field_cms
-        - field_sc_cms
   layout_builder:
     allow_custom: false
     enabled: false
@@ -48,7 +31,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 4
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -59,7 +42,7 @@ content:
     third_party_settings: {  }
   field_cms:
     type: entity_reference_entity_view
-    weight: 6
+    weight: 5
     region: content
     label: inline
     settings:
@@ -75,7 +58,7 @@ content:
             lb-col: false
             classes: {  }
   field_sc_screenshot:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       svg_attributes:
@@ -87,9 +70,16 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_sc_usage:
+    type: list_key
+    weight: 6
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_showcase_date:
     type: datetime_default
-    weight: 5
+    weight: 4
     region: content
     label: inline
     settings:
@@ -104,17 +94,12 @@ content:
             lb-col: false
             classes: {  }
   field_title_html:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  links:
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
-  field_sc_usage: true
   langcode: true
+  links: true

@@ -11,28 +11,10 @@ dependencies:
     - field.field.node.showcase.field_title_html
     - node.type.showcase
   module:
-    - ds
     - options
     - svg_image
     - text
     - user
-third_party_settings:
-  ds:
-    layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings: {  }
-    regions:
-      content:
-        - langcode
-        - links
-        - body
-        - field_sc_screenshot
-        - field_sc_usage
-        - field_sc_cms
-        - field_title_html
 id: node.showcase.default
 targetEntityType: node
 bundle: showcase
@@ -41,21 +23,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_cms:
-    weight: 106
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_sc_screenshot:
-    weight: 102
-    label: above
+    weight: 1
+    label: hidden
     settings:
       svg_attributes:
         width: ''
@@ -67,33 +41,22 @@ content:
     type: image
     region: content
   field_sc_usage:
-    weight: 103
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_title_html:
-    weight: 105
-    label: above
+    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  langcode:
-    type: language
-    weight: 0
-    region: content
-    label: above
-    settings:
-      link_to_entity: false
-      native_language: false
-    third_party_settings: {  }
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  field_cms: true
   field_showcase_date: true
+  langcode: true
+  links: true

@@ -51,15 +51,12 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  content_moderation_control: true
   field_downloads: true
   field_external_links: true
   field_meta_tags: true
   field_project_partners: true
   langcode: true
   layout_builder__layout: true
+  links: true

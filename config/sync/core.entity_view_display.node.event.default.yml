@@ -25,7 +25,6 @@ dependencies:
     - node.type.event
   module:
     - ds
-    - field_group
     - layout_builder
     - link
     - svg_image
@@ -35,109 +34,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-  field_group:
-    group_accordion_set:
-      children:
-        - group_general_information
-        - group_location
-        - group_event_program
-      parent_name: ''
-      weight: 6
-      format_type: accordion
-      format_settings:
-        id: ''
-        classes: ''
-        effect: none
-        direction: vertical
-      label: 'Accordion set'
-      region: content
-    group_location:
-      children:
-        - field_event_location_ref
-        - field_additional_info
-      parent_name: group_accordion_set
-      weight: 17
-      format_type: accordion_item
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-      label: Location
-      region: content
-    group_event_program:
-      children:
-        - 'dynamic_block_field:node-event_attendees'
-        - flag_event_attendance
-        - 'dynamic_block_field:node-event_session_proposals'
-        - 'dynamic_token_field:node-add_session_proposal'
-      parent_name: group_accordion_set
-      weight: 18
-      format_type: accordion_item
-      format_settings:
-        id: event-program
-        classes: ''
-        description: ''
-        formatter: closed
-      label: 'Sessions + Attendees'
-      region: content
-    group_general_information:
-      children:
-        - field_contact_ref
-        - body
-      parent_name: group_accordion_set
-      weight: 16
-      format_type: accordion_item
-      format_settings:
-        formatter: open
-        id: event-info
-        classes: ''
-      label: 'General information'
-      region: content
-  ds:
-    layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-    regions:
-      content:
-        - content_moderation_control
-        - field_title_html
-        - field_event_banner
-        - field_event_location_ref
-        - field_additional_info
-        - field_event_type
-        - field_twitter_hashtag
-        - field_website
-        - group_accordion_set
-        - field_contact_ref
-        - body
-        - 'dynamic_block_field:node-event_attendees'
-        - group_general_information
-        - group_location
-        - group_event_program
-        - flag_event_attendance
-        - 'dynamic_block_field:node-event_session_proposals'
-        - 'dynamic_token_field:node-add_session_proposal'
-    fields:
-      'dynamic_token_field:node-add_session_proposal':
-        plugin_id: 'dynamic_token_field:node-add_session_proposal'
-        weight: 20
-        label: hidden
-        formatter: default
-      'dynamic_block_field:node-event_attendees':
-        plugin_id: 'dynamic_block_field:node-event_attendees'
-        weight: 16
-        label: hidden
-        formatter: default
-      'dynamic_block_field:node-event_session_proposals':
-        plugin_id: 'dynamic_block_field:node-event_session_proposals'
-        weight: 19
-        label: hidden
-        formatter: default
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -145,7 +41,7 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 8
+    weight: 5
     region: content
     label: hidden
     settings: {  }
@@ -153,21 +49,6 @@ content:
   content_moderation_control:
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_additional_info:
-    type: text_trimmed
-    weight: 3
-    region: content
-    label: above
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-  field_contact_ref:
-    type: author
-    weight: 7
-    region: content
-    label: above
     settings: {  }
     third_party_settings: {  }
   field_event_banner:
@@ -184,23 +65,6 @@ content:
         height: '480'
     third_party_settings:
       ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-  field_event_location_ref:
-    type: entity_reference_entity_view
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      view_mode: full
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
         ft:
           id: minimal
           settings:
@@ -275,7 +139,7 @@ content:
             classes: {  }
   field_website:
     type: link
-    weight: 5
+    weight: 6
     region: content
     label: above
     settings:
@@ -291,9 +155,12 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_additional_info: true
+  field_contact_ref: true
   field_event_cmsg_participation: true
   field_event_date: true
   field_event_location: true
+  field_event_location_ref: true
   field_has_sessions: true
   field_internal_downloads: true
   field_internal_information: true

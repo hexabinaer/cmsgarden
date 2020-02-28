@@ -15,78 +15,6 @@ dependencies:
     - options
     - text
     - user
-third_party_settings:
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      ds_content:
-        - node_links
-        - field_session_category
-        - node_title
-        - body
-        - field_session_tags
-        - node_submitted_by
-        - flag_session_ratings
-    fields:
-      node_links:
-        plugin_id: node_links
-        weight: 0
-        label: hidden
-        formatter: default
-      node_title:
-        plugin_id: node_title
-        weight: 2
-        label: hidden
-        formatter: default
-        settings:
-          link: true
-          wrapper: ''
-          class: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow: true
-            ow-el: h4
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
-      node_submitted_by:
-        plugin_id: node_submitted_by
-        weight: 5
-        label: hidden
-        formatter: ds_post_date_cmsg_default_date
 id: node.session.teaser
 targetEntityType: node
 bundle: session
@@ -95,22 +23,22 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 3
+    weight: 2
     settings:
       trim_length: 600
     third_party_settings: {  }
-    region: ds_content
+    region: content
   field_session_category:
     type: list_key
-    weight: 1
-    region: ds_content
+    weight: 0
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_session_tags:
     type: entity_reference_label
-    weight: 4
-    region: ds_content
+    weight: 3
+    region: content
     label: hidden
     settings:
       link: true
@@ -145,8 +73,8 @@ content:
             fis-def-at: false
             fi-def-at: false
   flag_session_ratings:
-    weight: 6
-    region: ds_content
+    weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden:

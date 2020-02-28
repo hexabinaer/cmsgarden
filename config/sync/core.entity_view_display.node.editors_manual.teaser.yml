@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.editors_manual.body
+    - field.field.node.editors_manual.field_title_html
     - node.type.editors_manual
   module:
     - text
@@ -17,15 +18,22 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
+  field_title_html:
+    type: text_default
+    weight: 0
+    region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

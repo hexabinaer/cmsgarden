@@ -21,7 +21,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           ea7e5c96-a356-4975-9f36-b6ef06652d04:
             uuid: ea7e5c96-a356-4975-9f36-b6ef06652d04
@@ -82,6 +83,16 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
+          dfab1866-1cd0-49b2-94e6-fde0e5c9b86a:
+            uuid: dfab1866-1cd0-49b2-94e6-fde0e5c9b86a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:frequently_asked_question:content_moderation_control'
+            additional: {  }
+            weight: 4
         third_party_settings: {  }
 id: node.frequently_asked_question.teaser
 targetEntityType: node
@@ -94,6 +105,11 @@ content:
     weight: 1
     settings:
       trim_length: 600
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
     third_party_settings: {  }
     region: content
   field_question:

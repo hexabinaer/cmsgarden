@@ -25,12 +25,10 @@ dependencies:
     - image.style.large
     - node.type.event
   module:
-    - date_range_formatter
     - ds
     - field_group
     - layout_builder
     - link
-    - options
     - svg_image
     - text
     - user
@@ -69,11 +67,7 @@ third_party_settings:
       label: Location
       region: content
     group_event_program:
-      children:
-        - 'dynamic_block_field:node-event_attendees'
-        - flag_event_attendance
-        - 'dynamic_block_field:node-event_session_proposals'
-        - 'dynamic_token_field:node-add_session_proposal'
+      children: {  }
       parent_name: group_accordion_set
       weight: 18
       format_type: accordion_item
@@ -96,67 +90,6 @@ third_party_settings:
         classes: ''
       label: 'General information'
       region: content
-  ds:
-    layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: null
-    regions:
-      content:
-        - content_moderation_control
-        - switch_field
-        - field_title_html
-        - links
-        - field_event_date
-        - field_event_banner
-        - field_event_type
-        - field_event_cmsg_participation
-        - field_twitter_hashtag
-        - body
-        - field_website
-        - group_accordion_set
-        - field_event_location_ref
-        - 'dynamic_block_field:node-event_attendees'
-        - group_general_information
-        - group_location
-        - flag_event_attendance
-        - group_event_program
-        - 'dynamic_block_field:node-event_session_proposals'
-        - field_additional_info
-        - 'dynamic_token_field:node-add_session_proposal'
-    fields:
-      'dynamic_token_field:node-add_session_proposal':
-        plugin_id: 'dynamic_token_field:node-add_session_proposal'
-        weight: 19
-        label: hidden
-        formatter: default
-      'dynamic_block_field:node-event_attendees':
-        plugin_id: 'dynamic_block_field:node-event_attendees'
-        weight: 16
-        label: hidden
-        formatter: default
-      'dynamic_block_field:node-event_session_proposals':
-        plugin_id: 'dynamic_block_field:node-event_session_proposals'
-        weight: 18
-        label: hidden
-        formatter: default
-      switch_field:
-        plugin_id: switch_field
-        weight: 1
-        label: hidden
-        formatter: default
-        settings:
-          vms:
-            teaser: ''
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
 id: node.event.full
 targetEntityType: node
 bundle: event
@@ -202,64 +135,6 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-  field_event_cmsg_participation:
-    type: list_default
-    weight: 7
-    region: content
-    label: inline
-    settings: {  }
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: true
-            classes: {  }
-  field_event_date:
-    type: date_range_without_time
-    weight: 4
-    region: content
-    label: hidden
-    settings:
-      timezone_override: ''
-      single: 'd F Y'
-      single_all_day: 'd F Y'
-      one_day: 'd F Y'
-      one_month: 'd - {d} F Y'
-      several_months: 'd F - {d} {F} Y'
-      several_years: 'd F Y - {d} {F} {Y}'
-      separator: '-'
-      date_format: 'Y-m-d\TH:i:s'
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow: true
-            ow-el: h2
-            ow-cl: date--event
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
   field_event_location_ref:
     type: entity_reference_entity_view
     weight: 15
@@ -360,13 +235,10 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_contact_ref: true
+  field_event_cmsg_participation: true
+  field_event_date: true
   field_event_location: true
   field_has_sessions: true
   field_internal_downloads: true
@@ -376,3 +248,4 @@ hidden:
   field_public_downloads: true
   langcode: true
   layout_builder__layout: true
+  links: true

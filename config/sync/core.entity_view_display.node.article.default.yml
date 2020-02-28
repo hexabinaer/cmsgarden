@@ -26,37 +26,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-  ds:
-    layout:
-      id: ds_2col_stacked_fluid
-      library: ds/ds_2col_stacked_fluid
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          header: div
-          left: div
-          right: div
-          footer: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      header:
-        - field_title_html
-        - content_moderation_control
-        - links
-        - field_publish_date
-      left:
-        - field_image
-      right:
-        - body
-      footer:
-        - field_tags
-        - comment
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.default
@@ -66,29 +35,29 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 5
-    region: right
+    weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
     label: hidden
   comment:
     type: comment_default
-    weight: 7
-    region: footer
+    weight: 6
+    region: content
     label: above
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
   content_moderation_control:
-    weight: 1
-    region: header
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
   field_image:
     type: image
-    weight: 4
-    region: left
+    weight: 3
+    region: content
     settings:
       image_style: large
       image_link: ''
@@ -100,8 +69,8 @@ content:
     label: hidden
   field_publish_date:
     type: datetime_custom
-    weight: 3
-    region: header
+    weight: 2
+    region: content
     label: above
     settings:
       date_format: 'Y-m-d\TH:i:s'
@@ -109,16 +78,16 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_label
-    weight: 6
-    region: footer
+    weight: 5
+    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
   field_title_html:
     type: text_default
-    weight: 0
-    region: header
+    weight: 1
+    region: content
     label: hidden
     settings: {  }
     third_party_settings:
@@ -150,12 +119,8 @@ content:
             fis-def-at: false
             fi: false
             fi-def-at: false
-  links:
-    weight: 2
-    region: header
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_article_type: true
   field_meta_tags: true
   langcode: true
+  links: true

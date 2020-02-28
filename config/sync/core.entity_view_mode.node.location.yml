@@ -1,0 +1,10 @@
+uuid: 765c871c-97ef-4c4f-a65d-ede9e6088029
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.location
+label: 'Location only'
+targetEntityType: node
+cache: true

@@ -11,7 +11,7 @@ id: node.event.field_has_sessions
 field_name: field_has_sessions
 entity_type: node
 bundle: event
-label: 'Session proposal management'
+label: 'Session proposal management - DEPRECATED'
 description: 'If this is our own barcamp, tick "enable" to allow CMS Garden''s session proposals.'
 required: false
 translatable: false

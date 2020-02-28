@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_location_ref
+    - field.field.node.event.field_event_logo
     - field.field.node.event.field_event_type
     - field.field.node.event.field_has_sessions
     - field.field.node.event.field_internal_downloads
@@ -197,6 +198,7 @@ hidden:
   field_event_cmsg_participation: true
   field_event_date: true
   field_event_location: true
+  field_event_logo: true
   field_event_type: true
   field_has_sessions: true
   field_internal_downloads: true

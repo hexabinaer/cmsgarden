@@ -1,0 +1,8 @@
+uuid: dc765101-b5c4-4c7a-a2a3-f9a793f0a2ec
+langcode: en
+status: true
+dependencies: {  }
+id: cmsg_time
+label: 'CMSG time'
+locked: false
+pattern: 'g:i a'

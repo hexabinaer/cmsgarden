@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.date.field_date_range
     - field.field.node.date.field_event_cmsg_participation
     - field.field.node.date.field_has_sessions
+    - field.field.node.date.field_internal_information
     - field.field.node.date.field_location_ref
     - field.field.node.date.field_public_downloads
     - field.field.node.date.field_title_html
@@ -56,15 +57,25 @@ third_party_settings:
             uuid: 0321c0a7-fa23-4233-8f6a-b60e32b6c489
             region: content
             configuration:
+              id: 'field_block:node:date:field_title_html'
+              label: 'HTML title'
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:date:field_title_html'
-              formatter:
-                type: text_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
+                view_mode: view_mode
             additional: {  }
             weight: 3
           aa862cfd-40e5-4031-9523-c1c0e43f2b1f:
@@ -93,21 +104,54 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
-          4234811f-3bc0-43ac-b492-199bee2bc17f:
-            uuid: 4234811f-3bc0-43ac-b492-199bee2bc17f
-            region: content
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 75-25
+        components:
+          e3c1240f-d75f-4fb8-b7a4-e0b8f8bd9c01:
+            uuid: e3c1240f-d75f-4fb8-b7a4-e0b8f8bd9c01
+            region: first
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:date:field_date_range'
+              label: 'Start time'
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                type: date_range_without_time
                 label: hidden
+                type: daterange_default
                 settings:
                   timezone_override: ''
-                  date_format: 'd F Y'
+                  format_type: cmsg_time
                   separator: '-'
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          4234811f-3bc0-43ac-b492-199bee2bc17f:
+            uuid: 4234811f-3bc0-43ac-b492-199bee2bc17f
+            region: first
+            configuration:
+              id: 'field_block:node:date:field_date_range'
+              label: 'Date and time'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: date_range_without_time
+                settings:
+                  timezone_override: ''
                   single: 'd F Y'
                   single_all_day: 'd F Y'
                   one_day: 'd F Y'
@@ -122,71 +166,9 @@ third_party_settings:
                         lb: ''
                         lb-col: false
                         classes: {  }
-            additional: {  }
-            weight: 4
-          e3c1240f-d75f-4fb8-b7a4-e0b8f8bd9c01:
-            uuid: e3c1240f-d75f-4fb8-b7a4-e0b8f8bd9c01
-            region: content
-            configuration:
-              id: 'field_block:node:date:field_date_range'
-              label: 'Start time'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: daterange_default
-                settings:
-                  timezone_override: ''
-                  format_type: html_time
-                  separator: '-'
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: 'Start time'
-                        lb-col: false
-                        classes: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
-            weight: 5
-        third_party_settings: {  }
-      -
-        layout_id: layout_twocol_section
-        layout_settings:
-          label: ''
-          column_widths: 67-33
-        components:
-          aa5079e0-5395-4d92-91bd-60c4e2c89f46:
-            uuid: aa5079e0-5395-4d92-91bd-60c4e2c89f46
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:date:body'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 0
-          5b655541-bb35-4e1a-88ff-a562aa875cc1:
-            uuid: 5b655541-bb35-4e1a-88ff-a562aa875cc1
-            region: second
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:date:field_event_cmsg_participation'
-              formatter:
-                type: list_default
-                label: inline
-                settings: {  }
-                third_party_settings: {  }
             additional: {  }
             weight: 0
           f4967a16-5abe-4478-a538-e8846e6a2538:
@@ -235,39 +217,6 @@ third_party_settings:
                   link_to_entity: false
                 third_party_settings: {  }
             additional: {  }
-            weight: 2
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: Location
-        components:
-          56913d7d-afbf-4bef-bf1c-697bb99b34d0:
-            uuid: 56913d7d-afbf-4bef-bf1c-697bb99b34d0
-            region: content
-            configuration:
-              id: 'field_block:node:date:field_location_ref'
-              label: Location
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: node_embedded
-                third_party_settings:
-                  ds:
-                    ds_limit: ''
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
         third_party_settings: {  }
       -
@@ -276,28 +225,19 @@ third_party_settings:
           label: ''
           column_widths: 67-33
         components:
-          737ef717-3735-4af4-b8f1-3af7ffacde30:
-            uuid: 737ef717-3735-4af4-b8f1-3af7ffacde30
+          aa5079e0-5395-4d92-91bd-60c4e2c89f46:
+            uuid: aa5079e0-5395-4d92-91bd-60c4e2c89f46
             region: first
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:date:field_date_node_ref'
+              id: 'field_block:node:date:body'
               formatter:
-                type: entity_reference_entity_view
                 label: hidden
-                settings:
-                  view_mode: node_embedded
-                  link: false
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
             additional: {  }
             weight: 0
           fae5357d-9b51-4951-be72-5deecd5ba06b:
@@ -314,30 +254,41 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             additional: {  }
-            weight: 6
-          09e78419-6f5c-4b73-b28b-af3674ca1f33:
-            uuid: 09e78419-6f5c-4b73-b28b-af3674ca1f33
+            weight: 1
+          5b655541-bb35-4e1a-88ff-a562aa875cc1:
+            uuid: 5b655541-bb35-4e1a-88ff-a562aa875cc1
             region: second
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:date:flag_event_attendance'
+              id: 'field_block:node:date:field_event_cmsg_participation'
+              formatter:
+                type: list_default
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
             additional: {  }
-            weight: 7
-          62bc9e50-4f13-4b6c-a101-b133c84773e7:
-            uuid: 62bc9e50-4f13-4b6c-a101-b133c84773e7
-            region: second
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Location
+        components:
+          56913d7d-afbf-4bef-bf1c-697bb99b34d0:
+            uuid: 56913d7d-afbf-4bef-bf1c-697bb99b34d0
+            region: content
             configuration:
-              id: 'field_block:node:date:field_cms'
-              label: 'CMS on site'
+              id: 'field_block:node:date:field_location_ref'
+              label: Location
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
-                type: entity_reference_label
+                label: hidden
+                type: entity_reference_entity_view
                 settings:
-                  link: true
+                  view_mode: node_embedded
                 third_party_settings:
                   ds:
                     ds_limit: ''
@@ -351,7 +302,70 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 5
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'About (defaults)'
+        components:
+          737ef717-3735-4af4-b8f1-3af7ffacde30:
+            uuid: 737ef717-3735-4af4-b8f1-3af7ffacde30
+            region: content
+            configuration:
+              id: 'field_block:node:date:field_date_node_ref'
+              label: 'About the event'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: node_embedded
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Specific internals'
+        components:
+          07bd3c54-6724-4562-9932-5de6ee8e2766:
+            uuid: 07bd3c54-6724-4562-9932-5de6ee8e2766
+            region: content
+            configuration:
+              id: 'field_block:node:date:field_internal_information'
+              label: 'Internal information'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -370,6 +384,33 @@ third_party_settings:
               block_revision_id: 2
               block_serialized: null
               context_mapping: {  }
+            additional: {  }
+            weight: 2
+          62bc9e50-4f13-4b6c-a101-b133c84773e7:
+            uuid: 62bc9e50-4f13-4b6c-a101-b133c84773e7
+            region: content
+            configuration:
+              id: 'field_block:node:date:field_cms'
+              label: 'CMS on site'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: logo_linked
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 0
           78f051db-1d66-48d6-a9cb-f7236a710535:
@@ -557,6 +598,7 @@ content:
 hidden:
   field_cms: true
   field_has_sessions: true
+  field_internal_information: true
   field_public_downloads: true
   field_user_ref: true
   field_website: true

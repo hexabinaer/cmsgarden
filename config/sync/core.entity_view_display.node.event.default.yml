@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_location_ref
+    - field.field.node.event.field_event_logo
     - field.field.node.event.field_event_type
     - field.field.node.event.field_has_sessions
     - field.field.node.event.field_internal_downloads
@@ -71,6 +72,15 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+  field_event_logo:
+    type: entity_reference_entity_view
+    weight: 19
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
   field_event_type:
     type: entity_reference_label
     weight: 3

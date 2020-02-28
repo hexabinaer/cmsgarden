@@ -18,7 +18,7 @@ id: node.event.field_event_banner
 field_name: field_event_banner
 entity_type: node
 bundle: event
-label: 'Event logo or banner'
+label: 'Event logo or banner (DEPRECATED)'
 description: 'Preferably re-use images. Try and find this event''s artwork in the <a href="/admin/content/files">files archive</a>.'
 required: false
 translatable: true

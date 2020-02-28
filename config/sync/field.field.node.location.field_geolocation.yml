@@ -15,7 +15,14 @@ label: Geolocation
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    lat_sin: '0.79395093907452'
+    lat_cos: '0.60798183060243'
+    lng_rad: '0.23359001681693'
+    value: '52.5562812, 13.3837221'
+    lat: '52.5562812'
+    lng: '13.3837221'
 default_value_callback: ''
 settings: {  }
 field_type: geolocation

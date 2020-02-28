@@ -1,0 +1,10 @@
+uuid: 1005b8a0-ad31-4910-a339-6620b65208c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_text
+label: 'Text teaser'
+targetEntityType: node
+cache: true

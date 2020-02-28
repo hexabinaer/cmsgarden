@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_location_ref
+    - field.field.node.event.field_event_logo
     - field.field.node.event.field_event_type
     - field.field.node.event.field_has_sessions
     - field.field.node.event.field_internal_downloads
@@ -35,39 +36,6 @@ third_party_settings:
     allow_custom: false
     enabled: true
     sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: 'Location default'
-        components:
-          9970aef1-9ff3-4086-b7e9-81a1380dda3d:
-            uuid: 9970aef1-9ff3-4086-b7e9-81a1380dda3d
-            region: content
-            configuration:
-              id: 'field_block:node:event:field_event_location_ref'
-              label: 'Event location'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: node_embedded
-                third_party_settings:
-                  ds:
-                    ds_limit: ''
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
       -
         layout_id: layout_twocol_section
         layout_settings:
@@ -163,6 +131,39 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Location default'
+        components:
+          9970aef1-9ff3-4086-b7e9-81a1380dda3d:
+            uuid: 9970aef1-9ff3-4086-b7e9-81a1380dda3d
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_event_location_ref'
+              label: 'Event location'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: node_embedded
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.event.node_embedded
 targetEntityType: node
 bundle: event
@@ -253,6 +254,7 @@ hidden:
   field_event_date: true
   field_event_location: true
   field_event_location_ref: true
+  field_event_logo: true
   field_event_type: true
   field_has_sessions: true
   field_internal_downloads: true

@@ -1,20 +1,20 @@
-uuid: 3b7964f5-678c-4e0a-889e-8f84fe82e01b
+uuid: f16ab5dc-23ce-4bd7-bc54-9a41a1d731f0
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_internal_information
-    - node.type.event
+    - node.type.date
   module:
     - text
-id: node.event.field_internal_information
+id: node.date.field_internal_information
 field_name: field_internal_information
 entity_type: node
-bundle: event
+bundle: date
 label: 'Internal information'
-description: 'General (recurring) information for event organizers and ambassadors. '
+description: 'Date-specific internal information for organizers + ambassadors. For example, the location of the material storage room.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

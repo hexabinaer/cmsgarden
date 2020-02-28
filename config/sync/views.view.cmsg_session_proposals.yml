@@ -331,8 +331,8 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          tokenize: false
-          content: '<p><a class="add-content button" href="/node/add/session?edit[field_event_relation][widget][0][target_id]=[node:nid]">Add your session proposal!</a></p>'
+          tokenize: true
+          content: '<p><a class="add-content button" href="/node/add/session?edit[field_event_relation][widget][0][target_id]={{ raw_arguments.nid }}">Add your session proposal!</a></p>'
           plugin_id: text_custom
       footer: {  }
       empty: {  }
@@ -408,10 +408,12 @@ display:
         - 'config:core.entity_view_display.node.date.default'
         - 'config:core.entity_view_display.node.date.full'
         - 'config:core.entity_view_display.node.date.teaser'
+        - 'config:core.entity_view_display.node.date.teaser_text'
         - 'config:core.entity_view_display.node.editors_manual.default'
         - 'config:core.entity_view_display.node.editors_manual.teaser'
         - 'config:core.entity_view_display.node.event.default'
         - 'config:core.entity_view_display.node.event.full'
+        - 'config:core.entity_view_display.node.event.location'
         - 'config:core.entity_view_display.node.event.logo'
         - 'config:core.entity_view_display.node.event.node_embedded'
         - 'config:core.entity_view_display.node.event.teaser'
@@ -455,6 +457,7 @@ display:
       display_description: ''
       rendering_language: '***LANGUAGE_entity_default***'
       block_description: 'Session proposals'
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -474,10 +477,12 @@ display:
         - 'config:core.entity_view_display.node.date.default'
         - 'config:core.entity_view_display.node.date.full'
         - 'config:core.entity_view_display.node.date.teaser'
+        - 'config:core.entity_view_display.node.date.teaser_text'
         - 'config:core.entity_view_display.node.editors_manual.default'
         - 'config:core.entity_view_display.node.editors_manual.teaser'
         - 'config:core.entity_view_display.node.event.default'
         - 'config:core.entity_view_display.node.event.full'
+        - 'config:core.entity_view_display.node.event.location'
         - 'config:core.entity_view_display.node.event.logo'
         - 'config:core.entity_view_display.node.event.node_embedded'
         - 'config:core.entity_view_display.node.event.teaser'

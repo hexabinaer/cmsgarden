@@ -5,7 +5,7 @@ dependencies: {  }
 id: author_profile
 label: 'Author profile'
 display_label: 'My author profile'
-multiple: false
+multiple: true
 registration: false
 roles:
   authenticated: authenticated

@@ -6,13 +6,13 @@ dependencies:
     - system
 id: interim_frontend_fixes
 label: 'Interim frontend fixes'
-code: "h2 {\r\n  margin-top: 3rem;\r\n}\r\n\r\n/* Generic flex styling */\r\n\r\n.flexbox {\r\n  display: flex;\r\n  flex-flow: row wrap;\r\n}\r\n.flex-item {\r\n    flex: 1 1 33%;\r\n    border: 1px solid #333;\r\n    padding: 1rem;\r\n}\r\n\r\n/* CMS Logos in shelf */\r\n\r\n.view-cmsg-cms-overview {\r\n  display: flex;\r\n  flex-flow: row wrap;\r\n  border: 10px solid #fff;\r\n  padding: 0 10px;\r\n  box-shadow: 0 0 60px rgba(0,0,0,.2)\r\n}\r\n.view-cmsg-cms-overview .views-row {\r\n  border: 10px solid #fff;\r\n  box-shadow: inset 0 0 40px rgba(0,0,0,.3)\r\n}\r\n.view-cmsg-cms-overview .field-name-field-cms-logo {\r\n  margin: 0px 30px 0;\r\n}"
+code: "/* Make superfluous node titles identifiable */\r\n\r\narticle header * {\r\n  color: \r\n  green;\r\n  font-size: 12px !important;\r\n  margin: 0 !important;\r\n  padding: 0 !important;\r\n}\r\n\r\n\r\nh2 {\r\n  margin-top: 3rem;\r\n}\r\n\r\n/* Generic flex styling */\r\n\r\n.flexbox {\r\n  display: flex;\r\n  flex-flow: row wrap;\r\n}\r\n.flex-item {\r\n    flex: 1 1 33%;\r\n    border: 1px solid #333;\r\n    padding: 1rem;\r\n}\r\n\r\n/* CMS Logos in shelf */\r\n\r\n.view-cmsg-cms-overview {\r\n  display: flex;\r\n  flex-flow: row wrap;\r\n  border: 10px solid #fff;\r\n  padding: 0 10px;\r\n  box-shadow: 0 0 60px rgba(0,0,0,.2)\r\n}\r\n.view-cmsg-cms-overview .views-row {\r\n  border: 10px solid #fff;\r\n  box-shadow: inset 0 0 40px rgba(0,0,0,.3)\r\n}\r\n.view-cmsg-cms-overview .field-name-field-cms-logo {\r\n  margin: 0px 30px 0;\r\n}"
 media: screen
 preprocess: true
 conditions:
   current_theme:
     id: current_theme
     theme:
-      cmsg_barrio: cmsg_barrio
+      bartik: bartik
     negate: false
 conditions_require_all: true

@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.basic
     - core.entity_view_mode.node.full
     - field.field.node.event.body
     - field.field.node.event.field_additional_info
@@ -13,6 +12,7 @@ dependencies:
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_location_ref
+    - field.field.node.event.field_event_logo
     - field.field.node.event.field_event_type
     - field.field.node.event.field_has_sessions
     - field.field.node.event.field_internal_downloads
@@ -110,16 +110,27 @@ third_party_settings:
             uuid: 20f6c88a-3b9a-4340-b38c-2ad8e65e3275
             region: second
             configuration:
+              id: 'field_block:node:event:field_contact_ref'
+              label: Contact
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: compact
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_contact_ref'
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
+                view_mode: view_mode
             additional: {  }
             weight: 1
           de49e36e-37a7-4ce9-9a40-44b372dc33dd:
@@ -218,16 +229,15 @@ third_party_settings:
             uuid: d950966b-648f-4565-8f4c-a00fe6217e7a
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:event:field_event_location_ref'
+              label: 'Event location'
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                type: entity_reference_entity_view
                 label: hidden
+                type: entity_reference_entity_view
                 settings:
-                  view_mode: full
-                  link: false
+                  view_mode: node_embedded
                 third_party_settings:
                   ds:
                     ds_limit: ''
@@ -237,6 +247,9 @@ third_party_settings:
                         lb: ''
                         lb-col: false
                         classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 0
         third_party_settings: {  }
@@ -322,16 +335,16 @@ third_party_settings:
         layout_settings:
           label: Dates
         components:
-          55d05ce4-99ff-47da-971b-6df73de5d8f4:
-            uuid: 55d05ce4-99ff-47da-971b-6df73de5d8f4
+          cece2307-4143-4977-a580-999c5605ba41:
+            uuid: cece2307-4143-4977-a580-999c5605ba41
             region: content
             configuration:
-              id: 'views_block:cmsg_events-block_events_upcoming'
-              label: 'Next dates'
+              id: 'views_block:cmsg_events-block_event_related_dates'
+              label: ''
               provider: views
               label_display: visible
-              views_label: 'Next dates'
-              items_per_page: none
+              views_label: ''
+              items_per_page: '5'
               offset: null
               show_exposed_filters: null
               dont_hide_if_unfiltered_empty: null
@@ -344,21 +357,30 @@ third_party_settings:
               link_url: null
               context_mapping: {  }
             additional: {  }
-            weight: 0
-          d8a30d6d-d79e-4c91-930a-130973331f73:
-            uuid: d8a30d6d-d79e-4c91-930a-130973331f73
+            weight: 2
+          34572e3f-a5bb-4339-b490-2c0ec693b833:
+            uuid: 34572e3f-a5bb-4339-b490-2c0ec693b833
             region: content
             configuration:
-              id: 'inline_block:basic'
-              label: 'Past dates'
-              provider: layout_builder
+              id: 'views_block:cmsg_events-block_event_related_dates_archive'
+              label: ''
+              provider: views
               label_display: visible
-              view_mode: full
-              block_revision_id: 1
-              block_serialized: null
+              views_label: ''
+              items_per_page: '5'
+              offset: null
+              show_exposed_filters: null
+              dont_hide_if_unfiltered_empty: null
+              show_more_link: null
+              more_link_text: ''
+              pager_type: null
+              translatable_configuration:
+                '#en':
+                  use_more_text: null
+              link_url: null
               context_mapping: {  }
             additional: {  }
-            weight: 1
+            weight: 3
         third_party_settings: {  }
 id: node.event.full
 targetEntityType: node
@@ -541,6 +563,7 @@ hidden:
   field_event_cmsg_participation: true
   field_event_date: true
   field_event_location: true
+  field_event_logo: true
   field_has_sessions: true
   field_meta_tags: true
   field_org_geolocation: true

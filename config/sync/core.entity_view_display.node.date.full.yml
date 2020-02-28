@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.date.field_has_sessions
     - field.field.node.date.field_internal_information
     - field.field.node.date.field_location_ref
+    - field.field.node.date.field_org_ref
     - field.field.node.date.field_public_downloads
     - field.field.node.date.field_title_html
     - field.field.node.date.field_twitter_hashtag
@@ -372,20 +373,6 @@ third_party_settings:
         layout_settings:
           label: Meet
         components:
-          5673170a-bc50-4887-8e3b-1a7d5ba85187:
-            uuid: 5673170a-bc50-4887-8e3b-1a7d5ba85187
-            region: content
-            configuration:
-              id: 'inline_block:basic'
-              label: Organization
-              provider: layout_builder
-              label_display: visible
-              view_mode: full
-              block_revision_id: 2
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 2
           62bc9e50-4f13-4b6c-a101-b133c84773e7:
             uuid: 62bc9e50-4f13-4b6c-a101-b133c84773e7
             region: content
@@ -412,21 +399,75 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 0
-          78f051db-1d66-48d6-a9cb-f7236a710535:
-            uuid: 78f051db-1d66-48d6-a9cb-f7236a710535
+            weight: 1
+          5341fdb0-b787-4050-a813-c96d847bad16:
+            uuid: 5341fdb0-b787-4050-a813-c96d847bad16
+            region: content
+            configuration:
+              id: 'field_block:node:date:field_user_ref'
+              label: 'Ambassadors on site'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: compact
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+          095e60bf-d0d5-46d1-84fa-e90321bfa6d4:
+            uuid: 095e60bf-d0d5-46d1-84fa-e90321bfa6d4
+            region: content
+            configuration:
+              id: 'field_block:node:date:field_org_ref'
+              label: 'Organizations on site'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
+          3746f253-a972-4aed-a948-80d3a47a0ff1:
+            uuid: 3746f253-a972-4aed-a948-80d3a47a0ff1
             region: content
             configuration:
               id: 'inline_block:basic'
-              label: Users
+              label: 'Meet us there'
               provider: layout_builder
-              label_display: visible
+              label_display: '0'
               view_mode: full
-              block_revision_id: 3
+              block_revision_id: 4
               block_serialized: null
               context_mapping: {  }
             additional: {  }
-            weight: 1
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -599,6 +640,7 @@ hidden:
   field_cms: true
   field_has_sessions: true
   field_internal_information: true
+  field_org_ref: true
   field_public_downloads: true
   field_user_ref: true
   field_website: true

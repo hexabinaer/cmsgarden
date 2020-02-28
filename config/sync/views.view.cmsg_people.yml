@@ -10,6 +10,7 @@ dependencies:
     - taxonomy.vocabulary.content_management_systems
   module:
     - geolocation
+    - profile
     - taxonomy
     - user
 id: cmsg_people

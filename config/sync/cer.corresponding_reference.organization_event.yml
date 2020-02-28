@@ -1,0 +1,13 @@
+uuid: b016f812-ffed-4838-8757-9c92b59d1c21
+langcode: en
+status: true
+dependencies: {  }
+id: organization_event
+label: 'Organization <-> Event'
+enabled: true
+first_field: field_event_relation
+second_field: field_org_ref
+bundles:
+  node:
+    - date
+    - organization

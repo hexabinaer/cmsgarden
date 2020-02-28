@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.date.field_has_sessions
     - field.field.node.date.field_internal_information
     - field.field.node.date.field_location_ref
+    - field.field.node.date.field_org_ref
     - field.field.node.date.field_public_downloads
     - field.field.node.date.field_title_html
     - field.field.node.date.field_twitter_hashtag
@@ -73,6 +74,7 @@ hidden:
   field_event_cmsg_participation: true
   field_has_sessions: true
   field_internal_information: true
+  field_org_ref: true
   field_public_downloads: true
   field_twitter_hashtag: true
   field_user_ref: true

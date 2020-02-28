@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.date.field_has_sessions
     - field.field.node.date.field_internal_information
     - field.field.node.date.field_location_ref
+    - field.field.node.date.field_org_ref
     - field.field.node.date.field_public_downloads
     - field.field.node.date.field_title_html
     - field.field.node.date.field_twitter_hashtag
@@ -50,6 +51,7 @@ third_party_settings:
         - field_event_cmsg_participation
         - field_cms
         - field_user_ref
+        - field_org_ref
         - field_public_downloads
         - field_internal_information
       parent_name: group_accordion
@@ -175,7 +177,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_internal_information:
-    weight: 17
+    weight: 18
     settings:
       rows: 5
       placeholder: ''
@@ -201,9 +203,19 @@ content:
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: _none
+  field_org_ref:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
   field_public_downloads:
     type: entity_reference_autocomplete
-    weight: 16
+    weight: 17
     region: content
     settings:
       match_operator: CONTAINS

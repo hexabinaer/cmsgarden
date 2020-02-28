@@ -1,17 +1,17 @@
-uuid: f512b516-3ebf-434f-b71d-20f9b5c5eb05
-langcode: de
+uuid: 4d89b788-b705-4062-b336-fd7b8aa787ff
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_event_relation
+    - field.storage.node.field_org_ref
     - node.type.date
     - node.type.organization
-id: node.organization.field_event_relation
-field_name: field_event_relation
+id: node.date.field_org_ref
+field_name: field_org_ref
 entity_type: node
-bundle: organization
-label: 'Related event'
-description: 'Tick the events your organization will be attending (or has attended).'
+bundle: date
+label: 'Organizations on site'
+description: ''
 required: false
 translatable: false
 default_value: {  }
@@ -20,7 +20,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      date: date
+      organization: organization
     sort:
       field: _none
     auto_create: false

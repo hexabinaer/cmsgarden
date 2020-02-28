@@ -1,0 +1,14 @@
+uuid: d76c8346-54e1-4718-81f1-b2138a1a6fc4
+langcode: en
+status: true
+dependencies: {  }
+id: user_profile_event
+label: 'User profile <-> Event'
+enabled: true
+first_field: field_activities
+second_field: field_user_ref
+bundles:
+  node:
+    - date
+  profile:
+    - ambassador_profile

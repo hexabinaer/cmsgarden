@@ -4,10 +4,11 @@ status: true
 dependencies: {  }
 id: backoffice
 label: 'Back office'
-weight: -3
+weight: -4
 is_admin: null
 permissions:
   - 'create membership profile'
+  - 'edit field_activities'
   - 'edit field_internal_downloads'
   - 'edit field_member'
   - 'edit field_member_since'
@@ -15,6 +16,10 @@ permissions:
   - 'update any membership profile'
   - 'view any membership profile'
   - 'view any profile'
+  - 'view field_activities'
   - 'view field_member'
   - 'view field_member_since'
   - 'view field_membership_no'
+  - 'view field_mobile_phone'
+  - 'view field_office_phone'
+  - 'view field_private_phone'

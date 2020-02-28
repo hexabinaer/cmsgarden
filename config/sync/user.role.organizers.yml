@@ -1,0 +1,53 @@
+uuid: 5abe2bd0-faea-4703-a86c-6b9b6ac6c658
+langcode: en
+status: true
+dependencies: {  }
+id: organizers
+label: Organizers
+weight: -6
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access media overview'
+  - 'access shortcuts'
+  - 'create and edit custom blocks'
+  - 'create audio media'
+  - 'create date content'
+  - 'create event content'
+  - 'create file media'
+  - 'create image media'
+  - 'create media'
+  - 'create polls'
+  - 'create remote_video media'
+  - 'create video media'
+  - 'create webform'
+  - 'delete own audio media'
+  - 'delete own file media'
+  - 'delete own image media'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'delete own webform'
+  - 'edit any date content'
+  - 'edit any event content'
+  - 'edit own audio media'
+  - 'edit own file media'
+  - 'edit own image media'
+  - 'edit own polls'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'translate audio media'
+  - 'translate date node'
+  - 'translate event node'
+  - 'translate file media'
+  - 'translate image media'
+  - 'translate remote_video media'
+  - 'translate video media'
+  - 'update media'
+  - 'use default_nodes transition create_new_draft'
+  - 'use default_nodes transition publish'
+  - 'use default_nodes transition review'
+  - 'view field_mobile_phone'
+  - 'view field_office_phone'
+  - 'view field_private_phone'
+  - 'view latest version'
+  - 'view own unpublished media'

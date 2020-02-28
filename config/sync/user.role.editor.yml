@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: editor
 label: Editor
-weight: -6
+weight: -5
 is_admin: null
 permissions:
   - 'access administration pages'
@@ -100,6 +100,9 @@ permissions:
   - 'view event revisions'
   - 'view field_internal_downloads'
   - 'view field_internal_information'
+  - 'view field_mobile_phone'
+  - 'view field_office_phone'
+  - 'view field_private_phone'
   - 'view frequently_asked_question revisions'
   - 'view organization revisions'
   - 'view own ambassador_profile profile'

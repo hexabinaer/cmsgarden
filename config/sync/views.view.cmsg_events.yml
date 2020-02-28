@@ -600,6 +600,7 @@ display:
         relationships: false
         arguments: false
         title: false
+        header: false
       row:
         type: 'entity:node'
         options:
@@ -644,6 +645,18 @@ display:
           not: false
           plugin_id: numeric
       title: 'Next dates'
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: true
+          content: '<p><a class="add-content button" href="/node/add/date?edit[field_date_node_ref][widget][0][target_id]={{ raw_arguments.field_date_node_ref_target_id }}">Add a date</a></p>'
+          plugin_id: text_custom
     cache_metadata:
       max-age: -1
       contexts:
@@ -679,6 +692,7 @@ display:
         filters: false
         filter_groups: false
         title: false
+        header: false
       row:
         type: 'entity:node'
         options:
@@ -870,6 +884,7 @@ display:
         groups:
           1: AND
       title: 'Past dates'
+      header: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -928,10 +943,232 @@ display:
         - 'config:field.storage.node.field_date_range'
         - 'config:field.storage.node.field_event_banner'
         - 'config:field.storage.node.field_event_location'
+  er_events_all:
+    display_plugin: entity_reference
+    id: er_events_all
+    display_title: 'ER events (all)'
+    position: 6
+    display_options:
+      display_extenders: {  }
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+      defaults:
+        fields: false
+        filters: false
+        filter_groups: false
+        sorts: false
+      row:
+        type: entity_reference
+        options:
+          default_field_elements: true
+          inline:
+            title: title
+            field_date_range: field_date_range
+          separator: ' // '
+          hide_empty: false
+      style:
+        type: entity_reference
+        options:
+          search_fields:
+            title: title
+            field_date_range: '0'
+      display_description: ''
+      pager:
+        type: none
+        options:
+          offset: 0
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            date: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      sorts:
+        field_date_range_value:
+          id: field_date_range_value
+          table: node__field_date_range
+          field: field_date_range_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          granularity: minute
+          plugin_id: datetime
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   er_events_upcoming:
     display_plugin: entity_reference
     id: er_events_upcoming
-    display_title: 'Entity Reference'
+    display_title: 'ER events (upcoming)'
     position: 6
     display_options:
       display_extenders: {  }
@@ -1072,6 +1309,7 @@ display:
           plugin_id: field
       defaults:
         fields: false
+        sorts: false
       row:
         type: entity_reference
         options:
@@ -1087,6 +1325,25 @@ display:
           search_fields:
             title: title
             field_date_range: '0'
+      display_description: ''
+      pager:
+        type: none
+        options:
+          offset: 0
+      sorts:
+        field_date_range_value:
+          id: field_date_range_value
+          table: node__field_date_range
+          field: field_date_range_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          granularity: minute
+          plugin_id: datetime
     cache_metadata:
       max-age: -1
       contexts:

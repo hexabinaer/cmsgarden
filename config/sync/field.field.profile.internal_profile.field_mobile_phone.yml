@@ -10,7 +10,7 @@ field_name: field_mobile_phone
 entity_type: profile
 bundle: internal_profile
 label: 'Mobile phone'
-description: 'For internal use only - e. g. when an event organizer needs to contact you as an ambassador at that event. No abuse, promised.'
+description: 'For internal use only - e. g. when an event organizer needs to contact you as an ambassador at that event or when the backoffice has a question re. your membership. No abuse, promised.'
 required: false
 translatable: false
 default_value: {  }

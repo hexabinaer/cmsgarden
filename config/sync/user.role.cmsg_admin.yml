@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: cmsg_admin
 label: 'CMSG Admin'
-weight: -5
+weight: -3
 is_admin: null
 permissions:
   - 'access poll overview'
@@ -21,6 +21,7 @@ permissions:
   - 'delete any main profile'
   - 'delete any membership profile'
   - 'delete own membership profile'
+  - 'edit field_activities'
   - 'edit field_internal_downloads'
   - 'edit field_internal_information'
   - 'edit own field_internal_downloads'
@@ -35,7 +36,11 @@ permissions:
   - 'use text format full_html'
   - 'view any internal_profile profile'
   - 'view any membership profile'
+  - 'view field_activities'
   - 'view field_internal_downloads'
   - 'view field_internal_information'
+  - 'view field_mobile_phone'
+  - 'view field_office_phone'
+  - 'view field_private_phone'
   - 'view own field_internal_downloads'
   - 'view own field_internal_information'

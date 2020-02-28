@@ -167,6 +167,31 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Internal
+        components:
+          457189cd-4c53-4a1d-9058-5e74d690ce19:
+            uuid: 457189cd-4c53-4a1d-9058-5e74d690ce19
+            region: content
+            configuration:
+              id: 'field_block:user:user:internal_profile_profiles'
+              label: 'Internal profile profiles'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.full

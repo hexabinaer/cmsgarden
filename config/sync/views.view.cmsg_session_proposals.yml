@@ -330,7 +330,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
+          empty: true
           tokenize: true
           content: '<p><a class="add-content button" href="/node/add/session?edit[field_event_relation][widget][0][target_id]={{ raw_arguments.nid }}">Add your session proposal!</a></p>'
           plugin_id: text_custom

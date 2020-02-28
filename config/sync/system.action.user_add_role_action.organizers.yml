@@ -1,0 +1,14 @@
+uuid: 7be6317f-7848-4e00-bb5e-7fda532efef3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.organizers
+  module:
+    - user
+id: user_add_role_action.organizers
+label: 'Add the Organizers role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: organizers

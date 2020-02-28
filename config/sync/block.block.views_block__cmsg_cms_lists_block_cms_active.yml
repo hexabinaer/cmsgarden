@@ -1,0 +1,40 @@
+uuid: 605d6eca-5b1c-4649-bb20-fad261a9d93f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.cmsg_cms_lists
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__cmsg_cms_lists_block_cms_active
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:cmsg_cms_lists-block_cms_active'
+settings:
+  id: 'views_block:cmsg_cms_lists-block_cms_active'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  offset: null
+  show_exposed_filters: null
+  dont_hide_if_unfiltered_empty: null
+  show_more_link: null
+  more_link_text: ''
+  pager_type: null
+  translatable_configuration:
+    '#en':
+      use_more_text: null
+  link_url: null
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

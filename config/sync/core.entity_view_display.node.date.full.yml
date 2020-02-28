@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.date.field_user_ref
     - field.field.node.date.field_website
     - node.type.date
+    - views.view.cmsg_contextuals
     - views.view.cmsg_session_proposals
     - views.view.event_attendees
   module:
@@ -255,20 +256,28 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             additional: {  }
-            weight: 1
-          5b655541-bb35-4e1a-88ff-a562aa875cc1:
-            uuid: 5b655541-bb35-4e1a-88ff-a562aa875cc1
+            weight: 2
+          94ba91eb-5c0f-458b-b658-1b267a5b249a:
+            uuid: 94ba91eb-5c0f-458b-b658-1b267a5b249a
             region: second
             configuration:
+              id: 'views_block:cmsg_contextuals-block_cmsg_onsite'
+              label: ''
+              provider: views
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:date:field_event_cmsg_participation'
-              formatter:
-                type: list_default
-                label: inline
-                settings: {  }
-                third_party_settings: {  }
+              views_label: ''
+              items_per_page: none
+              offset: null
+              show_exposed_filters: null
+              dont_hide_if_unfiltered_empty: null
+              show_more_link: null
+              more_link_text: ''
+              pager_type: null
+              translatable_configuration:
+                '#en':
+                  use_more_text: null
+              link_url: null
+              context_mapping: {  }
             additional: {  }
             weight: 0
         third_party_settings: {  }

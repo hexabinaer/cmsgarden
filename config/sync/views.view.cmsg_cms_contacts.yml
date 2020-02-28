@@ -16,7 +16,7 @@ dependencies:
     - text
     - user
 id: cmsg_cms_contacts
-label: 'CMSG CMS contact'
+label: 'CMSG CMS external links'
 module: views
 description: 'Aggregates community links of the CMS portraits'
 tag: ''

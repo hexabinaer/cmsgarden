@@ -26,9 +26,128 @@ dependencies:
     - node.type.event
   module:
     - ds
+    - layout_builder
     - svg_image
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 25-75
+        components:
+          b1d3098a-a6fe-42ca-a808-ff2a50acc6cb:
+            uuid: b1d3098a-a6fe-42ca-a808-ff2a50acc6cb
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_event_banner'
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_style: medium
+                  image_link: content
+                  svg_render_as_image: '1'
+                  svg_attributes:
+                    width: '220'
+                    height: '220'
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+            additional: {  }
+            weight: 0
+          8ef95ea9-4e58-413a-bf99-26551a1efbf3:
+            uuid: 8ef95ea9-4e58-413a-bf99-26551a1efbf3
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_title_html'
+              label: 'HTML title'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+          ae4c46fc-7152-427b-a2b2-14ae99a2a1ad:
+            uuid: ae4c46fc-7152-427b-a2b2-14ae99a2a1ad
+            region: second
+            configuration:
+              id: 'field_block:node:event:body'
+              label: Description
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
+          3d7c2346-d114-4c9b-a9cb-b9d3feb43597:
+            uuid: 3d7c2346-d114-4c9b-a9cb-b9d3feb43597
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_event_location_ref'
+              label: 'Event location'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
 id: node.event.teaser
 targetEntityType: node
 bundle: event

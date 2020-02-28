@@ -22,12 +22,11 @@ dependencies:
     - field.field.node.event.field_title_html
     - field.field.node.event.field_twitter_hashtag
     - field.field.node.event.field_website
-    - image.style.large
+    - image.style.medium
     - node.type.event
   module:
     - ds
     - layout_builder
-    - layout_discovery
     - svg_image
     - user
 third_party_settings:
@@ -45,12 +44,12 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: large
+      image_style: medium
       image_link: ''
       svg_render_as_image: '1'
       svg_attributes:
-        width: '480'
-        height: '480'
+        width: '220'
+        height: '220'
     third_party_settings:
       ds:
         ft:

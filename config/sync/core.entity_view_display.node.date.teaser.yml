@@ -21,7 +21,155 @@ dependencies:
   module:
     - date_range_formatter
     - ds
+    - layout_builder
+    - layout_discovery
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 25-75
+        components:
+          d5b46247-1e96-46b3-a66a-768ef6d0f18f:
+            uuid: d5b46247-1e96-46b3-a66a-768ef6d0f18f
+            region: first
+            configuration:
+              id: 'field_block:node:date:field_date_node_ref'
+              label: Logo
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: logo
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          b1cded26-accb-48d0-9404-a297cd311567:
+            uuid: b1cded26-accb-48d0-9404-a297cd311567
+            region: second
+            configuration:
+              id: 'field_block:node:date:field_title_html'
+              label: 'HTML title'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+          a5eb2262-021f-4d80-ad2c-11a9cc55739c:
+            uuid: a5eb2262-021f-4d80-ad2c-11a9cc55739c
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:date:field_date_range'
+              formatter:
+                type: date_range_without_time
+                label: hidden
+                settings:
+                  separator: '-'
+                  date_format: 'Y-m-d\TH:i:s'
+                  timezone_override: ''
+                  single: 'd F Y'
+                  single_all_day: 'd F Y'
+                  one_day: 'd F Y'
+                  one_month: 'd - {d} F Y'
+                  several_months: 'd F - {d} {F} Y'
+                  several_years: 'd F Y - {d} {F} {Y}'
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          2c022a72-adf8-4aac-8ce1-19e6c283eced:
+            uuid: 2c022a72-adf8-4aac-8ce1-19e6c283eced
+            region: second
+            configuration:
+              id: 'field_block:node:date:body'
+              label: 'Date-related information'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 5
+          d9b6204b-7ffa-4ca9-ad34-9e8fb15351ab:
+            uuid: d9b6204b-7ffa-4ca9-ad34-9e8fb15351ab
+            region: second
+            configuration:
+              id: 'field_block:node:date:field_location_ref'
+              label: Location
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
 id: node.date.teaser
 targetEntityType: node
 bundle: date

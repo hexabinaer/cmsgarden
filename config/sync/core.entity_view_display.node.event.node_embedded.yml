@@ -26,13 +26,143 @@ dependencies:
   module:
     - ds
     - layout_builder
+    - layout_discovery
     - link
     - text
     - user
 third_party_settings:
   layout_builder:
     allow_custom: false
-    enabled: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Location default'
+        components:
+          9970aef1-9ff3-4086-b7e9-81a1380dda3d:
+            uuid: 9970aef1-9ff3-4086-b7e9-81a1380dda3d
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_event_location_ref'
+              label: 'Event location'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: node_embedded
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Event defaults'
+          column_widths: 67-33
+        components:
+          09c82b13-656f-49d7-a8d8-951f93619fe3:
+            uuid: 09c82b13-656f-49d7-a8d8-951f93619fe3
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_website'
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  rel: ''
+                  target: ''
+                  url_only: false
+                  url_plain: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          6a4d68e9-fc57-4182-aae8-77bed8763d5e:
+            uuid: 6a4d68e9-fc57-4182-aae8-77bed8763d5e
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_contact_ref'
+              label: Contact
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: compact
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          a9b31cc1-12f3-4273-a7cc-71b5ba04f01d:
+            uuid: a9b31cc1-12f3-4273-a7cc-71b5ba04f01d
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_twitter_hashtag'
+              label: 'Twitter hashtag'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: false
+                        classes: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          70190ad1-2816-41aa-b940-b17fb82096b7:
+            uuid: 70190ad1-2816-41aa-b940-b17fb82096b7
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:body'
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.event.node_embedded
 targetEntityType: node
 bundle: event
@@ -45,22 +175,14 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_event_type:
+  field_contact_ref:
     type: entity_reference_label
-    weight: 2
+    weight: 4
     region: content
-    label: inline
+    label: above
     settings:
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: true
-            classes: {  }
+      link: true
+    third_party_settings: {  }
   field_title_html:
     type: text_default
     weight: 0
@@ -98,7 +220,7 @@ content:
             fi-def-at: false
   field_twitter_hashtag:
     type: string
-    weight: 4
+    weight: 3
     region: content
     label: inline
     settings:
@@ -113,7 +235,7 @@ content:
             classes: {  }
   field_website:
     type: link
-    weight: 3
+    weight: 2
     region: content
     label: above
     settings:
@@ -126,12 +248,12 @@ content:
 hidden:
   content_moderation_control: true
   field_additional_info: true
-  field_contact_ref: true
   field_event_banner: true
   field_event_cmsg_participation: true
   field_event_date: true
   field_event_location: true
   field_event_location_ref: true
+  field_event_type: true
   field_has_sessions: true
   field_internal_downloads: true
   field_internal_information: true

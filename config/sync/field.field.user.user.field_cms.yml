@@ -11,7 +11,7 @@ id: user.user.field_cms
 field_name: field_cms
 entity_type: user
 bundle: user
-label: 'Working with'
+label: 'Working with (DEPRECATED)'
 description: ''
 required: false
 translatable: false

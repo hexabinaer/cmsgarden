@@ -11,7 +11,7 @@ id: user.user.field_user_main_profession
 field_name: field_user_main_profession
 entity_type: user
 bundle: user
-label: 'Main profession'
+label: 'Main profession (DEPRECATED)'
 description: 'Your job title or similar. Keep short please.'
 required: false
 translatable: true

@@ -7,7 +7,7 @@ dependencies:
 id: users
 label: Users
 type: 'canonical_entities:user'
-pattern: '/people/[user:field_user_first_name]-[user:field_user_last_name]'
+pattern: '/people/[user:main:field_first_name]-[user:main:field_middle_name]-[user:main:field_last_name]'
 selection_criteria: {  }
 selection_logic: and
 weight: -6

@@ -11,7 +11,7 @@ id: user.user.field_blog_author_profile
 field_name: field_blog_author_profile
 entity_type: user
 bundle: user
-label: 'Blog author profile'
+label: 'Blog author profile (DEPRECATED)'
 description: "When you write a blog post, this text will be displayed next to your name and picture. \r\nMax. 400 characters."
 required: false
 translatable: true

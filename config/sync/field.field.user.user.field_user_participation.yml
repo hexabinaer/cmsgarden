@@ -11,7 +11,7 @@ id: user.user.field_user_participation
 field_name: field_user_participation
 entity_type: user
 bundle: user
-label: 'Involvement in activities'
+label: 'Involvement in activities (DEPRECATED)'
 description: ''
 required: false
 translatable: false

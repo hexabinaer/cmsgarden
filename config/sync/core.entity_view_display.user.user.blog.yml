@@ -110,6 +110,8 @@ content:
             lb-col: false
             classes: {  }
 hidden:
+  ambassador_profile_profiles: true
+  author_profile_profiles: true
   cmsg_mail: true
   field_associated_org: true
   field_cms: true
@@ -130,6 +132,9 @@ hidden:
   field_user_middle_name: true
   field_user_opensourcesince: true
   field_user_participation: true
+  internal_profile_profiles: true
   langcode: true
+  main_profiles: true
   member_for: true
+  membership_profiles: true
   realname: true

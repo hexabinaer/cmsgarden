@@ -10,7 +10,7 @@ id: user.user.field_field_telephone_no_office
 field_name: field_field_telephone_no_office
 entity_type: user
 bundle: user
-label: 'Office phone'
+label: 'Office phone (DEPRECATED)'
 description: 'For internal use only, e. g. to contact you when you are volunteering for certain tasks. No abuse, promised.'
 required: false
 translatable: false

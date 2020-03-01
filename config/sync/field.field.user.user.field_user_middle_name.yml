@@ -10,7 +10,7 @@ id: user.user.field_user_middle_name
 field_name: field_user_middle_name
 entity_type: user
 bundle: user
-label: 'Middle name'
+label: 'Middle name (DEPRECATED)'
 description: ''
 required: false
 translatable: true

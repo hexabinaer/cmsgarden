@@ -11,7 +11,7 @@ id: user.user.field_user_opensourcesince
 field_name: field_user_opensourcesince
 entity_type: user
 bundle: user
-label: 'Using open source since'
+label: 'Using open source since (DEPRECATED)'
 description: 'Approx. year in which you started using open source software'
 required: false
 translatable: false

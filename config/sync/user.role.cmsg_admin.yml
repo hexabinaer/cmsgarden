@@ -7,6 +7,8 @@ label: 'CMSG Admin'
 weight: -3
 is_admin: null
 permissions:
+  - 'access media_entity_browser entity browser pages'
+  - 'access media_entity_browser_modal entity browser pages'
   - 'access poll overview'
   - 'administer flaggings'
   - 'administer flags'
@@ -27,6 +29,7 @@ permissions:
   - 'edit own field_internal_downloads'
   - 'edit own field_internal_information'
   - 'edit own polls'
+  - 'translate user'
   - 'update any ambassador_profile profile'
   - 'update any author_profile profile'
   - 'update any internal_profile profile'

@@ -1,0 +1,10 @@
+settings:
+  allowed_values:
+    -
+      label: 'Kein Mitglied'
+    -
+      label: 'Ordentliches Mitglied'
+    -
+      label: Fördermitglied
+    -
+      label: Ehrenmitglied

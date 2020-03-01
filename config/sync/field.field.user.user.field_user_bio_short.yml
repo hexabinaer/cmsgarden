@@ -11,7 +11,7 @@ id: user.user.field_user_bio_short
 field_name: field_user_bio_short
 entity_type: user
 bundle: user
-label: 'Short bio'
+label: 'Short bio (DEPRECATED)'
 description: 'Describe yourself in 1 to 2 brief sentences. Used for author info and on ''people'' overview.'
 required: false
 translatable: true

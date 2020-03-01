@@ -11,7 +11,7 @@ id: user.user.field_associated_org
 field_name: field_associated_org
 entity_type: user
 bundle: user
-label: 'Associated with'
+label: 'Associated with (DEPRECATED)'
 description: 'If you are a member of an organizational member of CMS Garden (for example, Contao Association), you can indicate your association here.'
 required: false
 translatable: false

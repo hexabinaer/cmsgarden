@@ -8,6 +8,8 @@ weight: -7
 is_admin: null
 permissions:
   - 'access in-place editing'
+  - 'access media_entity_browser entity browser pages'
+  - 'access media_entity_browser_modal entity browser pages'
   - 'access poll overview'
   - 'create ambassador_profile profile'
   - 'create author_profile profile'

@@ -10,7 +10,7 @@ id: user.user.field_field_mobile_phone_no
 field_name: field_field_mobile_phone_no
 entity_type: user
 bundle: user
-label: 'Mobile phone'
+label: 'Mobile phone (DEPRECATED)'
 description: 'For internal use only - e. g. when an event organizer needs to contact you as an ambassador at that event. No abuse, promised.'
 required: false
 translatable: false

@@ -10,7 +10,7 @@ id: user.user.field_user_first_name
 field_name: field_user_first_name
 entity_type: user
 bundle: user
-label: 'First name'
+label: 'First name (DEPRECATED)'
 description: ''
 required: true
 translatable: true

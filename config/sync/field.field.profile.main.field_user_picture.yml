@@ -11,7 +11,7 @@ field_name: field_user_picture
 entity_type: profile
 bundle: main
 label: Picture
-description: ''
+description: 'Your portrait or established avatar. No company logo please, it will be removed.'
 required: false
 translatable: false
 default_value: {  }

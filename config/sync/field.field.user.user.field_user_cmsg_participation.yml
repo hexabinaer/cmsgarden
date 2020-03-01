@@ -11,7 +11,7 @@ id: user.user.field_user_cmsg_participation
 field_name: field_user_cmsg_participation
 entity_type: user
 bundle: user
-label: 'Participating in CMS Garden since'
+label: 'Participating in CMS Garden since (DEPRECATED)'
 description: ''
 required: false
 translatable: false

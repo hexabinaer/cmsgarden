@@ -11,7 +11,7 @@ id: user.user.field_user_contributing_os
 field_name: field_user_contributing_os
 entity_type: user
 bundle: user
-label: 'Contributing to open source since'
+label: 'Contributing to open source since (DEPRECATED)'
 description: 'The year in which you started contributing in any reasonable way (it''s okay if you start today).'
 required: false
 translatable: false

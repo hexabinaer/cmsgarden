@@ -302,7 +302,7 @@ display:
           condition: '2'
           equalto: no_member
           then: '{{ nid }}'
-          or: ''
+          or: ' '
           strip_tags: 0
           plugin_id: views_conditional_field
       filters:

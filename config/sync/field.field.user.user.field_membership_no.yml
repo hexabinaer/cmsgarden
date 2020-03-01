@@ -10,7 +10,7 @@ id: user.user.field_membership_no
 field_name: field_membership_no
 entity_type: user
 bundle: user
-label: 'Membership no.'
+label: 'Membership no. (DEPRECATED)'
 description: ''
 required: false
 translatable: false

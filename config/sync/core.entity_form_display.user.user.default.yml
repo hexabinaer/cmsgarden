@@ -24,154 +24,27 @@ dependencies:
     - field.field.user.user.field_user_opensourcesince
     - field.field.user.user.field_user_participation
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
-    - address
-    - datetime_extras
     - field_group
-    - geolocation_address
-    - geolocation_leaflet
     - path
-    - svg_image
-    - text
     - user
 third_party_settings:
   field_group:
-    group_accordion:
-      children:
-        - group_settings
-        - group_personal
-        - group_location
-        - group_work
-        - group_cms_garden
-        - group_internal_contact
-        - group_administrative
-      parent_name: ''
-      weight: 0
-      format_type: accordion
-      format_settings:
-        id: ''
-        classes: ''
-        effect: none
-      label: Accordion
-      region: content
-    group_personal:
-      children:
-        - translation
-        - langcode
-        - user_picture
-        - field_user_first_name
-        - field_user_middle_name
-        - field_user_last_name
-        - field_user_bio_short
-      parent_name: group_accordion
-      weight: 32
-      format_type: accordion_item
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        required_fields: true
-        description: ''
-      label: Personal
-      region: content
-    group_work:
-      children:
-        - field_user_main_profession
-        - field_related_cms
-        - field_cms
-        - field_user_opensourcesince
-        - field_user_contributing_os
-        - field_associated_org
-      parent_name: group_accordion
-      weight: 34
-      format_type: accordion_item
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        required_fields: true
-        description: ''
-      label: Work
-      region: content
-    group_cms_garden:
-      children:
-        - field_user_cmsg_participation
-        - field_user_participation
-        - field_blog_author_profile
-      parent_name: group_accordion
-      weight: 35
-      format_type: accordion_item
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        required_fields: true
-        description: ''
-      label: 'CMS Garden'
-      region: content
     group_settings:
       children:
-        - account
         - language
         - timezone
         - contact
-      parent_name: group_accordion
-      weight: 31
-      format_type: accordion_item
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
       format_settings:
-        formatter: open
+        formatter: closed
         required_fields: true
         id: ''
         classes: ''
+        description: ''
       label: Settings
-      region: content
-    group_administrative:
-      children:
-        - field_member
-        - field_membership_no
-        - field_member_since
-        - path
-      parent_name: group_accordion
-      weight: 37
-      format_type: accordion_item
-      format_settings:
-        id: ''
-        classes: admin__only
-        formatter: closed
-        required_fields: true
-        description: ''
-      label: Administrative
-      region: content
-    group_internal_contact:
-      children:
-        - field_field_telephone_no_office
-        - field_field_mobile_phone_no
-      parent_name: group_accordion
-      weight: 36
-      format_type: accordion_item
-      format_settings:
-        id: ''
-        classes: internal
-        formatter: closed
-        required_fields: true
-        description: ''
-      label: 'Only for internal use'
-      region: content
-    group_location:
-      children:
-        - field_user_address
-        - field_user_geolocation
-      parent_name: group_accordion
-      weight: 33
-      format_type: accordion_item
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        required_fields: true
-        description: ''
-      label: Location
       region: content
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -181,683 +54,74 @@ bundle: user
 mode: default
 content:
   account:
-    weight: 28
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   contact:
-    weight: 33
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_associated_org:
-    weight: 22
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
-  field_blog_author_profile:
-    weight: 21
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_cms:
-    weight: 19
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_field_mobile_phone_no:
-    weight: 17
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_field_telephone_no_office:
-    weight: 14
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_gdpr:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_member:
-    weight: 15
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_member_since:
-    weight: 17
-    settings:
-      date_order: 'Y'
-      time_type: none
-      increment: '15'
-      date_year_range: '2013:2030'
-    third_party_settings: {  }
-    type: datatime_extras_configurable_list
-    region: content
-  field_membership_no:
-    weight: 16
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
-  field_user_address:
-    weight: 34
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
-  field_user_bio_short:
-    weight: 36
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_user_cmsg_participation:
-    weight: 19
-    settings:
-      date_order: MY
-      time_type: none
-      increment: '15'
-      date_year_range: '1900:2050'
-    third_party_settings: {  }
-    type: datatime_extras_configurable_list
-    region: content
-  field_user_contributing_os:
-    weight: 21
-    settings:
-      date_order: 'Y'
-      time_type: none
-      increment: '15'
-      date_year_range: '1900:2050'
-    third_party_settings: {  }
-    type: datatime_extras_configurable_list
-    region: content
-  field_user_first_name:
-    weight: 31
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_user_geolocation:
-    type: geolocation_leaflet
-    weight: 35
-    region: content
-    settings:
-      centre:
-        client_location:
-          weight: 0
-          enable: false
-          map_center_id: client_location
-        fit_bounds:
-          enable: true
-          weight: 0
-          map_center_id: fit_bounds
-          settings:
-            reset_zoom: false
-        fixed_value:
-          settings:
-            latitude: null
-            longitude: null
-          weight: 0
-          enable: false
-          map_center_id: location_plugins
-        freeogeoip:
-          weight: 0
-          enable: false
-          map_center_id: location_plugins
-      leaflet_settings:
-        height: 300px
-        width: 50%
-        zoom: '10'
-        map_features:
-          leaflet_control_geocoder:
-            enabled: true
-            weight: -100
-            settings:
-              position: topright
-              geocoder: photon
-              settings:
-                label: Address
-                description: 'Enter an address to be localized.'
-                location_priority:
-                  lat: null
-                  lng: null
-          leaflet_control_layer:
-            weight: 0
-            settings:
-              position: topright
-              default_label: true
-              tile_layer_providers:
-                OpenStreetMap:
-                  'OpenStreetMap Mapnik':
-                    label: ''
-                    checkbox: false
-                  'OpenStreetMap BlackAndWhite':
-                    label: ''
-                    checkbox: false
-                  'OpenStreetMap DE':
-                    label: ''
-                    checkbox: false
-                  'OpenStreetMap CH':
-                    label: ''
-                    checkbox: false
-                  'OpenStreetMap France':
-                    label: ''
-                    checkbox: false
-                  'OpenStreetMap HOT':
-                    label: ''
-                    checkbox: false
-                  'OpenStreetMap BZH':
-                    label: ''
-                    checkbox: false
-                OpenTopoMap:
-                  OpenTopoMap:
-                    label: ''
-                    checkbox: false
-                Thunderforest:
-                  'Thunderforest OpenCycleMap':
-                    label: ''
-                    checkbox: false
-                  'Thunderforest Transport':
-                    label: ''
-                    checkbox: false
-                  'Thunderforest TransportDark':
-                    label: ''
-                    checkbox: false
-                  'Thunderforest SpinalMap':
-                    label: ''
-                    checkbox: false
-                  'Thunderforest Landscape':
-                    label: ''
-                    checkbox: false
-                  'Thunderforest Outdoors':
-                    label: ''
-                    checkbox: false
-                  'Thunderforest Pioneer':
-                    label: ''
-                    checkbox: false
-                OpenMapSurfer:
-                  'OpenMapSurfer Roads':
-                    label: ''
-                    checkbox: false
-                  'OpenMapSurfer Grayscale':
-                    label: ''
-                    checkbox: false
-                Hydda:
-                  'Hydda Full':
-                    label: ''
-                    checkbox: false
-                  'Hydda Base':
-                    label: ''
-                    checkbox: false
-                MapBox:
-                  MapBox:
-                    label: ''
-                    checkbox: false
-                Stamen:
-                  'Stamen Toner':
-                    label: ''
-                    checkbox: false
-                  'Stamen TonerBackground':
-                    label: ''
-                    checkbox: false
-                  'Stamen TonerLite':
-                    label: ''
-                    checkbox: false
-                  'Stamen Watercolor':
-                    label: ''
-                    checkbox: false
-                  'Stamen Terrain':
-                    label: ''
-                    checkbox: false
-                  'Stamen TerrainBackground':
-                    label: ''
-                    checkbox: false
-                  'Stamen TopOSMRelief':
-                    label: ''
-                    checkbox: false
-                Esri:
-                  'Esri WorldStreetMap':
-                    label: ''
-                    checkbox: false
-                  'Esri DeLorme':
-                    label: ''
-                    checkbox: false
-                  'Esri WorldTopoMap':
-                    label: ''
-                    checkbox: false
-                  'Esri WorldImagery':
-                    label: ''
-                    checkbox: false
-                  'Esri WorldTerrain':
-                    label: ''
-                    checkbox: false
-                  'Esri WorldShadedRelief':
-                    label: ''
-                    checkbox: false
-                  'Esri WorldPhysical':
-                    label: ''
-                    checkbox: false
-                  'Esri OceanBasemap':
-                    label: ''
-                    checkbox: false
-                  'Esri NatGeoWorldMap':
-                    label: ''
-                    checkbox: false
-                  'Esri WorldGrayCanvas':
-                    label: ''
-                    checkbox: false
-                HERE:
-                  'HERE normalDay':
-                    label: ''
-                    checkbox: false
-                  'HERE normalDayCustom':
-                    label: ''
-                    checkbox: false
-                  'HERE normalDayGrey':
-                    label: ''
-                    checkbox: false
-                  'HERE normalDayMobile':
-                    label: ''
-                    checkbox: false
-                  'HERE normalDayGreyMobile':
-                    label: ''
-                    checkbox: false
-                  'HERE normalDayTransit':
-                    label: ''
-                    checkbox: false
-                  'HERE normalDayTransitMobile':
-                    label: ''
-                    checkbox: false
-                  'HERE normalNight':
-                    label: ''
-                    checkbox: false
-                  'HERE normalNightMobile':
-                    label: ''
-                    checkbox: false
-                  'HERE normalNightGrey':
-                    label: ''
-                    checkbox: false
-                  'HERE normalNightGreyMobile':
-                    label: ''
-                    checkbox: false
-                  'HERE normalNightTransit':
-                    label: ''
-                    checkbox: false
-                  'HERE normalNightTransitMobile':
-                    label: ''
-                    checkbox: false
-                  'HERE redcuedDay':
-                    label: ''
-                    checkbox: false
-                  'HERE redcuedNight':
-                    label: ''
-                    checkbox: false
-                  'HERE basicMap':
-                    label: ''
-                    checkbox: false
-                  'HERE mapLabels':
-                    label: ''
-                    checkbox: false
-                  'HERE trafficFlow':
-                    label: ''
-                    checkbox: false
-                  'HERE carnavDayGrey':
-                    label: ''
-                    checkbox: false
-                  'HERE hybridDayMobile':
-                    label: ''
-                    checkbox: false
-                  'HERE hybridDayTransit':
-                    label: ''
-                    checkbox: false
-                  'HERE hybridDayGrey':
-                    label: ''
-                    checkbox: false
-                  'HERE pedestrianDay':
-                    label: ''
-                    checkbox: false
-                  'HERE pedestrianNight':
-                    label: ''
-                    checkbox: false
-                  'HERE satelliteDay':
-                    label: ''
-                    checkbox: false
-                  'HERE terrainDay':
-                    label: ''
-                    checkbox: false
-                  'HERE terrainDayMobile':
-                    label: ''
-                    checkbox: false
-                FreeMapSK:
-                  FreeMapSK:
-                    label: ''
-                    checkbox: false
-                MtbMap:
-                  MtbMap:
-                    label: ''
-                    checkbox: false
-                CartoDB:
-                  'CartoDB Positron':
-                    label: ''
-                    checkbox: false
-                  'CartoDB PositronNoLabels':
-                    label: ''
-                    checkbox: false
-                  'CartoDB PositronOnlyLabels':
-                    label: ''
-                    checkbox: false
-                  'CartoDB DarkMatter':
-                    label: ''
-                    checkbox: false
-                  'CartoDB DarkMatterNoLabels':
-                    label: ''
-                    checkbox: false
-                  'CartoDB DarkMatterOnlyLabels':
-                    label: ''
-                    checkbox: false
-                  'CartoDB Voyager':
-                    label: ''
-                    checkbox: false
-                  'CartoDB VoyagerNoLabels':
-                    label: ''
-                    checkbox: false
-                  'CartoDB VoyagerOnlyLabels':
-                    label: ''
-                    checkbox: false
-                  'CartoDB VoyagerLabelsUnder':
-                    label: ''
-                    checkbox: false
-                HikeBike:
-                  HikeBike:
-                    label: ''
-                    checkbox: false
-                  'HikeBike HillShading':
-                    label: ''
-                    checkbox: false
-                BasemapAT:
-                  'BasemapAT basemap':
-                    label: ''
-                    checkbox: false
-                  'BasemapAT grau':
-                    label: ''
-                    checkbox: false
-                  'BasemapAT overlay':
-                    label: ''
-                    checkbox: false
-                  'BasemapAT highdpi':
-                    label: ''
-                    checkbox: false
-                  'BasemapAT orthofoto':
-                    label: ''
-                    checkbox: false
-                NLS:
-                  NLS:
-                    label: ''
-                    checkbox: false
-                Wikimedia:
-                  Wikimedia:
-                    label: ''
-                    checkbox: false
-                GeoportailFrance:
-                  'GeoportailFrance parcels':
-                    label: ''
-                    checkbox: false
-                  'GeoportailFrance ignMaps':
-                    label: ''
-                    checkbox: false
-                  'GeoportailFrance maps':
-                    label: ''
-                    checkbox: false
-                  'GeoportailFrance orthos':
-                    label: ''
-                    checkbox: false
-              tile_providers_options:
-                Thunderforest:
-                  apikey: ''
-                MapBox:
-                  accessToken: ''
-                HERE:
-                  app_id: ''
-                  app_code: ''
-                GeoportailFrance:
-                  apikey: ''
-            enabled: false
-          leaflet_tile_layer:
-            weight: 0
-            settings:
-              tile_layer_provider: 'OpenStreetMap Mapnik'
-              tile_provider_options:
-                Thunderforest:
-                  apikey: ''
-                MapBox:
-                  accessToken: ''
-                HERE:
-                  app_id: ''
-                  app_code: ''
-                GeoportailFrance:
-                  apikey: ''
-            enabled: false
-          leaflet_custom_tile_layer:
-            weight: 0
-            settings:
-              tile_layer_url: '//{s}.tile.osm.org/{z}/{x}/{y}.png'
-              tile_layer_attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-              tile_layer_subdomains: abc
-              tile_layer_zoom: 18
-            enabled: false
-          leaflet_max_bounds:
-            weight: 0
-            settings:
-              north: null
-              south: null
-              east: null
-              west: null
-            enabled: false
-          leaflet_marker_zoom_and_animate:
-            weight: 0
-            settings:
-              marker_zoom_anchor_id: ''
-            enabled: false
-          geolocation_marker_scroll_to_id:
-            weight: 0
-            settings:
-              scroll_target_id: ''
-            enabled: false
-          leaflet_marker_popup:
-            weight: 0
-            enabled: false
-            settings:
-              info_auto_display: false
-          leaflet_marker_icon:
-            weight: 0
-            settings:
-              marker_icon_path: ''
-              icon_size:
-                width: null
-                height: null
-              icon_anchor:
-                x: null
-                'y': null
-              popup_anchor:
-                x: 0
-                'y': 0
-              marker_shadow_path: ''
-              shadow_size:
-                width: null
-                height: null
-              shadow_anchor:
-                x: null
-                'y': null
-            enabled: false
-          leaflet_marker_clusterer:
-            weight: 0
-            enabled: false
-            settings:
-              cluster_settings:
-                show_coverage_on_hover: false
-                zoom_to_bounds_on_click: false
-          leaflet_control_zoom:
-            enabled: true
-            weight: 0
-            settings:
-              position: topright
-          leaflet_control_recenter:
-            weight: 0
-            settings:
-              position: topright
-            enabled: false
-          leaflet_control_scale:
-            enabled: true
-            weight: 0
-            settings:
-              position: topright
-              metric: true
-              imperial: true
-          leaflet_control_locate:
-            weight: 0
-            settings:
-              position: topright
-            enabled: false
-          leaflet_control_fullscreen:
-            weight: 0
-            settings:
-              position: topright
-            enabled: false
-          leaflet_gesture_handling:
-            enabled: true
-            weight: 0
-          leaflet_disable_user_interaction:
-            weight: 0
-            enabled: false
-          leaflet_client_location_indicator:
-            weight: 0
-            enabled: false
-          leaflet_wms:
-            weight: 0
-            settings:
-              url: ''
-              version: 1.1.1
-              layers: ''
-              styles: ''
-              srs: ''
-              format: image/jpeg
-              transparent: false
-              identify: false
-            enabled: false
-      auto_client_location_marker: '0'
-      allow_override_map_settings: 0
-      auto_client_location: ''
-    third_party_settings:
-      geolocation_address:
-        enable: true
-        address_field: field_user_address
-        geocoder: nominatim
-        geocoder_settings:
-          label: Address
-          description: 'Enter an address to be localized.'
-        sync_mode: manual
-        button_position: topleft
-        direction: one_way
-  field_user_last_name:
-    weight: 33
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_user_main_profession:
-    weight: 17
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_user_middle_name:
-    weight: 32
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_user_opensourcesince:
-    weight: 20
-    settings:
-      date_order: 'Y'
-      time_type: none
-      increment: '15'
-      date_year_range: '1900:2050'
-    third_party_settings: {  }
-    type: datatime_extras_configurable_list
-    region: content
-  field_user_participation:
-    weight: 20
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
     region: content
   langcode:
     type: language_select
-    weight: 1
+    weight: 4
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   language:
-    weight: 31
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 18
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 32
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 0
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
-  user_picture:
-    type: image_image
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    weight: 30
-    region: content
-hidden: {  }
+hidden:
+  ambassador_profile_profiles: true
+  author_profile_profiles: true
+  field_associated_org: true
+  field_blog_author_profile: true
+  field_cms: true
+  field_field_mobile_phone_no: true
+  field_field_telephone_no_office: true
+  field_member: true
+  field_member_since: true
+  field_membership_no: true
+  field_user_address: true
+  field_user_bio_short: true
+  field_user_cmsg_participation: true
+  field_user_contributing_os: true
+  field_user_first_name: true
+  field_user_geolocation: true
+  field_user_last_name: true
+  field_user_main_profession: true
+  field_user_middle_name: true
+  field_user_opensourcesince: true
+  field_user_participation: true
+  internal_profile_profiles: true
+  main_profiles: true
+  membership_profiles: true
+  user_picture: true

@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.location.field_archived
     - field.field.node.location.field_event_location
     - field.field.node.location.field_geolocation
     - field.field.node.location.field_location_notes
     - field.field.node.location.field_location_website
     - node.type.location
-    - workflows.workflow.default_nodes
   module:
     - address
     - content_moderation
@@ -24,10 +24,16 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_archived:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_event_location:
     weight: 2
     settings: {  }
@@ -502,6 +508,7 @@ content:
             enabled: false
       auto_client_location_marker: '0'
       auto_client_location: ''
+      hide_textfield_form: false
     third_party_settings:
       geolocation_address:
         enable: true
@@ -540,13 +547,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 13
+    weight: 14
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -554,21 +561,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 15
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   title:
@@ -580,13 +587,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -595,7 +602,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }

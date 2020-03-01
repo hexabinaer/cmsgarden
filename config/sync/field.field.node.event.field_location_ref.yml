@@ -1,16 +1,16 @@
-uuid: ffbffecf-6af5-43ab-b7ea-9a038ea5b95f
+uuid: 0d2007bf-f879-46b5-ba63-e2a922d85b76
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_location_ref
-    - node.type.date
-id: node.date.field_location_ref
+    - node.type.event
+id: node.event.field_location_ref
 field_name: field_location_ref
 entity_type: node
-bundle: date
+bundle: event
 label: Location
-description: 'Pick a location or <a href="/node/add/location">add a new location</a>.'
+description: 'The steady address for visitors (may differ from postal address!). Not found? <a href="/en/node/add/location" target="_blank">Add a new location</a>. Leave empty when the location changes and enter the location along with the event <strong>date</strong>.'
 required: false
 translatable: false
 default_value: {  }

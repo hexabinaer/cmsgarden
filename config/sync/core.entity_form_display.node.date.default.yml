@@ -185,21 +185,10 @@ content:
     type: text_textarea
     region: content
   field_location_ref:
-    type: inline_entity_form_complex
+    type: options_select
     weight: 7
     region: content
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      collapsible: true
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsed: false
-      allow_duplicate: false
-      revision: false
+    settings: {  }
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: _none

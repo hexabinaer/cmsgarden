@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.node_embedded
+    - field.field.node.location.field_archived
     - field.field.node.location.field_event_location
     - field.field.node.location.field_geolocation
     - field.field.node.location.field_location_notes
@@ -638,5 +639,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_archived: true
   field_geolocation: true
   langcode: true

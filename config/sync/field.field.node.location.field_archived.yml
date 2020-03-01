@@ -1,0 +1,21 @@
+uuid: d6800969-7b8a-4c08-947b-b1e8e4d91dc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archived
+    - node.type.location
+  module:
+    - options
+id: node.location.field_archived
+field_name: field_archived
+entity_type: node
+bundle: location
+label: Archive
+description: 'If this location is not available any more, set this to "archived". It will then not appear in select lists any more.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

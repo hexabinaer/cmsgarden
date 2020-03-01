@@ -16,19 +16,18 @@ dependencies:
     - field.field.node.event.field_has_sessions
     - field.field.node.event.field_internal_downloads
     - field.field.node.event.field_internal_information
+    - field.field.node.event.field_location_ref
     - field.field.node.event.field_meta_tags
     - field.field.node.event.field_org_geolocation
     - field.field.node.event.field_public_downloads
     - field.field.node.event.field_title_html
     - field.field.node.event.field_twitter_hashtag
     - field.field.node.event.field_website
-    - image.style.large
     - node.type.event
   module:
     - ds
     - layout_builder
     - link
-    - svg_image
     - text
     - user
 third_party_settings:
@@ -52,29 +51,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_event_banner:
-    type: image
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      image_style: large
-      image_link: ''
-      svg_render_as_image: '1'
-      svg_attributes:
-        width: '480'
-        height: '480'
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
   field_event_logo:
     type: entity_reference_entity_view
-    weight: 19
+    weight: 1
     label: above
     settings:
       view_mode: default
@@ -99,7 +78,7 @@ content:
             classes: {  }
   field_title_html:
     type: text_default
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings: {  }
@@ -167,6 +146,7 @@ content:
 hidden:
   field_additional_info: true
   field_contact_ref: true
+  field_event_banner: true
   field_event_cmsg_participation: true
   field_event_date: true
   field_event_location: true
@@ -174,6 +154,7 @@ hidden:
   field_has_sessions: true
   field_internal_downloads: true
   field_internal_information: true
+  field_location_ref: true
   field_meta_tags: true
   field_org_geolocation: true
   field_public_downloads: true

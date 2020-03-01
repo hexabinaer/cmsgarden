@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.location.field_archived
     - field.field.node.location.field_event_location
     - field.field.node.location.field_geolocation
     - field.field.node.location.field_location_notes
@@ -33,6 +34,7 @@ content:
             lb-col: false
             classes: {  }
 hidden:
+  field_archived: true
   field_geolocation: true
   field_location_notes: true
   field_location_website: true

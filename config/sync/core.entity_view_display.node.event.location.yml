@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.event.field_has_sessions
     - field.field.node.event.field_internal_downloads
     - field.field.node.event.field_internal_information
+    - field.field.node.event.field_location_ref
     - field.field.node.event.field_meta_tags
     - field.field.node.event.field_org_geolocation
     - field.field.node.event.field_public_downloads
@@ -25,7 +26,6 @@ dependencies:
     - field.field.node.event.field_website
     - node.type.event
   module:
-    - ds
     - layout_builder
     - user
 third_party_settings:
@@ -37,7 +37,7 @@ targetEntityType: node
 bundle: event
 mode: location
 content:
-  field_event_location_ref:
+  field_location_ref:
     type: entity_reference_entity_view
     weight: 0
     region: content
@@ -45,15 +45,7 @@ content:
     settings:
       view_mode: node_embedded
       link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
   flag_event_attendance:
     weight: 18
     region: content
@@ -68,6 +60,7 @@ hidden:
   field_event_cmsg_participation: true
   field_event_date: true
   field_event_location: true
+  field_event_location_ref: true
   field_event_logo: true
   field_event_type: true
   field_has_sessions: true

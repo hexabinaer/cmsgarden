@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.event.field_has_sessions
     - field.field.node.event.field_internal_downloads
     - field.field.node.event.field_internal_information
+    - field.field.node.event.field_location_ref
     - field.field.node.event.field_meta_tags
     - field.field.node.event.field_org_geolocation
     - field.field.node.event.field_public_downloads
@@ -42,34 +43,6 @@ third_party_settings:
           label: ''
           column_widths: 25-75
         components:
-          b1d3098a-a6fe-42ca-a808-ff2a50acc6cb:
-            uuid: b1d3098a-a6fe-42ca-a808-ff2a50acc6cb
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:event:field_event_banner'
-              formatter:
-                type: image
-                label: hidden
-                settings:
-                  image_style: medium
-                  image_link: content
-                  svg_render_as_image: '1'
-                  svg_attributes:
-                    width: '220'
-                    height: '220'
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-            additional: {  }
-            weight: 0
           8ef95ea9-4e58-413a-bf99-26551a1efbf3:
             uuid: 8ef95ea9-4e58-413a-bf99-26551a1efbf3
             region: second
@@ -121,12 +94,12 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 3
-          3d7c2346-d114-4c9b-a9cb-b9d3feb43597:
-            uuid: 3d7c2346-d114-4c9b-a9cb-b9d3feb43597
+          825a06da-3b5c-4d53-8524-f4418a9e67ef:
+            uuid: 825a06da-3b5c-4d53-8524-f4418a9e67ef
             region: second
             configuration:
-              id: 'field_block:node:event:field_event_location_ref'
-              label: 'Event location'
+              id: 'field_block:node:event:field_location_ref'
+              label: Location
               provider: layout_builder
               label_display: '0'
               formatter:
@@ -134,20 +107,31 @@ third_party_settings:
                 type: entity_reference_entity_view
                 settings:
                   view_mode: teaser
-                third_party_settings:
-                  ds:
-                    ds_limit: ''
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 4
+            weight: 5
+          f9e3ad00-9a4d-48c0-9a8b-c9528568ce71:
+            uuid: f9e3ad00-9a4d-48c0-9a8b-c9528568ce71
+            region: first
+            configuration:
+              id: 'field_block:node:event:field_event_logo'
+              label: 'Event logo or banner'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: full
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 id: node.event.teaser
 targetEntityType: node
@@ -203,6 +187,7 @@ hidden:
   field_has_sessions: true
   field_internal_downloads: true
   field_internal_information: true
+  field_location_ref: true
   field_meta_tags: true
   field_org_geolocation: true
   field_public_downloads: true

@@ -1,0 +1,22 @@
+uuid: 3291fa02-23f2-4def-a276-fc76bd409d5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - cmsgtheme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: cmsgtheme_help
+theme: cmsgtheme
+region: content
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

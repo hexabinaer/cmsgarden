@@ -1,0 +1,22 @@
+uuid: a13a3f50-2ef9-4f99-8c26-35ffe3ecb39b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cmsgtheme
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: cmsgtheme_local_tasks
+theme: cmsgtheme
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

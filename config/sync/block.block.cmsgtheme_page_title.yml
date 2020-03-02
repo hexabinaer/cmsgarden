@@ -1,0 +1,30 @@
+uuid: 80815953-79c7-4bc1-93b2-1d802f5b6692
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+  theme:
+    - cmsgtheme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: cmsgtheme_page_title
+theme: cmsgtheme
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blog_entry: blog_entry
+      frequently_asked_question: frequently_asked_question
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

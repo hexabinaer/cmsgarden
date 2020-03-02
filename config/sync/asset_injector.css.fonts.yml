@@ -1,0 +1,11 @@
+uuid: 905adf67-866b-4c53-b461-8328306c2fd8
+langcode: en
+status: true
+dependencies: {  }
+id: fonts
+label: Fonts
+code: "@font-face {\r\nfont-family: 'Cuprum';\r\nfont-style: normal;\r\nfont-weight: normal;\r\nsrc: local('Cuprum'), url('/themes/custom/cmsgtheme/fonts/Cuprum-Regular.woff') format('woff');\r\n}\r\n\r\n\r\n@font-face {\r\nfont-family: 'Cuprum Italic';\r\nfont-style: normal;\r\nfont-weight: normal;\r\nsrc: local('Cuprum Italic'), url('/themes/custom/cmsgtheme/fonts/Cuprum-Italic.woff') format('woff');\r\n}\r\n\r\n@font-face {\r\nfont-family: 'OpenSans-Light';\r\nfont-style: normal;\r\nfont-weight: normal;\r\nsrc: local('OpenSans-Light'), url('/themes/custom/cmsgtheme/fonts/OpenSans-Light.woff') format('woff');\r\n}\r\n\r\n/* Experimental: Variable Font */\r\n@font-face {\r\nfont-family: 'Noboto Flex';\r\nfont-style: oblique 0deg 12deg;\r\nfont-weight: 125 950;\r\nfont-stretch: 75% 200%;\r\nsrc: local('Notobot Flex'), url('/themes/custom/cmsgtheme/fonts/NobotoFlex-VF.ttf') format('ttf');\r\n}\r\n"
+media: all
+preprocess: true
+conditions: {  }
+conditions_require_all: true

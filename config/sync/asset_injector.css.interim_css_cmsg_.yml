@@ -1,0 +1,18 @@
+uuid: a86d553f-43fe-4c07-a3bc-f8611db868a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: interim_css_cmsg_
+label: 'Interim CSS (CMSG)'
+code: "/* Variables */\r\n\r\nbody {\r\n  font-family: 'OpenSans-Light', sans-serif;\r\n}\r\n\r\n@supports (font-variation-settings: 'wdth' 115) {\r\n  body {\r\n   font-family: 'Noboto Flex';\r\n   font-stretch: 120%;\r\n   font-weight: 350;\r\n   font-variation-settings: \"CAPS\" 170, \"CAPA\" 170, \"CURV\" 100;\r\n  }\r\n}\r\n\r\nh1, h2 {\r\n  font-family: 'Cuprum', sans-serif;\r\n}\r\n\r\n/* Layout */\r\n\r\n.layout-container > * {\r\n  padding: 1rem;\r\n}\r\n\r\nul.menu,\r\nul.links {\r\n  display: flex;\r\n  flex-flow: row nowrap;\r\n  border: 1px dashed #ccc;\r\n  border-width: 1px 0;\r\n}\r\n\r\n.menu-item,\r\nul.links li {\r\n  list-style: none;\r\n  padding: .25rem .5rem;\r\n  margin: 0 .5rem;\r\n}\r\n"
+media: screen
+preprocess: true
+conditions:
+  current_theme:
+    id: current_theme
+    theme:
+      cmsgtheme: cmsgtheme
+    negate: false
+conditions_require_all: true

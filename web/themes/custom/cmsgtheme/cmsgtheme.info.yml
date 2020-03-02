@@ -1,0 +1,23 @@
+name: CMSG Theme
+type: theme
+base theme: classy
+description: 'CMS Garden website theme, based on Classy (Drupal core theme)'
+version: 
+core: 8.x
+
+# Uncomment to: Define libraries group in which we can add css/js
+# libraries:
+#   -
+
+# Uncomment to: Add custom ckeditor stylesheets
+# ckeditor_stylesheets:
+#   -
+
+# Regions
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer

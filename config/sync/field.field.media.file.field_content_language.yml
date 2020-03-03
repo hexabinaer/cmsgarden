@@ -1,0 +1,21 @@
+uuid: f79ae2b7-3971-4e3a-93c0-3aabef456e11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_content_language
+    - media.type.file
+  module:
+    - options
+id: media.file.field_content_language
+field_name: field_content_language
+entity_type: media
+bundle: file
+label: 'Content language'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

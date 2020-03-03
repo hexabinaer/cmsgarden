@@ -1,37 +1,51 @@
-uuid: 387e5f42-1678-4a0d-bd67-d63e9741fb0d
+uuid: a5377d74-ba25-4336-9852-443249a15a8f
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.full
     - field.field.media.file.field_accessible
     - field.field.media.file.field_content_language
     - field.field.media.file.field_longdesc
     - field.field.media.file.field_media_file
-    - image.style.cmsg_thumbnail
+    - image.style.thumbnail
     - media.type.file
   module:
     - file
+    - layout_builder
     - options
     - svg_image
-id: media.file.default
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.file.full
 targetEntityType: media
 bundle: file
-mode: default
+mode: full
 content:
   field_accessible:
-    type: list_default
     weight: 2
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    type: list_default
+    region: content
   field_content_language:
+    type: list_default
     weight: 3
+    region: content
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+  field_longdesc:
+    type: text_default
+    weight: 4
     region: content
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
   field_media_file:
     weight: 1
     label: hidden
@@ -43,19 +57,18 @@ content:
   thumbnail:
     type: image
     weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: cmsg_thumbnail
-      image_link: ''
-      svg_render_as_image: '1'
+      image_style: thumbnail
       svg_attributes:
         width: ''
         height: ''
+      svg_render_as_image: true
+      image_link: ''
+    region: content
     third_party_settings: {  }
 hidden:
   created: true
-  field_longdesc: true
   filesize: true
   langcode: true
   mime: true

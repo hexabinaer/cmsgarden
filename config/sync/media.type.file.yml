@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: file
 label: File
-description: 'Use local files for reusable media.'
+description: 'Files mainly for download'
 source: file
 queue_thumbnail_downloads: false
 new_revision: true

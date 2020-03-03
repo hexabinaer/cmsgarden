@@ -1,0 +1,21 @@
+uuid: dc682d6a-6331-4bf1-9c04-5d86bec378cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_longdesc
+    - media.type.image
+  module:
+    - text
+id: media.image.field_longdesc
+field_name: field_longdesc
+entity_type: media
+bundle: image
+label: 'Long description'
+description: 'Enter an elaborate description if the image needs one in terms of accessibility (e. g. when the alt attribute is not sufficient).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: f264352b-6ce8-460c-836f-f1a0097d9fd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_longdesc
+    - media.type.file
+  module:
+    - text
+id: media.file.field_longdesc
+field_name: field_longdesc
+entity_type: media
+bundle: file
+label: 'Long description'
+description: 'Detailed description about the file.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

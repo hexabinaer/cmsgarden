@@ -1,0 +1,15 @@
+uuid: d63e5f8a-dc7d-44b0-87f6-7eeedd839ebd
+langcode: en
+status: true
+dependencies: {  }
+name: cmsg_teaser
+label: 'CMSG teaser (300 x 300)'
+effects:
+  f756c448-fdda-4539-985f-91c98be3d85e:
+    uuid: f756c448-fdda-4539-985f-91c98be3d85e
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      upscale: false

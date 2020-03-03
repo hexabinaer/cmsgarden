@@ -1,19 +1,25 @@
-uuid: e448a4eb-b3ec-4ec5-8a27-b4f8971acc12
+uuid: c9188d87-d93a-456b-a169-f3095e20bb64
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.teaser
     - field.field.media.image.field_longdesc
     - field.field.media.image.field_media_image
     - image.style.thumbnail
     - media.type.image
   module:
+    - layout_builder
     - svg_image
     - text
-id: media.image.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.image.teaser
 targetEntityType: media
 bundle: image
-mode: default
+mode: teaser
 content:
   field_longdesc:
     weight: 1

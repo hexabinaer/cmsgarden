@@ -1,63 +1,77 @@
-uuid: 387e5f42-1678-4a0d-bd67-d63e9741fb0d
+uuid: 97b91087-dece-4935-bdb6-5d637a90cbda
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.download
     - field.field.media.file.field_accessible
     - field.field.media.file.field_content_language
     - field.field.media.file.field_longdesc
     - field.field.media.file.field_media_file
-    - image.style.cmsg_thumbnail
+    - image.style.thumbnail
     - media.type.file
   module:
     - file
+    - layout_builder
     - options
     - svg_image
-id: media.file.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.file.download
 targetEntityType: media
 bundle: file
-mode: default
+mode: download
 content:
   field_accessible:
-    type: list_default
-    weight: 2
-    region: content
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    type: list_default
+    region: content
   field_content_language:
-    weight: 3
+    type: list_key
+    weight: 4
+    region: content
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
-    region: content
   field_media_file:
     weight: 1
-    label: hidden
+    label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content
+  filesize:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mime:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   thumbnail:
     type: image
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: cmsg_thumbnail
-      image_link: ''
+      image_style: thumbnail
+      image_link: file
       svg_render_as_image: '1'
       svg_attributes:
-        width: ''
-        height: ''
+        width: '100'
+        height: '100'
     third_party_settings: {  }
 hidden:
   created: true
   field_longdesc: true
-  filesize: true
   langcode: true
-  mime: true
   name: true
   uid: true

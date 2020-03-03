@@ -1,0 +1,15 @@
+uuid: 95e063f2-3c18-47a3-a7c6-ae2a99fb409f
+langcode: en
+status: true
+dependencies: {  }
+name: cmsg_thumbnail
+label: 'CMSG thumbnail (100 x 100)'
+effects:
+  1d414388-d18c-41ab-b62c-185907d91289:
+    uuid: 1d414388-d18c-41ab-b62c-185907d91289
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      upscale: false

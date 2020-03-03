@@ -1,0 +1,12 @@
+settings:
+  allowed_values:
+    -
+      label: keine
+    -
+      label: englisch
+    -
+      label: deutsch
+    -
+      label: 'zweisprachig (en/de)'
+    -
+      label: 'zweisprachig (de/en)'

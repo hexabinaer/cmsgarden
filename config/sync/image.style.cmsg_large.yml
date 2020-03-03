@@ -1,0 +1,15 @@
+uuid: 6a5b0100-cc41-409b-8810-2122beb51021
+langcode: en
+status: true
+dependencies: {  }
+name: cmsg_large
+label: 'CMSG large (960 x 540)'
+effects:
+  93ca46cb-93c1-40c0-a43f-c3715f56801f:
+    uuid: 93ca46cb-93c1-40c0-a43f-c3715f56801f
+    id: image_scale
+    weight: 1
+    data:
+      width: 960
+      height: 540
+      upscale: false

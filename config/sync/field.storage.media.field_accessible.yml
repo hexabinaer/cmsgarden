@@ -1,24 +1,28 @@
-uuid: 09d22c80-ab19-4474-b6c7-8dcf2afe53aa
+uuid: afe53245-a9a3-42e7-a8ff-4fd65c7977b2
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
-    - file
     - media
+    - options
 third_party_settings:
   field_permissions:
     permission_type: public
-id: media.field_media_audio_file
-field_name: field_media_audio_file
+id: media.field_accessible
+field_name: field_accessible
 entity_type: media
-type: file
+type: list_integer
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-module: file
+  allowed_values:
+    -
+      value: 1
+      label: accessible
+    -
+      value: 0
+      label: 'not accessible'
+  allowed_values_function: ''
+module: options
 locked: false
 cardinality: 1
 translatable: true

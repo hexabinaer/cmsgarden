@@ -1,0 +1,21 @@
+uuid: cc3c9dd3-4c06-4c22-bce6-3a5123c9f685
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_accessible
+    - media.type.file
+  module:
+    - options
+id: media.file.field_accessible
+field_name: field_accessible
+entity_type: media
+bundle: file
+label: Accessibility
+description: 'If applicable, please indicate that this file is (not) accessible to screen readers.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

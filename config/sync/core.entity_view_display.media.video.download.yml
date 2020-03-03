@@ -1,26 +1,31 @@
-uuid: e448a4eb-b3ec-4ec5-8a27-b4f8971acc12
+uuid: 91f22f0a-5072-44c9-aafc-4a47a000664f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_longdesc
-    - field.field.media.image.field_media_image
+    - core.entity_view_mode.media.download
+    - field.field.media.video.field_media_video_file
     - image.style.thumbnail
-    - media.type.image
+    - media.type.video
   module:
+    - file
+    - layout_builder
     - svg_image
-    - text
-id: media.image.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.video.download
 targetEntityType: media
-bundle: image
-mode: default
+bundle: video
+mode: download
 content:
-  field_longdesc:
+  field_media_video_file:
+    type: file_url_plain
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
     region: content
   thumbnail:
     type: image
@@ -37,10 +42,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_media_image: true
-  filesize: true
   langcode: true
-  link: true
-  mime: true
   name: true
   uid: true

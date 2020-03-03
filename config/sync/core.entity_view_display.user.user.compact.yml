@@ -25,19 +25,16 @@ dependencies:
     - field.field.user.user.field_user_opensourcesince
     - field.field.user.user.field_user_participation
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
-    - ds
     - field_group
-    - svg_image
     - user
 third_party_settings:
   field_group:
     group_div_fullname:
       children:
+        - field_field_mobile_phone_no
         - field_user_first_name
         - field_user_middle_name
-        - field_field_mobile_phone_no
       parent_name: ''
       weight: 22
       format_type: html_element
@@ -52,23 +49,6 @@ third_party_settings:
         classes: fullname
       label: 'Full name'
       region: hidden
-  ds:
-    layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings: {  }
-    regions:
-      content:
-        - user_picture
-        - 'dynamic_token_field:user-display_name'
-    fields:
-      'dynamic_token_field:user-display_name':
-        plugin_id: 'dynamic_token_field:user-display_name'
-        weight: 1
-        label: hidden
-        formatter: default
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
 id: user.user.compact
@@ -76,26 +56,20 @@ targetEntityType: user
 bundle: user
 mode: compact
 content:
-  user_picture:
-    type: image
+  main_profiles:
+    type: entity_reference_entity_view
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: thumbnail
-      image_link: content
-      svg_render_as_image: '1'
-      svg_attributes:
-        width: '100'
-        height: '100'
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+      view_mode: picture_only
+      link: false
+    third_party_settings: {  }
+  realname:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   ambassador_profile_profiles: true
   author_profile_profiles: true
@@ -122,7 +96,6 @@ hidden:
   field_user_participation: true
   internal_profile_profiles: true
   langcode: true
-  main_profiles: true
   member_for: true
   membership_profiles: true
-  realname: true
+  user_picture: true

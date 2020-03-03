@@ -26,7 +26,6 @@ dependencies:
     - field.field.user.user.field_user_participation
     - field.field.user.user.user_picture
   module:
-    - ds
     - field_group
     - layout_builder
     - user
@@ -51,19 +50,6 @@ third_party_settings:
         classes: fullname
       label: 'Full name'
       region: hidden
-  ds:
-    layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-    regions:
-      content:
-        - main_profiles
-        - realname
-        - author_profile_profiles
   layout_builder:
     allow_custom: false
     enabled: false

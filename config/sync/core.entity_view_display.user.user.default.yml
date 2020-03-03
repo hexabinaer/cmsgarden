@@ -24,39 +24,13 @@ dependencies:
     - field.field.user.user.field_user_opensourcesince
     - field.field.user.user.field_user_participation
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
-    - address
-    - field_group
     - layout_builder
-    - options
-    - svg_image
-    - text
     - user
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-  field_group:
-    group_div_fullname:
-      children:
-        - field_user_first_name
-        - field_user_middle_name
-        - field_user_last_name
-      parent_name: ''
-      weight: 0
-      format_type: html_element
-      format_settings:
-        id: ''
-        classes: fullname
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-      label: div
-      region: content
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.default
@@ -64,119 +38,45 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  field_associated_org:
-    weight: 6
+  main_profiles:
+    type: entity_reference_label
+    weight: 1
+    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+  realname:
+    weight: 0
     region: content
-  field_cms:
-    weight: 10
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_field_mobile_phone_no:
-    weight: 8
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_field_telephone_no_office:
-    weight: 9
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_member:
-    weight: 5
-    label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
-    region: content
-  field_user_address:
-    type: address_default
-    weight: 7
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_user_bio_short:
-    weight: 4
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_user_first_name:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_user_last_name:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_user_main_profession:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_user_middle_name:
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  user_picture:
-    type: image
-    weight: 1
-    region: content
-    settings:
-      image_style: thumbnail
-      image_link: content
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-    third_party_settings: {  }
-    label: hidden
 hidden:
   ambassador_profile_profiles: true
   author_profile_profiles: true
   cmsg_mail: true
+  field_associated_org: true
   field_blog_author_profile: true
+  field_cms: true
+  field_field_mobile_phone_no: true
+  field_field_telephone_no_office: true
   field_gdpr: true
+  field_member: true
   field_member_since: true
   field_membership_no: true
+  field_user_address: true
+  field_user_bio_short: true
   field_user_cmsg_participation: true
   field_user_contributing_os: true
+  field_user_first_name: true
   field_user_geolocation: true
+  field_user_last_name: true
+  field_user_main_profession: true
+  field_user_middle_name: true
   field_user_opensourcesince: true
   field_user_participation: true
   internal_profile_profiles: true
   langcode: true
-  main_profiles: true
   member_for: true
   membership_profiles: true
-  realname: true
+  user_picture: true

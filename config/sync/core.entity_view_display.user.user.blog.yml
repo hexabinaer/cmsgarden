@@ -25,13 +25,10 @@ dependencies:
     - field.field.user.user.field_user_opensourcesince
     - field.field.user.user.field_user_participation
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
     - ds
     - field_group
     - layout_builder
-    - svg_image
-    - text
     - user
 third_party_settings:
   field_group:
@@ -41,7 +38,7 @@ third_party_settings:
         - field_user_first_name
         - field_user_middle_name
       parent_name: ''
-      weight: 23
+      weight: 29
       format_type: html_element
       format_settings:
         element: div
@@ -60,18 +57,13 @@ third_party_settings:
       library: layout_discovery/onecol
       disable_css: false
       entity_classes: all_classes
-      settings: {  }
+      settings:
+        label: ''
     regions:
       content:
-        - user_picture
-        - 'dynamic_token_field:user-display_name'
-        - field_blog_author_profile
-    fields:
-      'dynamic_token_field:user-display_name':
-        plugin_id: 'dynamic_token_field:user-display_name'
-        weight: 1
-        label: hidden
-        formatter: default
+        - main_profiles
+        - realname
+        - author_profile_profiles
   layout_builder:
     allow_custom: false
     enabled: false
@@ -82,38 +74,34 @@ targetEntityType: user
 bundle: user
 mode: blog
 content:
-  field_blog_author_profile:
-    type: text_default
+  author_profile_profiles:
+    type: entity_reference_entity_view
     weight: 2
     region: content
     label: hidden
-    settings: {  }
+    settings:
+      view_mode: default
+      link: false
     third_party_settings: {  }
-  user_picture:
-    type: image
+  main_profiles:
+    type: entity_reference_entity_view
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: thumbnail
-      image_link: content
-      svg_render_as_image: '1'
-      svg_attributes:
-        width: '100'
-        height: '100'
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+      view_mode: picture_only
+      link: false
+    third_party_settings: {  }
+  realname:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   ambassador_profile_profiles: true
-  author_profile_profiles: true
   cmsg_mail: true
   field_associated_org: true
+  field_blog_author_profile: true
   field_cms: true
   field_field_mobile_phone_no: true
   field_field_telephone_no_office: true
@@ -134,7 +122,6 @@ hidden:
   field_user_participation: true
   internal_profile_profiles: true
   langcode: true
-  main_profiles: true
   member_for: true
   membership_profiles: true
-  realname: true
+  user_picture: true

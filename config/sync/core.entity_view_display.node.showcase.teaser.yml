@@ -6,15 +6,13 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.showcase.body
     - field.field.node.showcase.field_cms
+    - field.field.node.showcase.field_media_image
     - field.field.node.showcase.field_sc_screenshot
     - field.field.node.showcase.field_sc_usage
     - field.field.node.showcase.field_showcase_date
     - field.field.node.showcase.field_title_html
-    - image.style.medium
     - node.type.showcase
   module:
-    - ds
-    - svg_image
     - text
     - user
 id: node.showcase.teaser
@@ -22,27 +20,15 @@ targetEntityType: node
 bundle: showcase
 mode: teaser
 content:
-  field_sc_screenshot:
-    type: image
+  field_media_image:
+    type: entity_reference_entity_view
     weight: 1
     region: content
     label: hidden
     settings:
-      image_style: medium
-      image_link: ''
-      svg_render_as_image: '1'
-      svg_attributes:
-        width: '220'
-        height: '220'
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
   field_title_html:
     type: text_default
     weight: 0
@@ -54,6 +40,7 @@ hidden:
   body: true
   content_moderation_control: true
   field_cms: true
+  field_sc_screenshot: true
   field_sc_usage: true
   field_showcase_date: true
   langcode: true

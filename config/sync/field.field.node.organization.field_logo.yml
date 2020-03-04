@@ -18,7 +18,7 @@ id: node.organization.field_logo
 field_name: field_logo
 entity_type: node
 bundle: organization
-label: Logo
+label: 'Logo (DEPRECATED)'
 description: 'The organization''s logo.'
 required: false
 translatable: true

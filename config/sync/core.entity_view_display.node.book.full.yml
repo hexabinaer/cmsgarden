@@ -1,0 +1,116 @@
+uuid: 64a89086-1e0e-4116-8ea2-6e5f3d9d4b74
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.book.body
+    - field.field.node.book.field_title_html
+    - node.type.book
+    - system.menu.handbook
+  module:
+    - layout_builder
+    - layout_discovery
+    - system
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          d9c9937a-0639-4b52-8ad8-b5198db058d2:
+            uuid: d9c9937a-0639-4b52-8ad8-b5198db058d2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:book:field_title_html'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 75-25
+        components:
+          30f0614d-5ff8-4707-90a9-dbbc6e5f3d2c:
+            uuid: 30f0614d-5ff8-4707-90a9-dbbc6e5f3d2c
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:book:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          9a6ed09e-01d3-4e94-94d9-abd272f406d2:
+            uuid: 9a6ed09e-01d3-4e94-94d9-abd272f406d2
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:book:links'
+            additional: {  }
+            weight: 1
+          2cc98c62-18a9-4b08-9302-979057bb78aa:
+            uuid: 2cc98c62-18a9-4b08-9302-979057bb78aa
+            region: second
+            configuration:
+              id: 'system_menu_block:handbook'
+              label: 'Handbook navigation'
+              provider: system
+              label_display: visible
+              level: 1
+              depth: 0
+              expand_all_items: false
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+_core:
+  default_config_hash: UWTnZUj-u-jp8I_S1C1nUCTlM5iIV2QKdxm37ehFjoI
+id: node.book.full
+targetEntityType: node
+bundle: book
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title_html:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

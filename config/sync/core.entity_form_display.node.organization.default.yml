@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.image_browser_modal_
     - field.field.node.organization.body
     - field.field.node.organization.field_associated_users
     - field.field.node.organization.field_cms
     - field.field.node.organization.field_event_relation
     - field.field.node.organization.field_geographic_range
     - field.field.node.organization.field_logo
+    - field.field.node.organization.field_media_image
     - field.field.node.organization.field_member
     - field.field.node.organization.field_member_since
     - field.field.node.organization.field_membership_no
@@ -18,24 +20,24 @@ dependencies:
     - field.field.node.organization.field_organization_type
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
-    - image.style.thumbnail
     - node.type.organization
     - workflows.workflow.default_nodes
   module:
     - address
     - content_moderation
     - datetime
+    - entity_browser
     - field_group
     - geolocation
     - link
     - path
-    - svg_image
     - text
 third_party_settings:
   field_group:
     group_accordion:
       children:
         - group_profile_information
+        - group_background
         - group_administrative
       parent_name: ''
       weight: 11
@@ -48,17 +50,14 @@ third_party_settings:
       region: content
     group_profile_information:
       children:
-        - field_logo
+        - field_media_image
         - field_title_html
         - field_org_tagline
-        - field_org_cms
         - field_cms
-        - field_geographic_range
         - field_website
         - field_org_address
         - field_org_geolocation
         - body
-        - field_associated_users
       parent_name: group_accordion
       weight: 20
       format_type: accordion_item
@@ -72,7 +71,6 @@ third_party_settings:
       region: content
     group_administrative:
       children:
-        - field_organization_type
         - field_member
         - field_membership_no
         - field_member_since
@@ -86,6 +84,22 @@ third_party_settings:
         classes: admin__only
       label: Administrative
       region: content
+    group_background:
+      children:
+        - field_organization_type
+        - field_geographic_range
+        - field_associated_users
+      parent_name: group_accordion
+      weight: 21
+      format_type: accordion_item
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Background information'
 id: node.organization.default
 targetEntityType: node
 bundle: organization
@@ -93,7 +107,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 30
+    weight: 33
     settings:
       rows: 9
       summary_rows: 3
@@ -108,7 +122,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_associated_users:
-    weight: 31
+    weight: 33
     settings:
       match_operator: CONTAINS
       size: 60
@@ -118,17 +132,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_cms:
-    weight: 25
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_event_relation:
-    weight: 39
+    weight: 28
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -138,52 +142,59 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_geographic_range:
-    weight: 26
+    weight: 32
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
-  field_logo:
-    weight: 21
+  field_media_image:
+    weight: 24
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      entity_browser: image_browser_modal_
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: preview
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      selection_mode: selection_append
+      open: false
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_entity_reference
     region: content
   field_member:
-    weight: 36
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_member_since:
-    weight: 38
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_membership_no:
-    weight: 37
+    weight: 28
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_org_address:
-    weight: 28
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_org_geolocation:
-    weight: 29
+    weight: 32
     settings: {  }
     third_party_settings: {  }
     type: geolocation_latlng
     region: content
   field_org_tagline:
-    weight: 23
+    weight: 27
     settings:
       size: 60
       placeholder: ''
@@ -191,13 +202,13 @@ content:
     type: text_textfield
     region: content
   field_organization_type:
-    weight: 35
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_title_html:
-    weight: 22
+    weight: 26
     settings:
       size: 60
       placeholder: ''
@@ -205,7 +216,7 @@ content:
     type: text_textfield
     region: content
   field_website:
-    weight: 27
+    weight: 30
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -280,4 +291,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_event_relation: true
+  field_logo: true

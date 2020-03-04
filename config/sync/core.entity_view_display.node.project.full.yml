@@ -8,7 +8,9 @@ dependencies:
     - field.field.node.project.field_downloads
     - field.field.node.project.field_external_links
     - field.field.node.project.field_logo
+    - field.field.node.project.field_media_image
     - field.field.node.project.field_meta_tags
+    - field.field.node.project.field_org_ref
     - field.field.node.project.field_project_partners
     - field.field.node.project.field_title_html
     - field.field.node.project.layout_builder__layout
@@ -32,29 +34,6 @@ third_party_settings:
           label: ''
           column_widths: 50-50
         components:
-          deacc777-087c-4d56-8bc1-bd96e0964f54:
-            uuid: deacc777-087c-4d56-8bc1-bd96e0964f54
-            region: second
-            configuration:
-              id: 'field_block:node:project:field_logo'
-              label: Logo
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: image
-                settings:
-                  image_style: medium
-                  image_link: ''
-                  svg_render_as_image: 1
-                  svg_attributes:
-                    width: '220'
-                    height: '220'
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
           8bfffaaa-2453-4b54-8d91-ed5c328c92c9:
             uuid: 8bfffaaa-2453-4b54-8d91-ed5c328c92c9
             region: first
@@ -92,6 +71,25 @@ third_party_settings:
               id: 'extra_field_block:node:project:content_moderation_control'
             additional: {  }
             weight: 2
+          efb3ec92-5ee4-4a67-a5b9-5977b984b952:
+            uuid: efb3ec92-5ee4-4a67-a5b9-5977b984b952
+            region: second
+            configuration:
+              id: 'field_block:node:project:field_media_image'
+              label: 'Project logo'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -157,29 +155,27 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          3a8c675f-2eaa-453e-b0bd-b5e3ba94deeb:
-            uuid: 3a8c675f-2eaa-453e-b0bd-b5e3ba94deeb
+          0a6f8918-6d70-42e5-9514-d6665b7ccdbe:
+            uuid: 0a6f8918-6d70-42e5-9514-d6665b7ccdbe
             region: content
             configuration:
-              id: 'field_block:node:project:field_project_partners'
+              id: 'field_block:node:project:field_org_ref'
               label: 'Project partners'
               provider: layout_builder
               label_display: '0'
               formatter:
                 label: above
-                type: image
+                type: entity_reference_entity_view
                 settings:
-                  image_style: medium
-                  image_link: ''
-                  svg_render_as_image: 1
-                  svg_attributes:
-                    width: '220'
-                    height: '220'
-                third_party_settings: {  }
+                  view_mode: teaser
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
-            weight: 0
+            weight: 1
         third_party_settings: {  }
 id: node.project.full
 targetEntityType: node
@@ -257,5 +253,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_downloads: true
+  field_media_image: true
+  field_org_ref: true
   langcode: true
   layout_builder__layout: true

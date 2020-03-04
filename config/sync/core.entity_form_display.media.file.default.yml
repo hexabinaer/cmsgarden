@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.file.field_accessible
+    - field.field.media.file.field_category
     - field.field.media.file.field_content_language
     - field.field.media.file.field_longdesc
     - field.field.media.file.field_media_file
@@ -19,7 +20,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -29,6 +30,16 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_category:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
   field_content_language:
     weight: 3
     settings: {  }
@@ -36,7 +47,7 @@ content:
     type: options_select
     region: content
   field_longdesc:
-    weight: 5
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -67,7 +78,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -75,17 +86,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   translation:
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60

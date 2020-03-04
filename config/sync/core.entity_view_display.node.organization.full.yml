@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.organization.field_event_relation
     - field.field.node.organization.field_geographic_range
     - field.field.node.organization.field_logo
+    - field.field.node.organization.field_media_image
     - field.field.node.organization.field_member
     - field.field.node.organization.field_member_since
     - field.field.node.organization.field_membership_no
@@ -19,8 +20,6 @@ dependencies:
     - field.field.node.organization.field_organization_type
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
-    - field.field.user.user.field_member_since
-    - field.field.user.user.field_membership_no
     - filter.format.minimal_html
     - image.style.medium
     - node.type.organization
@@ -78,27 +77,6 @@ third_party_settings:
           label: ''
           column_widths: 33-34-33
         components:
-          44025da7-2276-4bb0-8008-1e8e716e19ff:
-            uuid: 44025da7-2276-4bb0-8008-1e8e716e19ff
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:organization:field_logo'
-              formatter:
-                type: image
-                label: hidden
-                settings:
-                  image_style: medium
-                  image_link: ''
-                  svg_render_as_image: '1'
-                  svg_attributes:
-                    width: '220'
-                    height: '220'
-                third_party_settings: {  }
-            additional: {  }
-            weight: 0
           353a7527-9634-460e-84f8-506b553194f0:
             uuid: 353a7527-9634-460e-84f8-506b553194f0
             region: first
@@ -113,7 +91,7 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             additional: {  }
-            weight: 1
+            weight: 2
           aa01d3d3-7290-4ff4-a6d0-33d46e5bee82:
             uuid: aa01d3d3-7290-4ff4-a6d0-33d46e5bee82
             region: second
@@ -147,58 +125,6 @@ third_party_settings:
                   rel: ''
                   target: ''
                 third_party_settings: {  }
-            additional: {  }
-            weight: 2
-          8103a34e-2c27-4502-a019-6234cd072b9d:
-            uuid: 8103a34e-2c27-4502-a019-6234cd072b9d
-            region: third
-            configuration:
-              id: 'field_block:user:user:field_membership_no'
-              label: 'Membership no.'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: number_integer
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-              context_mapping:
-                entity: '@user.current_user_context:current_user'
-            additional: {  }
-            weight: 2
-          cbe56291-a6ac-4b5e-9024-7ce7afcdb3c0:
-            uuid: cbe56291-a6ac-4b5e-9024-7ce7afcdb3c0
-            region: third
-            configuration:
-              id: 'field_block:user:user:field_member_since'
-              label: 'Member since'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: datetime_default
-                settings:
-                  timezone_override: ''
-                  format_type: html_year
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-              context_mapping:
-                entity: '@user.current_user_context:current_user'
             additional: {  }
             weight: 3
           59a4b1e9-c6e4-496b-ac7e-74ab75e37c27:
@@ -241,6 +167,65 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 2
+          bd9e1047-7cb9-460d-8fbd-52fc33120f27:
+            uuid: bd9e1047-7cb9-460d-8fbd-52fc33120f27
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_media_image'
+              label: Logo
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          467a6a01-12f1-47ca-9d74-235e0eadfab0:
+            uuid: 467a6a01-12f1-47ca-9d74-235e0eadfab0
+            region: third
+            configuration:
+              id: 'field_block:node:organization:field_membership_no'
+              label: 'Membership no.'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: number_integer
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 4
+          1e6b4d0e-4ebd-4d33-8d2e-0373b0a2beed:
+            uuid: 1e6b4d0e-4ebd-4d33-8d2e-0373b0a2beed
+            region: third
+            configuration:
+              id: 'field_block:node:organization:field_member_since'
+              label: 'Member since'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: cmsg_year_month
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 5
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -433,6 +418,7 @@ hidden:
   field_cms: true
   field_event_relation: true
   field_geographic_range: true
+  field_media_image: true
   field_member_since: true
   field_membership_no: true
   field_organization_type: true

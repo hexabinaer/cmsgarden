@@ -18,8 +18,8 @@ id: node.blog_entry.field_image
 field_name: field_image
 entity_type: node
 bundle: blog_entry
-label: 'Teaser image'
-description: 'Will will automatically scaled + maybe cropped.'
+label: 'Teaser image (DEPREACTED)'
+description: 'Will automatically be scaled + maybe cropped.'
 required: false
 translatable: true
 default_value: {  }

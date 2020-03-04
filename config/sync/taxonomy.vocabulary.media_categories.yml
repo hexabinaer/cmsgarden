@@ -1,0 +1,8 @@
+uuid: 43ac8f4f-c725-41a4-8a13-4b467f632bbf
+langcode: und
+status: true
+dependencies: {  }
+name: 'Media categories'
+vid: media_categories
+description: 'Tags for media assets'
+weight: 0

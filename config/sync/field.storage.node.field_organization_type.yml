@@ -17,16 +17,16 @@ settings:
   allowed_values:
     -
       value: '1'
-      label: partner
+      label: 'Project partner'
     -
       value: '2'
-      label: member
+      label: 'CMS Garden member'
     -
       value: '3'
-      label: sponsor
+      label: Sponsor
     -
       value: '4'
-      label: other
+      label: 'Non-profit cms association'
   allowed_values_function: ''
 module: options
 locked: false

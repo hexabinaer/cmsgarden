@@ -10,8 +10,8 @@ id: node.blog_entry.field_blog_topic_relation
 field_name: field_blog_topic_relation
 entity_type: node
 bundle: blog_entry
-label: 'Verwandte Themen'
-description: 'Bitte wähle weise. Themen-Tags sollten ähnliche Beiträge verbinden, nicht abgrenzen.'
+label: 'Related topics'
+description: 'Choose wisely. Topic tags should <em>connect</em> similar content, not be unique.'
 required: false
 translatable: false
 default_value: {  }

@@ -18,7 +18,7 @@ id: node.showcase.field_sc_screenshot
 field_name: field_sc_screenshot
 entity_type: node
 bundle: showcase
-label: Screenshot
+label: 'Screenshot (DEPRECATED)'
 description: 'Please enter a short description for accessibility. The title will be used as a caption to the image.'
 required: true
 translatable: true

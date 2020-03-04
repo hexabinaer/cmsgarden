@@ -18,7 +18,7 @@ id: node.project.field_project_partners
 field_name: field_project_partners
 entity_type: node
 bundle: project
-label: 'Project partners'
+label: 'Project partners (DEPRECATED)'
 description: 'Official partners + funders'
 required: false
 translatable: true

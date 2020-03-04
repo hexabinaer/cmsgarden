@@ -5,7 +5,6 @@ dependencies:
   config:
     - views.view.media_entity_browser
   module:
-    - entity_browser_entity_form
     - views
 _core:
   default_config_hash: VOi0Ua3BAuJlwzee4EWw-XHxybYY-IqVBetnROZff_I
@@ -16,7 +15,7 @@ display_configuration:
   width: '1070'
   height: '500'
   link_text: 'Select media'
-  auto_open: true
+  auto_open: false
 selection_display: no_display
 selection_display_configuration: {  }
 widget_selector: tabs
@@ -29,16 +28,17 @@ widgets:
       submit_text: 'Select media'
       auto_select: false
     uuid: fc729026-c85f-4561-acd5-38d4082b69fb
-    weight: -9
-    label: 'Choose existing media'
+    weight: -8
+    label: 'Choose existing images'
     id: view
-  9769d4e4-1f9c-4313-8b01-fe8cff8aa5a1:
+  8bedeb54-37e7-47c4-a266-4bc2a9858647:
     settings:
-      entity_type: media
-      bundle: image
-      form_mode: default
-      submit_text: 'Save image'
-    uuid: 9769d4e4-1f9c-4313-8b01-fe8cff8aa5a1
+      extensions: 'jpg jpeg png gif'
+      media_type: image
+      upload_location: 'public://images'
+      multiple: 0
+      submit_text: 'Select files'
+    uuid: 8bedeb54-37e7-47c4-a266-4bc2a9858647
     weight: -10
     label: 'Upload new image'
-    id: entity_form
+    id: media_image_upload

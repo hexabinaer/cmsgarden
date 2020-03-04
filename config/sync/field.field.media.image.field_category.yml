@@ -1,0 +1,33 @@
+uuid: 3a653293-e66b-444d-a053-f643348f645f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_category
+    - media.type.image
+    - taxonomy.vocabulary.media_categories
+  content:
+    - 'taxonomy_term:media_categories:5742e7bf-1dde-4374-8aa9-1af0c6eefaad'
+id: media.image.field_category
+field_name: field_category
+entity_type: media
+bundle: image
+label: Category
+description: 'Used for media library filtering'
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 5742e7bf-1dde-4374-8aa9-1af0c6eefaad
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      media_categories: media_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

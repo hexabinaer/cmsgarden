@@ -18,7 +18,7 @@ id: node.project.field_logo
 field_name: field_logo
 entity_type: node
 bundle: project
-label: Logo
+label: 'Logo (DEPRECATED)'
 description: 'The official project logo if applicable.'
 required: false
 translatable: true

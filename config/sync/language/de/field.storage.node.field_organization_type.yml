@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    0:
+      label: Projektpartner
+    1:
+      label: CMS-Garden-Mitglied
+    3:
+      label: 'Gemeinnütziger CMS-Verein'

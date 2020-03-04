@@ -11,7 +11,7 @@ id: node.organization.body
 field_name: body
 entity_type: node
 bundle: organization
-label: Profile
+label: 'Profile text'
 description: 'Please write a short text about your organization.'
 required: false
 translatable: true

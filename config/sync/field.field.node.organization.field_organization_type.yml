@@ -11,7 +11,7 @@ id: node.organization.field_organization_type
 field_name: field_organization_type
 entity_type: node
 bundle: organization
-label: Type
+label: 'Type of connection to CMS Garden'
 description: ''
 required: false
 translatable: false

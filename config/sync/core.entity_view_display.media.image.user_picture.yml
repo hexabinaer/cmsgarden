@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.user_picture
+    - field.field.media.image.field_category
     - field.field.media.image.field_longdesc
     - field.field.media.image.field_media_image
     - image.style.cmsg_userpic
@@ -35,6 +36,7 @@ content:
     region: content
 hidden:
   created: true
+  field_category: true
   field_longdesc: true
   filesize: true
   langcode: true

@@ -26,9 +26,9 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: images
-  file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
-  max_resolution: ''
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: '8 MB'
+  max_resolution: 2560x1440
   min_resolution: ''
   alt_field: true
   alt_field_required: true

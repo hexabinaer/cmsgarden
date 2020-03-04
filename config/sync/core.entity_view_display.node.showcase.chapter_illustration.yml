@@ -6,16 +6,15 @@ dependencies:
     - core.entity_view_mode.node.chapter_illustration
     - field.field.node.showcase.body
     - field.field.node.showcase.field_cms
+    - field.field.node.showcase.field_media_image
     - field.field.node.showcase.field_sc_screenshot
     - field.field.node.showcase.field_sc_usage
     - field.field.node.showcase.field_showcase_date
     - field.field.node.showcase.field_title_html
-    - image.style.large
     - node.type.showcase
   module:
-    - ds
     - layout_builder
-    - svg_image
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -26,27 +25,22 @@ targetEntityType: node
 bundle: showcase
 mode: chapter_illustration
 content:
-  field_sc_screenshot:
+  field_media_image:
+    type: entity_reference_entity_view
     weight: 1
+    region: content
     label: hidden
     settings:
-      image_style: large
-      image_link: content
-      svg_render_as_image: '1'
-      svg_attributes:
-        width: ''
-        height: ''
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: image
+      view_mode: embedded
+      link: false
+    third_party_settings: {  }
+  field_title_html:
+    type: text_default
+    weight: 2
     region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   links:
     weight: 0
     region: content
@@ -56,7 +50,7 @@ hidden:
   body: true
   content_moderation_control: true
   field_cms: true
+  field_sc_screenshot: true
   field_sc_usage: true
   field_showcase_date: true
-  field_title_html: true
   langcode: true

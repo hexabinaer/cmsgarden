@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.organization.field_event_relation
     - field.field.node.organization.field_geographic_range
     - field.field.node.organization.field_logo
+    - field.field.node.organization.field_media_image
     - field.field.node.organization.field_member
     - field.field.node.organization.field_member_since
     - field.field.node.organization.field_membership_no
@@ -20,12 +21,6 @@ dependencies:
     - field.field.node.organization.field_website
     - node.type.organization
   module:
-    - address
-    - datetime
-    - geolocation
-    - link
-    - options
-    - svg_image
     - text
     - user
 id: node.organization.default
@@ -33,100 +28,18 @@ targetEntityType: node
 bundle: organization
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   content_moderation_control:
     weight: -20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_associated_users:
-    weight: 103
+  field_media_image:
+    weight: 1
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_cms:
-    weight: 116
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_event_relation:
-    weight: 115
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_geographic_range:
-    weight: 110
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_logo:
-    weight: 113
-    label: above
-    settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_member:
-    weight: 102
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_member_since:
-    weight: 112
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_membership_no:
-    weight: 111
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_org_address:
-    weight: 104
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
-  field_org_geolocation:
-    weight: 106
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: geolocation_latlng
     region: content
   field_org_tagline:
     weight: 108
@@ -135,13 +48,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_organization_type:
-    weight: 114
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_title_html:
     weight: 105
     label: above
@@ -149,22 +55,19 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_website:
-    weight: 109
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  body: true
+  field_associated_users: true
+  field_cms: true
+  field_event_relation: true
+  field_geographic_range: true
+  field_logo: true
+  field_member: true
+  field_member_since: true
+  field_membership_no: true
+  field_org_address: true
+  field_org_geolocation: true
+  field_organization_type: true
+  field_website: true
   langcode: true
+  links: true

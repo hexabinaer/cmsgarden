@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.showcase.body
     - field.field.node.showcase.field_cms
+    - field.field.node.showcase.field_media_image
     - field.field.node.showcase.field_sc_screenshot
     - field.field.node.showcase.field_sc_usage
     - field.field.node.showcase.field_showcase_date
@@ -15,8 +16,6 @@ dependencies:
     - datetime
     - ds
     - layout_builder
-    - options
-    - svg_image
     - text
     - user
 third_party_settings:
@@ -42,7 +41,7 @@ content:
     third_party_settings: {  }
   field_cms:
     type: entity_reference_entity_view
-    weight: 5
+    weight: 4
     region: content
     label: inline
     settings:
@@ -57,29 +56,18 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-  field_sc_screenshot:
+  field_media_image:
+    type: entity_reference_entity_view
     weight: 2
+    region: content
     label: hidden
     settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_sc_usage:
-    type: list_key
-    weight: 6
-    region: content
-    label: above
-    settings: {  }
+      view_mode: full
+      link: false
     third_party_settings: {  }
   field_showcase_date:
     type: datetime_default
-    weight: 4
+    weight: 5
     region: content
     label: inline
     settings:
@@ -101,5 +89,7 @@ content:
     type: text_default
     region: content
 hidden:
+  field_sc_screenshot: true
+  field_sc_usage: true
   langcode: true
   links: true

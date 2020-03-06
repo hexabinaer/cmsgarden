@@ -321,6 +321,7 @@ display:
         use_more: false
         use_more_always: false
         use_more_text: false
+        css_class: false
       arguments:
         field_cms_target_id:
           id: field_cms_target_id
@@ -374,6 +375,7 @@ display:
       use_more_always: false
       use_more_text: 'See all'
       display_description: ''
+      css_class: 'people flex'
     cache_metadata:
       max-age: 0
       contexts:
@@ -401,17 +403,17 @@ display:
           marker_icon_path: ''
           marker_row_number: 0
           centre:
-            client_location:
-              weight: -10
-              enable: false
-              map_center_id: client_location
             fit_bounds:
               enable: true
               settings:
-                min_zoom: null
+                min_zoom: 10
                 reset_zoom: false
-              weight: -9
+              weight: -10
               map_center_id: fit_bounds
+            client_location:
+              weight: -9
+              enable: false
+              map_center_id: client_location
             first_row:
               enable: true
               weight: -8
@@ -436,7 +438,7 @@ display:
               settings:
                 access_key: ''
                 location_option_id: ipstack
-              weight: 0
+              weight: -5
               enable: false
               map_center_id: location_plugins
             fixed_boundaries:
@@ -445,7 +447,7 @@ display:
                 east: ''
                 south: ''
                 west: ''
-              weight: 0
+              weight: -4
               enable: false
               map_center_id: fixed_boundaries
           even_empty: 1
@@ -902,6 +904,7 @@ display:
         row: false
         fields: false
         pager: false
+        css_class: false
       row:
         type: 'entity:user'
         options:
@@ -1021,6 +1024,7 @@ display:
         options:
           offset: 0
       block_description: 'People map'
+      css_class: map
     cache_metadata:
       max-age: 0
       contexts:

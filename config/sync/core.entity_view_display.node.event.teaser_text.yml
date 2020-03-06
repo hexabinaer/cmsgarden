@@ -1,0 +1,116 @@
+uuid: 5c119e1a-dce1-4c8f-8462-069222a0c29e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_text
+    - field.field.node.event.body
+    - field.field.node.event.field_additional_info
+    - field.field.node.event.field_contact_ref
+    - field.field.node.event.field_event_logo
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_internal_downloads
+    - field.field.node.event.field_internal_information
+    - field.field.node.event.field_location_ref
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_public_downloads
+    - field.field.node.event.field_title_html
+    - field.field.node.event.field_twitter_hashtag
+    - field.field.node.event.field_website
+    - node.type.event
+  module:
+    - ds
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.event.teaser_text
+targetEntityType: node
+bundle: event
+mode: teaser_text
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_event_logo:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_location_ref:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: location
+      link: false
+    third_party_settings: {  }
+  field_title_html:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: h1
+            ow-cl: page-title
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  flag_event_attendance:
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_additional_info: true
+  field_contact_ref: true
+  field_event_banner: true
+  field_event_date: true
+  field_event_type: true
+  field_internal_downloads: true
+  field_internal_information: true
+  field_meta_tags: true
+  field_public_downloads: true
+  field_twitter_hashtag: true
+  field_website: true
+  langcode: true
+  layout_builder__layout: true
+  links: true

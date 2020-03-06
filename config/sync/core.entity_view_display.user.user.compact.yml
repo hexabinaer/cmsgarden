@@ -10,9 +10,11 @@ dependencies:
     - field.field.user.user.field_field_mobile_phone_no
     - field.field.user.user.field_field_telephone_no_office
     - field.field.user.user.field_gdpr
+    - field.field.user.user.field_last_password_reset
     - field.field.user.user.field_member
     - field.field.user.user.field_member_since
     - field.field.user.user.field_membership_no
+    - field.field.user.user.field_password_expiration
     - field.field.user.user.field_user_address
     - field.field.user.user.field_user_bio_short
     - field.field.user.user.field_user_cmsg_participation
@@ -80,9 +82,11 @@ hidden:
   field_field_mobile_phone_no: true
   field_field_telephone_no_office: true
   field_gdpr: true
+  field_last_password_reset: true
   field_member: true
   field_member_since: true
   field_membership_no: true
+  field_password_expiration: true
   field_user_address: true
   field_user_bio_short: true
   field_user_cmsg_participation: true

@@ -9,9 +9,11 @@ dependencies:
     - field.field.user.user.field_field_mobile_phone_no
     - field.field.user.user.field_field_telephone_no_office
     - field.field.user.user.field_gdpr
+    - field.field.user.user.field_last_password_reset
     - field.field.user.user.field_member
     - field.field.user.user.field_member_since
     - field.field.user.user.field_membership_no
+    - field.field.user.user.field_password_expiration
     - field.field.user.user.field_user_address
     - field.field.user.user.field_user_bio_short
     - field.field.user.user.field_user_cmsg_participation
@@ -72,9 +74,22 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_last_password_reset:
+    type: datetime_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_password_expiration:
+    type: boolean_checkbox
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
-    weight: 4
+    weight: 6
     region: content
     settings:
       include_locked: true
@@ -86,7 +101,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -96,7 +111,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 3
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

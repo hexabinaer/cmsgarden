@@ -51,6 +51,7 @@ content:
 hidden:
   body: true
   field_further_reading: true
+  field_glossary_reference: true
   field_wikipedia_link: true
   langcode: true
   links: true

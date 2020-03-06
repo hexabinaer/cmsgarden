@@ -55,6 +55,7 @@ content:
     region: content
 hidden:
   description: true
+  field_lead_color: true
   field_machine_name: true
   field_noderef_cms: true
   field_status: true

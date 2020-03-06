@@ -82,8 +82,8 @@ content:
     region: content
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: cmsg_year_month
     third_party_settings: {  }
   flag_event_attendance:
     weight: 10

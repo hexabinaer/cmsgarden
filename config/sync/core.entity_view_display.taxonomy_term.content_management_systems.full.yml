@@ -3,7 +3,7 @@ langcode: de
 status: true
 dependencies:
   config:
-    - core.base_field_override.taxonomy_term.content_management_systems.description
+    - block_content.type.basic
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
     - field.field.taxonomy_term.content_management_systems.field_lead_color
@@ -11,11 +11,13 @@ dependencies:
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
     - taxonomy.vocabulary.content_management_systems
+    - views.view.cmsg_cms_contacts
   module:
     - layout_builder
     - layout_discovery
     - svg_image
     - text
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -24,23 +26,33 @@ third_party_settings:
       -
         layout_id: layout_onecol
         layout_settings:
-          label: ''
+          label: Abstract
         components:
-          3dee5a22-1702-4b3b-be8c-0d8db395d325:
-            uuid: 3dee5a22-1702-4b3b-be8c-0d8db395d325
+          1e9a8602-8598-4003-9e27-f9765c5f7a57:
+            uuid: 1e9a8602-8598-4003-9e27-f9765c5f7a57
             region: content
             configuration:
+              id: 'field_block:taxonomy_term:content_management_systems:field_noderef_cms'
+              label: CMS-Portrait
+              provider: layout_builder
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:taxonomy_term:content_management_systems:description'
               formatter:
                 label: hidden
-                type: text_default
-                settings: {  }
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: abstract
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
           2d82a8db-d27b-4a61-b506-d121b54e3b9a:
             uuid: 2d82a8db-d27b-4a61-b506-d121b54e3b9a
             region: content
@@ -62,6 +74,113 @@ third_party_settings:
                 type: image
             additional: {  }
             weight: 1
+          5f8ac549-0cb3-4626-95dd-be23a62175ca:
+            uuid: 5f8ac549-0cb3-4626-95dd-be23a62175ca
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:content_management_systems:field_noderef_cms'
+              label: CMS-Portrait
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: characteristics
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+          7e276648-499b-42df-b5ce-957e0218e5ed:
+            uuid: 7e276648-499b-42df-b5ce-957e0218e5ed
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:content_management_systems:field_noderef_cms'
+              label: CMS-Portrait
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: node_embedded
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Useful addresses'
+          column_widths: 50-50
+        components:
+          9705ebb4-b9f6-4a8f-8174-4d02d1df77e2:
+            uuid: 9705ebb4-b9f6-4a8f-8174-4d02d1df77e2
+            region: second
+            configuration:
+              id: 'inline_block:basic'
+              label: PLACEHOLDER
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 5
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          5bc7d440-6d63-4702-baab-b024cef21633:
+            uuid: 5bc7d440-6d63-4702-baab-b024cef21633
+            region: first
+            configuration:
+              id: 'views_block:cmsg_cms_contacts-block_cms_links'
+              label: 'External links'
+              provider: views
+              label_display: visible
+              views_label: 'External links'
+              items_per_page: none
+              offset: null
+              show_exposed_filters: null
+              dont_hide_if_unfiltered_empty: null
+              show_more_link: null
+              more_link_text: ''
+              pager_type: null
+              translatable_configuration:
+                '#en':
+                  use_more_text: null
+              link_url: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Credits
+        components:
+          ce01a0d8-f3f9-469b-b34c-973142e88400:
+            uuid: ce01a0d8-f3f9-469b-b34c-973142e88400
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:content_management_systems:field_noderef_cms'
+              label: CMS-Portrait
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: credits
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: taxonomy_term.content_management_systems.full
 targetEntityType: taxonomy_term

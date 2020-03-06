@@ -20,29 +20,30 @@ dependencies:
     - field.field.node.date.field_user_ref
     - field.field.node.date.field_website
     - node.type.date
+    - views.view.cmsg_contextuals
   module:
     - date_range_formatter
-    - ds
     - layout_builder
     - layout_discovery
+    - options
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: true
     sections:
       -
-        layout_id: layout_twocol_section
+        layout_id: layout_onecol
         layout_settings:
           label: ''
-          column_widths: 25-75
         components:
-          d5b46247-1e96-46b3-a66a-768ef6d0f18f:
-            uuid: d5b46247-1e96-46b3-a66a-768ef6d0f18f
-            region: first
+          71c502ae-4f56-4837-8608-3a28ecba6931:
+            uuid: 71c502ae-4f56-4837-8608-3a28ecba6931
+            region: content
             configuration:
               id: 'field_block:node:date:field_date_node_ref'
-              label: Logo
+              label: 'Logo (event default)'
               provider: layout_builder
               label_display: '0'
               formatter:
@@ -50,58 +51,24 @@ third_party_settings:
                 type: entity_reference_entity_view
                 settings:
                   view_mode: logo
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          b1cded26-accb-48d0-9404-a297cd311567:
-            uuid: b1cded26-accb-48d0-9404-a297cd311567
-            region: second
+          878e1fce-cc84-4750-9cdb-32427173b50e:
+            uuid: 878e1fce-cc84-4750-9cdb-32427173b50e
+            region: content
             configuration:
-              id: 'field_block:node:date:field_title_html'
-              label: 'HTML title'
+              id: 'field_block:node:date:field_date_range'
+              label: 'Date and time'
               provider: layout_builder
               label_display: '0'
               formatter:
                 label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 2
-          a5eb2262-021f-4d80-ad2c-11a9cc55739c:
-            uuid: a5eb2262-021f-4d80-ad2c-11a9cc55739c
-            region: second
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:date:field_date_range'
-              formatter:
                 type: date_range_without_time
-                label: hidden
                 settings:
-                  separator: '-'
-                  date_format: 'Y-m-d\TH:i:s'
                   timezone_override: ''
                   single: 'd F Y'
                   single_all_day: 'd F Y'
@@ -110,67 +77,34 @@ third_party_settings:
                   several_months: 'd F - {d} {F} Y'
                   several_years: 'd F Y - {d} {F} {Y}'
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          8fb9ef11-14f9-4d4f-b0f7-ab082acaa6c1:
+            uuid: 8fb9ef11-14f9-4d4f-b0f7-ab082acaa6c1
+            region: content
+            configuration:
+              id: 'views_block:cmsg_contextuals-block_cmsg_onsite'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              offset: null
+              show_exposed_filters: null
+              dont_hide_if_unfiltered_empty: null
+              show_more_link: null
+              more_link_text: ''
+              pager_type: null
+              translatable_configuration:
+                '#en':
+                  use_more_text: null
+              link_url: null
+              context_mapping: {  }
             additional: {  }
             weight: 3
-          2c022a72-adf8-4aac-8ce1-19e6c283eced:
-            uuid: 2c022a72-adf8-4aac-8ce1-19e6c283eced
-            region: second
-            configuration:
-              id: 'field_block:node:date:body'
-              label: 'Date-related information'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 5
-          d9b6204b-7ffa-4ca9-ad34-9e8fb15351ab:
-            uuid: d9b6204b-7ffa-4ca9-ad34-9e8fb15351ab
-            region: second
-            configuration:
-              id: 'field_block:node:date:field_location_ref'
-              label: Location
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: teaser
-                third_party_settings:
-                  ds:
-                    ds_limit: ''
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 4
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components: {  }
         third_party_settings: {  }
 id: node.date.teaser
 targetEntityType: node
@@ -179,23 +113,16 @@ mode: teaser
 content:
   field_date_node_ref:
     type: entity_reference_entity_view
-    weight: 2
+    weight: 0
     region: content
     label: hidden
     settings:
-      view_mode: teaser
+      view_mode: logo
       link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
   field_date_range:
     type: date_range_without_time
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:
@@ -209,40 +136,26 @@ content:
       several_months: 'd F - {d} {F} Y'
       several_years: 'd F Y - {d} {F} {Y}'
     third_party_settings: {  }
-  field_location_ref:
-    type: entity_reference_entity_view
-    weight: 1
+  field_event_cmsg_participation:
+    type: list_default
+    weight: 2
     region: content
-    label: hidden
-    settings:
-      view_mode: teaser
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: '1'
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-  flag_event_attendance:
-    weight: 10
-    region: content
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
   field_cms: true
   field_contact_ref: true
-  field_event_cmsg_participation: true
   field_has_sessions: true
   field_internal_information: true
+  field_location_ref: true
   field_org_ref: true
   field_public_downloads: true
   field_title_html: true
   field_twitter_hashtag: true
   field_user_ref: true
   field_website: true
+  flag_event_attendance: true
   langcode: true
   links: true

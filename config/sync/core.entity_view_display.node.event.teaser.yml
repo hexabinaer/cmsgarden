@@ -20,6 +20,7 @@ dependencies:
     - node.type.event
   module:
     - layout_builder
+    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -28,14 +29,51 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: layout_twocol_section
+        layout_id: layout_onecol
         layout_settings:
           label: ''
-          column_widths: 25-75
         components:
+          f9e3ad00-9a4d-48c0-9a8b-c9528568ce71:
+            uuid: f9e3ad00-9a4d-48c0-9a8b-c9528568ce71
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_event_logo'
+              label: 'Event logo or banner'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: full
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          825a06da-3b5c-4d53-8524-f4418a9e67ef:
+            uuid: 825a06da-3b5c-4d53-8524-f4418a9e67ef
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_location_ref'
+              label: Location
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
           8ef95ea9-4e58-413a-bf99-26551a1efbf3:
             uuid: 8ef95ea9-4e58-413a-bf99-26551a1efbf3
-            region: second
+            region: content
             configuration:
               id: 'field_block:node:event:field_title_html'
               label: 'HTML title'
@@ -58,70 +96,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 2
-          ae4c46fc-7152-427b-a2b2-14ae99a2a1ad:
-            uuid: ae4c46fc-7152-427b-a2b2-14ae99a2a1ad
-            region: second
-            configuration:
-              id: 'field_block:node:event:body'
-              label: Description
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 3
-          825a06da-3b5c-4d53-8524-f4418a9e67ef:
-            uuid: 825a06da-3b5c-4d53-8524-f4418a9e67ef
-            region: second
-            configuration:
-              id: 'field_block:node:event:field_location_ref'
-              label: Location
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: teaser
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 5
-          f9e3ad00-9a4d-48c0-9a8b-c9528568ce71:
-            uuid: f9e3ad00-9a4d-48c0-9a8b-c9528568ce71
-            region: first
-            configuration:
-              id: 'field_block:node:event:field_event_logo'
-              label: 'Event logo or banner'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: full
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
         third_party_settings: {  }
 id: node.event.teaser
 targetEntityType: node

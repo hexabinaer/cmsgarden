@@ -25,6 +25,7 @@ dependencies:
     - field.field.user.user.field_user_participation
     - field.field.user.user.user_picture
   module:
+    - datetime
     - field_group
     - path
     - user

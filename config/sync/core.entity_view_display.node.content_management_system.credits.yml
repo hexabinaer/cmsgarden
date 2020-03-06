@@ -1,9 +1,9 @@
-uuid: 17d60236-f68a-4d66-8116-0d1c49ded536
+uuid: 0d83a965-e2d7-410b-a63c-966d2bfdc47e
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.credits
     - field.field.node.content_management_system.body
     - field.field.node.content_management_system.field_article_license
     - field.field.node.content_management_system.field_authors_ext
@@ -30,6 +30,8 @@ dependencies:
     - field.field.node.content_management_system.field_total_installs
     - node.type.content_management_system
   module:
+    - datetime
+    - ds
     - layout_builder
     - text
     - user
@@ -37,55 +39,77 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-id: node.content_management_system.teaser
+id: node.content_management_system.credits
 targetEntityType: node
 bundle: content_management_system
-mode: teaser
+mode: credits
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 1
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
+  field_article_license:
+    type: text_default
+    weight: 2
     region: content
-  field_termref_logo:
-    type: entity_reference_label
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_authors_ext:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_authors_ref:
+    type: entity_reference_entity_view
     weight: 0
     region: content
     label: above
     settings:
-      link: true
+      view_mode: compact
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  field_copyright_notice:
+    type: text_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 2
+  field_last_update:
+    type: datetime_default
+    weight: 4
+    region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  flag_event_attendance:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   content_moderation_control: true
-  field_article_license: true
-  field_authors_ext: true
-  field_authors_ref: true
   field_available_languages: true
   field_color_bg: true
   field_color_main: true
   field_color_text: true
-  field_copyright_notice: true
   field_core_contributors: true
   field_developers: true
   field_initial_release: true
-  field_last_update: true
   field_license: true
   field_link: true
-  field_logo: true
   field_major_release: true
   field_meta_tags: true
   field_open_source_as_of: true
   field_programming_language: true
   field_registered_users: true
+  field_termref_logo: true
   field_title_html: true
   field_total_downloads: true
   field_total_installs: true
   langcode: true
+  links: true

@@ -1,0 +1,10 @@
+uuid: 9d32e006-469b-4be7-be90-a090cfb65e15
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.characteristics
+label: Characteristics
+targetEntityType: node
+cache: true

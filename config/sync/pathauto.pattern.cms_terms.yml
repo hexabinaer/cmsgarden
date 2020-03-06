@@ -8,16 +8,16 @@ dependencies:
 id: cms_terms
 label: 'CMS Terms'
 type: 'canonical_entities:taxonomy_term'
-pattern: '/collection/[term:field_machine_name]'
+pattern: '/cms/[term:field_machine_name]'
 selection_criteria:
-  ff686b17-24f4-44de-b506-44394fb70f34:
+  c79f5867-c1c5-4c79-b085-90e5bc58f413:
     id: 'entity_bundle:taxonomy_term'
     bundles:
       content_management_systems: content_management_systems
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: ff686b17-24f4-44de-b506-44394fb70f34
+    uuid: c79f5867-c1c5-4c79-b085-90e5bc58f413
 selection_logic: and
 weight: -7
 relationships: {  }

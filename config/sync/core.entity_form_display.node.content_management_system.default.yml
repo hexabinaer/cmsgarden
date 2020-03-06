@@ -8,6 +8,9 @@ dependencies:
     - field.field.node.content_management_system.field_authors_ext
     - field.field.node.content_management_system.field_authors_ref
     - field.field.node.content_management_system.field_available_languages
+    - field.field.node.content_management_system.field_color_bg
+    - field.field.node.content_management_system.field_color_main
+    - field.field.node.content_management_system.field_color_text
     - field.field.node.content_management_system.field_copyright_notice
     - field.field.node.content_management_system.field_core_contributors
     - field.field.node.content_management_system.field_developers
@@ -36,24 +39,8 @@ dependencies:
     - text
 third_party_settings:
   field_group:
-    group_sections:
-      children:
-        - group_global_information
-        - group_resources
-        - group_portrait
-      parent_name: ''
-      weight: 11
-      format_type: tabs
-      format_settings:
-        label: Sections
-        direction: horizontal
-        id: ''
-        classes: ''
-      label: Sections
-      region: content
     group_global_information:
       children:
-        - field_termref_logo
         - field_major_release
         - field_programming_language
         - field_initial_release
@@ -65,50 +52,85 @@ third_party_settings:
         - field_total_downloads
         - field_total_installs
         - field_available_languages
-      parent_name: group_sections
-      weight: 7
-      format_type: tab
+      parent_name: ''
+      weight: 3
+      format_type: details
       format_settings:
+        description: ''
+        weight: 0
+        required_fields: true
         id: ''
         classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: 'Global information'
+        open: false
+      label: 'Facts + figures'
       region: content
     group_portrait:
       children:
+        - field_title_html
+        - field_termref_logo
         - field_last_update
         - body
-        - field_article_license
-        - field_authors_ref
-        - field_authors_ext
-        - field_copyright_notice
-      parent_name: group_sections
-      weight: 10
-      format_type: tab
+      parent_name: ''
+      weight: 2
+      format_type: details
       format_settings:
+        description: ''
+        open: true
+        weight: '0'
+        required_fields: true
         id: ''
         classes: ''
-        formatter: open
-        description: ''
-        required_fields: true
       label: Portrait
       region: content
     group_resources:
       children:
         - field_link
-      parent_name: group_sections
-      weight: 8
-      format_type: tab
+      parent_name: ''
+      weight: 4
+      format_type: details
       format_settings:
         id: ''
         classes: ''
         formatter: closed
         description: ''
         required_fields: true
+        open: false
+        weight: 0
       label: Resources
       region: content
+    group_brand_color:
+      children:
+        - field_color_main
+        - field_color_text
+        - field_color_bg
+      parent_name: ''
+      weight: 6
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Custom color coding'
+    group_credits:
+      children:
+        - field_article_license
+        - field_authors_ref
+        - field_authors_ext
+        - field_copyright_notice
+      parent_name: ''
+      weight: 5
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Credits
 id: node.content_management_system.default
 targetEntityType: node
 bundle: content_management_system
@@ -116,22 +138,22 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 41
+    weight: 5
     settings:
       rows: 9
-      summary_rows: 3
       placeholder: ''
-      show_summary: false
+      summary_rows: 3
+      show_summary: true
     third_party_settings: {  }
     region: content
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_article_license:
-    weight: 42
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -139,7 +161,7 @@ content:
     type: text_textfield
     region: content
   field_authors_ext:
-    weight: 44
+    weight: 8
     settings:
       rows: 5
       placeholder: ''
@@ -147,7 +169,7 @@ content:
     type: text_textarea
     region: content
   field_authors_ref:
-    weight: 43
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -164,8 +186,32 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_color_bg:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_color_main:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_color_text:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_copyright_notice:
-    weight: 45
+    weight: 9
     settings:
       rows: 5
       placeholder: ''
@@ -197,7 +243,7 @@ content:
     type: datatime_extras_configurable_list
     region: content
   field_last_update:
-    weight: 40
+    weight: 4
     settings:
       date_order: YMD
       time_type: none
@@ -215,7 +261,7 @@ content:
     type: text_textfield
     region: content
   field_link:
-    weight: 30
+    weight: 26
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -231,7 +277,7 @@ content:
     type: string_textfield
     region: content
   field_meta_tags:
-    weight: 10
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -260,7 +306,7 @@ content:
     type: number
     region: content
   field_termref_logo:
-    weight: 25
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -300,13 +346,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 16
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -314,21 +360,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 9
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 13
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -340,13 +386,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 12
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -355,7 +401,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 8
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

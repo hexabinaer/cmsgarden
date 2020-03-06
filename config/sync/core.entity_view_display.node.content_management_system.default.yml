@@ -8,6 +8,9 @@ dependencies:
     - field.field.node.content_management_system.field_authors_ext
     - field.field.node.content_management_system.field_authors_ref
     - field.field.node.content_management_system.field_available_languages
+    - field.field.node.content_management_system.field_color_bg
+    - field.field.node.content_management_system.field_color_main
+    - field.field.node.content_management_system.field_color_text
     - field.field.node.content_management_system.field_copyright_notice
     - field.field.node.content_management_system.field_core_contributors
     - field.field.node.content_management_system.field_developers
@@ -26,8 +29,6 @@ dependencies:
     - field.field.node.content_management_system.field_total_installs
     - node.type.content_management_system
   module:
-    - datetime
-    - ds
     - layout_builder
     - text
     - user
@@ -40,45 +41,33 @@ targetEntityType: node
 bundle: content_management_system
 mode: default
 content:
-  body:
-    type: text_summary_or_trimmed
-    weight: 1
+  field_title_html:
+    type: text_default
+    weight: 0
     region: content
     label: hidden
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
-  field_last_update:
-    weight: 0
-    label: inline
-    settings:
-      timezone_override: ''
-      format_type: html_month
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: datetime_default
-    region: content
   flag_event_attendance:
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   content_moderation_control: true
   field_article_license: true
   field_authors_ext: true
   field_authors_ref: true
   field_available_languages: true
+  field_color_bg: true
+  field_color_main: true
+  field_color_text: true
   field_copyright_notice: true
   field_core_contributors: true
   field_developers: true
   field_initial_release: true
+  field_last_update: true
   field_license: true
   field_link: true
   field_major_release: true
@@ -87,7 +76,6 @@ hidden:
   field_programming_language: true
   field_registered_users: true
   field_termref_logo: true
-  field_title_html: true
   field_total_downloads: true
   field_total_installs: true
   langcode: true

@@ -1,0 +1,10 @@
+uuid: 447c34a2-7731-4ffd-8007-867e9a989439
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.credits
+label: Credits
+targetEntityType: node
+cache: true

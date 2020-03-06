@@ -1,9 +1,9 @@
-uuid: 17d60236-f68a-4d66-8116-0d1c49ded536
+uuid: cbd8a876-00cf-4695-abc6-bc0867988688
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.characteristics
     - field.field.node.content_management_system.body
     - field.field.node.content_management_system.field_article_license
     - field.field.node.content_management_system.field_authors_ext
@@ -30,62 +30,142 @@ dependencies:
     - field.field.node.content_management_system.field_total_installs
     - node.type.content_management_system
   module:
+    - datetime
     - layout_builder
+    - options
     - text
     - user
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-id: node.content_management_system.teaser
+id: node.content_management_system.characteristics
 targetEntityType: node
 bundle: content_management_system
-mode: teaser
+mode: characteristics
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 1
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
+  field_available_languages:
+    type: string
+    weight: 10
     region: content
-  field_termref_logo:
-    type: entity_reference_label
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_core_contributors:
+    type: number_decimal
+    weight: 7
+    region: content
+    label: inline
+    settings:
+      thousand_separator: "\t"
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_developers:
+    type: number_decimal
+    weight: 6
+    region: content
+    label: inline
+    settings:
+      thousand_separator: "\t"
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_initial_release:
+    type: datetime_default
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_year
+    third_party_settings: {  }
+  field_license:
+    type: text_default
+    weight: 3
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_major_release:
+    type: string
+    weight: 4
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_open_source_as_of:
+    type: datetime_default
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_year
+    third_party_settings: {  }
+  field_programming_language:
+    type: list_default
     weight: 0
     region: content
-    label: above
-    settings:
-      link: true
+    label: inline
+    settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 2
+  field_registered_users:
+    type: number_decimal
+    weight: 5
+    region: content
+    label: inline
+    settings:
+      thousand_separator: "\t"
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_total_downloads:
+    type: number_decimal
+    weight: 8
+    region: content
+    label: inline
+    settings:
+      thousand_separator: "\t"
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_total_installs:
+    type: number_decimal
+    weight: 9
+    region: content
+    label: inline
+    settings:
+      thousand_separator: "\t"
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  flag_event_attendance:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   content_moderation_control: true
   field_article_license: true
   field_authors_ext: true
   field_authors_ref: true
-  field_available_languages: true
   field_color_bg: true
   field_color_main: true
   field_color_text: true
   field_copyright_notice: true
-  field_core_contributors: true
-  field_developers: true
-  field_initial_release: true
   field_last_update: true
-  field_license: true
   field_link: true
-  field_logo: true
-  field_major_release: true
   field_meta_tags: true
-  field_open_source_as_of: true
-  field_programming_language: true
-  field_registered_users: true
+  field_termref_logo: true
   field_title_html: true
-  field_total_downloads: true
-  field_total_installs: true
   langcode: true
+  links: true

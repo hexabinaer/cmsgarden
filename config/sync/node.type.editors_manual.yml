@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'editor-manual:'
 name: 'Editors'' manual'
 type: editors_manual
-description: 'Add a chapter for the handbook'
+description: 'Handbook chapter for editors, useful tutorials how to create content for this website.'
 help: ''
 new_revision: true
 preview_mode: 1

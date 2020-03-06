@@ -1,0 +1,19 @@
+uuid: e66e7e6c-316f-48c6-9897-442f7db96f15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_color_main
+    - node.type.content_management_system
+id: node.content_management_system.field_color_main
+field_name: field_color_main
+entity_type: node
+bundle: content_management_system
+label: 'Lead color'
+description: 'The main brand color (used for color-coded backgrounds).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

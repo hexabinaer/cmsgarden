@@ -6,12 +6,12 @@ dependencies:
     - core.base_field_override.taxonomy_term.content_management_systems.description
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
+    - field.field.taxonomy_term.content_management_systems.field_lead_color
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
     - taxonomy.vocabulary.content_management_systems
   module:
-    - ctools
     - layout_builder
     - layout_discovery
     - svg_image
@@ -23,67 +23,45 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
-          7355fca9-9b56-43bc-8846-01dba22b3a7e:
-            uuid: 7355fca9-9b56-43bc-8846-01dba22b3a7e
+          3dee5a22-1702-4b3b-be8c-0d8db395d325:
+            uuid: 3dee5a22-1702-4b3b-be8c-0d8db395d325
             region: content
             configuration:
-              id: 'entity_view:taxonomy_term'
-              label: 'Entity view (Logo linked)'
-              provider: ctools
-              label_display: visible
-              view_mode: logo_linked
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-      -
-        layout_id: layout_twocol_section
-        layout_settings:
-          column_widths: 50-50
-        components:
-          8f1eae6a-135c-4430-a72f-81e2014651d7:
-            uuid: 8f1eae6a-135c-4430-a72f-81e2014651d7
-            region: first
-            configuration:
-              id: 'field_block:taxonomy_term:content_management_systems:field_cms_logo'
-              label: Logo
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: image
-                settings:
-                  image_style: medium
-                  image_link: ''
-                  svg_render_as_image: 1
-                  svg_attributes:
-                    width: '220'
-                    height: '220'
-                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          80b21083-bb76-4268-ac9a-d83d07825009:
-            uuid: 80b21083-bb76-4268-ac9a-d83d07825009
-            region: second
-            configuration:
               id: 'field_block:taxonomy_term:content_management_systems:description'
-              label: Description
-              provider: layout_builder
-              label_display: '0'
               formatter:
                 label: hidden
                 type: text_default
                 settings: {  }
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
             additional: {  }
             weight: 0
+          2d82a8db-d27b-4a61-b506-d121b54e3b9a:
+            uuid: 2d82a8db-d27b-4a61-b506-d121b54e3b9a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:taxonomy_term:content_management_systems:field_cms_logo'
+              formatter:
+                label: hidden
+                settings:
+                  svg_attributes:
+                    width: ''
+                    height: ''
+                  svg_render_as_image: true
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+                type: image
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 id: taxonomy_term.content_management_systems.full
 targetEntityType: taxonomy_term
@@ -111,6 +89,7 @@ content:
     type: image
     region: content
 hidden:
+  field_lead_color: true
   field_machine_name: true
   field_noderef_cms: true
   field_status: true

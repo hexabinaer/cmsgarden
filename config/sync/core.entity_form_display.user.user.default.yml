@@ -3,29 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_associated_org
-    - field.field.user.user.field_blog_author_profile
-    - field.field.user.user.field_cms
-    - field.field.user.user.field_field_mobile_phone_no
-    - field.field.user.user.field_field_telephone_no_office
     - field.field.user.user.field_gdpr
     - field.field.user.user.field_last_password_reset
-    - field.field.user.user.field_member
-    - field.field.user.user.field_member_since
-    - field.field.user.user.field_membership_no
     - field.field.user.user.field_password_expiration
-    - field.field.user.user.field_user_address
-    - field.field.user.user.field_user_bio_short
-    - field.field.user.user.field_user_cmsg_participation
-    - field.field.user.user.field_user_contributing_os
-    - field.field.user.user.field_user_first_name
-    - field.field.user.user.field_user_geolocation
-    - field.field.user.user.field_user_last_name
-    - field.field.user.user.field_user_main_profession
-    - field.field.user.user.field_user_middle_name
-    - field.field.user.user.field_user_opensourcesince
-    - field.field.user.user.field_user_participation
-    - field.field.user.user.user_picture
   module:
     - datetime
     - field_group
@@ -38,17 +18,38 @@ third_party_settings:
         - language
         - timezone
         - contact
+        - field_gdpr
       parent_name: ''
       weight: 1
-      format_type: fieldset
+      format_type: details_sidebar
       format_settings:
         formatter: closed
         required_fields: true
         id: ''
         classes: ''
         description: ''
+        open: false
+        weight: 0
       label: Settings
       region: content
+    group_password:
+      children:
+        - account
+        - field_last_password_reset
+        - field_password_expiration
+      parent_name: ''
+      weight: 0
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+        open: false
+        weight: 0
+      label: 'Username and password'
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
@@ -67,7 +68,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_gdpr:
-    weight: 2
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -76,20 +77,20 @@ content:
     region: content
   field_last_password_reset:
     type: datetime_default
-    weight: 3
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_password_expiration:
     type: boolean_checkbox
-    weight: 4
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }
     region: content
   langcode:
     type: language_select
-    weight: 6
+    weight: 3
     region: content
     settings:
       include_locked: true
@@ -101,7 +102,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -111,7 +112,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -120,24 +121,13 @@ hidden:
   author_profile_profiles: true
   field_associated_org: true
   field_blog_author_profile: true
-  field_cms: true
-  field_field_mobile_phone_no: true
   field_field_telephone_no_office: true
-  field_member: true
-  field_member_since: true
   field_membership_no: true
-  field_user_address: true
   field_user_bio_short: true
-  field_user_cmsg_participation: true
-  field_user_contributing_os: true
   field_user_first_name: true
-  field_user_geolocation: true
-  field_user_last_name: true
   field_user_main_profession: true
   field_user_middle_name: true
-  field_user_opensourcesince: true
   field_user_participation: true
   internal_profile_profiles: true
   main_profiles: true
   membership_profiles: true
-  user_picture: true

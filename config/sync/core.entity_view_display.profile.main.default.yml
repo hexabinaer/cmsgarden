@@ -17,7 +17,6 @@ dependencies:
     - field.field.profile.main.field_using_os
     - filter.format.plain_text
     - profile.type.main
-    - views.view.cmsg_members_user
   module:
     - address
     - datetime
@@ -25,7 +24,6 @@ dependencies:
     - layout_builder
     - layout_discovery
     - text
-    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -60,29 +58,6 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
-            weight: 0
-          ab95d8b4-54d3-4edc-82f0-c7c8067aab2c:
-            uuid: ab95d8b4-54d3-4edc-82f0-c7c8067aab2c
-            region: second
-            configuration:
-              id: 'views_block:cmsg_members_user-block_member_badge'
-              label: ''
-              provider: views
-              label_display: '0'
-              views_label: ''
-              items_per_page: none
-              offset: null
-              show_exposed_filters: null
-              dont_hide_if_unfiltered_empty: null
-              show_more_link: null
-              more_link_text: ''
-              pager_type: null
-              translatable_configuration:
-                '#en':
-                  use_more_text: null
-              link_url: null
-              context_mapping: {  }
             additional: {  }
             weight: 0
         third_party_settings: {  }
@@ -307,7 +282,7 @@ third_party_settings:
                         weight: 0
                         settings:
                           position: topright
-                          default_label: true
+                          default_label: false
                           tile_layer_providers:
                             OpenStreetMap:
                               'OpenStreetMap Mapnik':
@@ -605,9 +580,10 @@ third_party_settings:
                               apikey: ''
                         enabled: false
                       leaflet_tile_layer:
+                        enabled: true
                         weight: 0
                         settings:
-                          tile_layer_provider: 'OpenStreetMap Mapnik'
+                          tile_layer_provider: 'Stamen TonerLite'
                           tile_provider_options:
                             Thunderforest:
                               apikey: ''
@@ -618,7 +594,6 @@ third_party_settings:
                               app_code: ''
                             GeoportailFrance:
                               apikey: ''
-                        enabled: false
                       leaflet_tile_layer_overlay:
                         weight: 0
                         settings:
@@ -749,14 +724,7 @@ third_party_settings:
                     width: 100%
                     zoom: '10'
                   use_overridden_map_settings: 0
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode

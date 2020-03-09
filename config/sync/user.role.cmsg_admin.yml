@@ -12,6 +12,7 @@ permissions:
   - 'access poll overview'
   - 'administer flaggings'
   - 'administer flags'
+  - 'administer honeypot'
   - 'administer polls'
   - 'assign ambassador role'
   - 'assign backoffice role'

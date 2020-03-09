@@ -16,6 +16,7 @@ permissions:
   - 'access site-wide contact form'
   - 'access user contact forms'
   - 'access user profiles'
+  - 'bypass honeypot protection'
   - 'cancel account'
   - 'cancel own vote'
   - 'change own username'

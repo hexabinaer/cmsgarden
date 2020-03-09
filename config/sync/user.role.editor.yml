@@ -21,6 +21,7 @@ permissions:
   - 'administer polls'
   - 'administer redirects'
   - 'administer url aliases'
+  - 'assign organizers role'
   - 'bypass node access'
   - 'create ambassador_profile profile'
   - 'create article content'

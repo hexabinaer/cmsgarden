@@ -54,6 +54,7 @@
         "drupal/redirect": "^1.5",
         "drupal/registration_validation": "^1.2",
         "drupal/replicate_ui": "^1.0",
+        "drupal/role_delegation": "^1.1",
         "drupal/simplify": "^1.1",
         "drupal/svg_image": "^1.9",
         "drupal/swiftmailer": "^1.0@beta",

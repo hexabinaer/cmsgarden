@@ -9,6 +9,9 @@ is_admin: null
 permissions:
   - 'access media_entity_browser entity browser pages'
   - 'access media_entity_browser_modal entity browser pages'
+  - 'assign ambassador role'
+  - 'assign editor role'
+  - 'assign member role'
   - 'create field_category'
   - 'create field_internal_downloads'
   - 'create field_internal_information'

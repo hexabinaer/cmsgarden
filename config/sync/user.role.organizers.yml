@@ -12,6 +12,8 @@ permissions:
   - 'access media_entity_browser entity browser pages'
   - 'access media_entity_browser_modal entity browser pages'
   - 'access shortcuts'
+  - 'assign ambassador role'
+  - 'assign organizers role'
   - 'create and edit custom blocks'
   - 'create audio media'
   - 'create date content'

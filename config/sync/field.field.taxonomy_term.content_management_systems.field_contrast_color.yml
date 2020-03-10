@@ -1,0 +1,19 @@
+uuid: e262d798-cbf7-4fa3-adc3-8fcf88592ba5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_contrast_color
+    - taxonomy.vocabulary.content_management_systems
+id: taxonomy_term.content_management_systems.field_contrast_color
+field_name: field_contrast_color
+entity_type: taxonomy_term
+bundle: content_management_systems
+label: 'Background contrast strengthening color'
+description: 'If the brand color has no good contrast with neither white nor black text, enter a color code to use as a text shadow color (either #000000 or #ffffff, normally).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

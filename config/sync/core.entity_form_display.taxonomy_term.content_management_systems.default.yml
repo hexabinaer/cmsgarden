@@ -5,15 +5,36 @@ dependencies:
   config:
     - entity_browser.browser.media_entity_browser
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
+    - field.field.taxonomy_term.content_management_systems.field_contrast_color
     - field.field.taxonomy_term.content_management_systems.field_lead_color
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
+    - field.field.taxonomy_term.content_management_systems.field_text_color
     - taxonomy.vocabulary.content_management_systems
   module:
     - entity_browser
+    - field_group
     - path
     - text
+third_party_settings:
+  field_group:
+    group_colors:
+      children:
+        - field_lead_color
+        - field_text_color
+        - field_contrast_color
+      parent_name: ''
+      weight: 5
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Custom color coding'
 id: taxonomy_term.content_management_systems.default
 targetEntityType: taxonomy_term
 bundle: content_management_systems
@@ -41,8 +62,16 @@ content:
     third_party_settings: {  }
     type: entity_browser_file
     region: content
+  field_contrast_color:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_lead_color:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -58,7 +87,7 @@ content:
     type: string_textfield
     region: content
   field_noderef_cms:
-    weight: 8
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60
@@ -68,10 +97,18 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_status:
-    weight: 7
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_text_color:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   langcode:
     type: language_select
@@ -90,7 +127,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -98,7 +135,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 100
+    weight: 12
     region: content
     third_party_settings: {  }
 hidden: {  }

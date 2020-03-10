@@ -1,16 +1,16 @@
-uuid: 3b4dacec-3b09-49f8-b2d4-011aff3d564f
+uuid: b730449b-2703-4122-b542-146c40d41c38
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
-    - node
+    - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_color_bg
-field_name: field_color_bg
-entity_type: node
+id: taxonomy_term.field_contrast_color
+field_name: field_contrast_color
+entity_type: taxonomy_term
 type: string
 settings:
   max_length: 20

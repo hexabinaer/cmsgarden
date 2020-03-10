@@ -10,8 +10,6 @@ dependencies:
     - field.field.node.content_management_system.field_authors_ref
     - field.field.node.content_management_system.field_available_languages
     - field.field.node.content_management_system.field_color_bg
-    - field.field.node.content_management_system.field_color_main
-    - field.field.node.content_management_system.field_color_text
     - field.field.node.content_management_system.field_copyright_notice
     - field.field.node.content_management_system.field_core_contributors
     - field.field.node.content_management_system.field_developers
@@ -95,8 +93,6 @@ hidden:
   content_moderation_control: true
   field_available_languages: true
   field_color_bg: true
-  field_color_main: true
-  field_color_text: true
   field_core_contributors: true
   field_developers: true
   field_initial_release: true

@@ -6,10 +6,12 @@ dependencies:
     - block_content.type.basic
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
+    - field.field.taxonomy_term.content_management_systems.field_contrast_color
     - field.field.taxonomy_term.content_management_systems.field_lead_color
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
+    - field.field.taxonomy_term.content_management_systems.field_text_color
     - taxonomy.vocabulary.content_management_systems
     - views.view.cmsg_cms_contacts
   module:
@@ -208,8 +210,10 @@ content:
     type: image
     region: content
 hidden:
+  field_contrast_color: true
   field_lead_color: true
   field_machine_name: true
   field_noderef_cms: true
   field_status: true
+  field_text_color: true
   langcode: true

@@ -5,11 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.logo_linked
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
+    - field.field.taxonomy_term.content_management_systems.field_contrast_color
     - field.field.taxonomy_term.content_management_systems.field_lead_color
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
-    - image.style.medium
+    - field.field.taxonomy_term.content_management_systems.field_text_color
+    - image.style.cmsg_logo
     - taxonomy.vocabulary.content_management_systems
   module:
     - layout_builder
@@ -29,17 +31,19 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: medium
+      image_style: cmsg_logo
       image_link: content
       svg_render_as_image: '1'
       svg_attributes:
-        width: '220'
-        height: '220'
+        width: '200'
+        height: '150'
     third_party_settings: {  }
 hidden:
   description: true
+  field_contrast_color: true
   field_lead_color: true
   field_machine_name: true
   field_noderef_cms: true
   field_status: true
+  field_text_color: true
   langcode: true

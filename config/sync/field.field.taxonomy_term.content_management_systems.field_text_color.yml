@@ -1,0 +1,19 @@
+uuid: 52fa39a4-1b7f-4575-ab7f-46b227471f88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_text_color
+    - taxonomy.vocabulary.content_management_systems
+id: taxonomy_term.content_management_systems.field_text_color
+field_name: field_text_color
+entity_type: taxonomy_term
+bundle: content_management_systems
+label: 'Intro text color'
+description: 'Text color to use on brand-colored backgrounds (preferably #ffffff or #000000).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

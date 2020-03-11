@@ -1,0 +1,10 @@
+uuid: 817f48c3-e480-4473-8ebd-6f78c795eea7
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.logo_inverted
+label: 'Logo inverted'
+targetEntityType: taxonomy_term
+cache: true

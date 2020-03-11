@@ -6,6 +6,7 @@ dependencies:
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
     - field.field.taxonomy_term.content_management_systems.field_contrast_color
     - field.field.taxonomy_term.content_management_systems.field_lead_color
+    - field.field.taxonomy_term.content_management_systems.field_logo_inverted
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
@@ -55,6 +56,19 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_logo_inverted:
+    weight: 10
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_machine_name:
     weight: 1

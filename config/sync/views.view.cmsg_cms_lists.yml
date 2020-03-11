@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.taxonomy_term.logo_linked
+    - core.entity_view_mode.taxonomy_term.logo_inverted
     - taxonomy.vocabulary.content_management_systems
   module:
     - options
@@ -59,7 +59,7 @@ display:
         type: 'entity:taxonomy_term'
         options:
           relationship: none
-          view_mode: logo_linked
+          view_mode: logo_inverted
       fields:
         name:
           id: name

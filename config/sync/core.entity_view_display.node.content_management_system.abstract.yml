@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.content_management_system.field_authors_ext
     - field.field.node.content_management_system.field_authors_ref
     - field.field.node.content_management_system.field_available_languages
-    - field.field.node.content_management_system.field_color_bg
     - field.field.node.content_management_system.field_copyright_notice
     - field.field.node.content_management_system.field_core_contributors
     - field.field.node.content_management_system.field_developers
@@ -66,7 +65,6 @@ hidden:
   field_authors_ext: true
   field_authors_ref: true
   field_available_languages: true
-  field_color_bg: true
   field_copyright_notice: true
   field_core_contributors: true
   field_developers: true

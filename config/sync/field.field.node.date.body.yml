@@ -12,7 +12,7 @@ field_name: body
 entity_type: node
 bundle: date
 label: 'Date-related information'
-description: 'Please only add info related to this certain date, if necessary.'
+description: 'Please only add info related to this certain date. For example, an agenda. Will be displayed below the general (recurring) event description.'
 required: false
 translatable: true
 default_value: {  }

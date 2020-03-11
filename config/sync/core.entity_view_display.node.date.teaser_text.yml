@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.date.field_event_cmsg_participation
     - field.field.node.date.field_has_sessions
     - field.field.node.date.field_internal_information
+    - field.field.node.date.field_intro
     - field.field.node.date.field_location_ref
     - field.field.node.date.field_org_ref
     - field.field.node.date.field_public_downloads
@@ -35,13 +36,6 @@ targetEntityType: node
 bundle: date
 mode: teaser_text
 content:
-  body:
-    type: text_default
-    weight: 4
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_date_node_ref:
     type: entity_reference_entity_view
     weight: 0
@@ -67,6 +61,14 @@ content:
     third_party_settings: {  }
     type: date_range_without_time
     region: content
+  field_intro:
+    type: text_trimmed
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
   field_location_ref:
     weight: 3
     label: hidden
@@ -92,6 +94,7 @@ content:
     type: text_default
     region: content
 hidden:
+  body: true
   field_cms: true
   field_contact_ref: true
   field_event_cmsg_participation: true

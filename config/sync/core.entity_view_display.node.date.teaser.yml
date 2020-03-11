@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.date.field_event_cmsg_participation
     - field.field.node.date.field_has_sessions
     - field.field.node.date.field_internal_information
+    - field.field.node.date.field_intro
     - field.field.node.date.field_location_ref
     - field.field.node.date.field_org_ref
     - field.field.node.date.field_public_downloads
@@ -149,6 +150,7 @@ hidden:
   field_contact_ref: true
   field_has_sessions: true
   field_internal_information: true
+  field_intro: true
   field_location_ref: true
   field_org_ref: true
   field_public_downloads: true

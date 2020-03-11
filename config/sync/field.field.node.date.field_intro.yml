@@ -1,0 +1,21 @@
+uuid: 713ce49d-7429-4808-b376-9a2e3f27b9d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro
+    - node.type.date
+  module:
+    - text
+id: node.date.field_intro
+field_name: field_intro
+entity_type: node
+bundle: date
+label: 'Date-related intro'
+description: 'The text above the general (recurring) event description.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

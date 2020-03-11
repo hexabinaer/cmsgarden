@@ -34,10 +34,10 @@ third_party_settings:
       -
         layout_id: layout_onecol
         layout_settings:
-          label: Moderation
+          label: ''
         components:
-          39cdd4f6-2765-4ed8-a016-e134929288f5:
-            uuid: 39cdd4f6-2765-4ed8-a016-e134929288f5
+          b7807055-763a-4995-8654-e36c52216e38:
+            uuid: b7807055-763a-4995-8654-e36c52216e38
             region: content
             configuration:
               label_display: '0'
@@ -53,8 +53,31 @@ third_party_settings:
           label: ''
           column_widths: 67-33
         components:
-          baa184ff-2417-4e15-8174-60be3cfe8577:
-            uuid: baa184ff-2417-4e15-8174-60be3cfe8577
+          3bf43f56-ac97-43a4-a514-74bb939cef19:
+            uuid: 3bf43f56-ac97-43a4-a514-74bb939cef19
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_twitter_hashtag'
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  ds:
+                    ft:
+                      id: minimal
+                      settings:
+                        lb: ''
+                        lb-col: true
+                        classes: {  }
+            additional: {  }
+            weight: 1
+          6383db9f-b017-449c-ad03-2dab94be8571:
+            uuid: 6383db9f-b017-449c-ad03-2dab94be8571
             region: first
             configuration:
               label_display: '0'
@@ -95,9 +118,43 @@ third_party_settings:
                         fi: false
                         fi-def-at: false
             additional: {  }
-            weight: 4
-          20f6c88a-3b9a-4340-b38c-2ad8e65e3275:
-            uuid: 20f6c88a-3b9a-4340-b38c-2ad8e65e3275
+            weight: 2
+          5590473d-a383-45a6-869f-88bba11e18d4:
+            uuid: 5590473d-a383-45a6-869f-88bba11e18d4
+            region: first
+            configuration:
+              id: 'field_block:node:event:field_event_logo'
+              label: 'Event logo or banner'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: logo
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          a0150446-bc06-40a0-88fe-6b9a5ad4c8d0:
+            uuid: a0150446-bc06-40a0-88fe-6b9a5ad4c8d0
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:body'
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          edc5b053-f5ef-4185-a1fe-2b9dd63da6ec:
+            uuid: edc5b053-f5ef-4185-a1fe-2b9dd63da6ec
             region: second
             configuration:
               id: 'field_block:node:event:field_contact_ref'
@@ -112,62 +169,13 @@ third_party_settings:
                 third_party_settings:
                   ds:
                     ds_limit: ''
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 1
-          de49e36e-37a7-4ce9-9a40-44b372dc33dd:
-            uuid: de49e36e-37a7-4ce9-9a40-44b372dc33dd
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:event:body'
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 5
-          e9b05471-9405-44f7-9212-0e992e1e2ef5:
-            uuid: e9b05471-9405-44f7-9212-0e992e1e2ef5
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:event:field_event_banner'
-              formatter:
-                type: image
-                label: hidden
-                settings:
-                  image_style: large
-                  image_link: ''
-                  svg_render_as_image: '1'
-                  svg_attributes:
-                    width: '480'
-                    height: '480'
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-            additional: {  }
-            weight: 3
-          8ce16f98-2c5e-4e35-87c3-d5ccaee79f08:
-            uuid: 8ce16f98-2c5e-4e35-87c3-d5ccaee79f08
+            weight: 0
+          7a94df2c-cdf5-4f17-9d52-2fbebf5ba84c:
+            uuid: 7a94df2c-cdf5-4f17-9d52-2fbebf5ba84c
             region: first
             configuration:
               label_display: '0'
@@ -185,36 +193,32 @@ third_party_settings:
                   url_plain: false
                 third_party_settings: {  }
             additional: {  }
-            weight: 6
-          f883d2ac-ff3b-4868-842d-2b1ab0dc15d8:
-            uuid: f883d2ac-ff3b-4868-842d-2b1ab0dc15d8
-            region: second
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:event:field_twitter_hashtag'
-              formatter:
-                type: string
-                label: inline
-                settings:
-                  link_to_entity: false
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: true
-                        classes: {  }
-            additional: {  }
-            weight: 2
+            weight: 4
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
-          label: Location
-        components: {  }
+          label: 'Regular location'
+        components:
+          00d43d81-e67b-4256-a19c-1b38ceb161c5:
+            uuid: 00d43d81-e67b-4256-a19c-1b38ceb161c5
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_location_ref'
+              label: Location
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: node_embedded
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -222,8 +226,8 @@ third_party_settings:
           label: ''
           column_widths: 67-33
         components:
-          87cac6e2-a904-4de4-a478-cb52c2db2843:
-            uuid: 87cac6e2-a904-4de4-a478-cb52c2db2843
+          7279d3ff-6571-4dda-a9e4-00295c7247da:
+            uuid: 7279d3ff-6571-4dda-a9e4-00295c7247da
             region: first
             configuration:
               label_display: '0'
@@ -237,31 +241,36 @@ third_party_settings:
                   trim_length: 600
                 third_party_settings: {  }
             additional: {  }
-            weight: 1
-          04718166-1612-4bdd-bd7b-1c7a956dd2f5:
-            uuid: 04718166-1612-4bdd-bd7b-1c7a956dd2f5
+            weight: 0
+          db10f645-7e3d-4143-871f-5bf06b10cf12:
+            uuid: db10f645-7e3d-4143-871f-5bf06b10cf12
             region: second
             configuration:
+              id: 'field_block:node:event:field_public_downloads'
+              label: Downloads
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: download
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_public_downloads'
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
+                view_mode: view_mode
             additional: {  }
             weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
-          label: Internals
+          label: 'Internal info'
         components:
-          3036e174-c3f6-4607-b9f4-849dc484e5d5:
-            uuid: 3036e174-c3f6-4607-b9f4-849dc484e5d5
+          7620518d-0f54-4a51-bb41-f450f8f2b823:
+            uuid: 7620518d-0f54-4a51-bb41-f450f8f2b823
             region: content
             configuration:
               label_display: '0'
@@ -274,76 +283,28 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             additional: {  }
-            weight: 13
-          bbb849b6-00d8-4a80-ac8a-d972c23bbc18:
-            uuid: bbb849b6-00d8-4a80-ac8a-d972c23bbc18
+            weight: 9
+          a6abd9c1-dea8-4c02-a070-1197a6e42dae:
+            uuid: a6abd9c1-dea8-4c02-a070-1197a6e42dae
             region: content
             configuration:
+              id: 'field_block:node:event:field_internal_downloads'
+              label: 'Internal downloads'
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: download
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_internal_downloads'
-              formatter:
-                type: media_thumbnail
-                label: above
-                settings:
-                  image_style: ''
-                  image_link: ''
-                third_party_settings: {  }
+                view_mode: view_mode
             additional: {  }
-            weight: 14
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: Dates
-        components:
-          cece2307-4143-4977-a580-999c5605ba41:
-            uuid: cece2307-4143-4977-a580-999c5605ba41
-            region: content
-            configuration:
-              id: 'views_block:cmsg_events-block_event_related_dates'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: '5'
-              offset: null
-              show_exposed_filters: null
-              dont_hide_if_unfiltered_empty: null
-              show_more_link: null
-              more_link_text: ''
-              pager_type: null
-              translatable_configuration:
-                '#en':
-                  use_more_text: null
-              link_url: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 2
-          34572e3f-a5bb-4339-b490-2c0ec693b833:
-            uuid: 34572e3f-a5bb-4339-b490-2c0ec693b833
-            region: content
-            configuration:
-              id: 'views_block:cmsg_events-block_event_related_dates_archive'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: '5'
-              offset: null
-              show_exposed_filters: null
-              dont_hide_if_unfiltered_empty: null
-              show_more_link: null
-              more_link_text: ''
-              pager_type: null
-              translatable_configuration:
-                '#en':
-                  use_more_text: null
-              link_url: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 3
+            weight: 10
         third_party_settings: {  }
 id: node.event.full
 targetEntityType: node

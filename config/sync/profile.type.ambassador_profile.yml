@@ -8,5 +8,5 @@ display_label: 'Ambassador profile'
 multiple: false
 registration: true
 roles: {  }
-allow_revisions: true
+allow_revisions: false
 new_revision: true

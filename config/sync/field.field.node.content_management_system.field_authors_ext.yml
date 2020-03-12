@@ -6,7 +6,15 @@ dependencies:
     - field.storage.node.field_authors_ext
     - node.type.content_management_system
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    restricted_html: restricted_html
+    minimal_html: '0'
+    basic_html: '0'
+    full_html: '0'
+    plain_text: '0'
 id: node.content_management_system.field_authors_ext
 field_name: field_authors_ext
 entity_type: node

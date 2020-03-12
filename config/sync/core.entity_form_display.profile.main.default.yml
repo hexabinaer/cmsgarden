@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.user_pic_browser
     - field.field.profile.main.field_address
     - field.field.profile.main.field_association
     - field.field.profile.main.field_bio_short
@@ -19,22 +20,89 @@ dependencies:
   module:
     - address
     - datetime_extras
+    - entity_browser
+    - field_group
     - geolocation_address
     - geolocation_leaflet
     - text
+third_party_settings:
+  field_group:
+    group_name:
+      children:
+        - field_first_name
+        - field_middle_name
+        - field_last_name
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: true
+      label: Name
+    group_work:
+      children:
+        - field_main_profession
+        - field_cms
+        - field_using_os
+        - field_contributing_os
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Work
+    group_about_me:
+      children:
+        - field_bio_short
+        - field_association
+      parent_name: ''
+      weight: 4
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'About me'
+    group_location:
+      children:
+        - field_address
+        - field_geolocation
+      parent_name: ''
+      weight: 5
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: Location
 id: profile.main.default
 targetEntityType: profile
 bundle: main
 mode: default
 content:
   field_address:
-    weight: 9
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_association:
-    weight: 11
+    weight: 9
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -44,7 +112,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_bio_short:
-    weight: 12
+    weight: 8
     settings:
       rows: 5
       placeholder: ''
@@ -52,13 +120,13 @@ content:
     type: text_textarea
     region: content
   field_cms:
-    weight: 5
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_contributing_os:
-    weight: 7
+    weight: 6
     settings:
       date_order: 'Y'
       time_type: none
@@ -68,7 +136,7 @@ content:
     type: datatime_extras_configurable_list
     region: content
   field_first_name:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -76,7 +144,7 @@ content:
     type: string_textfield
     region: content
   field_geolocation:
-    weight: 10
+    weight: 6
     settings:
       centre:
         fit_bounds:
@@ -127,7 +195,6 @@ content:
         zoom: '10'
         map_features:
           leaflet_control_geocoder:
-            enabled: true
             weight: -100
             settings:
               position: topright
@@ -139,6 +206,7 @@ content:
                 location_priority:
                   lat: null
                   lng: null
+            enabled: false
           leaflet_control_layer:
             weight: 0
             settings:
@@ -533,10 +601,10 @@ content:
               imperial: true
             enabled: false
           leaflet_control_recenter:
+            enabled: true
             weight: 0
             settings:
               position: topright
-            enabled: false
           leaflet_control_locate:
             enabled: true
             weight: 0
@@ -587,7 +655,7 @@ content:
         button_position: topleft
         direction: one_way
         ignore:
-          organization: false
+          organization: true
           address-line1: false
           address-line2: false
           locality: false
@@ -596,7 +664,7 @@ content:
     type: geolocation_leaflet
     region: content
   field_last_name:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -604,7 +672,7 @@ content:
     type: string_textfield
     region: content
   field_main_profession:
-    weight: 4
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -612,7 +680,7 @@ content:
     type: text_textfield
     region: content
   field_middle_name:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -620,17 +688,22 @@ content:
     type: string_textfield
     region: content
   field_user_picture:
-    weight: 8
+    weight: 3
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      entity_browser: user_pic_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: preview
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
   field_using_os:
-    weight: 6
+    weight: 5
     settings:
       date_order: 'Y'
       time_type: none
@@ -647,7 +720,7 @@ content:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 13
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

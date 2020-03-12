@@ -1,0 +1,42 @@
+uuid: 4df9db8e-4580-42e6-abde-bdeb374d404d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - views
+name: user_pic_browser
+label: 'User picture browser (modal)'
+display: modal
+display_configuration:
+  width: '1070'
+  height: '500'
+  link_text: 'Select picture'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  2befa771-6c27-488c-97e7-7ee5596eace8:
+    settings:
+      extensions: 'jpg jpeg png gif'
+      media_type: image
+      upload_location: 'public://users'
+      multiple: '1'
+      submit_text: 'Select files'
+    uuid: 2befa771-6c27-488c-97e7-7ee5596eace8
+    weight: -10
+    label: 'Upload new picture'
+    id: media_image_upload
+  0b833738-7b9d-4947-b479-3d65a0817ade:
+    settings:
+      view: media_entity_browser
+      view_display: user_pic_browser
+      submit_text: 'Select image'
+      auto_select: false
+    uuid: 0b833738-7b9d-4947-b479-3d65a0817ade
+    weight: -9
+    label: 'Browse your profile pictures'
+    id: view

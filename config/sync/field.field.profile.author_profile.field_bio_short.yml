@@ -6,7 +6,15 @@ dependencies:
     - field.storage.profile.field_bio_short
     - profile.type.author_profile
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    restricted_html: restricted_html
+    minimal_html: '0'
+    basic_html: '0'
+    full_html: '0'
+    plain_text: '0'
 id: profile.author_profile.field_bio_short
 field_name: field_bio_short
 entity_type: profile

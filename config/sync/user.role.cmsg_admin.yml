@@ -13,6 +13,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access image_browser_modal_ entity browser pages'
   - 'access in-place editing'
   - 'access media overview'
   - 'access media_entity_browser entity browser pages'

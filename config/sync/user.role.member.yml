@@ -8,8 +8,8 @@ weight: -7
 is_admin: null
 permissions:
   - 'access contextual links'
+  - 'access image_browser_modal_ entity browser pages'
   - 'access in-place editing'
-  - 'access media_entity_browser entity browser pages'
   - 'access media_entity_browser_modal entity browser pages'
   - 'access poll overview'
   - 'access toolbar'
@@ -50,6 +50,7 @@ permissions:
   - 'translate organization node'
   - 'update own author_profile profile'
   - 'update own internal_profile profile'
+  - 'use text format basic_html'
   - 'view any internal_profile profile'
   - 'view field_internal_downloads'
   - 'view field_internal_information'

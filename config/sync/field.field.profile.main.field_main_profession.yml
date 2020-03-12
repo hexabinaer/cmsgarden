@@ -6,7 +6,15 @@ dependencies:
     - field.storage.profile.field_main_profession
     - profile.type.main
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    minimal_html: minimal_html
+    basic_html: '0'
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
 id: profile.main.field_main_profession
 field_name: field_main_profession
 entity_type: profile

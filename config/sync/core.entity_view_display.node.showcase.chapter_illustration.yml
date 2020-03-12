@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.showcase.body
     - field.field.node.showcase.field_cms
     - field.field.node.showcase.field_media_image
-    - field.field.node.showcase.field_sc_screenshot
     - field.field.node.showcase.field_sc_usage
     - field.field.node.showcase.field_showcase_date
     - field.field.node.showcase.field_title_html
@@ -50,7 +49,6 @@ hidden:
   body: true
   content_moderation_control: true
   field_cms: true
-  field_sc_screenshot: true
   field_sc_usage: true
   field_showcase_date: true
   langcode: true

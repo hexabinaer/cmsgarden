@@ -1,9 +1,10 @@
-uuid: 5f6829fa-ed70-44ae-8baa-fd5f3ec4e469
+uuid: b8008c17-0b63-465b-a87f-1cefaa27c69b
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.full
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_type
@@ -26,10 +27,10 @@ third_party_settings:
     enabled: false
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
-id: node.article.default
+id: node.article.full
 targetEntityType: node
 bundle: article
-mode: default
+mode: full
 content:
   body:
     type: text_default
@@ -54,7 +55,7 @@ content:
     third_party_settings: {  }
   field_media_image:
     type: entity_reference_entity_view
-    weight: 3
+    weight: 1
     label: hidden
     settings:
       view_mode: embedded
@@ -62,13 +63,13 @@ content:
     third_party_settings: {  }
     region: content
   field_publish_date:
-    type: datetime_custom
-    weight: 2
+    type: datetime_default
+    weight: 3
     region: content
-    label: above
+    label: visually_hidden
     settings:
-      date_format: 'Y-m-d\TH:i:s'
       timezone_override: ''
+      format_type: cmsg_default_date
     third_party_settings: {  }
   field_tags:
     type: entity_reference_label
@@ -80,7 +81,7 @@ content:
     third_party_settings: {  }
   field_title_html:
     type: text_default
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings: {  }

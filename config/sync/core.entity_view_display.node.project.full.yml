@@ -5,74 +5,48 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.project.body
-    - field.field.node.project.field_downloads
     - field.field.node.project.field_external_links
-    - field.field.node.project.field_logo
     - field.field.node.project.field_media_image
     - field.field.node.project.field_meta_tags
     - field.field.node.project.field_org_ref
-    - field.field.node.project.field_project_partners
+    - field.field.node.project.field_public_downloads
     - field.field.node.project.field_title_html
-    - field.field.node.project.layout_builder__layout
     - node.type.project
   module:
     - layout_builder
     - layout_discovery
     - link
-    - metatag
-    - svg_image
     - text
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: true
+    allow_custom: false
     enabled: true
     sections:
       -
-        layout_id: layout_twocol_section
+        layout_id: layout_onecol
         layout_settings:
           label: ''
-          column_widths: 50-50
         components:
-          8bfffaaa-2453-4b54-8d91-ed5c328c92c9:
-            uuid: 8bfffaaa-2453-4b54-8d91-ed5c328c92c9
-            region: first
-            configuration:
-              id: 'field_block:node:project:field_title_html'
-              label: 'HTML title'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
-          e2364c3b-7505-4900-b31b-ccae34f3f50e:
-            uuid: e2364c3b-7505-4900-b31b-ccae34f3f50e
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:project:links'
-            additional: {  }
-            weight: 0
-          8964309d-31dd-4261-a875-9266eeed3c6a:
-            uuid: 8964309d-31dd-4261-a875-9266eeed3c6a
-            region: first
+          5122cdcf-d68b-43ab-9402-14a9177cd6c7:
+            uuid: 5122cdcf-d68b-43ab-9402-14a9177cd6c7
+            region: content
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
               id: 'extra_field_block:node:project:content_moderation_control'
             additional: {  }
-            weight: 2
-          efb3ec92-5ee4-4a67-a5b9-5977b984b952:
-            uuid: efb3ec92-5ee4-4a67-a5b9-5977b984b952
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 50-50
+        components:
+          4db497cf-da9a-490c-b20c-19908128f1b1:
+            uuid: 4db497cf-da9a-490c-b20c-19908128f1b1
             region: second
             configuration:
               id: 'field_block:node:project:field_media_image'
@@ -83,21 +57,36 @@ third_party_settings:
                 label: hidden
                 type: entity_reference_entity_view
                 settings:
-                  view_mode: teaser
+                  view_mode: logo
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 1
+            weight: 0
+          1e556b82-3268-49b3-a901-e9e4b3085976:
+            uuid: 1e556b82-3268-49b3-a901-e9e4b3085976
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:project:field_title_html'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
         components:
-          15ee3e18-de6d-41f4-9d39-49d2f59316bc:
-            uuid: 15ee3e18-de6d-41f4-9d39-49d2f59316bc
+          06432a32-7650-49f3-98b6-fdd9f1267511:
+            uuid: 06432a32-7650-49f3-98b6-fdd9f1267511
             region: content
             configuration:
               label_display: '0'
@@ -115,9 +104,25 @@ third_party_settings:
                 third_party_settings: {  }
                 type: link
             additional: {  }
-            weight: 3
-          f685a322-bc2e-4f95-8898-9e5029e43034:
-            uuid: f685a322-bc2e-4f95-8898-9e5029e43034
+            weight: 2
+          bfacce60-2c2d-4408-b460-0dac2bd4d216:
+            uuid: bfacce60-2c2d-4408-b460-0dac2bd4d216
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:project:field_public_downloads'
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          53b31a80-b53f-43c1-8f69-76e6ba8ef04e:
+            uuid: 53b31a80-b53f-43c1-8f69-76e6ba8ef04e
             region: content
             configuration:
               label_display: '0'
@@ -131,32 +136,14 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 0
-          05c7acb2-012e-4331-9861-db8c35fc2a0d:
-            uuid: 05c7acb2-012e-4331-9861-db8c35fc2a0d
-            region: content
-            configuration:
-              id: 'field_block:node:project:field_downloads'
-              label: Downloads
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: file_table
-                settings:
-                  use_description_as_link_text: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
-          label: ''
+          label: 'Project partners'
         components:
-          0a6f8918-6d70-42e5-9514-d6665b7ccdbe:
-            uuid: 0a6f8918-6d70-42e5-9514-d6665b7ccdbe
+          06004580-586b-40c2-a7ef-c5d31277f7e0:
+            uuid: 06004580-586b-40c2-a7ef-c5d31277f7e0
             region: content
             configuration:
               id: 'field_block:node:project:field_org_ref'
@@ -167,7 +154,7 @@ third_party_settings:
                 label: above
                 type: entity_reference_entity_view
                 settings:
-                  view_mode: teaser
+                  view_mode: logo
                 third_party_settings:
                   ds:
                     ds_limit: ''
@@ -175,7 +162,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 1
+            weight: 0
         third_party_settings: {  }
 id: node.project.full
 targetEntityType: node
@@ -190,12 +177,12 @@ content:
     third_party_settings: {  }
     region: content
   content_moderation_control:
-    weight: -20
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: first
   field_external_links:
-    weight: 4
+    weight: 5
     label: above
     settings:
       trim_length: 80
@@ -206,54 +193,33 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_logo:
+  field_media_image:
+    type: entity_reference_entity_view
     weight: 2
+    region: content
     label: hidden
     settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
-      image_link: ''
+      view_mode: logo
+      link: false
     third_party_settings: {  }
-    type: image
+  field_public_downloads:
+    type: entity_reference_label
+    weight: 4
     region: content
-  field_meta_tags:
-    weight: 6
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
-  field_project_partners:
-    weight: 5
     label: above
     settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
-      image_link: ''
+      link: true
     third_party_settings: {  }
-    type: image
-    region: content
   field_title_html:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  links:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
-  field_downloads: true
-  field_media_image: true
+  field_meta_tags: true
   field_org_ref: true
   langcode: true
   layout_builder__layout: true
+  links: true

@@ -4,17 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.project.body
-    - field.field.node.project.field_downloads
     - field.field.node.project.field_external_links
-    - field.field.node.project.field_logo
     - field.field.node.project.field_media_image
     - field.field.node.project.field_meta_tags
     - field.field.node.project.field_org_ref
-    - field.field.node.project.field_project_partners
+    - field.field.node.project.field_public_downloads
     - field.field.node.project.field_title_html
-    - field.field.node.project.layout_builder__layout
     - node.type.project
   module:
+    - ds
+    - link
     - text
     - user
 id: node.project.default
@@ -22,34 +21,69 @@ targetEntityType: node
 bundle: project
 mode: default
 content:
+  body:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   content_moderation_control:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_media_image:
-    weight: 2
+  field_external_links:
+    type: link
+    weight: 5
+    region: content
     label: above
     settings:
-      link: true
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    type: entity_reference_label
+  field_media_image:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: logo
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_org_ref:
+    type: entity_reference_entity_view
+    weight: 6
+    region: content
+    label: above
+    settings:
+      view_mode: logo
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  field_public_downloads:
+    weight: 4
+    label: above
+    settings:
+      view_mode: download
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_entity_view
     region: content
   field_title_html:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
 hidden:
-  body: true
-  field_downloads: true
-  field_external_links: true
-  field_logo: true
   field_meta_tags: true
-  field_org_ref: true
-  field_project_partners: true
   langcode: true
-  layout_builder__layout: true
   links: true

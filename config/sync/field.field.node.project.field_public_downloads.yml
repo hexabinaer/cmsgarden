@@ -1,0 +1,28 @@
+uuid: d5ab06c3-b34e-4481-ac60-cba0c4c2817d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_downloads
+    - media.type.file
+    - node.type.project
+id: node.project.field_public_downloads
+field_name: field_public_downloads
+entity_type: node
+bundle: project
+label: Downloads
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

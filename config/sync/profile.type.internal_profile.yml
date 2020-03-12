@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: internal_profile
 label: 'Internal profile'
-display_label: ''
+display_label: Internal
 multiple: false
 registration: false
 roles:

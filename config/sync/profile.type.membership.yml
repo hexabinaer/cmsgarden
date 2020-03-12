@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: membership
 label: Membership
-display_label: 'Member profile'
+display_label: 'My membership'
 multiple: false
 registration: false
 roles:

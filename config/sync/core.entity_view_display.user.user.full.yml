@@ -135,14 +135,7 @@ third_party_settings:
                 type: entity_reference_entity_view
                 settings:
                   view_mode: default
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode

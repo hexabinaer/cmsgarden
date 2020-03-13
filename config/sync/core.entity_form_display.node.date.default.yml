@@ -22,6 +22,7 @@ dependencies:
     - field.field.node.date.field_website
     - node.type.date
   module:
+    - chosen_field
     - content_moderation
     - datetime_range
     - entity_browser
@@ -121,14 +122,10 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_contact_ref:
-    type: entity_reference_autocomplete
+    type: chosen_select
     weight: 11
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_date_node_ref:
     weight: 7

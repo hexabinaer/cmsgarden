@@ -24,6 +24,7 @@ dependencies:
     - workflows.workflow.default_nodes
   module:
     - address
+    - chosen_field
     - content_moderation
     - datetime
     - entity_browser
@@ -125,13 +126,9 @@ content:
     third_party_settings: {  }
   field_associated_users:
     weight: 33
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: chosen_select
     region: content
   field_cms:
     weight: 27

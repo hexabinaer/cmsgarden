@@ -20,6 +20,7 @@ dependencies:
     - node.type.event
     - workflows.workflow.default_nodes
   module:
+    - chosen_field
     - content_moderation
     - entity_browser
     - field_group
@@ -124,13 +125,9 @@ content:
     region: content
   field_contact_ref:
     weight: 28
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: chosen_select
     region: content
   field_event_logo:
     weight: 6

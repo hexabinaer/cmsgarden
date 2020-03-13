@@ -13,6 +13,7 @@ dependencies:
     - node.type.testimonial
     - workflows.workflow.default_nodes
   module:
+    - chosen_field
     - content_moderation
     - datetime_extras
     - path
@@ -40,13 +41,9 @@ content:
     third_party_settings: {  }
   field_cited_person:
     weight: 7
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: chosen_select
     region: content
   field_cited_person_ext:
     weight: 8

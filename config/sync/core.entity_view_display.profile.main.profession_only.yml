@@ -14,6 +14,7 @@ dependencies:
     - field.field.profile.main.field_last_name
     - field.field.profile.main.field_main_profession
     - field.field.profile.main.field_middle_name
+    - field.field.profile.main.field_social_media
     - field.field.profile.main.field_user_picture
     - field.field.profile.main.field_using_os
     - profile.type.main
@@ -46,6 +47,7 @@ hidden:
   field_geolocation: true
   field_last_name: true
   field_middle_name: true
+  field_social_media: true
   field_user_picture: true
   field_using_os: true
   langcode: true

@@ -1,0 +1,112 @@
+uuid: 6fffeadf-2eb0-4ac6-9be6-344369996581
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - cmsgtheme
+id: socialmedialinks
+theme: cmsgtheme
+region: footer
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Follow us'
+  provider: social_media_links
+  label_display: visible
+  platforms:
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-10'
+    github:
+      value: CMS-Garden
+      description: GitHub
+      weight: '-9'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-8'
+    twitter:
+      value: cmsgarden
+      description: 'Follow us on Twitter'
+      weight: '-7'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '-6'
+    behance:
+      value: ''
+      description: ''
+      weight: '-5'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-4'
+    instagram:
+      value: ''
+      description: ''
+      weight: '-3'
+    contact:
+      value: contact
+      description: 'Contact us'
+      weight: '-2'
+    facebook:
+      value: ''
+      description: ''
+      weight: '-1'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '0'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '1'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '2'
+    youtube:
+      value: ''
+      description: ''
+      weight: '3'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '4'
+    linkedin:
+      value: company/cms-garden/
+      description: ''
+      weight: '5'
+    email:
+      value: ''
+      description: ''
+      weight: '6'
+    flickr:
+      value: ''
+      description: ''
+      weight: '7'
+    rss:
+      value: ''
+      description: ''
+      weight: '8'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '9'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: _blank
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

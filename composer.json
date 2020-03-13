@@ -58,6 +58,7 @@
         "drupal/replicate_ui": "^1.0",
         "drupal/role_delegation": "^1.1",
         "drupal/simplify": "^1.1",
+        "drupal/social_media_links": "^2.6",
         "drupal/svg_image": "^1.9",
         "drupal/swiftmailer": "^1.0@beta",
         "drupal/token": "^1.6",

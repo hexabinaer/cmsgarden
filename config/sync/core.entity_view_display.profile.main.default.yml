@@ -13,6 +13,7 @@ dependencies:
     - field.field.profile.main.field_last_name
     - field.field.profile.main.field_main_profession
     - field.field.profile.main.field_middle_name
+    - field.field.profile.main.field_social_media
     - field.field.profile.main.field_user_picture
     - field.field.profile.main.field_using_os
     - filter.format.plain_text
@@ -23,6 +24,7 @@ dependencies:
     - geolocation
     - layout_builder
     - layout_discovery
+    - social_media_links_field
     - text
 third_party_settings:
   layout_builder:
@@ -730,6 +732,30 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
+          4f370b9f-095f-49d9-99d4-71f14f886aae:
+            uuid: 4f370b9f-095f-49d9-99d4-71f14f886aae
+            region: second
+            configuration:
+              id: 'field_block:profile:main:field_social_media'
+              label: 'Social media'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: social_media_links_field_default
+                settings:
+                  appearance:
+                    orientation: h
+                    show_name: 0
+                  link_attributes:
+                    target: _blank
+                    rel: nofollow
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 id: profile.main.default
 targetEntityType: profile
@@ -806,6 +832,15 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_social_media:
+    weight: 9
+    label: above
+    settings:
+      appearance: {  }
+      link_attributes: {  }
+    third_party_settings: {  }
+    type: social_media_links_field_default
+    region: first
   field_user_picture:
     type: entity_reference_entity_view
     weight: 3

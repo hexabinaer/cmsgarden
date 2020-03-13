@@ -16,10 +16,12 @@ dependencies:
     - field.field.node.organization.field_org_geolocation
     - field.field.node.organization.field_org_tagline
     - field.field.node.organization.field_organization_type
+    - field.field.node.organization.field_social_media
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
     - node.type.organization
   module:
+    - social_media_links_field
     - text
     - user
 id: node.organization.default
@@ -46,6 +48,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_social_media:
+    weight: 109
+    label: above
+    settings:
+      appearance: {  }
+      link_attributes: {  }
+    third_party_settings: {  }
+    type: social_media_links_field_default
     region: content
   field_title_html:
     weight: 105

@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.organization.field_org_geolocation
     - field.field.node.organization.field_org_tagline
     - field.field.node.organization.field_organization_type
+    - field.field.node.organization.field_social_media
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
     - filter.format.minimal_html
@@ -273,6 +274,30 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          c4be030c-6fe7-4212-85bf-94be62cbe2fe:
+            uuid: c4be030c-6fe7-4212-85bf-94be62cbe2fe
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_social_media'
+              label: 'Social media'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: social_media_links_field_default
+                settings:
+                  appearance:
+                    orientation: h
+                    show_name: 0
+                  link_attributes:
+                    target: _blank
+                    rel: nofollow
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -423,5 +448,6 @@ hidden:
   field_event_relation: true
   field_geographic_range: true
   field_organization_type: true
+  field_social_media: true
   langcode: true
   links: true

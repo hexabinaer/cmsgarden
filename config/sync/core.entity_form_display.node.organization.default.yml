@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.organization.field_org_geolocation
     - field.field.node.organization.field_org_tagline
     - field.field.node.organization.field_organization_type
+    - field.field.node.organization.field_social_media
     - field.field.node.organization.field_title_html
     - field.field.node.organization.field_website
     - node.type.organization
@@ -30,6 +31,7 @@ dependencies:
     - geolocation
     - link
     - path
+    - social_media_links_field
     - text
 third_party_settings:
   field_group:
@@ -57,6 +59,7 @@ third_party_settings:
         - field_org_address
         - field_org_geolocation
         - body
+        - field_social_media
       parent_name: group_accordion
       weight: 20
       format_type: accordion_item
@@ -106,7 +109,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 33
+    weight: 31
     settings:
       rows: 9
       summary_rows: 3
@@ -131,7 +134,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_cms:
-    weight: 28
+    weight: 27
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -181,19 +184,19 @@ content:
     type: number
     region: content
   field_org_address:
-    weight: 31
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_org_geolocation:
-    weight: 32
+    weight: 30
     settings: {  }
     third_party_settings: {  }
     type: geolocation_latlng
     region: content
   field_org_tagline:
-    weight: 27
+    weight: 26
     settings:
       size: 60
       placeholder: ''
@@ -206,8 +209,14 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_social_media:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: social_media_links_field_default
+    region: content
   field_title_html:
-    weight: 26
+    weight: 25
     settings:
       size: 60
       placeholder: ''
@@ -215,7 +224,7 @@ content:
     type: text_textfield
     region: content
   field_website:
-    weight: 30
+    weight: 28
     settings:
       placeholder_url: ''
       placeholder_title: ''

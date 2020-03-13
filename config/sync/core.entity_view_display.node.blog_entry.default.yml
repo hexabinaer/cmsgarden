@@ -5,15 +5,16 @@ dependencies:
   config:
     - field.field.node.blog_entry.body
     - field.field.node.blog_entry.field_author
-    - field.field.node.blog_entry.field_blog_download
     - field.field.node.blog_entry.field_blog_topic_relation
     - field.field.node.blog_entry.field_cms
     - field.field.node.blog_entry.field_media_image
+    - field.field.node.blog_entry.field_public_downloads
     - field.field.node.blog_entry.field_sub_title
     - field.field.node.blog_entry.field_term_suggestion
     - field.field.node.blog_entry.field_title_html
     - node.type.blog_entry
   module:
+    - ds
     - text
     - user
 id: node.blog_entry.default
@@ -38,6 +39,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
+  field_public_downloads:
+    weight: 4
+    label: above
+    settings:
+      view_mode: download
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_entity_view
+    region: content
   field_sub_title:
     weight: 1
     label: hidden
@@ -54,7 +66,6 @@ content:
     region: content
 hidden:
   field_author: true
-  field_blog_download: true
   field_blog_topic_relation: true
   field_cms: true
   field_term_suggestion: true

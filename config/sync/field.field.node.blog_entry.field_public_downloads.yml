@@ -1,0 +1,28 @@
+uuid: 2cbc8b0c-6508-4181-8e91-37ff3148def7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_downloads
+    - media.type.file
+    - node.type.blog_entry
+id: node.blog_entry.field_public_downloads
+field_name: field_public_downloads
+entity_type: node
+bundle: blog_entry
+label: Download
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

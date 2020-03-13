@@ -25,7 +25,7 @@ widgets:
       view: media_entity_browser
       view_display: media_browser_files
       submit_text: 'Select files'
-      auto_select: false
+      auto_select: true
     uuid: b6459766-4082-46c1-84f0-b249c6941dbc
     weight: -9
     label: 'Browse library'
@@ -33,7 +33,7 @@ widgets:
   26afe466-f198-4bdf-b916-bd749773f889:
     settings:
       entity_type: file
-      bundle: ''
+      bundle: file
       form_mode: default
       submit_text: 'Save file'
     uuid: 26afe466-f198-4bdf-b916-bd749773f889

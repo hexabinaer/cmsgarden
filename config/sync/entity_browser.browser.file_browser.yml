@@ -1,0 +1,42 @@
+uuid: e2005785-e26d-4ecc-9053-95eeca662030
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: file_browser
+label: 'File browser'
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  d38ea08c-e836-49ce-9adc-f0c01016c9a6:
+    settings:
+      entity_type: file
+      bundle: file
+      form_mode: default
+      submit_text: 'Save file'
+    uuid: d38ea08c-e836-49ce-9adc-f0c01016c9a6
+    weight: 1
+    label: 'Upload new file'
+    id: entity_form
+  a728cf65-fa61-4cf6-93dd-0dbca7a66be2:
+    settings:
+      view: media_entity_browser
+      view_display: media_browser_files
+      submit_text: 'Select files'
+      auto_select: true
+    uuid: a728cf65-fa61-4cf6-93dd-0dbca7a66be2
+    weight: 2
+    label: 'Browse library'
+    id: view

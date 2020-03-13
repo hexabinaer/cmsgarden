@@ -23,7 +23,6 @@ settings:
       type: _none
     target_bundles: null
     sort:
-      field: field_user_first_name
-      direction: ASC
+      field: _none
     auto_create: false
 field_type: entity_reference

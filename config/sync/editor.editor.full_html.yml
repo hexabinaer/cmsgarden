@@ -35,10 +35,23 @@ settings:
             - BulletedList
             - NumberedList
         -
-          name: Media
+          name: Tools
           items:
-            - Blockquote
-            - DrupalImage
+            - PasteFromWord
+            - ShowBlocks
+            - Maximize
+        -
+          name: 'Block Formatting'
+          items:
+            - Source
+            - Format
+        -
+          name: 'Inline elements'
+          items:
+            - Styles
+            - SpecialChar
+            - Language
+      -
         -
           name: 'Entity embed'
           items:
@@ -48,25 +61,16 @@ settings:
             - poll
             - glossary_ref
         -
-          name: 'Block Formatting'
+          name: 'Block formatting'
           items:
-            - Format
+            - Blockquote
             - Table
             - HorizontalRule
-        -
-          name: Tools
-          items:
-            - PasteFromWord
-            - SpecialChar
-            - Language
-            - Source
-            - ShowBlocks
-            - Maximize
   plugins:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: 'p.intro|Intro highlighted'
 image_upload:
   status: true
   scheme: public

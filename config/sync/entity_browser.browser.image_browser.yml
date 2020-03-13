@@ -1,4 +1,4 @@
-uuid: 7a7ce451-475c-4bce-b2d6-1f8ff35331c5
+uuid: 01bddb67-09c0-462a-9192-8512efa2ed0d
 langcode: en
 status: true
 dependencies:
@@ -6,37 +6,39 @@ dependencies:
     - views.view.media_entity_browser
   module:
     - views
-name: image_browser_modal_
-label: 'Image browser (modal)'
-display: modal
+name: image_browser
+label: 'Image browser'
+display: iframe
 display_configuration:
-  width: '1070'
+  width: '650'
   height: '500'
-  link_text: 'Select image'
+  link_text: 'Select images'
   auto_open: false
-selection_display: no_display
-selection_display_configuration: {  }
+selection_display: view
+selection_display_configuration:
+  view: media_entity_browser
+  view_display: media_browser_all
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  bc33ef49-9964-4b5a-8389-e8fb093508ca:
+  f5f146c0-4b34-4d7e-b352-6ee5a075f889:
     settings:
-      extensions: 'jpg jpeg png gif svg'
+      extensions: 'jpg jpeg png gif'
       media_type: image
       upload_location: 'public://'
-      multiple: 0
+      multiple: '1'
       submit_text: 'Select files'
-    uuid: bc33ef49-9964-4b5a-8389-e8fb093508ca
+    uuid: f5f146c0-4b34-4d7e-b352-6ee5a075f889
     weight: 1
     label: 'Upload new image'
     id: media_image_upload
-  d45341fa-f192-4ca1-ae6f-44feb2200a81:
+  4ca1e803-bfa9-49af-919a-005475b3545b:
     settings:
       view: media_entity_browser
       view_display: media_browser_images
       submit_text: 'Select image'
       auto_select: true
-    uuid: d45341fa-f192-4ca1-ae6f-44feb2200a81
+    uuid: 4ca1e803-bfa9-49af-919a-005475b3545b
     weight: 2
     label: 'Browse library'
     id: view

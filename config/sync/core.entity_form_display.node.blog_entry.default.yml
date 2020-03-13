@@ -46,11 +46,10 @@ third_party_settings:
       weight: 22
       format_type: accordion_item
       format_settings:
+        formatter: open
+        required_fields: true
         id: ''
         classes: ''
-        formatter: closed
-        required_fields: true
-        description: ''
       label: 'Basic content'
       region: content
     group_additional_info:
@@ -94,9 +93,9 @@ content:
     weight: 12
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content

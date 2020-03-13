@@ -11,7 +11,7 @@ dependencies:
   module:
     - entity_embed
     - node
-label: Node
+label: 'Node embed'
 id: node
 type_id: entity
 type_settings:

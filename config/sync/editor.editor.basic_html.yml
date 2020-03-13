@@ -21,6 +21,8 @@ settings:
             - Italic
             - Strike
             - Superscript
+            - '-'
+            - RemoveFormat
         -
           name: Linking
           items:
@@ -32,25 +34,22 @@ settings:
             - BulletedList
             - NumberedList
         -
-          name: Media
+          name: Tools
           items:
-            - Blockquote
-            - DrupalImage
+            - PasteFromWord
+            - Source
+            - Maximize
         -
           name: 'Block Formatting'
           items:
             - Format
-            - Table
         -
-          name: Tools
+          name: 'Inline elements'
           items:
-            - RemoveFormat
-            - PasteFromWord
-            - glossary_ref
+            - Styles
             - SpecialChar
             - Language
-            - Source
-            - Maximize
+      -
         -
           name: 'Entity embed'
           items:
@@ -58,11 +57,17 @@ settings:
             - showcase_embed
             - node
             - poll
+            - glossary_ref
+        -
+          name: 'Block formatting'
+          items:
+            - Blockquote
+            - Table
   plugins:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: 'p.intro|Intro highlighted'
 image_upload:
   status: true
   scheme: public

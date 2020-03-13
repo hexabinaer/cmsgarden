@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'Event date'
 type: date
-description: 'Announce a date/time and pick location for a meetup.'
+description: 'Announce a date/time (using event default information and location list.)'
 help: ''
 new_revision: true
 preview_mode: 1

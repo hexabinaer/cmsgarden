@@ -1,0 +1,29 @@
+uuid: e24678a6-ab3f-4cc1-908d-fb7230486e3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_cmsg_role
+    - profile.type.membership
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    minimal_html: minimal_html
+    basic_html: '0'
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: profile.membership.field_cmsg_role
+field_name: field_cmsg_role
+entity_type: profile
+bundle: membership
+label: 'Role in CMS Garden'
+description: 'Member of the board, head of steady working group, anything?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

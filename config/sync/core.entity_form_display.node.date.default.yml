@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.file_browser_modal
     - field.field.node.date.body
     - field.field.node.date.field_cms
     - field.field.node.date.field_contact_ref
@@ -23,6 +24,7 @@ dependencies:
   module:
     - content_moderation
     - datetime_range
+    - entity_browser
     - entity_browser_entity_form
     - field_group
     - inline_entity_form
@@ -200,14 +202,18 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_public_downloads:
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     weight: 17
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      entity_browser: file_browser_modal
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
   field_title_html:
     type: text_textfield

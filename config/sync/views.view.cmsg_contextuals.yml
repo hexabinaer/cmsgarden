@@ -14,7 +14,7 @@ dependencies:
 id: cmsg_contextuals
 label: 'CMSG contextual elements'
 module: views
-description: 'Rewrites of certain node fields'
+description: 'Rewrites of certain node fields (e. g. membership badge)'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -738,6 +738,10 @@ display:
       display_extenders: {  }
       block_description: 'membership badge (organization)'
       display_description: ''
+      block_hide_empty: true
+      sorts: {  }
+      defaults:
+        sorts: false
     cache_metadata:
       max-age: -1
       contexts:

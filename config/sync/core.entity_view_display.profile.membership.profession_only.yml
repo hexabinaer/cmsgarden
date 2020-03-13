@@ -1,0 +1,35 @@
+uuid: 2a53114b-8ed5-41de-b6d8-461832c21686
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.profession_only
+    - field.field.profile.membership.field_cmsg_role
+    - field.field.profile.membership.field_member
+    - field.field.profile.membership.field_member_since
+    - field.field.profile.membership.field_membership_no_
+    - profile.type.membership
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: profile.membership.profession_only
+targetEntityType: profile
+bundle: membership
+mode: profession_only
+content:
+  field_cmsg_role:
+    type: text_default
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_member: true
+  field_member_since: true
+  field_membership_no_: true
+  langcode: true

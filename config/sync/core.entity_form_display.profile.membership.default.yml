@@ -3,17 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.profile.membership.field_cmsg_role
     - field.field.profile.membership.field_member
     - field.field.profile.membership.field_member_since
     - field.field.profile.membership.field_membership_no_
     - profile.type.membership
   module:
     - datetime_extras
+    - text
 id: profile.membership.default
 targetEntityType: profile
 bundle: membership
 mode: default
 content:
+  field_cmsg_role:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   field_member:
     weight: 0
     settings: {  }

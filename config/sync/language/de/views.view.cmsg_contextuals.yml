@@ -1,0 +1,13 @@
+display:
+  default:
+    display_options:
+      fields:
+        nid:
+          alter:
+            text: '<img src="/sites/default/files/logos/CMSG-Badge_{{ field_member }}_en.png" alt="Abzeichen: {{ field_member_1 }} des CMS Garden e. V." />'
+  block_cmsg_onsite:
+    display_options:
+      fields:
+        nid:
+          alter:
+            text: '<img src="/sites/default/files/logos/CMSG-on-site_{{ field_event_cmsg_participation_1 }}_en.png" alt="CMS Garden {{ field_event_cmsg_participation }} ist dabei" />'

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.profile.membership.field_cmsg_role
     - field.field.profile.membership.field_member
     - field.field.profile.membership.field_member_since
     - field.field.profile.membership.field_membership_no_
@@ -41,4 +42,5 @@ content:
     type: number_integer
     region: content
 hidden:
+  field_cmsg_role: true
   langcode: true

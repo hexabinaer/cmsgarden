@@ -118,16 +118,17 @@ third_party_settings:
             weight: 1
         third_party_settings: {  }
       -
-        layout_id: layout_onecol
+        layout_id: layout_twocol_section
         layout_settings:
-          label: 'CMSG activities'
+          label: Internal
+          column_widths: 50-50
         components:
-          664a4ef2-3bff-414d-a2ce-52a3579baf79:
-            uuid: 664a4ef2-3bff-414d-a2ce-52a3579baf79
-            region: content
+          457189cd-4c53-4a1d-9058-5e74d690ce19:
+            uuid: 457189cd-4c53-4a1d-9058-5e74d690ce19
+            region: first
             configuration:
-              id: 'field_block:user:user:ambassador_profile_profiles'
-              label: 'My CMS Garden Activities'
+              id: 'field_block:user:user:internal_profile_profiles'
+              label: 'Internal profile'
               provider: layout_builder
               label_display: visible
               formatter:
@@ -141,22 +142,16 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: Internal
-        components:
-          457189cd-4c53-4a1d-9058-5e74d690ce19:
-            uuid: 457189cd-4c53-4a1d-9058-5e74d690ce19
-            region: content
+          5bc0df10-e3d9-4901-a759-70d0b4dade30:
+            uuid: 5bc0df10-e3d9-4901-a759-70d0b4dade30
+            region: second
             configuration:
-              id: 'field_block:user:user:internal_profile_profiles'
-              label: 'Internal profile profiles'
+              id: 'field_block:user:user:membership_profiles'
+              label: 'My membership'
               provider: layout_builder
-              label_display: '0'
+              label_display: visible
               formatter:
-                label: hidden
+                label: above
                 type: entity_reference_entity_view
                 settings:
                   view_mode: default

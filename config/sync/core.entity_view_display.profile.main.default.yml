@@ -18,6 +18,7 @@ dependencies:
     - field.field.profile.main.field_using_os
     - filter.format.plain_text
     - profile.type.main
+    - views.view.cmsg_members
   module:
     - address
     - datetime
@@ -26,6 +27,7 @@ dependencies:
     - layout_discovery
     - social_media_links_field
     - text
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -62,6 +64,48 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          09c86316-16a7-4654-9ba6-b61fcbdd0d04:
+            uuid: 09c86316-16a7-4654-9ba6-b61fcbdd0d04
+            region: second
+            configuration:
+              id: 'views_block:cmsg_members-block_member_badge'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: '5'
+              offset: null
+              show_exposed_filters: null
+              dont_hide_if_unfiltered_empty: null
+              show_more_link: null
+              more_link_text: ''
+              pager_type: null
+              translatable_configuration:
+                '#en':
+                  use_more_text: null
+              link_url: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          dab666eb-f1a9-4c92-bd17-9e6b21e7ff8b:
+            uuid: dab666eb-f1a9-4c92-bd17-9e6b21e7ff8b
+            region: first
+            configuration:
+              id: 'field_block:user:user:ambassador_profile_profiles'
+              label: Involvement
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section

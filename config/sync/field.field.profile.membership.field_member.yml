@@ -14,7 +14,7 @@ bundle: membership
 label: 'Member of CMS Garden e. V.'
 description: 'To be set by administrative staff.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: no_member

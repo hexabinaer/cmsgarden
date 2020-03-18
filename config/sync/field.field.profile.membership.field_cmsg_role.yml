@@ -22,7 +22,7 @@ bundle: membership
 label: 'Role in CMS Garden'
 description: 'Member of the board, head of steady working group, anything?'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

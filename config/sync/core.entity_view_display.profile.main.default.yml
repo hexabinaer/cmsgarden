@@ -73,7 +73,7 @@ third_party_settings:
               provider: views
               label_display: '0'
               views_label: ''
-              items_per_page: '5'
+              items_per_page: none
               offset: null
               show_exposed_filters: null
               dont_hide_if_unfiltered_empty: null
@@ -81,7 +81,7 @@ third_party_settings:
               more_link_text: ''
               pager_type: null
               translatable_configuration:
-                '#en':
+                '#de':
                   use_more_text: null
               link_url: null
               context_mapping: {  }

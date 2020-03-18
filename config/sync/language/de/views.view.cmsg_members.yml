@@ -5,3 +5,5 @@ display:
         uid:
           alter:
             text: '<img src="/sites/default/files/logos/CMSG-Badge_{{ field_member }}_en.png" alt="Abzeichen: {{ field_member_1 }} des CMS Garden e. V." />'
+        field_cmsg_role:
+          label: 'Rolle im CMS Garden'

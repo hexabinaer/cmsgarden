@@ -7,10 +7,14 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_type
+    - field.field.node.article.field_blog_topic_relation
+    - field.field.node.article.field_cms
     - field.field.node.article.field_media_image
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_publish_date
     - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_image
+    - field.field.node.article.field_term_suggestion
     - field.field.node.article.field_title_html
     - node.type.article
   module:
@@ -52,6 +56,22 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_blog_topic_relation:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_cms:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_media_image:
     type: entity_reference_entity_view
     weight: 3
@@ -78,6 +98,22 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+  field_teaser_image:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_term_suggestion:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_title_html:
     type: text_default
     weight: 1

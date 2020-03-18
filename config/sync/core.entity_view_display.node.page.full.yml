@@ -5,8 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.page.body
+    - field.field.node.page.field_media_image
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_teaser_image
     - field.field.node.page.field_title_html
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
     - layout_builder
@@ -18,6 +21,31 @@ third_party_settings:
     allow_custom: true
     enabled: true
     sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          843d93cf-f9e6-49bf-93b1-7608d83f8719:
+            uuid: 843d93cf-f9e6-49bf-93b1-7608d83f8719
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_media_image'
+              label: 'Main image'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: header_image
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
@@ -91,7 +119,9 @@ content:
     type: text_default
     region: content
 hidden:
+  field_media_image: true
   field_meta_tags: true
+  field_teaser_image: true
   langcode: true
   layout_builder__layout: true
   links: true

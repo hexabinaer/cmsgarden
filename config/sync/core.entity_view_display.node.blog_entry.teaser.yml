@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.blog_entry.field_media_image
     - field.field.node.blog_entry.field_public_downloads
     - field.field.node.blog_entry.field_sub_title
+    - field.field.node.blog_entry.field_teaser_image
     - field.field.node.blog_entry.field_term_suggestion
     - field.field.node.blog_entry.field_title_html
     - node.type.blog_entry
@@ -41,16 +42,24 @@ content:
     third_party_settings:
       ds:
         ds_limit: ''
-  field_media_image:
-    type: entity_reference_entity_view
+  field_sub_title:
+    type: text_trimmed
     weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_teaser_image:
+    type: entity_reference_entity_view
+    weight: 0
     region: content
     label: hidden
     settings:
       view_mode: teaser
       link: false
     third_party_settings: {  }
-  field_sub_title:
+  field_title_html:
     type: text_trimmed
     weight: 1
     region: content
@@ -58,18 +67,15 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-  field_title_html:
-    type: text_trimmed
-    weight: 0
+  links:
+    weight: 5
     region: content
-    label: hidden
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
 hidden:
   field_blog_topic_relation: true
   field_cms: true
+  field_media_image: true
   field_public_downloads: true
   field_term_suggestion: true
   langcode: true
-  links: true

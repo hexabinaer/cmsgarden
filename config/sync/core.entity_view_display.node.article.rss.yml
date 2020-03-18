@@ -7,10 +7,14 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_type
+    - field.field.node.article.field_blog_topic_relation
+    - field.field.node.article.field_cms
     - field.field.node.article.field_media_image
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_publish_date
     - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_image
+    - field.field.node.article.field_term_suggestion
     - field.field.node.article.field_title_html
     - node.type.article
   module:
@@ -42,9 +46,13 @@ hidden:
   comment: true
   content_moderation_control: true
   field_article_type: true
+  field_blog_topic_relation: true
+  field_cms: true
   field_media_image: true
   field_meta_tags: true
   field_publish_date: true
   field_tags: true
+  field_teaser_image: true
+  field_term_suggestion: true
   langcode: true
   links: true

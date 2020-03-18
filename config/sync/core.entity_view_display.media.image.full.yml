@@ -5,23 +5,160 @@ dependencies:
   config:
     - core.entity_view_mode.media.full
     - field.field.media.image.field_category
+    - field.field.media.image.field_copyright_link
+    - field.field.media.image.field_copyright_owner
     - field.field.media.image.field_longdesc
     - field.field.media.image.field_media_image
     - media.type.image
   module:
+    - field_group
     - layout_builder
+    - layout_discovery
     - svg_image
+    - text
 third_party_settings:
   layout_builder:
     allow_custom: false
-    enabled: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          04299755-f097-4340-a74a-4b71edb2d20a:
+            uuid: 04299755-f097-4340-a74a-4b71edb2d20a
+            region: content
+            configuration:
+              id: 'field_block:media:image:name'
+              label: Name
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Image
+        components:
+          0d9b76e2-212e-4708-88db-3fb18999166b:
+            uuid: 0d9b76e2-212e-4708-88db-3fb18999166b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:media:image:field_media_image'
+              formatter:
+                label: hidden
+                settings:
+                  svg_attributes:
+                    width: ''
+                    height: ''
+                  svg_render_as_image: true
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+                type: image
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Copyright
+        components:
+          815f21c1-ad79-4f1d-ba2d-7750ca6a6baa:
+            uuid: 815f21c1-ad79-4f1d-ba2d-7750ca6a6baa
+            region: content
+            configuration:
+              id: 'field_block:media:image:field_copyright_owner'
+              label: 'Copyright owner'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Long description'
+          column_widths: 75-25
+        components:
+          007946e4-727d-4e0f-a050-60755add5def:
+            uuid: 007946e4-727d-4e0f-a050-60755add5def
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:media:image:field_longdesc'
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+  field_group:
+    group_copyright:
+      children:
+        - field_copyright_owner
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Copyright line'
 id: media.image.full
 targetEntityType: media
 bundle: image
 mode: full
 content:
+  field_copyright_owner:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_longdesc:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_media_image:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       svg_attributes:
@@ -33,14 +170,21 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   created: true
   field_category: true
-  field_longdesc: true
+  field_copyright_link: true
   filesize: true
   langcode: true
   link: true
   mime: true
-  name: true
   thumbnail: true
   uid: true

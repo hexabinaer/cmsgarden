@@ -1,0 +1,29 @@
+uuid: e73899f8-7843-473a-9e16-0cd974d19e38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_topic_relation
+    - node.type.article
+    - taxonomy.vocabulary.tags
+id: node.article.field_blog_topic_relation
+field_name: field_blog_topic_relation
+entity_type: node
+bundle: article
+label: 'Related topics'
+description: 'Choose wisely. Topic tags should <em>connect</em> similar content, not be unique.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

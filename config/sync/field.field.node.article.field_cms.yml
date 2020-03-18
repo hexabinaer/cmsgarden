@@ -1,0 +1,25 @@
+uuid: 09662d5a-7b53-48b8-b809-f2ea8ebcde0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cms
+    - node.type.article
+id: node.article.field_cms
+field_name: field_cms
+entity_type: node
+bundle: article
+label: 'Related CMS'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: cmsg_cms_lists
+      display_name: er_cms_active
+      arguments: {  }
+field_type: entity_reference

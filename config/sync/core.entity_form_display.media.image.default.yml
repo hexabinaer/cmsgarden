@@ -4,14 +4,37 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_category
+    - field.field.media.image.field_copyright_link
+    - field.field.media.image.field_copyright_owner
     - field.field.media.image.field_longdesc
     - field.field.media.image.field_media_image
     - image.style.thumbnail
     - media.type.image
   module:
+    - field_group
+    - link
     - path
     - svg_image
     - text
+third_party_settings:
+  field_group:
+    group_copyright_details:
+      children:
+        - field_copyright_owner
+        - field_copyright_link
+        - field_category
+        - field_longdesc
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Copyright + details'
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -19,12 +42,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   field_category:
-    weight: 3
+    weight: 17
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -33,8 +56,24 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
     region: content
+  field_copyright_link:
+    weight: 16
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_copyright_owner:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   field_longdesc:
-    weight: 4
+    weight: 18
     settings:
       rows: 5
       placeholder: ''
@@ -66,7 +105,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -74,17 +113,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60

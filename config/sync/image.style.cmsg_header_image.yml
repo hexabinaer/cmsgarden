@@ -1,0 +1,15 @@
+uuid: ef768e7f-ff52-479a-ad4a-b958964ee23a
+langcode: en
+status: true
+dependencies: {  }
+name: cmsg_header_image
+label: 'CMSG Header image'
+effects:
+  c8e82b27-1a9e-4986-8f8e-e33f9716d0e8:
+    uuid: c8e82b27-1a9e-4986-8f8e-e33f9716d0e8
+    id: image_scale
+    weight: 2
+    data:
+      width: 1440
+      height: 380
+      upscale: false

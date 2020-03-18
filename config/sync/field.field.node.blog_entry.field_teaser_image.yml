@@ -1,0 +1,28 @@
+uuid: ba5d28c7-3aad-4689-b9f5-c8339c357e75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_image
+    - media.type.image
+    - node.type.blog_entry
+id: node.blog_entry.field_teaser_image
+field_name: field_teaser_image
+entity_type: node
+bundle: blog_entry
+label: 'Teaser image'
+description: 'Only used in teasers, along with the body summary.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

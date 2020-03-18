@@ -5,14 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.media.teaser
     - field.field.media.image.field_category
+    - field.field.media.image.field_copyright_link
+    - field.field.media.image.field_copyright_owner
     - field.field.media.image.field_longdesc
     - field.field.media.image.field_media_image
-    - image.style.thumbnail
+    - image.style.cmsg_teaser
     - media.type.image
   module:
     - layout_builder
     - svg_image
-    - text
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -22,33 +23,29 @@ targetEntityType: media
 bundle: image
 mode: teaser
 content:
-  field_longdesc:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  thumbnail:
+  field_media_image:
     type: image
     weight: 0
+    region: content
     label: hidden
     settings:
-      image_style: thumbnail
+      image_style: cmsg_teaser
+      image_link: content
+      svg_render_as_image: '1'
       svg_attributes:
         width: ''
         height: ''
-      svg_render_as_image: true
-      image_link: ''
-    region: content
     third_party_settings: {  }
 hidden:
   created: true
   field_category: true
-  field_media_image: true
+  field_copyright_link: true
+  field_copyright_owner: true
+  field_longdesc: true
   filesize: true
   langcode: true
   link: true
   mime: true
   name: true
+  thumbnail: true
   uid: true

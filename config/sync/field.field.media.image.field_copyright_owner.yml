@@ -1,0 +1,29 @@
+uuid: 1f7c9813-913c-4b87-90f3-3a745c063ea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_copyright_owner
+    - media.type.image
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    minimal_html: minimal_html
+    basic_html: '0'
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: media.image.field_copyright_owner
+field_name: field_copyright_owner
+entity_type: media
+bundle: image
+label: 'Copyright owner'
+description: 'Naming the creator should be considered <strong>mandatory</strong>. Use <code><span lang="xy"></code> to help pronounce the name in the appropriate language.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

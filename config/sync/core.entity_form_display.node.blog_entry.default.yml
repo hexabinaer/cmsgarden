@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.file_browser_modal
+    - entity_browser.browser.image_browser_modal_
     - field.field.node.blog_entry.body
     - field.field.node.blog_entry.field_author
     - field.field.node.blog_entry.field_blog_topic_relation
@@ -154,7 +154,7 @@ content:
   field_teaser_image:
     weight: 8
     settings:
-      entity_browser: file_browser_modal
+      entity_browser: image_browser_modal_
       field_widget_display: rendered_entity
       field_widget_display_settings:
         view_mode: preview

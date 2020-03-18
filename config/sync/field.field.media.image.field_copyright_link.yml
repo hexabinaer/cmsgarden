@@ -1,0 +1,23 @@
+uuid: a71cee3a-2706-4e70-ad71-4a9ed5332fe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_copyright_link
+    - media.type.image
+  module:
+    - link
+id: media.image.field_copyright_link
+field_name: field_copyright_link
+entity_type: media
+bundle: image
+label: 'Copyright link'
+description: 'The link to the copyright owner''s web presence or original location (e. g. Wikimedia Commons). Not to confuse with the Creative Commons link, please.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

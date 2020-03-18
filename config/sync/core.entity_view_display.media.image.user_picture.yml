@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.media.user_picture
     - field.field.media.image.field_category
+    - field.field.media.image.field_copyright_link
+    - field.field.media.image.field_copyright_owner
     - field.field.media.image.field_longdesc
     - field.field.media.image.field_media_image
     - image.style.cmsg_userpic
@@ -26,7 +28,7 @@ content:
     label: hidden
     settings:
       image_style: cmsg_userpic
-      image_link: ''
+      image_link: content
       svg_render_as_image: '1'
       svg_attributes:
         width: '150'
@@ -37,6 +39,8 @@ content:
 hidden:
   created: true
   field_category: true
+  field_copyright_link: true
+  field_copyright_owner: true
   field_longdesc: true
   filesize: true
   langcode: true

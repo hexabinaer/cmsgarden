@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.media.download
     - field.field.media.image.field_category
+    - field.field.media.image.field_copyright_link
+    - field.field.media.image.field_copyright_owner
     - field.field.media.image.field_longdesc
     - field.field.media.image.field_media_image
     - image.style.thumbnail
@@ -56,6 +58,8 @@ content:
 hidden:
   created: true
   field_category: true
+  field_copyright_link: true
+  field_copyright_owner: true
   field_longdesc: true
   langcode: true
   link: true

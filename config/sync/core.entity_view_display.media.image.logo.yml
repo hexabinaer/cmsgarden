@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.media.logo
     - field.field.media.image.field_category
+    - field.field.media.image.field_copyright_link
+    - field.field.media.image.field_copyright_owner
     - field.field.media.image.field_longdesc
     - field.field.media.image.field_media_image
     - image.style.cmsg_logo
@@ -25,7 +27,7 @@ content:
     type: image
     weight: 0
     region: content
-    label: above
+    label: hidden
     settings:
       image_style: cmsg_logo
       image_link: ''
@@ -37,6 +39,8 @@ content:
 hidden:
   created: true
   field_category: true
+  field_copyright_link: true
+  field_copyright_owner: true
   field_longdesc: true
   filesize: true
   langcode: true

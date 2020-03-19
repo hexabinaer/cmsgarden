@@ -63,7 +63,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 0
+            weight: 1
           09c86316-16a7-4654-9ba6-b61fcbdd0d04:
             uuid: 09c86316-16a7-4654-9ba6-b61fcbdd0d04
             region: second
@@ -86,33 +86,7 @@ third_party_settings:
               link_url: null
               context_mapping: {  }
             additional: {  }
-            weight: 0
-          dab666eb-f1a9-4c92-bd17-9e6b21e7ff8b:
-            uuid: dab666eb-f1a9-4c92-bd17-9e6b21e7ff8b
-            region: first
-            configuration:
-              id: 'field_block:user:user:ambassador_profile_profiles'
-              label: Involvement
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
-              context_mapping:
-                entity: '@user.current_user_context:current_user'
-                view_mode: view_mode
-            additional: {  }
             weight: 1
-        third_party_settings: {  }
-      -
-        layout_id: layout_twocol_section
-        layout_settings:
-          label: Work
-          column_widths: 67-33
-        components:
           563e3267-1468-4374-a9a2-e12b422ab7c2:
             uuid: 563e3267-1468-4374-a9a2-e12b422ab7c2
             region: first
@@ -139,7 +113,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 0
+            weight: 2
           1d7a5abb-91f5-4c60-83ae-8c6b83dd3374:
             uuid: 1d7a5abb-91f5-4c60-83ae-8c6b83dd3374
             region: second
@@ -166,7 +140,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 0
+            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -800,6 +774,76 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: Internal
+          column_widths: 50-50
+        components:
+          a2118126-402b-4bde-842c-6435c09ce552:
+            uuid: a2118126-402b-4bde-842c-6435c09ce552
+            region: first
+            configuration:
+              id: 'field_block:user:user:internal_profile_profiles'
+              label: 'Strictly internal'
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          0b50227e-3ed4-4288-871f-e07f437f1928:
+            uuid: 0b50227e-3ed4-4288-871f-e07f437f1928
+            region: second
+            configuration:
+              id: 'field_block:user:user:membership_profiles'
+              label: Membership
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'My CMS Garden activities'
+        components:
+          d24f45b6-5a4b-4a47-968c-18edf79b7b85:
+            uuid: d24f45b6-5a4b-4a47-968c-18edf79b7b85
+            region: content
+            configuration:
+              id: 'field_block:user:user:ambassador_profile_profiles'
+              label: 'My CMS Garden activities'
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: profile.main.default
 targetEntityType: profile

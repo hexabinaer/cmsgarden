@@ -622,7 +622,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -655,7 +655,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -703,7 +703,11 @@ display:
             body: body
             field_wikipedia_link: body
             field_glossary_reference: body
+            nid_1: nid_1
             field_title_html_1: body
+            edit_node: edit_node
+            translation_link: translation_link
+            dropbutton: dropbutton
           info:
             nid:
               sortable: false
@@ -738,6 +742,13 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            nid_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             field_title_html_1:
               sortable: false
               default_sort_order: asc
@@ -745,7 +756,28 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-          default: '-1'
+            edit_node:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            translation_link:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            dropbutton:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: true
+              responsive: ''
+          default: field_title_html
           empty_table: false
       row:
         type: fields

@@ -1,0 +1,25 @@
+uuid: f8dc6d15-ada4-4098-b6e8-0bf14350f50b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cms
+    - node.type.lecture
+id: node.lecture.field_cms
+field_name: field_cms
+entity_type: node
+bundle: lecture
+label: 'Related CMS'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: cmsg_cms_lists
+      display_name: er_cms_active
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: b6eade50-0d38-428a-8b8d-27d667283658
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lecture
+id: node.lecture.status
+field_name: status
+entity_type: node
+bundle: lecture
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

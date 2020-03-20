@@ -1,0 +1,29 @@
+uuid: d34efd93-51df-4c42-aeec-ac4fd8f3d946
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_html
+    - node.type.lecture
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    minimal_html: minimal_html
+    basic_html: '0'
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: node.lecture.field_title_html
+field_name: field_title_html
+entity_type: node
+bundle: lecture
+label: 'HTML title'
+description: 'This is the rendered headline (h1). You may add markup (such as em or span lang="fr") for accessibility here.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

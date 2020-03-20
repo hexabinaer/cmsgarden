@@ -1,0 +1,39 @@
+uuid: b18d72cf-4fd9-4289-8fec-f6142609a416
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lecture.body
+    - field.field.node.lecture.field_associated_users
+    - field.field.node.lecture.field_cms
+    - field.field.node.lecture.field_session_tags
+    - field.field.node.lecture.field_title_html
+    - node.type.lecture
+  module:
+    - text
+    - user
+id: node.lecture.teaser
+targetEntityType: node
+bundle: lecture
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_associated_users: true
+  field_cms: true
+  field_session_tags: true
+  field_title_html: true
+  langcode: true

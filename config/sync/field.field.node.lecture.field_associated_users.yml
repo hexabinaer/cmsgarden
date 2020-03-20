@@ -1,0 +1,37 @@
+uuid: da67fc1d-a030-4117-9236-40be8fa06f77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_associated_users
+    - node.type.lecture
+id: node.lecture.field_associated_users
+field_name: field_associated_users
+entity_type: node
+bundle: lecture
+label: Speakers
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: role
+      role:
+        ambassador: ambassador
+        member: member
+        organizers: organizers
+        editor: editor
+        backoffice: '0'
+        cmsg_admin: '0'
+        administrator: '0'
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

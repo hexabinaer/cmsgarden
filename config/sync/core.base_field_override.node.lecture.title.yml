@@ -1,0 +1,18 @@
+uuid: b1b14d9d-0f10-4832-a3e9-2cff2ca6ac18
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lecture
+id: node.lecture.title
+field_name: title
+entity_type: node
+bundle: lecture
+label: 'Administrative title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

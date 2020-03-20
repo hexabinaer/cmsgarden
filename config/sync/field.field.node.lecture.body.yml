@@ -1,0 +1,31 @@
+uuid: aac26501-ee90-40ae-94e3-c857f71acfe4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.lecture
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    minimal_html: '0'
+    basic_html: '0'
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: node.lecture.body
+field_name: body
+entity_type: node
+bundle: lecture
+label: Description
+description: 'Please enter a summary for overview pages and give a meaningful description about your talk, flexibility options etc.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

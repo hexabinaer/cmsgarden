@@ -1,17 +1,17 @@
-uuid: 60ddfd3e-8efb-4116-8cb8-a14c5ea0912b
+uuid: 9b7556b4-27ab-4306-b2a7-192d70b98efd
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_session_tags
-    - node.type.session
+    - node.type.lecture
     - taxonomy.vocabulary.lecture_tags
-id: node.session.field_session_tags
+id: node.lecture.field_session_tags
 field_name: field_session_tags
 entity_type: node
-bundle: session
+bundle: lecture
 label: Tags
-description: 'Choose wisely. Topic tags should <em>connect</em> similar content, not be unique.'
+description: 'Choose wisely. Tags should <em>connect</em> similar content, not be unique.'
 required: false
 translatable: true
 default_value: {  }

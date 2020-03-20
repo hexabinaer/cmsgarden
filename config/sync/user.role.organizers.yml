@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: organizers
-label: Organizers
+label: Organizer
 weight: -6
 is_admin: null
 permissions:

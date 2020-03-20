@@ -19,7 +19,6 @@ dependencies:
     - field.field.node.event.field_website
     - node.type.event
   module:
-    - ds
     - layout_builder
     - layout_discovery
     - link
@@ -124,6 +123,53 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 0
+          fbbaf57a-9c4a-4149-96e5-c6ce95e9f3d7:
+            uuid: fbbaf57a-9c4a-4149-96e5-c6ce95e9f3d7
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_contact_ref'
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          f492185b-e89c-4e50-9fdf-b67d0c9dd522:
+            uuid: f492185b-e89c-4e50-9fdf-b67d0c9dd522
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_title_html'
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          14d90d67-e058-4017-a2b1-575b6ac33b69:
+            uuid: 14d90d67-e058-4017-a2b1-575b6ac33b69
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_twitter_hashtag'
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -168,7 +214,7 @@ content:
     region: content
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_title_html:
     type: text_default
@@ -176,35 +222,7 @@ content:
     region: content
     label: hidden
     settings: {  }
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow: true
-            ow-el: h1
-            ow-cl: page-title
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
+    third_party_settings: {  }
   field_twitter_hashtag:
     type: string
     weight: 3
@@ -212,14 +230,7 @@ content:
     label: inline
     settings:
       link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: true
-            classes: {  }
+    third_party_settings: {  }
   field_website:
     type: link
     weight: 2

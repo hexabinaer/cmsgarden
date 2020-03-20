@@ -8,47 +8,12 @@ dependencies:
     - profile.type.ambassador_profile
   module:
     - datetime
-    - ds
     - layout_builder
-    - layout_discovery
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: true
     sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: 'CMSG since'
-        components:
-          b45c215f-78d5-47ed-89d6-936629d65b9f:
-            uuid: b45c215f-78d5-47ed-89d6-936629d65b9f
-            region: content
-            configuration:
-              id: 'field_block:profile:ambassador_profile:field_cmsg_participation'
-              label: 'Participating in CMS Garden since'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: datetime_default
-                settings:
-                  timezone_override: ''
-                  format_type: cmsg_year_month
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
       -
         layout_id: layout_twocol_section
         layout_settings:
@@ -71,6 +36,23 @@ third_party_settings:
                 type: entity_reference_label
             additional: {  }
             weight: 0
+          15e6739f-80be-41bf-b923-7acc2314f28f:
+            uuid: 15e6739f-80be-41bf-b923-7acc2314f28f
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:profile:ambassador_profile:field_cmsg_participation'
+              formatter:
+                label: inline
+                settings:
+                  timezone_override: ''
+                  format_type: cmsg_year_month
+                third_party_settings: {  }
+                type: datetime_default
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: profile.ambassador_profile.default
 targetEntityType: profile
@@ -91,14 +73,7 @@ content:
     settings:
       timezone_override: ''
       format_type: cmsg_year_month
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
     type: datetime_default
     region: content
 hidden:

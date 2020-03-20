@@ -28,7 +28,6 @@ dependencies:
   module:
     - cmsg_base
     - date_range_formatter
-    - ds
     - layout_builder
     - layout_discovery
     - options
@@ -107,6 +106,81 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
+          81ba8182-2041-4aaa-9e9b-637efcc614d1:
+            uuid: 81ba8182-2041-4aaa-9e9b-637efcc614d1
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:date:field_date_node_ref'
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: logo
+                  link: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 4
+          43ac65b3-8469-4574-90ea-2821bfbfb3d5:
+            uuid: 43ac65b3-8469-4574-90ea-2821bfbfb3d5
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:date:field_date_range'
+              formatter:
+                type: date_range_without_time
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  separator: '-'
+                  single: 'd F Y'
+                  single_all_day: 'd F Y'
+                  one_day: 'd F Y'
+                  one_month: 'd - {d} F Y'
+                  several_months: 'd F - {d} {F} Y'
+                  several_years: 'd F Y - {d} {F} {Y}'
+                  date_format: 'Y-m-d\TH:i:s'
+                third_party_settings: {  }
+            additional: {  }
+            weight: 5
+          8b4e08f1-6278-4467-80ea-05b6865e7240:
+            uuid: 8b4e08f1-6278-4467-80ea-05b6865e7240
+            region: content
+            configuration:
+              id: 'field_block:node:date:field_location_ref'
+              label: Location
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: node_embedded
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 6
+          c7fa49ca-93f5-43a3-afa9-f08888b5a990:
+            uuid: c7fa49ca-93f5-43a3-afa9-f08888b5a990
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:date:field_title_html'
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 7
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -569,16 +643,9 @@ content:
     region: content
     label: hidden
     settings:
-      view_mode: node_embedded
+      view_mode: logo
       link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
   field_date_range:
     type: date_range_without_time
     weight: 1
@@ -586,7 +653,6 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      date_format: 'd F Y'
       separator: '-'
       single: 'd F Y'
       single_all_day: 'd F Y'
@@ -594,14 +660,8 @@ content:
       one_month: 'd - {d} F Y'
       several_months: 'd F - {d} {F} Y'
       several_years: 'd F Y - {d} {F} {Y}'
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+      date_format: 'Y-m-d\TH:i:s'
+    third_party_settings: {  }
   field_event_cmsg_participation:
     type: list_default
     weight: 7
@@ -615,17 +675,9 @@ content:
     region: content
     label: above
     settings:
-      view_mode: teaser
+      view_mode: node_embedded
       link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
   field_title_html:
     type: text_default
     weight: 0

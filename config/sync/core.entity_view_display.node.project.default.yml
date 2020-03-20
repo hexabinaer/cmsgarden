@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.project.field_title_html
     - node.type.project
   module:
-    - ds
     - link
     - text
     - user
@@ -62,18 +61,14 @@ content:
     settings:
       view_mode: logo
       link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
+    third_party_settings: {  }
   field_public_downloads:
     weight: 4
     label: above
     settings:
       view_mode: download
       link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
+    third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
   field_title_html:

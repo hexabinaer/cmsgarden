@@ -28,7 +28,6 @@ dependencies:
     - node.type.content_management_system
   module:
     - datetime
-    - ds
     - layout_builder
     - text
     - user
@@ -59,14 +58,7 @@ content:
     settings:
       timezone_override: ''
       format_type: html_month
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
     type: datetime_default
     region: content
   flag_event_attendance:

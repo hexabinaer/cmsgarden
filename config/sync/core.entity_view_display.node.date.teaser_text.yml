@@ -23,7 +23,6 @@ dependencies:
     - node.type.date
   module:
     - date_range_formatter
-    - ds
     - layout_builder
     - text
     - user
@@ -75,15 +74,7 @@ content:
     settings:
       view_mode: teaser
       link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
   field_title_html:

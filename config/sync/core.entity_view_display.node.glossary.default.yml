@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.glossary.field_wikipedia_link
     - node.type.glossary
   module:
-    - ds
     - link
     - text
     - user
@@ -55,14 +54,7 @@ content:
       url_plain: false
       rel: '0'
       target: '0'
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: Wikipedia
-            lb-col: true
-            classes: {  }
+    third_party_settings: {  }
     type: link
     region: content
   links:

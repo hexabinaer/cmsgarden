@@ -19,7 +19,6 @@ dependencies:
     - field.field.profile.main.field_using_os
     - profile.type.main
   module:
-    - ds
     - layout_builder
 third_party_settings:
   layout_builder:
@@ -37,14 +36,7 @@ content:
     settings:
       view_mode: user_picture
       link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   field_address: true

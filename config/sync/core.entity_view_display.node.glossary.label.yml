@@ -6,11 +6,11 @@ dependencies:
     - core.entity_view_mode.node.label
     - field.field.node.glossary.body
     - field.field.node.glossary.field_further_reading
+    - field.field.node.glossary.field_glossary_reference
     - field.field.node.glossary.field_title_html
     - field.field.node.glossary.field_wikipedia_link
     - node.type.glossary
   module:
-    - ds
     - layout_builder
     - text
     - user
@@ -18,24 +18,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      ds_content:
-        - field_title_html
 id: node.glossary.label
 targetEntityType: node
 bundle: glossary

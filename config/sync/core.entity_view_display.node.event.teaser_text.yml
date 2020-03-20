@@ -19,7 +19,6 @@ dependencies:
     - field.field.node.event.field_website
     - node.type.event
   module:
-    - ds
     - layout_builder
     - text
     - user
@@ -64,35 +63,7 @@ content:
     region: content
     label: hidden
     settings: {  }
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow: true
-            ow-el: h1
-            ow-cl: page-title
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
+    third_party_settings: {  }
   flag_event_attendance:
     weight: 18
     region: content

@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.session.field_session_tags
     - node.type.session
   module:
-    - ds
     - options
     - text
     - user
@@ -42,36 +41,7 @@ content:
     label: hidden
     settings:
       link: true
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: span
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
+    third_party_settings: {  }
   flag_session_ratings:
     weight: 5
     region: content

@@ -11,41 +11,11 @@ dependencies:
     - field.field.node.glossary.field_wikipedia_link
     - node.type.glossary
   module:
-    - ds
     - field_group
     - link
     - text
     - user
 third_party_settings:
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      ds_content:
-        - group_description
-        - field_glossary_reference
-        - node_links
-        - body
-        - field_wikipedia_link
-        - field_further_reading
-    fields:
-      node_links:
-        plugin_id: node_links
-        weight: 1
-        label: hidden
-        formatter: default
   field_group:
     group_description:
       children:
@@ -130,14 +100,7 @@ content:
       url_plain: false
       rel: '0'
       target: '0'
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: Wikipedia
-            lb-col: true
-            classes: {  }
+    third_party_settings: {  }
 hidden:
   field_title_html: true
   langcode: true

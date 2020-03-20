@@ -13,7 +13,6 @@ dependencies:
     - node.type.location
   module:
     - address
-    - ds
     - geolocation
     - layout_builder
     - link
@@ -510,49 +509,14 @@ content:
       use_overridden_map_settings: 0
       common_map: '1'
       data_provider_settings: {  }
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
     type: geolocation_map
     region: content
   field_location_notes:
     weight: 3
     label: above
     settings: {  }
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: h3
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
+    third_party_settings: {  }
     type: text_default
     region: content
   field_location_website:

@@ -13,7 +13,6 @@ dependencies:
     - node.type.showcase
   module:
     - datetime
-    - ds
     - layout_builder
     - text
     - user
@@ -46,15 +45,7 @@ content:
     settings:
       view_mode: logo_linked
       link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
   field_media_image:
     type: entity_reference_entity_view
     weight: 2
@@ -72,14 +63,7 @@ content:
     settings:
       timezone_override: ''
       format_type: html_year
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
+    third_party_settings: {  }
   field_title_html:
     weight: 1
     label: hidden

@@ -19,7 +19,6 @@ dependencies:
     - field.field.node.event.field_website
     - node.type.event
   module:
-    - ds
     - layout_builder
     - layout_discovery
     - link
@@ -46,6 +45,102 @@ third_party_settings:
               id: 'extra_field_block:node:event:content_moderation_control'
             additional: {  }
             weight: 0
+          618902ae-f5c5-47f6-8bf5-89f0d225c79c:
+            uuid: 618902ae-f5c5-47f6-8bf5-89f0d225c79c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_contact_ref'
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          ffaee6df-efc8-4432-8e63-65ee7c4034ef:
+            uuid: ffaee6df-efc8-4432-8e63-65ee7c4034ef
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_event_type'
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          eea01ea2-4394-424d-84b1-6dbcc76941ee:
+            uuid: eea01ea2-4394-424d-84b1-6dbcc76941ee
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_internal_downloads'
+              formatter:
+                type: media_thumbnail
+                label: above
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          f5a6236c-3575-4133-a897-10fd1cb760b6:
+            uuid: f5a6236c-3575-4133-a897-10fd1cb760b6
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_public_downloads'
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 4
+          21760c0d-9767-4aa1-9090-412636ee06bb:
+            uuid: 21760c0d-9767-4aa1-9090-412636ee06bb
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_title_html'
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 5
+          41330317-faab-46b7-ad7b-0df6fa8f10cd:
+            uuid: 41330317-faab-46b7-ad7b-0df6fa8f10cd
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_twitter_hashtag'
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 6
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -337,7 +432,7 @@ content:
     region: content
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_event_banner:
     type: image
@@ -366,15 +461,7 @@ content:
     label: inline
     settings:
       link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: true
-            classes: {  }
+    third_party_settings: {  }
   field_internal_downloads:
     type: media_thumbnail
     weight: 12
@@ -397,7 +484,7 @@ content:
     region: content
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_title_html:
     type: text_default
@@ -405,35 +492,7 @@ content:
     region: content
     label: hidden
     settings: {  }
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow: true
-            ow-el: h1
-            ow-cl: page-title
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
+    third_party_settings: {  }
   field_twitter_hashtag:
     type: string
     weight: 4
@@ -441,14 +500,7 @@ content:
     label: inline
     settings:
       link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            lb-col: true
-            classes: {  }
+    third_party_settings: {  }
   field_website:
     type: link
     weight: 5

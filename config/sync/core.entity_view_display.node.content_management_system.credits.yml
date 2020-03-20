@@ -28,7 +28,6 @@ dependencies:
     - node.type.content_management_system
   module:
     - datetime
-    - ds
     - layout_builder
     - text
     - user
@@ -63,9 +62,7 @@ content:
     settings:
       view_mode: compact
       link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
+    third_party_settings: {  }
   field_copyright_notice:
     type: text_default
     weight: 3

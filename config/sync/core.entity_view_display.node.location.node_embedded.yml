@@ -573,14 +573,7 @@ third_party_settings:
                     width: 100%
                     zoom: '10'
                   use_overridden_map_settings: 0
-                third_party_settings:
-                  ds:
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode

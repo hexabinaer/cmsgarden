@@ -2,7 +2,3 @@ display:
   default:
     display_options:
       title: Glossar
-  page_glossary:
-    display_options:
-      menu:
-        title: Glossar

@@ -8,8 +8,8 @@ dependencies:
     - field.storage.node.field_title_html
     - field.storage.node.field_wikipedia_link
     - node.type.glossary
-    - system.menu.main
   module:
+    - content_translation
     - link
     - node
     - text
@@ -69,7 +69,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -509,6 +509,172 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: Edit
+          output_url_as_text: false
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link_edit
+        translation_link:
+          id: translation_link
+          table: node
+          field: translation_link
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: Translate
+          output_url_as_text: 0
+          absolute: 0
+          entity_type: node
+          plugin_id: content_translation_link
+        dropbutton:
+          id: dropbutton
+          table: views
+          field: dropbutton
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Operations
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            edit_node: edit_node
+            translation_link: translation_link
+            nid: '0'
+            field_title_html: '0'
+            body: '0'
+            field_wikipedia_link: '0'
+            field_glossary_reference: '0'
+            nid_1: '0'
+            field_title_html_1: '0'
+          destination: true
+          plugin_id: dropbutton
       arguments: {  }
       relationships:
         field_glossary_reference:
@@ -736,9 +902,9 @@ display:
         - 'config:field.storage.node.field_glossary_reference'
         - 'config:field.storage.node.field_title_html'
         - 'config:field.storage.node.field_wikipedia_link'
-  attachment_1:
-    id: attachment_1
-    display_title: Attachment
+  att_glossary_abc:
+    id: att_glossary_abc
+    display_title: 'Attachment A-Z'
     display_plugin: attachment
     position: 2
     display_options:
@@ -752,6 +918,7 @@ display:
           items_per_page: 0
       defaults:
         arguments: false
+        fields: false
       arguments:
         title:
           id: title
@@ -791,9 +958,139 @@ display:
           entity_field: title
       displays:
         default: default
-        page_1: page_1
+        block_1: block_1
       inherit_arguments: false
       display_extenders: {  }
+      display_description: ''
+      fields:
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
+        field_title_html:
+          id: field_title_html
+          table: node__field_title_html
+          field: field_title_html
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Lemma
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a id="gl-{{ nid }}"></a>{{ field_title_html }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: strong
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
     cache_metadata:
       contexts:
         - 'languages:language_content'
@@ -804,35 +1101,31 @@ display:
         - user.permissions
       max-age: -1
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_glossary_reference'
         - 'config:field.storage.node.field_title_html'
-        - 'config:field.storage.node.field_wikipedia_link'
-  page_glossary:
-    id: page_glossary
-    display_title: Page
-    display_plugin: page
+  block_glossary:
+    display_plugin: block
+    id: block_glossary
+    display_title: 'Block Glossary'
     position: 1
     display_options:
-      query:
-        type: views_query
-        options: {  }
-      path: glossary
-      menu:
-        type: normal
-        title: Glossary
-        weight: 0
-        menu_name: main
-        parent: ''
       display_extenders: {  }
+      block_description: 'Glossary (complete)'
+      allow:
+        items_per_page: false
+        offset: 0
+        show_exposed_filters: 0
+        dont_hide_if_unfiltered_empty: 0
+        show_more_link: 0
+        pager_type: 0
+      display_description: ''
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - user
         - 'user.node_grants:view'
         - user.permissions
-      max-age: -1
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_glossary_reference'

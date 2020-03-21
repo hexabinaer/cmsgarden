@@ -1,0 +1,39 @@
+uuid: ced496e3-04e6-474b-a304-fdcfa2c1809d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.location
+    - field.field.node.location.field_archived
+    - field.field.node.location.field_event_location
+    - field.field.node.location.field_geolocation
+    - field.field.node.location.field_location_notes
+    - field.field.node.location.field_location_website
+    - node.type.location
+  module:
+    - cmsg_base
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.location.location
+targetEntityType: node
+bundle: location
+mode: location
+content:
+  field_event_location:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: cmsg_address_location_only
+    region: content
+hidden:
+  field_archived: true
+  field_geolocation: true
+  field_location_notes: true
+  field_location_website: true
+  langcode: true
+  links: true

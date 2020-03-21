@@ -51,32 +51,7 @@ third_party_settings:
                 label: hidden
                 type: entity_reference_entity_view
                 settings:
-                  view_mode: logo
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-          878e1fce-cc84-4750-9cdb-32427173b50e:
-            uuid: 878e1fce-cc84-4750-9cdb-32427173b50e
-            region: content
-            configuration:
-              id: 'field_block:node:date:field_date_range'
-              label: 'Date and time'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: date_range_without_time
-                settings:
-                  timezone_override: ''
-                  single: 'd F Y'
-                  single_all_day: 'd F Y'
-                  one_day: 'd F Y'
-                  one_month: 'd - {d} F Y'
-                  several_months: 'd F - {d} {F} Y'
-                  several_years: 'd F Y - {d} {F} {Y}'
+                  view_mode: teaser
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -106,6 +81,50 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 3
+          9d69e08c-9172-4829-ac8f-ef4bf66e15f6:
+            uuid: 9d69e08c-9172-4829-ac8f-ef4bf66e15f6
+            region: content
+            configuration:
+              id: 'field_block:node:date:field_location_ref'
+              label: Location
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: location
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+          878e1fce-cc84-4750-9cdb-32427173b50e:
+            uuid: 878e1fce-cc84-4750-9cdb-32427173b50e
+            region: content
+            configuration:
+              id: 'field_block:node:date:field_date_range'
+              label: 'Date and time'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: date_range_without_time
+                settings:
+                  timezone_override: ''
+                  single: 'd F Y'
+                  single_all_day: 'd F Y'
+                  one_day: 'd F Y'
+                  one_month: 'd - {d} F Y'
+                  several_months: 'd F - {d} {F} Y'
+                  several_years: 'd F Y - {d} {F} {Y}'
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: node.date.teaser
 targetEntityType: node

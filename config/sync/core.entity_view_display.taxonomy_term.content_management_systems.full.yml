@@ -15,6 +15,8 @@ dependencies:
     - field.field.taxonomy_term.content_management_systems.field_text_color
     - taxonomy.vocabulary.content_management_systems
     - views.view.cmsg_cms_contacts
+    - views.view.cmsg_people
+    - views.view.cmsg_testimonials
   module:
     - layout_builder
     - layout_discovery
@@ -184,6 +186,79 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Events
+        components:
+          a645ac10-18b6-41c7-b0cf-63ba81895fe1:
+            uuid: a645ac10-18b6-41c7-b0cf-63ba81895fe1
+            region: content
+            configuration:
+              id: 'inline_block:basic'
+              label: PLACEHOLDER
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 6
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Ambassadors
+        components:
+          7a7477e0-c3e0-4699-9979-d99a827564ec:
+            uuid: 7a7477e0-c3e0-4699-9979-d99a827564ec
+            region: content
+            configuration:
+              id: 'views_block:cmsg_testimonials-block_testim_cms_all'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              offset: null
+              show_exposed_filters: null
+              dont_hide_if_unfiltered_empty: null
+              show_more_link: null
+              more_link_text: ''
+              pager_type: null
+              translatable_configuration:
+                '#en':
+                  use_more_text: null
+              link_url: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          a86496e0-43e0-4014-82d4-1162111f0122:
+            uuid: a86496e0-43e0-4014-82d4-1162111f0122
+            region: content
+            configuration:
+              id: 'views_block:cmsg_people-block_cms_people'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              offset: null
+              show_exposed_filters: null
+              dont_hide_if_unfiltered_empty: null
+              show_more_link: null
+              more_link_text: ''
+              pager_type: null
+              translatable_configuration:
+                '#en':
+                  use_more_text: null
+              link_url: null
+              context_mapping:
+                field_cms_target_id: layout_builder.entity
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 id: taxonomy_term.content_management_systems.full
 targetEntityType: taxonomy_term

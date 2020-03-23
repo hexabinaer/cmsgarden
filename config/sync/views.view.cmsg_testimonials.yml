@@ -21,6 +21,7 @@ dependencies:
     - taxonomy
     - text
     - user
+    - views_add_button
 id: cmsg_testimonials
 label: 'CMSG testimonials'
 module: views
@@ -928,6 +929,137 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_cited_person'
+        - 'config:field.storage.node.field_cited_person_ext'
+        - 'config:field.storage.node.field_date_quoting'
+        - 'config:field.storage.node.field_organization'
+        - 'config:field.storage.node.field_testimonial_relation_gen'
+  block_testim_cms_all:
+    display_plugin: block
+    id: block_testim_cms_all
+    display_title: 'Block CMS-related'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      arguments:
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: 'A testimonial for Drupal'
+          default_argument_type: taxonomy_tid
+          default_argument_options:
+            node: true
+            anyall: +
+            term_page: '0'
+            limit: false
+            vids: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: true
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          add_table: false
+          require_value: false
+          reduce_duplicates: false
+          plugin_id: taxonomy_index_tid
+      defaults:
+        arguments: false
+        pager: false
+        style: false
+        row: false
+        header: false
+      display_description: ''
+      pager:
+        type: mini
+        options:
+          items_per_page: 2
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      block_description: 'Testimonials (CMS-related)'
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: full
+      header:
+        views_add_button:
+          id: views_add_button
+          table: views
+          field: views_add_button
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: 1
+          type: node+testimonial
+          render_plugin: views_add_button_node
+          access_plugin: ''
+          context: ''
+          button_text: 'Submit your testimonial for {{ arguments.tid }}'
+          button_classes: 'add-content button'
+          button_attributes: ''
+          button_access_denied:
+            value: ''
+            format: minimal_html
+          button_prefix:
+            value: ''
+            format: minimal_html
+          button_suffix:
+            value: ''
+            format: minimal_html
+          query_string: 'edit[field_cms][widget][0][target_id]={{ raw_arguments.tid }}'
+          destination: 1
+          plugin_id: views_add_button_area
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions

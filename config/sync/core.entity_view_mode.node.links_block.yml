@@ -1,0 +1,10 @@
+uuid: 85780daf-a065-43cf-9e4d-b1195d82a5ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.links_block
+label: 'Links block'
+targetEntityType: node
+cache: true

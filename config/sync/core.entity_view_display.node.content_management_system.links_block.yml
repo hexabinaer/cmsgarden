@@ -1,0 +1,82 @@
+uuid: dbfb0a30-99ba-4907-a3e7-3db44f70cdd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.links_block
+    - field.field.node.content_management_system.body
+    - field.field.node.content_management_system.field_article_license
+    - field.field.node.content_management_system.field_authors_ext
+    - field.field.node.content_management_system.field_authors_ref
+    - field.field.node.content_management_system.field_available_languages
+    - field.field.node.content_management_system.field_copyright_notice
+    - field.field.node.content_management_system.field_core_contributors
+    - field.field.node.content_management_system.field_developers
+    - field.field.node.content_management_system.field_initial_release
+    - field.field.node.content_management_system.field_last_update
+    - field.field.node.content_management_system.field_license
+    - field.field.node.content_management_system.field_link
+    - field.field.node.content_management_system.field_major_release
+    - field.field.node.content_management_system.field_meta_tags
+    - field.field.node.content_management_system.field_open_source_as_of
+    - field.field.node.content_management_system.field_programming_language
+    - field.field.node.content_management_system.field_registered_users
+    - field.field.node.content_management_system.field_termref_logo
+    - field.field.node.content_management_system.field_title_html
+    - field.field.node.content_management_system.field_total_downloads
+    - field.field.node.content_management_system.field_total_installs
+    - node.type.content_management_system
+  module:
+    - layout_builder
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.content_management_system.links_block
+targetEntityType: node
+bundle: content_management_system
+mode: links_block
+content:
+  field_link:
+    type: link
+    weight: 0
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  flag_event_attendance:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  content_moderation_control: true
+  field_article_license: true
+  field_authors_ext: true
+  field_authors_ref: true
+  field_available_languages: true
+  field_copyright_notice: true
+  field_core_contributors: true
+  field_developers: true
+  field_initial_release: true
+  field_last_update: true
+  field_license: true
+  field_major_release: true
+  field_meta_tags: true
+  field_open_source_as_of: true
+  field_programming_language: true
+  field_registered_users: true
+  field_termref_logo: true
+  field_title_html: true
+  field_total_downloads: true
+  field_total_installs: true
+  langcode: true
+  links: true

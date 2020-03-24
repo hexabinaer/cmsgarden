@@ -80,50 +80,59 @@ third_party_settings:
             uuid: 4e47b017-85d3-44ae-8414-a8a3dcc869b0
             region: third
             configuration:
+              id: 'field_block:node:organization:field_member_since'
+              label: 'Member since'
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: above
+                type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: cmsg_year_month
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:organization:field_member_since'
-              formatter:
-                type: datetime_default
-                label: above
-                settings:
-                  format_type: medium
-                  timezone_override: ''
-                third_party_settings: {  }
+                view_mode: view_mode
             additional: {  }
             weight: 2
           a261c30a-4604-44af-beb2-33973700de7a:
             uuid: a261c30a-4604-44af-beb2-33973700de7a
             region: third
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:organization:field_membership_no'
+              label: 'Membership no.'
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                type: number_integer
                 label: above
+                type: number_integer
                 settings:
                   thousand_separator: ''
                   prefix_suffix: true
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 1
           1d209d6c-3e1b-44f4-86e0-6c54a1dc744a:
             uuid: 1d209d6c-3e1b-44f4-86e0-6c54a1dc744a
             region: second
             configuration:
+              id: 'field_block:node:organization:field_cms'
+              label: CMS
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: logo
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:organization:field_cms'
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
+                view_mode: view_mode
             additional: {  }
             weight: 1
           450340b1-4766-454b-9823-470cf08012fa:
@@ -180,16 +189,19 @@ third_party_settings:
             uuid: 851af1f8-736d-47be-b0d3-2f6b92054ebc
             region: first
             configuration:
+              id: 'field_block:node:organization:field_media_image'
+              label: Logo
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: logo
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:organization:field_media_image'
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
+                view_mode: view_mode
             additional: {  }
             weight: 0
           62689e22-bceb-4841-9335-6b9693b1bb6e:
@@ -302,22 +314,25 @@ third_party_settings:
       -
         layout_id: layout_onecol
         layout_settings:
-          label: ''
+          label: 'Contact persons'
         components:
           d1e93647-9646-4d3a-9ca3-540c43bd5f49:
             uuid: d1e93647-9646-4d3a-9ca3-540c43bd5f49
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:organization:field_associated_users'
+              label: 'Contact persons'
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: above
+                type: entity_reference_entity_view
                 settings:
-                  link: true
+                  view_mode: compact
                 third_party_settings: {  }
-                type: entity_reference_label
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 0
         third_party_settings: {  }

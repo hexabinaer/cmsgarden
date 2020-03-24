@@ -1,0 +1,34 @@
+uuid: ba86b30d-0c82-4403-ad2a-27cea415ed2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.cmsg_cms_lists
+  module:
+    - views
+  theme:
+    - cmsgtheme
+id: menu_cms
+theme: cmsgtheme
+region: footer
+weight: -7
+provider: null
+plugin: 'views_block:cmsg_cms_lists-block_menu_cms'
+settings:
+  id: 'views_block:cmsg_cms_lists-block_menu_cms'
+  label: 'The CMS'
+  provider: views
+  label_display: visible
+  views_label: 'The CMS'
+  items_per_page: none
+  offset: null
+  show_exposed_filters: null
+  dont_hide_if_unfiltered_empty: null
+  show_more_link: null
+  more_link_text: ''
+  pager_type: null
+  translatable_configuration:
+    '#en':
+      use_more_text: null
+  link_url: null
+visibility: {  }

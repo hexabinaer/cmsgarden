@@ -9,7 +9,7 @@ dependencies:
 id: socialmedialinks
 theme: cmsgtheme
 region: footer
-weight: 0
+weight: -5
 provider: null
 plugin: social_media_links_block
 settings:

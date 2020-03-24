@@ -1,0 +1,10 @@
+uuid: 6382a09f-326b-4f30-acf0-1643a5ce78fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.links_block
+label: 'Links block'
+targetEntityType: taxonomy_term
+cache: true

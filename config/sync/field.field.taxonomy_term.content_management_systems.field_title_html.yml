@@ -1,0 +1,29 @@
+uuid: 4ff04cdf-4961-42ea-9355-8cdc8a56be5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_title_html
+    - taxonomy.vocabulary.content_management_systems
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    minimal_html: minimal_html
+    basic_html: '0'
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: taxonomy_term.content_management_systems.field_title_html
+field_name: field_title_html
+entity_type: taxonomy_term
+bundle: content_management_systems
+label: 'HTML title'
+description: 'This is the rendered headline (h1). Write the CMS name how it is usually written (including special characters, capitals). You may add markup (such as abbr title="Typo" or span lang="fr") for accessibility here.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -3,7 +3,6 @@ langcode: de
 status: true
 dependencies:
   config:
-    - block_content.type.basic
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.content_management_systems.field_cms_logo
     - field.field.taxonomy_term.content_management_systems.field_contrast_color
@@ -13,8 +12,10 @@ dependencies:
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
     - field.field.taxonomy_term.content_management_systems.field_text_color
+    - field.field.taxonomy_term.content_management_systems.field_title_html
     - taxonomy.vocabulary.content_management_systems
-    - views.view.cmsg_cms_contacts
+    - views.view.cmsg_contextuals
+    - views.view.cmsg_events
     - views.view.cmsg_people
     - views.view.cmsg_testimonials
   module:
@@ -124,29 +125,34 @@ third_party_settings:
           label: 'Useful addresses'
           column_widths: 50-50
         components:
-          9705ebb4-b9f6-4a8f-8174-4d02d1df77e2:
-            uuid: 9705ebb4-b9f6-4a8f-8174-4d02d1df77e2
-            region: second
-            configuration:
-              id: 'inline_block:basic'
-              label: PLACEHOLDER
-              provider: layout_builder
-              label_display: visible
-              view_mode: full
-              block_revision_id: 5
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          5bc7d440-6d63-4702-baab-b024cef21633:
-            uuid: 5bc7d440-6d63-4702-baab-b024cef21633
+          0b5e6faa-4ec0-4a8c-95cb-9b563ce325aa:
+            uuid: 0b5e6faa-4ec0-4a8c-95cb-9b563ce325aa
             region: first
             configuration:
-              id: 'views_block:cmsg_cms_contacts-block_cms_links'
-              label: 'External links'
+              id: 'field_block:taxonomy_term:content_management_systems:field_noderef_cms'
+              label: CMS-Portrait
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: links_block
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          43717d05-bf52-4788-bf7c-32b827e9c0f4:
+            uuid: 43717d05-bf52-4788-bf7c-32b827e9c0f4
+            region: second
+            configuration:
+              id: 'views_block:cmsg_contextuals-block_rel_org'
+              label: ''
               provider: views
-              label_display: visible
-              views_label: 'External links'
+              label_display: '0'
+              views_label: ''
               items_per_page: none
               offset: null
               show_exposed_filters: null
@@ -160,7 +166,7 @@ third_party_settings:
               link_url: null
               context_mapping: {  }
             additional: {  }
-            weight: 0
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -192,20 +198,29 @@ third_party_settings:
         layout_settings:
           label: Events
         components:
-          a645ac10-18b6-41c7-b0cf-63ba81895fe1:
-            uuid: a645ac10-18b6-41c7-b0cf-63ba81895fe1
+          6684eddc-afbe-475f-8c8e-23d67abec465:
+            uuid: 6684eddc-afbe-475f-8c8e-23d67abec465
             region: content
             configuration:
-              id: 'inline_block:basic'
-              label: PLACEHOLDER
-              provider: layout_builder
+              id: 'views_block:cmsg_events-block_cms_related_dates'
+              label: ''
+              provider: views
               label_display: visible
-              view_mode: full
-              block_revision_id: 6
-              block_serialized: null
+              views_label: ''
+              items_per_page: none
+              offset: null
+              show_exposed_filters: null
+              dont_hide_if_unfiltered_empty: null
+              show_more_link: null
+              more_link_text: ''
+              pager_type: null
+              translatable_configuration:
+                '#en':
+                  use_more_text: null
+              link_url: null
               context_mapping: {  }
             additional: {  }
-            weight: 0
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -293,4 +308,5 @@ hidden:
   field_noderef_cms: true
   field_status: true
   field_text_color: true
+  field_title_html: true
   langcode: true

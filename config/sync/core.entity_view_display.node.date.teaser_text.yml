@@ -35,17 +35,8 @@ targetEntityType: node
 bundle: date
 mode: teaser_text
 content:
-  field_date_node_ref:
-    type: entity_reference_entity_view
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      view_mode: logo
-      link: false
-    third_party_settings: {  }
   field_date_range:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       separator: '-'
@@ -60,25 +51,17 @@ content:
     third_party_settings: {  }
     type: date_range_without_time
     region: content
-  field_intro:
-    type: text_trimmed
-    weight: 4
-    region: content
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
   field_location_ref:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
-      view_mode: teaser
+      view_mode: location
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
   field_title_html:
-    weight: 1
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -88,9 +71,11 @@ hidden:
   body: true
   field_cms: true
   field_contact_ref: true
+  field_date_node_ref: true
   field_event_cmsg_participation: true
   field_has_sessions: true
   field_internal_information: true
+  field_intro: true
   field_org_ref: true
   field_public_downloads: true
   field_twitter_hashtag: true

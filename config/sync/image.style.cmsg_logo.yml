@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: cmsg_logo
-label: 'CMSG logo'
+label: 'CMSG logo (200 x 150)'
 effects:
   d078c7b1-fa1a-4dea-963e-70cbe63edf04:
     uuid: d078c7b1-fa1a-4dea-963e-70cbe63edf04

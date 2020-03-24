@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.logo_inverted
+    - field.storage.taxonomy_term.field_title_html
     - taxonomy.vocabulary.content_management_systems
   module:
     - options
     - taxonomy
+    - text
     - user
 id: cmsg_cms_lists
 label: 'CMSG CMS lists'
@@ -391,6 +393,186 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
+  block_menu_cms:
+    display_plugin: block
+    id: block_menu_cms
+    display_title: 'Block CMS menu'
+    position: 5
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      block_description: 'CMS menu links'
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+          type: ul
+          wrapper_class: menu
+          class: menu-item
+      defaults:
+        style: false
+        row: false
+        fields: false
+        group_by: false
+        css_class: false
+        query: false
+        sorts: false
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      fields:
+        field_title_html:
+          id: field_title_html
+          table: taxonomy_term__field_title_html
+          field: field_title_html
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: '<a href=" {{ view_taxonomy_term }} ">{{ field_title_html__value }} | {{ field_title_html__format }}</a>'
+            make_link: false
+            path: '{{ view_taxonomy_term }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: '<abbr> <span>'
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: entity_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        view_taxonomy_term:
+          id: view_taxonomy_term
+          table: taxonomy_term_data
+          field: view_taxonomy_term
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_title_html }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: View
+          output_url_as_text: false
+          absolute: false
+          entity_type: taxonomy_term
+          plugin_id: entity_link
+      group_by: true
+      css_class: ''
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: null
+      sorts:
+        field_machine_name_value:
+          id: field_machine_name_value
+          table: taxonomy_term__field_machine_name
+          field: field_machine_name_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      rendering_language: '***LANGUAGE_language_interface***'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.taxonomy_term.field_title_html'
   er_cms_active:
     display_plugin: entity_reference
     id: er_cms_active

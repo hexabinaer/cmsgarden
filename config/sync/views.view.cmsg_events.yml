@@ -513,7 +513,7 @@ display:
   block_cms_related_dates:
     display_plugin: block
     id: block_cms_related_dates
-    display_title: 'Block related dates'
+    display_title: 'Block related dates (cms)'
     position: 4
     display_options:
       display_extenders: {  }
@@ -600,7 +600,7 @@ display:
   block_event_related_dates:
     display_plugin: block
     id: block_event_related_dates
-    display_title: 'Block related dates'
+    display_title: 'Block related dates (event)'
     position: 4
     display_options:
       display_extenders: {  }

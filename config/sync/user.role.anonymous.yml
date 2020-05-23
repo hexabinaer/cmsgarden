@@ -21,5 +21,6 @@ permissions:
   - 'view any author_profile profile'
   - 'view any main profile'
   - 'view field_cmsg_role'
+  - 'view field_member'
   - 'view media'
   - 'view own field_cmsg_role'

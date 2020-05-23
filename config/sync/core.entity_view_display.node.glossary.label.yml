@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.label
     - field.field.node.glossary.body
+    - field.field.node.glossary.field_anchor
     - field.field.node.glossary.field_further_reading
     - field.field.node.glossary.field_glossary_reference
     - field.field.node.glossary.field_title_html
@@ -32,6 +33,7 @@ content:
     region: ds_content
 hidden:
   body: true
+  field_anchor: true
   field_further_reading: true
   field_glossary_reference: true
   field_wikipedia_link: true

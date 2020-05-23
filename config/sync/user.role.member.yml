@@ -54,6 +54,8 @@ permissions:
   - 'view any internal_profile profile'
   - 'view field_internal_downloads'
   - 'view field_internal_information'
+  - 'view field_member_since'
+  - 'view field_membership_no'
   - 'view own ambassador_profile profile'
   - 'view own author_profile profile'
   - 'view own field_category'

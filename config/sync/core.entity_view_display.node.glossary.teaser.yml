@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.glossary.body
+    - field.field.node.glossary.field_anchor
     - field.field.node.glossary.field_further_reading
     - field.field.node.glossary.field_glossary_reference
     - field.field.node.glossary.field_title_html
@@ -102,6 +103,7 @@ content:
       target: '0'
     third_party_settings: {  }
 hidden:
+  field_anchor: true
   field_title_html: true
   langcode: true
   links: true

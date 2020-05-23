@@ -41,7 +41,9 @@
         "drupal/field_group": "^3.0",
         "drupal/field_permissions": "^1.0@RC",
         "drupal/flag": "^4.0@beta",
-        "drupal/geolocation": "3.0-rc6",
+        "drupal/geolocation": "~3.0",
+        "drupal/git_deploy": "^2.3",
+        "drupal/hacked": "^2.0@beta",
         "drupal/honeypot": "^1.30",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/media_entity_browser": "~2",
@@ -69,7 +71,6 @@
         "drupal/webform": "^5.8",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
-        "webflo/drupal-core-require-dev": "^8.8",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "zaporylie/composer-drupal-optimizations": "^1.0"

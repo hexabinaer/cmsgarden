@@ -17,6 +17,7 @@ dependencies:
     - content_moderation
     - entity_browser
     - link
+    - media_library
     - metatag
     - path
     - text
@@ -52,21 +53,14 @@ content:
   field_media_image:
     weight: 3
     settings:
-      entity_browser: image_browser_modal_
-      field_widget_display: rendered_entity
-      field_widget_display_settings:
-        view_mode: preview
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: true
-      selection_mode: selection_append
-      open: false
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   field_meta_tags:
     weight: 14
-    settings: {  }
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content

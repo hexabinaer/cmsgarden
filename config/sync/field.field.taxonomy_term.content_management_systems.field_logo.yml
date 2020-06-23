@@ -1,0 +1,28 @@
+uuid: 220c1abd-5984-42f7-8efa-a86e37a98019
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_logo
+    - media.type.image
+    - taxonomy.vocabulary.content_management_systems
+id: taxonomy_term.content_management_systems.field_logo
+field_name: field_logo
+entity_type: taxonomy_term
+bundle: content_management_systems
+label: Logo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

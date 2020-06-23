@@ -1,0 +1,30 @@
+uuid: 55b9402a-9ff4-49a5-a33b-2859c3e30c15
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.file.field_accessible
+    - field.field.media.file.field_category
+    - field.field.media.file.field_content_language
+    - field.field.media.file.field_longdesc
+    - field.field.media.file.field_media_file
+    - media.type.file
+id: media.file.media_library
+targetEntityType: media
+bundle: file
+mode: media_library
+content: {  }
+hidden:
+  created: true
+  field_accessible: true
+  field_category: true
+  field_content_language: true
+  field_longdesc: true
+  field_media_file: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  translation: true
+  uid: true

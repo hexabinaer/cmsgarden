@@ -1,13 +1,13 @@
 settings:
   default_form_open_message: 'Dieses Formular wurde noch nicht für Eingaben geöffnet.'
+  default_form_close_message: 'Entschuldigung… Dieses Formular ist für neue Eingaben geschlossen.'
   default_form_exception_message: 'Dieses Webformular kann nicht angezeigt werden. Bitte kontaktieren Sie den Website-Administrator.'
   default_submit_button_label: Absenden
   default_reset_button_label: Zurücksetzen
   default_form_confidential_message: 'Dieses Formular ist vertraulich. Um es abzuschicken, müssen Sie sich daher <a href="[site:login-url]/logout?destination=[current-page:url:relative]">abmelden</a>.'
   default_form_access_denied_message: 'Bitte melden Sie sich an, um auf das Formular zugreifen zu können.'
   default_form_required_label: 'Zeigt das erforderliche Feld an'
-  default_wizard_prev_button_label: '< Vorherige Seite'
-  default_wizard_next_button_label: 'Nächste Seite >'
+  default_wizard_prev_button_label: '< Zurück'
   default_wizard_start_label: Beginn
   default_wizard_confirmation_label: Vollständig
   default_preview_next_button_label: Vorschau
@@ -18,6 +18,8 @@ settings:
   default_draft_button_label: 'Als Entwurf speichern'
   default_draft_saved_message: 'Einsendung zwischengespeichert. Sie können später dieses Formular mit den jetzt gesicherten Inhalten wieder aufrufen.'
   default_draft_loaded_message: 'Ein teilweise ausgefülltes Formular wurde gefunden. Bitte füllen Sie die restlichen Teile aus.'
+  default_draft_pending_single_message: 'Es gibt einen ausstehenden Entwurf für dieses Webformular. <a href="#">Den ausstehenden Entwurf laden</a>.'
+  default_draft_pending_multiple_message: 'Es gibt ausstehende Entwürfe für dieses Webformular. <a href="#">Ausstehende Entwürfe anzeigen</a>.'
   default_confirmation_message: 'Neue Eingabe zu [webform:title] hinzugefügt.'
   default_confirmation_back_label: 'Zurück zum Formular'
   default_submission_label: '[webform_submission:submitted-to]: Eingabe #[webform_submission:serial]'
@@ -44,6 +46,7 @@ file:
   file_private_redirect_message: 'Bitte anmelden, um auf die hochgeladene Datei zugreifen zu können.'
 mail:
   default_from_name: '[site:name]'
+  default_subject: 'Webformular-Eingabe für: [webform_submission:source-title]'
   default_body_text: "Gesendet am: [webform_submission:created]\r\nGesendet von: [webform_submission:user]\r\n\r\nGesendete Eingaben:\r\n[webform_submission:values]\n"
   default_body_html: "<p>Gesendet am: [webform_submission:created]</p>\r\n<p>Gesendet von: [webform_submission:user]</p>\r\n<p>Gesendete Eingaben:</p>\r\n[webform_submission:values]\n"
 test:

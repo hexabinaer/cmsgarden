@@ -3,21 +3,20 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.content_management_systems.field_cms_logo
     - field.field.taxonomy_term.content_management_systems.field_contrast_color
     - field.field.taxonomy_term.content_management_systems.field_lead_color
-    - field.field.taxonomy_term.content_management_systems.field_logo_inverted
+    - field.field.taxonomy_term.content_management_systems.field_logo
+    - field.field.taxonomy_term.content_management_systems.field_logo_inv
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
     - field.field.taxonomy_term.content_management_systems.field_text_color
     - field.field.taxonomy_term.content_management_systems.field_title_html
-    - image.style.thumbnail
     - taxonomy.vocabulary.content_management_systems
   module:
     - field_group
+    - media_library
     - path
-    - svg_image
     - text
 third_party_settings:
   field_group:
@@ -26,8 +25,8 @@ third_party_settings:
         - field_lead_color
         - field_text_color
         - field_contrast_color
-        - field_cms_logo
-        - field_logo_inverted
+        - field_logo
+        - field_logo_inv
       parent_name: ''
       weight: 6
       format_type: details
@@ -44,14 +43,6 @@ targetEntityType: taxonomy_term
 bundle: content_management_systems
 mode: default
 content:
-  field_cms_logo:
-    weight: 17
-    settings:
-      preview_image_style: thumbnail
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_contrast_color:
     weight: 16
     settings:
@@ -68,13 +59,19 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_logo_inverted:
+  field_logo:
+    type: media_library_widget
+    weight: 17
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_logo_inv:
+    type: media_library_widget
     weight: 18
     settings:
-      preview_image_style: thumbnail
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   field_machine_name:
     weight: 4

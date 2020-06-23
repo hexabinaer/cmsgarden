@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.full
-    - field.field.taxonomy_term.content_management_systems.field_cms_logo
     - field.field.taxonomy_term.content_management_systems.field_contrast_color
     - field.field.taxonomy_term.content_management_systems.field_lead_color
-    - field.field.taxonomy_term.content_management_systems.field_logo_inverted
+    - field.field.taxonomy_term.content_management_systems.field_logo
+    - field.field.taxonomy_term.content_management_systems.field_logo_inv
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
@@ -21,7 +21,6 @@ dependencies:
   module:
     - layout_builder
     - layout_discovery
-    - svg_image
     - text
     - views
 third_party_settings:
@@ -59,27 +58,6 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          2d82a8db-d27b-4a61-b506-d121b54e3b9a:
-            uuid: 2d82a8db-d27b-4a61-b506-d121b54e3b9a
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:taxonomy_term:content_management_systems:field_cms_logo'
-              formatter:
-                label: hidden
-                settings:
-                  svg_attributes:
-                    width: ''
-                    height: ''
-                  svg_render_as_image: true
-                  image_style: ''
-                  image_link: ''
-                third_party_settings: {  }
-                type: image
-            additional: {  }
-            weight: 1
           5f8ac549-0cb3-4626-95dd-be23a62175ca:
             uuid: 5f8ac549-0cb3-4626-95dd-be23a62175ca
             region: content
@@ -98,7 +76,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: 3
           7e276648-499b-42df-b5ce-957e0218e5ed:
             uuid: 7e276648-499b-42df-b5ce-957e0218e5ed
             region: content
@@ -117,7 +95,26 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 3
+            weight: 4
+          b743b895-8a6f-4e26-9b6c-550b40fe74a6:
+            uuid: b743b895-8a6f-4e26-9b6c-550b40fe74a6
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:content_management_systems:field_logo'
+              label: Logo
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: logo
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -287,23 +284,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_cms_logo:
-    weight: 1
-    label: hidden
-    settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
 hidden:
   field_contrast_color: true
   field_lead_color: true
-  field_logo_inverted: true
+  field_logo: true
+  field_logo_inv: true
   field_machine_name: true
   field_noderef_cms: true
   field_status: true

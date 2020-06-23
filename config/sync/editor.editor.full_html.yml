@@ -37,13 +37,14 @@ settings:
         -
           name: Tools
           items:
+            - Maximize
             - PasteFromWord
             - ShowBlocks
-            - Maximize
+            - Source
+            - Markdown
         -
           name: 'Block Formatting'
           items:
-            - Source
             - Format
         -
           name: 'Inline elements'

@@ -3,10 +3,10 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.content_management_systems.field_cms_logo
     - field.field.taxonomy_term.content_management_systems.field_contrast_color
     - field.field.taxonomy_term.content_management_systems.field_lead_color
-    - field.field.taxonomy_term.content_management_systems.field_logo_inverted
+    - field.field.taxonomy_term.content_management_systems.field_logo
+    - field.field.taxonomy_term.content_management_systems.field_logo_inv
     - field.field.taxonomy_term.content_management_systems.field_machine_name
     - field.field.taxonomy_term.content_management_systems.field_noderef_cms
     - field.field.taxonomy_term.content_management_systems.field_status
@@ -22,17 +22,17 @@ mode: default
 content:
   field_title_html:
     weight: 0
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
 hidden:
   description: true
-  field_cms_logo: true
   field_contrast_color: true
   field_lead_color: true
-  field_logo_inverted: true
+  field_logo: true
+  field_logo_inv: true
   field_machine_name: true
   field_noderef_cms: true
   field_status: true

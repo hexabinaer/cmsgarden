@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.content_management_system.field_major_release
     - field.field.node.content_management_system.field_meta_tags
     - field.field.node.content_management_system.field_open_source_as_of
+    - field.field.node.content_management_system.field_paragraphs
     - field.field.node.content_management_system.field_programming_language
     - field.field.node.content_management_system.field_registered_users
     - field.field.node.content_management_system.field_termref_logo
@@ -26,6 +27,7 @@ dependencies:
     - field.field.node.content_management_system.field_total_downloads
     - field.field.node.content_management_system.field_total_installs
     - node.type.content_management_system
+    - views.view.cmsg_testimonials
   module:
     - datetime
     - field_group
@@ -35,6 +37,7 @@ dependencies:
     - options
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -653,5 +656,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_meta_tags: true
+  field_paragraphs: true
   field_title_html: true
   langcode: true

@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.content_management_system.field_major_release
     - field.field.node.content_management_system.field_meta_tags
     - field.field.node.content_management_system.field_open_source_as_of
+    - field.field.node.content_management_system.field_paragraphs
     - field.field.node.content_management_system.field_programming_language
     - field.field.node.content_management_system.field_registered_users
     - field.field.node.content_management_system.field_termref_logo
@@ -28,6 +29,7 @@ dependencies:
     - node.type.content_management_system
   module:
     - datetime
+    - entity_reference_revisions
     - layout_builder
     - text
     - user
@@ -61,6 +63,15 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   flag_event_attendance:
     weight: 10
     region: content

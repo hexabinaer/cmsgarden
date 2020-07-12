@@ -41,6 +41,7 @@ module:
   entity_limit: 0
   entity_reference_revisions: 0
   field: 0
+  field_formatter_class: 0
   field_group: 0
   field_permissions: 0
   field_ui: 0
@@ -70,6 +71,7 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  paragraphs_type_permissions: 0
   password_policy: 0
   password_policy_character_types: 0
   password_policy_history: 0
@@ -119,6 +121,7 @@ module:
   webform_bootstrap: 1
   content_translation: 10
   views: 10
+  paragraphs: 11
   minimal: 1000
 theme:
   stable: 0

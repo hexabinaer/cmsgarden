@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.content_management_system.field_major_release
     - field.field.node.content_management_system.field_meta_tags
     - field.field.node.content_management_system.field_open_source_as_of
+    - field.field.node.content_management_system.field_paragraphs
     - field.field.node.content_management_system.field_programming_language
     - field.field.node.content_management_system.field_registered_users
     - field.field.node.content_management_system.field_termref_logo
@@ -72,6 +73,7 @@ hidden:
   field_major_release: true
   field_meta_tags: true
   field_open_source_as_of: true
+  field_paragraphs: true
   field_programming_language: true
   field_registered_users: true
   field_termref_logo: true

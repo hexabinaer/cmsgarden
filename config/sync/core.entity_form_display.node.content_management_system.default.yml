@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.content_management_system.field_major_release
     - field.field.node.content_management_system.field_meta_tags
     - field.field.node.content_management_system.field_open_source_as_of
+    - field.field.node.content_management_system.field_paragraphs
     - field.field.node.content_management_system.field_programming_language
     - field.field.node.content_management_system.field_registered_users
     - field.field.node.content_management_system.field_termref_logo
@@ -33,6 +34,7 @@ dependencies:
     - field_group
     - link
     - metatag
+    - paragraphs
     - path
     - text
 third_party_settings:
@@ -245,6 +247,18 @@ content:
       date_year_range: '1994:2030'
     third_party_settings: {  }
     type: datatime_extras_configurable_list
+    region: content
+  field_paragraphs:
+    type: entity_reference_paragraphs
+    weight: 38
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_programming_language:
     weight: 27

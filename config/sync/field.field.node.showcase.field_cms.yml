@@ -9,7 +9,7 @@ id: node.showcase.field_cms
 field_name: field_cms
 entity_type: node
 bundle: showcase
-label: 'Related CMS'
+label: 'Built with'
 description: ''
 required: false
 translatable: false

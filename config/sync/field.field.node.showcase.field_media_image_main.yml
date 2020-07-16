@@ -1,0 +1,28 @@
+uuid: 9a46a561-811f-4b58-9ebd-e8ac825b97d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_image_main
+    - media.type.image
+    - node.type.showcase
+id: node.showcase.field_media_image_main
+field_name: field_media_image_main
+entity_type: node
+bundle: showcase
+label: 'Main image'
+description: 'The title will be automatically inserted as a the image caption.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

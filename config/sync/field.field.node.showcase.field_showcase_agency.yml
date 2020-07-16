@@ -1,0 +1,29 @@
+uuid: d714f6e7-3862-48b7-9082-0b5a8f334803
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_showcase_agency
+    - node.type.showcase
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    minimal_html: minimal_html
+    basic_html: '0'
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: node.showcase.field_showcase_agency
+field_name: field_showcase_agency
+entity_type: node
+bundle: showcase
+label: Agency
+description: 'The name of your agency and/or the customer''s contractor (the entity that you''ve been working for)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

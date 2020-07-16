@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
+    - field.field.media.image.field_caption
     - field.field.media.image.field_category
     - field.field.media.image.field_copyright_link
     - field.field.media.image.field_copyright_owner
+    - field.field.media.image.field_license
     - field.field.media.image.field_longdesc
     - field.field.media.image.field_media_image
     - media.type.image
@@ -55,21 +57,24 @@ third_party_settings:
             uuid: 0d9b76e2-212e-4708-88db-3fb18999166b
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:media:image:field_media_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: hidden
+                type: image
                 settings:
-                  svg_attributes:
-                    width: ''
-                    height: ''
-                  svg_render_as_image: true
                   image_style: ''
                   image_link: ''
+                  svg_render_as_image: true
+                  svg_attributes:
+                    width: null
+                    height: null
                 third_party_settings: {  }
-                type: image
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 0
         third_party_settings: {  }
@@ -87,9 +92,55 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: hidden
+                label: visually_hidden
                 type: text_default
                 settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          7a906a5d-e0d8-4af8-b743-c6c2900b01cf:
+            uuid: 7a906a5d-e0d8-4af8-b743-c6c2900b01cf
+            region: content
+            configuration:
+              id: 'field_block:media:image:field_copyright_link'
+              label: 'Copyright link'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: link
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+          9f9a6657-a2e5-4e3a-aa65-0fc1529ae7d5:
+            uuid: 9f9a6657-a2e5-4e3a-aa65-0fc1529ae7d5
+            region: content
+            configuration:
+              id: 'field_block:media:image:field_license'
+              label: License
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: link
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -162,8 +213,8 @@ content:
     label: hidden
     settings:
       svg_attributes:
-        width: ''
-        height: ''
+        width: null
+        height: null
       svg_render_as_image: true
       image_style: ''
       image_link: ''
@@ -180,8 +231,10 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_caption: true
   field_category: true
   field_copyright_link: true
+  field_license: true
   filesize: true
   langcode: true
   link: true

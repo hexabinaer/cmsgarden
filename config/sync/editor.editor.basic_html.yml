@@ -54,8 +54,6 @@ settings:
           name: 'Entity embed'
           items:
             - media_entity_embed
-            - showcase_embed
-            - node
             - poll
             - glossary_ref
         -

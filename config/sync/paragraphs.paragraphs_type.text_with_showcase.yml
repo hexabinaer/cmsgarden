@@ -1,0 +1,10 @@
+uuid: 9a0de972-347c-4818-a956-4ceae70bb25e
+langcode: en
+status: true
+dependencies: {  }
+id: text_with_showcase
+label: 'Text with showcase image'
+icon_uuid: null
+icon_default: null
+description: 'Add a content section using a showcase main picture as an illustration.'
+behavior_plugins: {  }

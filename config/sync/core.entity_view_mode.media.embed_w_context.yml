@@ -1,0 +1,10 @@
+uuid: 28e072c7-37fb-41e6-82dc-689b7c481da5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.embed_w_context
+label: 'Embed in context'
+targetEntityType: media
+cache: true

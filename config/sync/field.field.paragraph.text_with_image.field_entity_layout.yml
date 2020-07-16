@@ -12,12 +12,10 @@ field_name: field_entity_layout
 entity_type: paragraph
 bundle: text_with_image
 label: 'Paragraph layout'
-description: 'Select visual composition.'
+description: 'Select the visual composition.'
 required: false
 translatable: false
-default_value:
-  -
-    value: asset-above
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string

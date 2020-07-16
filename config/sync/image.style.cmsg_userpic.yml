@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: cmsg_userpic
-label: 'CMSG userpic'
+label: 'CMSG userpic (150 circle)'
 effects:
   311d2614-c9e9-4edb-8834-463b7ad08aae:
     uuid: 311d2614-c9e9-4edb-8834-463b7ad08aae

@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    -
+      label: 'Auch als alleinstehendes Showcase-Projekt veröffentlichen'
+    -
+      label: 'Nur zur Verwendung in einem CMS-Portrait'

@@ -1,0 +1,82 @@
+uuid: eff57a90-1e69-40c6-9be5-8d687be05a86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_with_showcase.field_body
+    - field.field.paragraph.text_with_showcase.field_caption
+    - field.field.paragraph.text_with_showcase.field_entity_layout
+    - field.field.paragraph.text_with_showcase.field_node_ref
+    - paragraphs.paragraphs_type.text_with_showcase
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_figure:
+      children:
+        - field_node_ref
+        - group_figcaption
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: figure
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Figure
+    group_figcaption:
+      children:
+        - field_caption
+      parent_name: group_figure
+      weight: 4
+      format_type: html_element
+      region: content
+      format_settings:
+        element: figcaption
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: Figcaption
+id: paragraph.text_with_showcase.default
+targetEntityType: paragraph
+bundle: text_with_showcase
+mode: default
+content:
+  field_body:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_node_ref:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: chapter_illustration
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_entity_layout: true

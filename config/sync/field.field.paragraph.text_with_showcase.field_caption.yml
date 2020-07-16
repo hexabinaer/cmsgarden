@@ -1,0 +1,29 @@
+uuid: 9e26f685-9680-4ed9-8a5d-a537213d977d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_caption
+    - paragraphs.paragraphs_type.text_with_showcase
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    minimal_html: minimal_html
+    basic_html: '0'
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.text_with_showcase.field_caption
+field_name: field_caption
+entity_type: paragraph
+bundle: text_with_showcase
+label: Caption
+description: 'Add a line describing the purpose of the illustration in the current context.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

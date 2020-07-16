@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: cmsg_header_image
-label: 'CMSG Header image'
+label: 'CMSG Header image (1440 x 380)'
 effects:
   c8e82b27-1a9e-4986-8f8e-e33f9716d0e8:
     uuid: c8e82b27-1a9e-4986-8f8e-e33f9716d0e8

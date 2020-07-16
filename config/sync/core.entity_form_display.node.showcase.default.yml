@@ -6,17 +6,45 @@ dependencies:
     - field.field.node.showcase.body
     - field.field.node.showcase.field_cms
     - field.field.node.showcase.field_media_image
+    - field.field.node.showcase.field_media_image_main
+    - field.field.node.showcase.field_paragraphs
     - field.field.node.showcase.field_sc_usage
+    - field.field.node.showcase.field_showcase_agency
+    - field.field.node.showcase.field_showcase_customer
     - field.field.node.showcase.field_showcase_date
+    - field.field.node.showcase.field_tags
     - field.field.node.showcase.field_title_html
     - node.type.showcase
     - workflows.workflow.default_nodes
   module:
     - content_moderation
-    - datetime
+    - datetime_extras
+    - field_group
     - media_library
+    - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_showcase_details:
+      children:
+        - field_showcase_customer
+        - field_showcase_agency
+        - field_tags
+        - body
+        - field_media_image
+        - field_paragraphs
+      parent_name: ''
+      weight: 7
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Only to fill in when this shall become a standalone showcase.'
+        open: false
+        required_fields: true
+      label: 'Showcase details'
 id: node.showcase.default
 targetEntityType: node
 bundle: showcase
@@ -24,7 +52,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 7
+    weight: 14
     settings:
       rows: 9
       summary_rows: 3
@@ -34,12 +62,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_cms:
-    weight: 4
+    weight: 5
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -49,23 +77,72 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_media_image:
-    weight: 3
+    weight: 15
     settings:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
     region: content
+  field_media_image_main:
+    type: media_library_widget
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_paragraphs:
+    weight: 16
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   field_sc_usage:
-    weight: 5
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_showcase_agency:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_showcase_customer:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   field_showcase_date:
     weight: 6
-    settings: {  }
+    settings:
+      date_order: 'Y'
+      time_type: none
+      increment: '15'
+      date_year_range: '1998:2030'
     third_party_settings: {  }
-    type: datetime_default
+    type: datetime_datelist_no_time
+    region: content
+  field_tags:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_title_html:
     weight: 2
@@ -84,13 +161,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 16
+    weight: 17
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -98,21 +175,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 12
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 16
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     region: content
     third_party_settings: {  }
   title:
@@ -124,7 +201,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -139,7 +216,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }

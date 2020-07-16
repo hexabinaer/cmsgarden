@@ -1,0 +1,29 @@
+uuid: febaa515-465f-492b-9e49-59088a651a6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_caption
+    - media.type.image
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    minimal_html: minimal_html
+    basic_html: '0'
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: media.image.field_caption
+field_name: field_caption
+entity_type: media
+bundle: image
+label: 'Default caption'
+description: 'Depending on the context, images can display this default caption.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

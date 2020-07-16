@@ -10,8 +10,8 @@ id: node.showcase.field_media_image
 field_name: field_media_image
 entity_type: node
 bundle: showcase
-label: Screenshot
-description: 'Please enter a short description for accessibility. The title will be used as a caption to the image.'
+label: 'Further images'
+description: 'The image name will automatically be inserted as the image caption. For more flexibility, use the "paragraphs" below instead.'
 required: true
 translatable: true
 default_value: {  }

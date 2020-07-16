@@ -1,0 +1,29 @@
+uuid: 3b8e8e23-c912-4705-83d3-a81c97eed231
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_showcase_customer
+    - node.type.showcase
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    minimal_html: minimal_html
+    basic_html: '0'
+    full_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: node.showcase.field_showcase_customer
+field_name: field_showcase_customer
+entity_type: node
+bundle: showcase
+label: Customer
+description: 'The name of the project owner (company, organization)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

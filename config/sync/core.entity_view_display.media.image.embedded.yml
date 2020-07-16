@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.embedded
+    - field.field.media.image.field_caption
     - field.field.media.image.field_category
     - field.field.media.image.field_copyright_link
     - field.field.media.image.field_copyright_owner
+    - field.field.media.image.field_license
     - field.field.media.image.field_longdesc
     - field.field.media.image.field_media_image
     - image.style.cmsg_large
@@ -14,6 +16,7 @@ dependencies:
   module:
     - field_group
     - layout_builder
+    - link
     - svg_image
     - text
 third_party_settings:
@@ -23,14 +26,14 @@ third_party_settings:
   field_group:
     group_copyright:
       children:
+        - field_license
         - field_copyright_owner
+        - field_copyright_link
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: html_element
       region: content
       format_settings:
-        id: ''
-        classes: ''
         element: div
         show_label: false
         label_element: h3
@@ -38,22 +41,55 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: copyright
       label: 'Copyright line'
 id: media.image.embedded
 targetEntityType: media
 bundle: image
 mode: embedded
 content:
-  field_copyright_owner:
+  field_caption:
     type: text_default
-    weight: 9
+    weight: 1
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_copyright_link:
+    type: link
+    weight: 12
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_copyright_owner:
+    type: text_default
+    weight: 11
+    region: content
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_license:
+    type: link
+    weight: 10
+    region: content
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
   field_longdesc:
     type: text_trimmed
-    weight: 1
+    weight: 2
     region: content
     label: visually_hidden
     settings:
@@ -67,15 +103,14 @@ content:
     settings:
       image_style: cmsg_large
       image_link: ''
-      svg_render_as_image: '1'
+      svg_render_as_image: true
       svg_attributes:
-        width: ''
-        height: ''
+        width: null
+        height: null
     third_party_settings: {  }
 hidden:
   created: true
   field_category: true
-  field_copyright_link: true
   filesize: true
   langcode: true
   link: true

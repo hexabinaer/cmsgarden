@@ -7,8 +7,13 @@ dependencies:
     - field.field.node.showcase.body
     - field.field.node.showcase.field_cms
     - field.field.node.showcase.field_media_image
+    - field.field.node.showcase.field_media_image_main
+    - field.field.node.showcase.field_paragraphs
     - field.field.node.showcase.field_sc_usage
+    - field.field.node.showcase.field_showcase_agency
+    - field.field.node.showcase.field_showcase_customer
     - field.field.node.showcase.field_showcase_date
+    - field.field.node.showcase.field_tags
     - field.field.node.showcase.field_title_html
     - node.type.showcase
   module:
@@ -19,7 +24,7 @@ targetEntityType: node
 bundle: showcase
 mode: teaser
 content:
-  field_media_image:
+  field_media_image_main:
     type: entity_reference_entity_view
     weight: 1
     region: content
@@ -39,7 +44,12 @@ hidden:
   body: true
   content_moderation_control: true
   field_cms: true
+  field_media_image: true
+  field_paragraphs: true
   field_sc_usage: true
+  field_showcase_agency: true
+  field_showcase_customer: true
   field_showcase_date: true
+  field_tags: true
   langcode: true
   links: true

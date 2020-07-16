@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: image
 label: Image
-description: 'Use local images for reusable media.'
+description: reusable
 source: image
 queue_thumbnail_downloads: true
 new_revision: true

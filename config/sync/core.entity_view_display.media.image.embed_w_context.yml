@@ -1,0 +1,114 @@
+uuid: d522cc8f-6c35-4776-9567-362cd27c0bc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embed_w_context
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_category
+    - field.field.media.image.field_copyright_link
+    - field.field.media.image.field_copyright_owner
+    - field.field.media.image.field_license
+    - field.field.media.image.field_longdesc
+    - field.field.media.image.field_media_image
+    - image.style.cmsg_large
+    - media.type.image
+  module:
+    - field_group
+    - layout_builder
+    - link
+    - svg_image
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_copyright_line:
+      children:
+        - field_license
+        - field_copyright_owner
+        - field_copyright_link
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: copyright
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Copyright line'
+id: media.image.embed_w_context
+targetEntityType: media
+bundle: image
+mode: embed_w_context
+content:
+  field_copyright_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_copyright_owner:
+    weight: 4
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_license:
+    type: link
+    weight: 3
+    region: content
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_longdesc:
+    type: text_trimmed
+    weight: 1
+    region: content
+    label: above
+    settings:
+      trim_length: 2
+    third_party_settings: {  }
+  field_media_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: cmsg_large
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_caption: true
+  field_category: true
+  filesize: true
+  langcode: true
+  link: true
+  mime: true
+  name: true
+  thumbnail: true
+  uid: true

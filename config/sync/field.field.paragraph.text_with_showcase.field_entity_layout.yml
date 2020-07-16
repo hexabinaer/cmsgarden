@@ -1,0 +1,21 @@
+uuid: 4c9df5eb-8f48-406a-8e01-07d2fe35b176
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_entity_layout
+    - paragraphs.paragraphs_type.text_with_showcase
+  module:
+    - options
+id: paragraph.text_with_showcase.field_entity_layout
+field_name: field_entity_layout
+entity_type: paragraph
+bundle: text_with_showcase
+label: 'Paragraph layout'
+description: 'Select the visual composition.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

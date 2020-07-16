@@ -1,0 +1,23 @@
+uuid: f4d8f3f8-9238-4763-aa8e-64e0040c5a9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_license
+    - media.type.image
+  module:
+    - link
+id: media.image.field_license
+field_name: field_license
+entity_type: media
+bundle: image
+label: License
+description: "Mandatory for creative work. Preferably a Creative Commons license, for example: \r\n\"CC BY-NC-SA 2.0\" linked to https://creativecommons.org/licenses/by-nc-sa/2.0\r\nOtherwise, write \"All rights reserved\" linked to https://en.wikipedia.org/wiki/All_rights_reserved"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

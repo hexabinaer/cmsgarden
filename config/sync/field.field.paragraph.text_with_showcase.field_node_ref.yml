@@ -1,19 +1,19 @@
-uuid: ad0f55f2-261e-435e-8133-cc151f5289a2
+uuid: f45abdfa-f7e7-4e8c-9e09-1209d1379391
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_node_ref
     - node.type.showcase
-    - paragraphs.paragraphs_type.text_with_image
-id: paragraph.text_with_image.field_node_ref
+    - paragraphs.paragraphs_type.text_with_showcase
+id: paragraph.text_with_showcase.field_node_ref
 field_name: field_node_ref
 entity_type: paragraph
-bundle: text_with_image
+bundle: text_with_showcase
 label: Showcase
-description: 'Select the first screenshot of an existing showcase'
+description: 'Select the first screenshot of an existing showcase.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

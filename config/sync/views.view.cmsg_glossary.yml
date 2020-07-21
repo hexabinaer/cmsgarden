@@ -134,7 +134,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Lemma
+          label: Term
           exclude: false
           alter:
             alter_text: true
@@ -196,7 +196,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Erläuterung
+          label: Explanation
           exclude: false
           alter:
             alter_text: false

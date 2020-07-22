@@ -1,0 +1,16 @@
+label: Standard-Inhaltsmoderation
+type_settings:
+  states:
+    draft:
+      label: Entwurf
+    published:
+      label: Veröffentlicht
+    review:
+      label: 'Zum Gegenlesen'
+  transitions:
+    create_new_draft:
+      label: 'Neuer Entwurf'
+    publish:
+      label: Veröffentlichen
+    review:
+      label: Gegenlesen

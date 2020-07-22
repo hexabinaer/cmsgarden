@@ -1,29 +1,31 @@
-uuid: dc5bcdaf-ae4a-43ed-a8ac-dbceeeafd113
+uuid: 91c6fd2b-c128-4f05-a638-6ebbaa58f955
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text_with_image.field_body
-    - field.field.paragraph.text_with_image.field_caption
-    - field.field.paragraph.text_with_image.field_entity_layout
-    - field.field.paragraph.text_with_image.field_media_image
-    - paragraphs.paragraphs_type.text_with_image
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.text_with_showcase.field_body
+    - field.field.paragraph.text_with_showcase.field_caption
+    - field.field.paragraph.text_with_showcase.field_entity_layout
+    - field.field.paragraph.text_with_showcase.field_node_ref
+    - paragraphs.paragraphs_type.text_with_showcase
   module:
-    - field_formatter_class
     - field_group
-    - options
+    - layout_builder
     - text
 third_party_settings:
   field_group:
     group_figure:
       children:
-        - field_media_image
+        - field_node_ref
         - group_figcaption
       parent_name: ''
       weight: 0
       format_type: html_element
       region: content
       format_settings:
+        id: ''
+        classes: ''
         element: figure
         show_label: false
         label_element: h3
@@ -31,14 +33,12 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: ''
       label: Figure
     group_figcaption:
       children:
         - field_caption
       parent_name: group_figure
-      weight: 3
+      weight: 4
       format_type: html_element
       region: content
       format_settings:
@@ -52,41 +52,37 @@ third_party_settings:
         id: ''
         classes: ''
       label: Figcaption
-id: paragraph.text_with_image.default
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.text_with_showcase.preview
 targetEntityType: paragraph
-bundle: text_with_image
-mode: default
+bundle: text_with_showcase
+mode: preview
 content:
   field_body:
     weight: 4
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
-    type: text_default
+    type: text_trimmed
     region: content
   field_caption:
-    weight: 3
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_entity_layout:
-    type: list_default
-    weight: 5
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-  field_media_image:
-    type: entity_reference_entity_view
-    weight: 1
+  field_node_ref:
+    weight: 3
     label: hidden
     settings:
-      view_mode: embedded
+      view_mode: chapter_illustration
       link: false
-    third_party_settings:
-      field_formatter_class:
-        class: ''
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
-hidden: {  }
+hidden:
+  field_entity_layout: true

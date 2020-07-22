@@ -18,19 +18,32 @@ third_party_settings:
       children:
         - field_entity_layout
         - field_media_image
-        - field_node_ref
         - field_caption
+      parent_name: ''
+      weight: 0
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: Asset
+    group_text:
+      children:
+        - field_body
       parent_name: ''
       weight: 1
       format_type: details
       region: content
       format_settings:
-        id: ''
-        classes: ''
         description: ''
         open: true
         required_fields: true
-      label: Asset
+        id: ''
+        classes: ''
+      label: Text
 id: paragraph.text_with_image.default
 targetEntityType: paragraph
 bundle: text_with_image

@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    -
+      label: News/Meldung
+    -
+      label: Pressemitteilung

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.blog_entry.field_blog_topic_relation
     - field.field.node.blog_entry.field_cms
     - field.field.node.blog_entry.field_media_image
+    - field.field.node.blog_entry.field_paragraphs
     - field.field.node.blog_entry.field_public_downloads
     - field.field.node.blog_entry.field_sub_title
     - field.field.node.blog_entry.field_teaser_image
@@ -239,6 +240,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_paragraphs: true
   field_public_downloads: true
   field_teaser_image: true
   field_term_suggestion: true

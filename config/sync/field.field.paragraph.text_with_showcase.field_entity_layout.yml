@@ -14,7 +14,7 @@ bundle: text_with_showcase
 label: 'Paragraph layout'
 description: 'Select the visual composition.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

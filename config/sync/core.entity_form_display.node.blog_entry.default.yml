@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.blog_entry.field_blog_topic_relation
     - field.field.node.blog_entry.field_cms
     - field.field.node.blog_entry.field_media_image
+    - field.field.node.blog_entry.field_paragraphs
     - field.field.node.blog_entry.field_public_downloads
     - field.field.node.blog_entry.field_sub_title
     - field.field.node.blog_entry.field_teaser_image
@@ -20,6 +21,7 @@ dependencies:
     - content_moderation
     - entity_browser
     - field_group
+    - paragraphs
     - path
     - text
 third_party_settings:
@@ -31,9 +33,10 @@ third_party_settings:
         - field_media_image
         - field_teaser_image
         - body
+        - field_paragraphs
         - field_public_downloads
       parent_name: ''
-      weight: 3
+      weight: 2
       format_type: details
       format_settings:
         description: ''
@@ -129,8 +132,20 @@ content:
     third_party_settings: {  }
     type: entity_browser_entity_reference
     region: content
-  field_public_downloads:
+  field_paragraphs:
     weight: 10
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_public_downloads:
+    weight: 11
     settings:
       entity_browser: file_browser_modal
       field_widget_display: label

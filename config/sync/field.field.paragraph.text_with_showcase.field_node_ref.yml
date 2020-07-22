@@ -13,7 +13,7 @@ bundle: text_with_showcase
 label: Showcase
 description: 'Select the first screenshot of an existing showcase.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

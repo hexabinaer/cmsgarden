@@ -11,9 +11,9 @@ field_name: field_media_image
 entity_type: node
 bundle: article
 label: 'Main image'
-description: 'To display above the headline for illustrative purposes (panorama format, ideally). When a caption is required, please embed your image in the body.'
+description: 'Rendered below the headlines at a fixed position.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

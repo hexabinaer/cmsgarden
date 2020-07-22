@@ -29,13 +29,27 @@ third_party_settings:
         open: true
         required_fields: true
       label: Asset
+    group_text:
+      children:
+        - field_body
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Text
 id: paragraph.text_with_showcase.default
 targetEntityType: paragraph
 bundle: text_with_showcase
 mode: default
 content:
   field_body:
-    weight: 1
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -68,7 +82,7 @@ content:
     region: content
   status:
     type: boolean_checkbox
-    weight: 2
+    weight: 3
     region: content
     settings:
       display_label: true

@@ -22,7 +22,7 @@ bundle: text_with_showcase
 label: Caption
 description: 'Add a line describing the purpose of the illustration in the current context.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

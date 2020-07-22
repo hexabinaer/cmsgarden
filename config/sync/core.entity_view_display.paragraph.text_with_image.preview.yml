@@ -1,16 +1,17 @@
-uuid: dc5bcdaf-ae4a-43ed-a8ac-dbceeeafd113
+uuid: d33b515a-a997-4575-91b7-9409d8b95055
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.text_with_image.field_body
     - field.field.paragraph.text_with_image.field_caption
     - field.field.paragraph.text_with_image.field_entity_layout
     - field.field.paragraph.text_with_image.field_media_image
     - paragraphs.paragraphs_type.text_with_image
   module:
-    - field_formatter_class
     - field_group
+    - layout_builder
     - options
     - text
 third_party_settings:
@@ -52,17 +53,21 @@ third_party_settings:
         id: ''
         classes: ''
       label: Figcaption
-id: paragraph.text_with_image.default
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.text_with_image.preview
 targetEntityType: paragraph
 bundle: text_with_image
-mode: default
+mode: preview
 content:
   field_body:
     weight: 4
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
-    type: text_default
+    type: text_trimmed
     region: content
   field_caption:
     weight: 3
@@ -72,7 +77,7 @@ content:
     type: text_default
     region: content
   field_entity_layout:
-    type: list_default
+    type: list_key
     weight: 5
     region: content
     label: hidden
@@ -83,10 +88,8 @@ content:
     weight: 1
     label: hidden
     settings:
-      view_mode: embedded
+      view_mode: preview
       link: false
-    third_party_settings:
-      field_formatter_class:
-        class: ''
+    third_party_settings: {  }
     region: content
 hidden: {  }

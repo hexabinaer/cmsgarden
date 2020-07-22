@@ -19,7 +19,7 @@ id: node.blog_entry.field_sub_title
 field_name: field_sub_title
 entity_type: node
 bundle: blog_entry
-label: 'Sub title'
+label: Subheadline
 description: 'The sub-headline.'
 required: false
 translatable: true

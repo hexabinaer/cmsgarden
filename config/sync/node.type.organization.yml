@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Organization
 type: organization
-description: 'Add a new organizational member or a non-profit, CMS-related, association (administrative staff only).'
+description: "Add a new organizational member or a non-profit, CMS-related, association (administrative staff only).\r\n(Can also be used to provide a project partner for reference.)"
 help: ''
 new_revision: true
 preview_mode: 1

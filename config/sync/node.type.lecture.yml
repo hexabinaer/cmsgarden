@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Lecture
 type: lecture
-description: 'A session or lecture that can be held in the course of CMS Garden''s activities.'
+description: 'A session or lecture that can be held in the course (or outside) of CMS Garden''s activities.'
 help: ''
 new_revision: true
 preview_mode: 1

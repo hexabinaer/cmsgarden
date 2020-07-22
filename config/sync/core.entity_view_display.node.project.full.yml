@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.project.body
+    - field.field.node.project.field_contact_ref
     - field.field.node.project.field_external_links
     - field.field.node.project.field_media_image
     - field.field.node.project.field_meta_tags
@@ -43,7 +44,7 @@ third_party_settings:
         layout_id: layout_twocol_section
         layout_settings:
           label: ''
-          column_widths: 50-50
+          column_widths: 67-33
         components:
           4db497cf-da9a-490c-b20c-19908128f1b1:
             uuid: 4db497cf-da9a-490c-b20c-19908128f1b1
@@ -84,10 +85,74 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 67-33
         components:
+          53b31a80-b53f-43c1-8f69-76e6ba8ef04e:
+            uuid: 53b31a80-b53f-43c1-8f69-76e6ba8ef04e
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:project:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          7245ea14-449f-4442-99f6-ec1e239d1719:
+            uuid: 7245ea14-449f-4442-99f6-ec1e239d1719
+            region: second
+            configuration:
+              id: 'field_block:node:project:field_contact_ref'
+              label: Contact
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: compact
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 50-50
+        components:
+          bfacce60-2c2d-4408-b460-0dac2bd4d216:
+            uuid: bfacce60-2c2d-4408-b460-0dac2bd4d216
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:project:field_public_downloads'
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
           06432a32-7650-49f3-98b6-fdd9f1267511:
             uuid: 06432a32-7650-49f3-98b6-fdd9f1267511
-            region: content
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -103,37 +168,6 @@ third_party_settings:
                   target: ''
                 third_party_settings: {  }
                 type: link
-            additional: {  }
-            weight: 2
-          bfacce60-2c2d-4408-b460-0dac2bd4d216:
-            uuid: bfacce60-2c2d-4408-b460-0dac2bd4d216
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:project:field_public_downloads'
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            additional: {  }
-            weight: 1
-          53b31a80-b53f-43c1-8f69-76e6ba8ef04e:
-            uuid: 53b31a80-b53f-43c1-8f69-76e6ba8ef04e
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:project:body'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
             additional: {  }
             weight: 0
         third_party_settings: {  }
@@ -155,9 +189,7 @@ third_party_settings:
                 type: entity_reference_entity_view
                 settings:
                   view_mode: logo
-                third_party_settings:
-                  ds:
-                    ds_limit: ''
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
@@ -218,6 +250,7 @@ content:
     type: text_default
     region: content
 hidden:
+  field_contact_ref: true
   field_meta_tags: true
   field_org_ref: true
   langcode: true

@@ -11,7 +11,7 @@ dependencies:
     - field.field.node.location.field_location_website
     - node.type.location
   module:
-    - cmsg_base
+    - address
     - user
 id: node.location.teaser
 targetEntityType: node
@@ -19,12 +19,12 @@ bundle: location
 mode: teaser
 content:
   field_event_location:
-    type: cmsg_address_location_only
-    weight: 0
-    region: content
-    label: hidden
+    weight: 1
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: address_default
+    region: content
 hidden:
   field_archived: true
   field_geolocation: true

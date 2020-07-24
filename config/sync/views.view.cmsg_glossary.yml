@@ -34,7 +34,7 @@ display:
         type: views_query
         options:
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_comment: ''
           query_tags: {  }
@@ -258,11 +258,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Wikipedia about'
           exclude: false
           alter:
             alter_text: true
-            text: '<br>{{ field_wikipedia_link }}'
+            text: '<br><label label-inline label-icon wikipedia>Wikipedia:</label> {{ field_wikipedia_link }}'
             make_link: false
             path: ''
             absolute: false
@@ -302,7 +302,7 @@ display:
           click_sort_column: uri
           type: link
           settings:
-            trim_length: 80
+            trim_length: 120
             url_only: false
             url_plain: false
             rel: '0'

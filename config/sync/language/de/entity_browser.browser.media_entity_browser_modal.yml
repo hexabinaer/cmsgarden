@@ -5,3 +5,5 @@ widgets:
     settings:
       submit_text: 'Medium auswählen'
     label: 'Vorhandene auswählen'
+  8bedeb54-37e7-47c4-a266-4bc2a9858647:
+    label: 'Neues Bild'

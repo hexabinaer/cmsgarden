@@ -12,17 +12,12 @@ field_name: field_wikipedia_link
 entity_type: node
 bundle: glossary
 label: 'Wikipedia link'
-description: 'If not needed, please remove the default value.'
+description: 'Enter full URL, beginning with https://en.wikipedia.org/wiki/'
 required: false
 translatable: true
-default_value:
-  -
-    attributes: {  }
-    uri: 'https://en.wikipedia.org/wiki/'
-    title: ''
-    options: {  }
+default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 16
-  title: 0
+  title: 1
 field_type: link

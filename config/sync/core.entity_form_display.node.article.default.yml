@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.image_browser_modal_
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_type
@@ -21,8 +20,8 @@ dependencies:
   module:
     - content_moderation
     - datetime
-    - entity_browser
     - field_group
+    - media_library
     - metatag
     - path
     - text
@@ -113,21 +112,14 @@ content:
   field_media_image:
     weight: 6
     settings:
-      entity_browser: image_browser_modal_
-      field_widget_display: rendered_entity
-      field_widget_display_settings:
-        view_mode: preview
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_replace: false
-      open: false
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   field_meta_tags:
     weight: 12
-    settings: {  }
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
@@ -140,17 +132,9 @@ content:
   field_teaser_image:
     weight: 7
     settings:
-      entity_browser: image_browser_modal_
-      field_widget_display: rendered_entity
-      field_widget_display_settings:
-        view_mode: preview
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_replace: false
-      open: false
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   field_term_suggestion:
     weight: 18

@@ -1,5 +1,2 @@
 label: Wikipedia-Link
 description: 'Wenn nicht benötigt, entferne bitte die Vorbelegung.'
-default_value:
-  -
-    title: 'https://de.wikipedia.org/wiki/'

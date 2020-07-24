@@ -1,0 +1,9 @@
+display_configuration:
+  link_text: 'Bild wählen'
+selection_display_configuration:
+  select_text: 'Auswahl verwenden'
+widgets:
+  bc33ef49-9964-4b5a-8389-e8fb093508ca:
+    label: 'Neues Bild'
+  d45341fa-f192-4ca1-ae6f-44feb2200a81:
+    label: 'Vorhandene auswählen'

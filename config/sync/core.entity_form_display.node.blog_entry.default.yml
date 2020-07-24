@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.image_browser_modal_
+    - entity_browser.browser.file_browser_modal
     - field.field.node.blog_entry.body
     - field.field.node.blog_entry.field_author
     - field.field.node.blog_entry.field_blog_topic_relation
@@ -21,6 +21,7 @@ dependencies:
     - content_moderation
     - entity_browser
     - field_group
+    - media_library
     - paragraphs
     - path
     - text
@@ -120,17 +121,9 @@ content:
   field_media_image:
     weight: 7
     settings:
-      entity_browser: image_browser_modal_
-      field_widget_display: rendered_entity
-      field_widget_display_settings:
-        view_mode: preview
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: true
-      selection_mode: selection_append
-      open: false
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   field_paragraphs:
     weight: 10
@@ -169,17 +162,9 @@ content:
   field_teaser_image:
     weight: 8
     settings:
-      entity_browser: image_browser_modal_
-      field_widget_display: rendered_entity
-      field_widget_display_settings:
-        view_mode: preview
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_replace: false
-      open: false
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   field_term_suggestion:
     weight: 15

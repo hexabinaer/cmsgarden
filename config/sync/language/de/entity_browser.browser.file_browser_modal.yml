@@ -1,0 +1,9 @@
+display_configuration:
+  link_text: 'Datei wählen'
+widgets:
+  b6459766-4082-46c1-84f0-b249c6941dbc:
+    settings:
+      submit_text: 'Dateien wählen'
+    label: 'Vorhandene auswählen'
+  26afe466-f198-4bdf-b916-bd749773f889:
+    label: 'Neue Datei'

@@ -1,0 +1,21 @@
+uuid: 6d97889e-da14-4c45-b8ec-3a28486bd2b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archived
+    - node.type.project
+  module:
+    - options
+id: node.project.field_archived
+field_name: field_archived
+entity_type: node
+bundle: project
+label: Archive
+description: 'Tick this to archive the project (will be listed correspondingly)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

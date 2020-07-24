@@ -1,0 +1,1035 @@
+uuid: d1a61fbb-5c92-4e6e-867c-b0c365979138
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.storage.node.field_project_type
+    - node.type.project
+    - taxonomy.vocabulary.project_category
+  content:
+    - 'taxonomy_term:project_category:2ab280ec-48c5-4284-92a6-6c70122ffe24'
+  module:
+    - datetime
+    - node
+    - options
+    - taxonomy
+    - user
+id: cmsg_projects
+label: 'CMSG projects'
+module: views
+description: 'Aggregates published projects'
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: none
+        options:
+          items_per_page: null
+          offset: 0
+      style:
+        type: default
+        options:
+          grouping:
+            -
+              field: field_project_type
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: true
+          uses_fields: true
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: teaser
+      fields:
+        field_project_type:
+          id: field_project_type
+          table: node__field_project_type
+          field: field_project_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        rendered_entity:
+          id: rendered_entity
+          table: node
+          field: rendered_entity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view_mode: teaser
+          entity_type: node
+          plugin_id: rendered_entity
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            project: project
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+        field_archived_value:
+          id: field_archived_value
+          table: node__field_archived
+          field: field_archived_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: empty
+          value:
+            all: all
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        langcode_1:
+          id: langcode_1
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_project_type
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_project_type
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+        field_publish_date_value:
+          id: field_publish_date_value
+          table: node__field_publish_date
+          field: field_publish_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
+      title: 'Current projects'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships:
+        field_project_type:
+          id: field_project_type
+          table: node__field_project_type
+          field: field_project_type
+          relationship: none
+          group_type: group
+          admin_label: 'field_project_type: Taxonomy term'
+          required: false
+          plugin_id: standard
+      arguments: {  }
+      display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.node.article.default'
+        - 'config:core.entity_view_display.node.article.full'
+        - 'config:core.entity_view_display.node.article.rss'
+        - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.blog_entry.default'
+        - 'config:core.entity_view_display.node.blog_entry.full'
+        - 'config:core.entity_view_display.node.blog_entry.teaser'
+        - 'config:core.entity_view_display.node.content_management_system.abstract'
+        - 'config:core.entity_view_display.node.content_management_system.characteristics'
+        - 'config:core.entity_view_display.node.content_management_system.credits'
+        - 'config:core.entity_view_display.node.content_management_system.default'
+        - 'config:core.entity_view_display.node.content_management_system.full'
+        - 'config:core.entity_view_display.node.content_management_system.links_block'
+        - 'config:core.entity_view_display.node.content_management_system.node_embedded'
+        - 'config:core.entity_view_display.node.content_management_system.teaser'
+        - 'config:core.entity_view_display.node.date.default'
+        - 'config:core.entity_view_display.node.date.full'
+        - 'config:core.entity_view_display.node.date.teaser'
+        - 'config:core.entity_view_display.node.date.teaser_text'
+        - 'config:core.entity_view_display.node.editors_manual.default'
+        - 'config:core.entity_view_display.node.editors_manual.full'
+        - 'config:core.entity_view_display.node.editors_manual.teaser'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.full'
+        - 'config:core.entity_view_display.node.event.location'
+        - 'config:core.entity_view_display.node.event.logo'
+        - 'config:core.entity_view_display.node.event.node_embedded'
+        - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.event.teaser_text'
+        - 'config:core.entity_view_display.node.frequently_asked_question.default'
+        - 'config:core.entity_view_display.node.frequently_asked_question.full'
+        - 'config:core.entity_view_display.node.frequently_asked_question.teaser'
+        - 'config:core.entity_view_display.node.glossary.default'
+        - 'config:core.entity_view_display.node.glossary.label'
+        - 'config:core.entity_view_display.node.glossary.teaser'
+        - 'config:core.entity_view_display.node.lecture.default'
+        - 'config:core.entity_view_display.node.lecture.teaser'
+        - 'config:core.entity_view_display.node.location.default'
+        - 'config:core.entity_view_display.node.location.full'
+        - 'config:core.entity_view_display.node.location.location'
+        - 'config:core.entity_view_display.node.location.node_embedded'
+        - 'config:core.entity_view_display.node.location.teaser'
+        - 'config:core.entity_view_display.node.organization.default'
+        - 'config:core.entity_view_display.node.organization.full'
+        - 'config:core.entity_view_display.node.organization.logo'
+        - 'config:core.entity_view_display.node.organization.teaser'
+        - 'config:core.entity_view_display.node.organization.teaser_text'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.full'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.page.teaser_text'
+        - 'config:core.entity_view_display.node.project.default'
+        - 'config:core.entity_view_display.node.project.full'
+        - 'config:core.entity_view_display.node.project.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.showcase.chapter_illustration'
+        - 'config:core.entity_view_display.node.showcase.default'
+        - 'config:core.entity_view_display.node.showcase.full'
+        - 'config:core.entity_view_display.node.showcase.teaser'
+        - 'config:core.entity_view_display.node.testimonial.default'
+        - 'config:core.entity_view_display.node.testimonial.full'
+        - 'config:core.entity_view_display.node.testimonial.teaser'
+        - 'config:field.storage.node.field_project_type'
+  block_projects_archived:
+    display_plugin: block
+    id: block_projects_archived
+    display_title: 'Block archived'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: 'Projects (archived)'
+      display_description: ''
+      block_hide_empty: true
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            project: project
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+        field_archived_value:
+          id: field_archived_value
+          table: node__field_archived
+          field: field_archived_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value:
+            all: all
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      title: 'Former projects (archived)'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.node.article.default'
+        - 'config:core.entity_view_display.node.article.full'
+        - 'config:core.entity_view_display.node.article.rss'
+        - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.blog_entry.default'
+        - 'config:core.entity_view_display.node.blog_entry.full'
+        - 'config:core.entity_view_display.node.blog_entry.teaser'
+        - 'config:core.entity_view_display.node.content_management_system.abstract'
+        - 'config:core.entity_view_display.node.content_management_system.characteristics'
+        - 'config:core.entity_view_display.node.content_management_system.credits'
+        - 'config:core.entity_view_display.node.content_management_system.default'
+        - 'config:core.entity_view_display.node.content_management_system.full'
+        - 'config:core.entity_view_display.node.content_management_system.links_block'
+        - 'config:core.entity_view_display.node.content_management_system.node_embedded'
+        - 'config:core.entity_view_display.node.content_management_system.teaser'
+        - 'config:core.entity_view_display.node.date.default'
+        - 'config:core.entity_view_display.node.date.full'
+        - 'config:core.entity_view_display.node.date.teaser'
+        - 'config:core.entity_view_display.node.date.teaser_text'
+        - 'config:core.entity_view_display.node.editors_manual.default'
+        - 'config:core.entity_view_display.node.editors_manual.full'
+        - 'config:core.entity_view_display.node.editors_manual.teaser'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.full'
+        - 'config:core.entity_view_display.node.event.location'
+        - 'config:core.entity_view_display.node.event.logo'
+        - 'config:core.entity_view_display.node.event.node_embedded'
+        - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.event.teaser_text'
+        - 'config:core.entity_view_display.node.frequently_asked_question.default'
+        - 'config:core.entity_view_display.node.frequently_asked_question.full'
+        - 'config:core.entity_view_display.node.frequently_asked_question.teaser'
+        - 'config:core.entity_view_display.node.glossary.default'
+        - 'config:core.entity_view_display.node.glossary.label'
+        - 'config:core.entity_view_display.node.glossary.teaser'
+        - 'config:core.entity_view_display.node.lecture.default'
+        - 'config:core.entity_view_display.node.lecture.teaser'
+        - 'config:core.entity_view_display.node.location.default'
+        - 'config:core.entity_view_display.node.location.full'
+        - 'config:core.entity_view_display.node.location.location'
+        - 'config:core.entity_view_display.node.location.node_embedded'
+        - 'config:core.entity_view_display.node.location.teaser'
+        - 'config:core.entity_view_display.node.organization.default'
+        - 'config:core.entity_view_display.node.organization.full'
+        - 'config:core.entity_view_display.node.organization.logo'
+        - 'config:core.entity_view_display.node.organization.teaser'
+        - 'config:core.entity_view_display.node.organization.teaser_text'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.full'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.page.teaser_text'
+        - 'config:core.entity_view_display.node.project.default'
+        - 'config:core.entity_view_display.node.project.full'
+        - 'config:core.entity_view_display.node.project.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.showcase.chapter_illustration'
+        - 'config:core.entity_view_display.node.showcase.default'
+        - 'config:core.entity_view_display.node.showcase.full'
+        - 'config:core.entity_view_display.node.showcase.teaser'
+        - 'config:core.entity_view_display.node.testimonial.default'
+        - 'config:core.entity_view_display.node.testimonial.full'
+        - 'config:core.entity_view_display.node.testimonial.teaser'
+        - 'config:field.storage.node.field_project_type'
+  block_projects_current:
+    display_plugin: block
+    id: block_projects_current
+    display_title: 'Block current'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: 'Projects (current)'
+      display_description: ''
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.node.article.default'
+        - 'config:core.entity_view_display.node.article.full'
+        - 'config:core.entity_view_display.node.article.rss'
+        - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.blog_entry.default'
+        - 'config:core.entity_view_display.node.blog_entry.full'
+        - 'config:core.entity_view_display.node.blog_entry.teaser'
+        - 'config:core.entity_view_display.node.content_management_system.abstract'
+        - 'config:core.entity_view_display.node.content_management_system.characteristics'
+        - 'config:core.entity_view_display.node.content_management_system.credits'
+        - 'config:core.entity_view_display.node.content_management_system.default'
+        - 'config:core.entity_view_display.node.content_management_system.full'
+        - 'config:core.entity_view_display.node.content_management_system.links_block'
+        - 'config:core.entity_view_display.node.content_management_system.node_embedded'
+        - 'config:core.entity_view_display.node.content_management_system.teaser'
+        - 'config:core.entity_view_display.node.date.default'
+        - 'config:core.entity_view_display.node.date.full'
+        - 'config:core.entity_view_display.node.date.teaser'
+        - 'config:core.entity_view_display.node.date.teaser_text'
+        - 'config:core.entity_view_display.node.editors_manual.default'
+        - 'config:core.entity_view_display.node.editors_manual.full'
+        - 'config:core.entity_view_display.node.editors_manual.teaser'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.full'
+        - 'config:core.entity_view_display.node.event.location'
+        - 'config:core.entity_view_display.node.event.logo'
+        - 'config:core.entity_view_display.node.event.node_embedded'
+        - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.event.teaser_text'
+        - 'config:core.entity_view_display.node.frequently_asked_question.default'
+        - 'config:core.entity_view_display.node.frequently_asked_question.full'
+        - 'config:core.entity_view_display.node.frequently_asked_question.teaser'
+        - 'config:core.entity_view_display.node.glossary.default'
+        - 'config:core.entity_view_display.node.glossary.label'
+        - 'config:core.entity_view_display.node.glossary.teaser'
+        - 'config:core.entity_view_display.node.lecture.default'
+        - 'config:core.entity_view_display.node.lecture.teaser'
+        - 'config:core.entity_view_display.node.location.default'
+        - 'config:core.entity_view_display.node.location.full'
+        - 'config:core.entity_view_display.node.location.location'
+        - 'config:core.entity_view_display.node.location.node_embedded'
+        - 'config:core.entity_view_display.node.location.teaser'
+        - 'config:core.entity_view_display.node.organization.default'
+        - 'config:core.entity_view_display.node.organization.full'
+        - 'config:core.entity_view_display.node.organization.logo'
+        - 'config:core.entity_view_display.node.organization.teaser'
+        - 'config:core.entity_view_display.node.organization.teaser_text'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.full'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.page.teaser_text'
+        - 'config:core.entity_view_display.node.project.default'
+        - 'config:core.entity_view_display.node.project.full'
+        - 'config:core.entity_view_display.node.project.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.showcase.chapter_illustration'
+        - 'config:core.entity_view_display.node.showcase.default'
+        - 'config:core.entity_view_display.node.showcase.full'
+        - 'config:core.entity_view_display.node.showcase.teaser'
+        - 'config:core.entity_view_display.node.testimonial.default'
+        - 'config:core.entity_view_display.node.testimonial.full'
+        - 'config:core.entity_view_display.node.testimonial.teaser'
+        - 'config:field.storage.node.field_project_type'
+  block_projects_wg:
+    display_plugin: block
+    id: block_projects_wg
+    display_title: 'Block working groups'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: 'Working groups'
+      display_description: ''
+      block_hide_empty: true
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            project: project
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+        field_archived_value:
+          id: field_archived_value
+          table: node__field_archived
+          field: field_archived_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: empty
+          value:
+            all: all
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+        langcode_1:
+          id: langcode_1
+          table: taxonomy_term_field_data
+          field: langcode
+          relationship: field_project_type
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
+        field_project_type_target_id:
+          id: field_project_type_target_id
+          table: node__field_project_type
+          field: field_project_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            - 42
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: project_category
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      title: 'Working groups'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.node.article.default'
+        - 'config:core.entity_view_display.node.article.full'
+        - 'config:core.entity_view_display.node.article.rss'
+        - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.blog_entry.default'
+        - 'config:core.entity_view_display.node.blog_entry.full'
+        - 'config:core.entity_view_display.node.blog_entry.teaser'
+        - 'config:core.entity_view_display.node.content_management_system.abstract'
+        - 'config:core.entity_view_display.node.content_management_system.characteristics'
+        - 'config:core.entity_view_display.node.content_management_system.credits'
+        - 'config:core.entity_view_display.node.content_management_system.default'
+        - 'config:core.entity_view_display.node.content_management_system.full'
+        - 'config:core.entity_view_display.node.content_management_system.links_block'
+        - 'config:core.entity_view_display.node.content_management_system.node_embedded'
+        - 'config:core.entity_view_display.node.content_management_system.teaser'
+        - 'config:core.entity_view_display.node.date.default'
+        - 'config:core.entity_view_display.node.date.full'
+        - 'config:core.entity_view_display.node.date.teaser'
+        - 'config:core.entity_view_display.node.date.teaser_text'
+        - 'config:core.entity_view_display.node.editors_manual.default'
+        - 'config:core.entity_view_display.node.editors_manual.full'
+        - 'config:core.entity_view_display.node.editors_manual.teaser'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.full'
+        - 'config:core.entity_view_display.node.event.location'
+        - 'config:core.entity_view_display.node.event.logo'
+        - 'config:core.entity_view_display.node.event.node_embedded'
+        - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.event.teaser_text'
+        - 'config:core.entity_view_display.node.frequently_asked_question.default'
+        - 'config:core.entity_view_display.node.frequently_asked_question.full'
+        - 'config:core.entity_view_display.node.frequently_asked_question.teaser'
+        - 'config:core.entity_view_display.node.glossary.default'
+        - 'config:core.entity_view_display.node.glossary.label'
+        - 'config:core.entity_view_display.node.glossary.teaser'
+        - 'config:core.entity_view_display.node.lecture.default'
+        - 'config:core.entity_view_display.node.lecture.teaser'
+        - 'config:core.entity_view_display.node.location.default'
+        - 'config:core.entity_view_display.node.location.full'
+        - 'config:core.entity_view_display.node.location.location'
+        - 'config:core.entity_view_display.node.location.node_embedded'
+        - 'config:core.entity_view_display.node.location.teaser'
+        - 'config:core.entity_view_display.node.organization.default'
+        - 'config:core.entity_view_display.node.organization.full'
+        - 'config:core.entity_view_display.node.organization.logo'
+        - 'config:core.entity_view_display.node.organization.teaser'
+        - 'config:core.entity_view_display.node.organization.teaser_text'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.full'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.page.teaser_text'
+        - 'config:core.entity_view_display.node.project.default'
+        - 'config:core.entity_view_display.node.project.full'
+        - 'config:core.entity_view_display.node.project.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.showcase.chapter_illustration'
+        - 'config:core.entity_view_display.node.showcase.default'
+        - 'config:core.entity_view_display.node.showcase.full'
+        - 'config:core.entity_view_display.node.showcase.teaser'
+        - 'config:core.entity_view_display.node.testimonial.default'
+        - 'config:core.entity_view_display.node.testimonial.full'
+        - 'config:core.entity_view_display.node.testimonial.teaser'
+        - 'config:field.storage.node.field_project_type'

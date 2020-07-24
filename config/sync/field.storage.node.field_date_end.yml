@@ -1,4 +1,4 @@
-uuid: 4d608883-8908-4a9b-aa55-bc3b29f433d6
+uuid: 9c0d05fd-325d-48d9-a52e-c6f10e6fad14
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_publish_date
-field_name: field_publish_date
+id: node.field_date_end
+field_name: field_date_end
 entity_type: node
 type: datetime
 settings:

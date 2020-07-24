@@ -1,0 +1,21 @@
+uuid: 20566b0b-3e74-4279-a7b3-7e6135a60783
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publish_date
+    - node.type.project
+  module:
+    - datetime
+id: node.project.field_publish_date
+field_name: field_publish_date
+entity_type: node
+bundle: project
+label: 'Start date'
+description: 'The year the project was started in.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

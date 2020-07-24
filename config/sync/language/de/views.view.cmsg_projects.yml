@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      title: 'Aktuelle Projekte'
+  block_projects_archived:
+    display_options:
+      title: 'Frühere Projekte (Archiv)'
+  block_projects_wg:
+    display_title: 'Block current'
+    display_options:
+      title: Arbeitsgruppen

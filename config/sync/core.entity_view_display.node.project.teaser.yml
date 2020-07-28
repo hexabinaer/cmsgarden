@@ -49,6 +49,11 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
   field_archived: true
@@ -61,4 +66,3 @@ hidden:
   field_public_downloads: true
   field_publish_date: true
   langcode: true
-  links: true

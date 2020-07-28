@@ -13,5 +13,5 @@ third_party_settings:
 id: poll_choice.poll_choice
 target_entity_type_id: poll_choice
 target_bundle: poll_choice
-default_langcode: site_default
+default_langcode: current_interface
 language_alterable: true

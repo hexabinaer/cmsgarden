@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.logo_inverted
+    - core.entity_view_mode.taxonomy_term.teaser
     - field.storage.taxonomy_term.field_title_html
     - taxonomy.vocabulary.content_management_systems
   module:
@@ -294,6 +295,35 @@ display:
       display_extenders: {  }
       display_description: ''
       block_description: 'CMS logos (active)'
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags: {  }
+  block_cms_active_teasers:
+    display_plugin: block
+    id: block_cms_active_teasers
+    display_title: 'Block participating (teasers)'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      block_description: 'CMS teasers (active)'
+      style:
+        type: default
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        css_class: false
+      row:
+        type: 'entity:taxonomy_term'
+        options:
+          relationship: none
+          view_mode: teaser
+      css_class: ''
     cache_metadata:
       max-age: 0
       contexts:

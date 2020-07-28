@@ -1,0 +1,55 @@
+uuid: 10afb269-3216-4524-9aa0-348d89a97934
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.content_management_systems.field_contrast_color
+    - field.field.taxonomy_term.content_management_systems.field_lead_color
+    - field.field.taxonomy_term.content_management_systems.field_logo
+    - field.field.taxonomy_term.content_management_systems.field_logo_inv
+    - field.field.taxonomy_term.content_management_systems.field_machine_name
+    - field.field.taxonomy_term.content_management_systems.field_noderef_cms
+    - field.field.taxonomy_term.content_management_systems.field_status
+    - field.field.taxonomy_term.content_management_systems.field_text_color
+    - field.field.taxonomy_term.content_management_systems.field_title_html
+    - taxonomy.vocabulary.content_management_systems
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: taxonomy_term.content_management_systems.teaser
+targetEntityType: taxonomy_term
+bundle: content_management_systems
+mode: teaser
+content:
+  field_logo:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: logo
+      link: false
+    third_party_settings: {  }
+  field_noderef_cms:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: abstract
+      link: false
+    third_party_settings: {  }
+hidden:
+  description: true
+  field_contrast_color: true
+  field_lead_color: true
+  field_logo_inv: true
+  field_machine_name: true
+  field_status: true
+  field_text_color: true
+  field_title_html: true
+  langcode: true

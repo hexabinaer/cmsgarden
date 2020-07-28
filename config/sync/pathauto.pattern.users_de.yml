@@ -1,25 +1,25 @@
-uuid: cbf7e09f-f453-44d4-8643-69e0504e1133
+uuid: bafe44cc-4542-48b9-9ff6-5bb3da0a58c2
 langcode: en
 status: true
 dependencies:
   module:
     - language
     - user
-id: users
-label: 'Users en'
+id: users_de
+label: 'Users de'
 type: 'canonical_entities:user'
-pattern: '/cms-experts/[user:main:field_first_name]-[user:main:field_middle_name]-[user:main:field_last_name]'
+pattern: '/cms-experten-expertinnen/[user:main:field_first_name]-[user:main:field_middle_name]-[user:main:field_last_name]'
 selection_criteria:
-  7fc31238-4fc0-4a47-9c0f-6758ca3cb2a0:
+  4f967923-11af-4c5c-becd-c495ddb5f517:
     id: language
     langcodes:
-      en: en
+      de: de
     negate: false
     context_mapping:
       language: 'user:langcode:language'
-    uuid: 7fc31238-4fc0-4a47-9c0f-6758ca3cb2a0
+    uuid: 4f967923-11af-4c5c-becd-c495ddb5f517
 selection_logic: and
-weight: -6
+weight: -5
 relationships:
   'user:langcode:language':
     label: Language

@@ -14,6 +14,7 @@ dependencies:
   module:
     - content_moderation
     - field_group
+    - media_library
     - metatag
     - path
     - text
@@ -75,16 +76,14 @@ content:
   field_media_image:
     weight: 4
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   field_meta_tags:
     weight: 14
-    settings: {  }
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content

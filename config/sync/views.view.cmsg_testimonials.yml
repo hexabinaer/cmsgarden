@@ -22,6 +22,7 @@ dependencies:
     - text
     - user
     - views_add_button
+    - views_infinite_scroll
 id: cmsg_testimonials
 label: 'CMSG testimonials'
 module: views
@@ -1335,6 +1336,7 @@ display:
         fields: false
         style: false
         row: false
+        pager: false
       display_description: ''
       header:
         area:
@@ -1666,6 +1668,27 @@ display:
         options:
           relationship: none
           view_mode: full
+      pager:
+        type: infinite_scroll
+        options:
+          items_per_page: 12
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Alle -'
+            offset: false
+            offset_label: Versatz
+          views_infinite_scroll:
+            button_text: 'Load More'
+            automatically_load_content: false
     cache_metadata:
       max-age: 0
       contexts:

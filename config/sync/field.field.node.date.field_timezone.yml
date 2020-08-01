@@ -1,0 +1,23 @@
+uuid: 8ec13322-a96a-49ac-b841-15895e188967
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timezone
+    - node.type.date
+  module:
+    - tzfield
+id: node.date.field_timezone
+field_name: field_timezone
+entity_type: node
+bundle: date
+label: 'Time zone'
+description: 'If different from Central European Time (UTC +1:00) resp. Central European Summer Time (UTC +2:00), please enter the local time zone of the event. Defaults to: Europe/Berlin.'
+required: false
+translatable: false
+default_value:
+  -
+    value: Europe/Berlin
+default_value_callback: ''
+settings: {  }
+field_type: tzfield

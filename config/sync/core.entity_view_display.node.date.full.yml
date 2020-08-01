@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.date.field_location_ref
     - field.field.node.date.field_org_ref
     - field.field.node.date.field_public_downloads
+    - field.field.node.date.field_timezone
     - field.field.node.date.field_title_html
     - field.field.node.date.field_twitter_hashtag
     - field.field.node.date.field_user_ref
@@ -298,6 +299,24 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          c979cc55-2d91-4fae-9b46-45d7f500cdeb:
+            uuid: c979cc55-2d91-4fae-9b46-45d7f500cdeb
+            region: content
+            configuration:
+              id: 'field_block:node:date:field_timezone'
+              label: 'Time zone'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -333,15 +352,7 @@ third_party_settings:
                 type: entity_reference_entity_view
                 settings:
                   view_mode: logo_linked
-                third_party_settings:
-                  ds:
-                    ds_limit: ''
-                    ft:
-                      id: minimal
-                      settings:
-                        lb: ''
-                        lb-col: false
-                        classes: {  }
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
@@ -559,29 +570,6 @@ third_party_settings:
           label: 'Session management'
           column_widths: 67-33
         components:
-          f4580001-71da-4170-879f-22d8bcb05bce:
-            uuid: f4580001-71da-4170-879f-22d8bcb05bce
-            region: first
-            configuration:
-              id: 'views_block:cmsg_session_proposals-block_session_proposals'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              offset: null
-              show_exposed_filters: null
-              dont_hide_if_unfiltered_empty: null
-              show_more_link: null
-              more_link_text: ''
-              pager_type: null
-              translatable_configuration:
-                '#en':
-                  use_more_text: null
-              link_url: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
           42787a34-3e0c-4987-9094-c05b6359ef7c:
             uuid: 42787a34-3e0c-4987-9094-c05b6359ef7c
             region: second
@@ -617,6 +605,19 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 2
+          f2fe450e-2dea-423a-a724-26456a3b6562:
+            uuid: f2fe450e-2dea-423a-a724-26456a3b6562
+            region: first
+            configuration:
+              id: 'views_block:cmsg_session_proposals-block_sessions'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 id: node.date.full
 targetEntityType: node
@@ -705,6 +706,7 @@ hidden:
   field_intro: true
   field_org_ref: true
   field_public_downloads: true
+  field_timezone: true
   field_user_ref: true
   field_website: true
   langcode: true

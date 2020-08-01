@@ -1,27 +1,22 @@
-uuid: abaeaba5-0c07-4009-b9d2-a974661dfc27
+uuid: b6ad9c4f-3398-4c15-896e-2d12df75f855
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
     - node
-    - options
+    - tzfield
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_has_sessions
-field_name: field_has_sessions
+id: node.field_timezone
+field_name: field_timezone
 entity_type: node
-type: list_integer
-settings:
-  allowed_values:
-    -
-      value: 1
-      label: enable
-  allowed_values_function: ''
-module: options
+type: tzfield
+settings: {  }
+module: tzfield
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

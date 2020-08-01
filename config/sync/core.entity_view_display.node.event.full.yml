@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.event.field_twitter_hashtag
     - field.field.node.event.field_website
     - node.type.event
+    - views.view.cmsg_events
   module:
     - layout_builder
     - layout_discovery
@@ -25,6 +26,7 @@ dependencies:
     - media
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -170,7 +172,7 @@ third_party_settings:
                         lb-col: true
                         classes: {  }
             additional: {  }
-            weight: 1
+            weight: 2
           6383db9f-b017-449c-ad03-2dab94be8571:
             uuid: 6383db9f-b017-449c-ad03-2dab94be8571
             region: first
@@ -237,17 +239,67 @@ third_party_settings:
             uuid: a0150446-bc06-40a0-88fe-6b9a5ad4c8d0
             region: first
             configuration:
+              id: 'field_block:node:event:body'
+              label: 'About the event'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 400
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
+          7a94df2c-cdf5-4f17-9d52-2fbebf5ba84c:
+            uuid: 7a94df2c-cdf5-4f17-9d52-2fbebf5ba84c
+            region: second
+            configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:body'
+              id: 'field_block:node:event:field_website'
               formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  rel: ''
+                  target: ''
+                  url_only: false
+                  url_plain: false
                 third_party_settings: {  }
             additional: {  }
-            weight: 3
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          7349f9f3-7733-4655-8e89-8a1762b0827a:
+            uuid: 7349f9f3-7733-4655-8e89-8a1762b0827a
+            region: content
+            configuration:
+              id: 'views_block:cmsg_events-block_event_related_dates'
+              label: 'Next date'
+              provider: views
+              label_display: visible
+              views_label: 'Next date'
+              items_per_page: '1'
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 67-33
+        components:
           edc5b053-f5ef-4185-a1fe-2b9dd63da6ec:
             uuid: edc5b053-f5ef-4185-a1fe-2b9dd63da6ec
             region: second
@@ -268,27 +320,46 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 0
-          7a94df2c-cdf5-4f17-9d52-2fbebf5ba84c:
-            uuid: 7a94df2c-cdf5-4f17-9d52-2fbebf5ba84c
+            weight: 1
+          82465974-c72c-486b-96ef-edc94eafd5f1:
+            uuid: 82465974-c72c-486b-96ef-edc94eafd5f1
             region: first
             configuration:
-              label_display: '0'
+              id: 'field_block:node:event:body'
+              label: 'About the event'
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:event:field_website'
-              formatter:
-                type: link
-                label: above
-                settings:
-                  trim_length: 80
-                  rel: ''
-                  target: ''
-                  url_only: false
-                  url_plain: false
-                third_party_settings: {  }
+                view_mode: view_mode
             additional: {  }
-            weight: 4
+            weight: 2
+          db10f645-7e3d-4143-871f-5bf06b10cf12:
+            uuid: db10f645-7e3d-4143-871f-5bf06b10cf12
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_public_downloads'
+              label: Downloads
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: download
+                third_party_settings:
+                  ds:
+                    ds_limit: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -314,16 +385,9 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-        third_party_settings: {  }
-      -
-        layout_id: layout_twocol_section
-        layout_settings:
-          label: ''
-          column_widths: 67-33
-        components:
           7279d3ff-6571-4dda-a9e4-00295c7247da:
             uuid: 7279d3ff-6571-4dda-a9e4-00295c7247da
-            region: first
+            region: content
             configuration:
               label_display: '0'
               context_mapping:
@@ -336,26 +400,38 @@ third_party_settings:
                   trim_length: 600
                 third_party_settings: {  }
             additional: {  }
+            weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 50-50
+        components:
+          b9cb8cac-24d5-4f83-a211-1fb9fb3181ea:
+            uuid: b9cb8cac-24d5-4f83-a211-1fb9fb3181ea
+            region: first
+            configuration:
+              id: 'views_block:cmsg_events-block_event_related_dates'
+              label: Upcoming
+              provider: views
+              label_display: visible
+              views_label: Upcoming
+              items_per_page: '3'
+              context_mapping: {  }
+            additional: {  }
             weight: 0
-          db10f645-7e3d-4143-871f-5bf06b10cf12:
-            uuid: db10f645-7e3d-4143-871f-5bf06b10cf12
+          da759440-76c1-4a66-86fb-aba78fb32ca5:
+            uuid: da759440-76c1-4a66-86fb-aba78fb32ca5
             region: second
             configuration:
-              id: 'field_block:node:event:field_public_downloads'
-              label: Downloads
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: download
-                third_party_settings:
-                  ds:
-                    ds_limit: ''
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
+              id: 'views_block:cmsg_events-block_event_related_dates_archive'
+              label: 'Past dates'
+              provider: views
+              label_display: visible
+              views_label: 'Past dates'
+              items_per_page: '3'
+              context_mapping: {  }
             additional: {  }
             weight: 0
         third_party_settings: {  }
@@ -442,10 +518,10 @@ content:
     settings:
       image_style: large
       image_link: ''
-      svg_render_as_image: '1'
+      svg_render_as_image: true
       svg_attributes:
-        width: '480'
-        height: '480'
+        width: 480
+        height: 480
     third_party_settings:
       ds:
         ft:

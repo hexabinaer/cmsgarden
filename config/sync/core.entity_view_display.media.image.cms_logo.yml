@@ -1,0 +1,55 @@
+uuid: bc400ae1-3c7a-44d9-8476-4978c453b69e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.cms_logo
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_category
+    - field.field.media.image.field_copyright_link
+    - field.field.media.image.field_copyright_owner
+    - field.field.media.image.field_license
+    - field.field.media.image.field_longdesc
+    - field.field.media.image.field_media_image
+    - image.style.cms_logo
+    - media.type.image
+  module:
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.image.cms_logo
+targetEntityType: media
+bundle: image
+mode: cms_logo
+content:
+  field_media_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: cms_logo
+      image_link: content
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: 100
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_caption: true
+  field_category: true
+  field_copyright_link: true
+  field_copyright_owner: true
+  field_license: true
+  field_longdesc: true
+  filesize: true
+  langcode: true
+  link: true
+  mime: true
+  name: true
+  thumbnail: true
+  uid: true

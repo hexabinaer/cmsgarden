@@ -20,6 +20,6 @@ settings:
   handler_settings:
     view:
       view_name: cmsg_cms_lists
-      display_name: er_cms_active
+      display_name: er_cms_all
       arguments: {  }
 field_type: entity_reference

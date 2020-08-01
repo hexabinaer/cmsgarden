@@ -1,0 +1,10 @@
+uuid: 9e0baa1a-8cb2-49fd-afb8-7f8c6bcc09cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.cms_logo
+label: 'CMS logo'
+targetEntityType: media
+cache: true

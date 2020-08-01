@@ -1,8 +1,9 @@
-uuid: 0497ae40-2301-4bce-ab8e-ab2fcf13e8bc
+uuid: c271eaba-1f25-4785-9535-cef94f89d627
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.date_only
     - field.field.node.date.body
     - field.field.node.date.field_cms
     - field.field.node.date.field_contact_ref
@@ -22,78 +23,51 @@ dependencies:
     - field.field.node.date.field_website
     - node.type.date
   module:
-    - datetime_range
-    - text
+    - date_range_formatter
+    - layout_builder
     - user
-id: node.date.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.date.date_only
 targetEntityType: node
 bundle: date
-mode: default
+mode: date_only
 content:
-  field_date_node_ref:
-    weight: 2
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_date_range:
-    weight: 1
-    label: above
-    settings:
-      separator: '-'
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: daterange_default
-    region: content
-  field_intro:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_location_ref:
-    weight: 3
-    label: above
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
-  field_timezone:
-    weight: 6
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_title_html:
     weight: 0
-    label: above
-    settings: {  }
+    label: hidden
+    settings:
+      timezone_override: ''
+      single: 'd F Y'
+      single_all_day: 'd F Y'
+      one_day: 'd F Y'
+      one_month: 'd - {d} F Y'
+      several_months: 'd F - {d} {F} Y'
+      several_years: 'd F Y - {d} {F} {Y}'
+      separator: '-'
+      date_format: 'Y-m-d\TH:i:s'
     third_party_settings: {  }
-    type: text_default
+    type: date_range_without_time
     region: content
-  flag_event_attendance:
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   body: true
   field_cms: true
   field_contact_ref: true
+  field_date_node_ref: true
   field_event_cmsg_participation: true
   field_has_sessions: true
   field_internal_information: true
+  field_intro: true
+  field_location_ref: true
   field_org_ref: true
   field_public_downloads: true
+  field_timezone: true
+  field_title_html: true
   field_twitter_hashtag: true
   field_user_ref: true
   field_website: true
+  flag_event_attendance: true
   langcode: true
   links: true

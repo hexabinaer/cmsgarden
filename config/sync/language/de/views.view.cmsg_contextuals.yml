@@ -10,4 +10,4 @@ display:
       fields:
         nid:
           alter:
-            text: '<img src="/sites/default/files/logos/CMSG-on-site_{{ field_event_cmsg_participation_1 }}_en.png" alt="CMS Garden {{ field_event_cmsg_participation }} ist dabei" />'
+            text: '<img src="/sites/default/files/logos/cmsg-on-site_{{ field_event_cmsg_participation_1 }}_de.svg" alt="CMS Garden ist {{ field_event_cmsg_participation }} dabei" />'

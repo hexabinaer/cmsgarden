@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.date.field_location_ref
     - field.field.node.date.field_org_ref
     - field.field.node.date.field_public_downloads
+    - field.field.node.date.field_timezone
     - field.field.node.date.field_title_html
     - field.field.node.date.field_twitter_hashtag
     - field.field.node.date.field_user_ref
@@ -173,6 +174,7 @@ hidden:
   field_location_ref: true
   field_org_ref: true
   field_public_downloads: true
+  field_timezone: true
   field_title_html: true
   field_twitter_hashtag: true
   field_user_ref: true

@@ -1,0 +1,15 @@
+uuid: b7901a48-76f7-4410-ad99-ed84c20a701b
+langcode: en
+status: true
+dependencies: {  }
+name: cms_logo
+label: 'CMS logo'
+effects:
+  971723cb-bf20-4f6c-909e-92a9f020fe95:
+    uuid: 971723cb-bf20-4f6c-909e-92a9f020fe95
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 100
+      upscale: false

@@ -595,7 +595,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<img src="/sites/default/files/logos/CMSG-on-site_{{ field_event_cmsg_participation_1 }}_en.png" alt="CMS Garden {{ field_event_cmsg_participation }} on site" />'
+            text: '<img src="/sites/default/files/logos/cmsg-on-site_{{ field_event_cmsg_participation_1 }}_en.svg" alt="CMS Garden {{ field_event_cmsg_participation }} on site" />'
             make_link: false
             path: ''
             absolute: false

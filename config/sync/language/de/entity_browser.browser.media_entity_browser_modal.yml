@@ -1,9 +1,9 @@
-display_configuration:
-  link_text: 'Medium auswählen'
 widgets:
+  8bedeb54-37e7-47c4-a266-4bc2a9858647:
+    label: 'Neues Bild'
   fc729026-c85f-4561-acd5-38d4082b69fb:
     settings:
       submit_text: 'Medium auswählen'
     label: 'Vorhandene auswählen'
-  8bedeb54-37e7-47c4-a266-4bc2a9858647:
-    label: 'Neues Bild'
+display_configuration:
+  link_text: 'Medium auswählen'

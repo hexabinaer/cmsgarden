@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.organization.body
     - field.field.node.organization.field_associated_users
     - field.field.node.organization.field_cms
-    - field.field.node.organization.field_event_relation
     - field.field.node.organization.field_geographic_range
     - field.field.node.organization.field_media_image
     - field.field.node.organization.field_member
@@ -277,5 +276,4 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_event_relation: true
   field_org_geolocation: true

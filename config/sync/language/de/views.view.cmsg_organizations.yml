@@ -1,0 +1,7 @@
+display:
+  block_members_org:
+    display_options:
+      title: 'Mitgliedsorganisationen und -unternehmen'
+  block_members_org_table:
+    display_options:
+      title: 'Mitgliedsorganisationen und -unternehmen'

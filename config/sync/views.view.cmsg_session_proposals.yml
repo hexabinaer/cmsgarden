@@ -14,8 +14,8 @@ dependencies:
 id: cmsg_session_proposals
 label: 'CMSG session proposals'
 module: views
-description: 'Lists session proposals referecing the current event'
-tag: ''
+description: 'Lists session proposals referencing the current event'
+tag: events
 base_table: node_field_data
 base_field: nid
 display:
@@ -437,6 +437,8 @@ display:
         - 'config:core.entity_view_display.node.content_management_system.links_block'
         - 'config:core.entity_view_display.node.content_management_system.node_embedded'
         - 'config:core.entity_view_display.node.content_management_system.teaser'
+        - 'config:core.entity_view_display.node.date.archive'
+        - 'config:core.entity_view_display.node.date.date_only'
         - 'config:core.entity_view_display.node.date.default'
         - 'config:core.entity_view_display.node.date.full'
         - 'config:core.entity_view_display.node.date.teaser'
@@ -526,6 +528,8 @@ display:
         - 'config:core.entity_view_display.node.content_management_system.links_block'
         - 'config:core.entity_view_display.node.content_management_system.node_embedded'
         - 'config:core.entity_view_display.node.content_management_system.teaser'
+        - 'config:core.entity_view_display.node.date.archive'
+        - 'config:core.entity_view_display.node.date.date_only'
         - 'config:core.entity_view_display.node.date.default'
         - 'config:core.entity_view_display.node.date.full'
         - 'config:core.entity_view_display.node.date.teaser'

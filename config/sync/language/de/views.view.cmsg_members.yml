@@ -10,3 +10,14 @@ display:
   block_members_people:
     display_options:
       title: 'Individuelle Mitglieder'
+  default:
+    display_options:
+      fields:
+        field_address_sorting_code:
+          label: 'Sitz in'
+        field_address_dependent_locality:
+          label: Stadt/Land
+      filters:
+        field_cms_target_id:
+          expose:
+            label: 'Arbeitet mit'

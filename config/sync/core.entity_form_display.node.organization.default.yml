@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.image_browser_modal_
     - field.field.node.organization.body
     - field.field.node.organization.field_associated_users
     - field.field.node.organization.field_cms
@@ -27,9 +26,9 @@ dependencies:
     - chosen_field
     - content_moderation
     - datetime
-    - entity_browser
     - field_group
     - link
+    - media_library
     - path
     - social_media_links_field
     - text
@@ -144,17 +143,9 @@ content:
   field_media_image:
     weight: 6
     settings:
-      entity_browser: image_browser_modal_
-      field_widget_display: rendered_entity
-      field_widget_display_settings:
-        view_mode: preview
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: true
-      selection_mode: selection_append
-      open: false
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   field_member:
     weight: 27

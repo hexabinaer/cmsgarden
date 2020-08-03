@@ -5,3 +5,8 @@ display:
   block_members_org_table:
     display_options:
       title: 'Mitgliedsorganisationen und -unternehmen'
+      fields:
+        field_org_address_sorting_code:
+          label: 'Sitz in'
+        field_org_address_dependent_locality:
+          label: Stadt/Land

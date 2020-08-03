@@ -9,6 +9,7 @@ dependencies:
     - node.type.organization
   module:
     - address
+    - contextual
     - node
     - options
     - text
@@ -449,16 +450,17 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        field_organization_type_value:
-          id: field_organization_type_value
-          table: node__field_organization_type
-          field: field_organization_type_value
+        field_member_value:
+          id: field_member_value
+          table: node__field_member
+          field: field_member_value
           relationship: none
           group_type: group
           admin_label: ''
           operator: or
           value:
-            2: '2'
+            member_full: member_full
+            member_sust: member_sust
           group: 1
           exposed: false
           expose:
@@ -552,6 +554,7 @@ display:
         style: false
         row: false
         fields: false
+        sorts: false
       filter_groups:
         operator: AND
         groups:
@@ -569,7 +572,8 @@ display:
           summary: ''
           description: ''
           columns:
-            field_title_html: field_title_html
+            field_title_html: view_node
+            view_node: view_node
             field_org_tagline: field_org_tagline
             field_org_address_sorting_code: field_org_address_sorting_code
             field_org_address_postal_code: field_org_address_sorting_code
@@ -577,8 +581,17 @@ display:
             field_org_address_locality: field_org_address_dependent_locality
             field_org_address_administrative_area: field_org_address_dependent_locality
             field_org_address_country_code: field_org_address_dependent_locality
+            edit_node: edit_node
+            contextual_links: contextual_links
           info:
             field_title_html:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            view_node:
               sortable: true
               default_sort_order: asc
               align: ''
@@ -634,6 +647,20 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            edit_node:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            contextual_links:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
           default: '-1'
           empty_table: false
       row:
@@ -651,8 +678,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Name
-          exclude: false
+          label: ''
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -684,7 +711,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -706,6 +733,59 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
+          group_type: group
+          admin_label: 'Name linked to content'
+          label: Name
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_title_html }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: false
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
         field_org_tagline:
           id: field_org_tagline
           table: node__field_org_tagline
@@ -1066,6 +1146,145 @@ display:
           hide_alter_empty: true
           display_name: true
           plugin_id: country
+        edit_node:
+          id: edit_node
+          table: node_field_revision
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'Edit organization'
+          output_url_as_text: false
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link_edit
+        contextual_links:
+          id: contextual_links
+          table: views
+          field: contextual_links
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            edit_node: edit_node
+            field_title_html: '0'
+            field_org_tagline: '0'
+            field_org_address_sorting_code: '0'
+            field_org_address_postal_code: '0'
+            field_org_address_dependent_locality: '0'
+            field_org_address_locality: '0'
+            field_org_address_administrative_area: '0'
+            field_org_address_country_code: '0'
+          destination: true
+          plugin_id: contextual_links
+      sorts:
+        field_org_address_country_code:
+          id: field_org_address_country_code
+          table: node__field_org_address
+          field: field_org_address_country_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          sort_by: name
+          plugin_id: country
+        field_org_address_postal_code:
+          id: field_org_address_postal_code
+          table: node__field_org_address
+          field: field_org_address_postal_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:

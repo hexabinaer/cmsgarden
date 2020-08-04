@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.organization.field_member_since
     - field.field.node.organization.field_membership_no
     - field.field.node.organization.field_org_address
-    - field.field.node.organization.field_org_geolocation
     - field.field.node.organization.field_org_tagline
     - field.field.node.organization.field_organization_type
     - field.field.node.organization.field_social_media
@@ -20,6 +19,7 @@ dependencies:
     - field.field.node.organization.field_website
     - node.type.organization
   module:
+    - address
     - social_media_links_field
     - text
     - user
@@ -40,6 +40,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_org_address:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
     region: content
   field_org_tagline:
     weight: 108
@@ -72,8 +79,6 @@ hidden:
   field_member: true
   field_member_since: true
   field_membership_no: true
-  field_org_address: true
-  field_org_geolocation: true
   field_organization_type: true
   field_website: true
   langcode: true

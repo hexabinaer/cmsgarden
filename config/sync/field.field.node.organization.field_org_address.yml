@@ -1,4 +1,4 @@
-uuid: 54611e36-fb12-4198-b0da-66743edbc463
+uuid: 5e4ab76a-8a1e-4fc1-ba90-86a1e71400ed
 langcode: en
 status: true
 dependencies:
@@ -12,24 +12,10 @@ field_name: field_org_address
 entity_type: node
 bundle: organization
 label: Address
-description: 'You can enter up to 3 addresses here. If that''s not sufficient, please add a link to an appropriate page on your website to the profile text.'
+description: 'You can enter all official addresses here.'
 required: false
 translatable: false
-default_value:
-  -
-    langcode: ''
-    country_code: DE
-    administrative_area: null
-    locality: ''
-    dependent_locality: null
-    postal_code: ''
-    sorting_code: null
-    address_line1: ''
-    address_line2: ''
-    organization: null
-    given_name: null
-    additional_name: null
-    family_name: null
+default_value: {  }
 default_value_callback: ''
 settings:
   available_countries: {  }

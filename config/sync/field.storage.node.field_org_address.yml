@@ -1,4 +1,4 @@
-uuid: 6c72e153-7b4e-4d68-ada1-ae85631e610c
+uuid: 72d582f7-1634-4b81-9c77-03fd51a2f0d4
 langcode: en
 status: true
 dependencies:
@@ -16,7 +16,7 @@ type: address
 settings: {  }
 module: address
 locked: false
-cardinality: 3
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

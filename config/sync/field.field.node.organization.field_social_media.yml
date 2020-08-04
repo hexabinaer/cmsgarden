@@ -20,43 +20,27 @@ default_value:
     platform: null
     value: null
     platform_values:
-      tumblr:
-        value: ''
-      vimeo:
-        value: ''
-      rss:
-        value: ''
-      flickr:
-        value: ''
-      email:
-        value: ''
-      linkedin:
-        value: ''
-      slideshare:
-        value: ''
-      youtube:
-        value: ''
-      pinterest:
-        value: ''
-      googleplus:
-        value: ''
       github:
         value: ''
-      facebook:
-        value: ''
-      contact:
-        value: ''
-      instagram:
-        value: ''
-      drupal:
-        value: ''
-      behance:
-        value: ''
-      vkontakte:
+      bitbucket:
         value: ''
       twitter:
         value: ''
-      bitbucket:
+      instagram:
+        value: ''
+      facebook:
+        value: ''
+      vimeo:
+        value: ''
+      pinterest:
+        value: ''
+      youtube:
+        value: ''
+      slideshare:
+        value: ''
+      linkedin:
+        value: ''
+      flickr:
         value: ''
       youtube_channel:
         value: ''
@@ -64,84 +48,96 @@ default_value_callback: ''
 settings:
   iconset: 'fontawesome:2x'
   platforms:
-    tumblr:
-      description: ''
-      weight: '-10'
-      enabled: 0
-    github:
-      enabled: '1'
-      description: ''
-      weight: '-9'
-    bitbucket:
-      enabled: '1'
-      description: ''
-      weight: '-8'
     twitter:
       enabled: '1'
       description: ''
-      weight: '-7'
-    vkontakte:
-      description: ''
-      weight: '-6'
-      enabled: 0
-    behance:
-      description: ''
-      weight: '-5'
-      enabled: 0
-    drupal:
-      description: ''
-      weight: '-4'
-      enabled: 0
-    instagram:
-      enabled: '1'
-      description: ''
-      weight: '-3'
-    contact:
-      description: ''
-      weight: '-2'
-      enabled: 0
+      weight: '-33'
     facebook:
       enabled: '1'
       description: ''
-      weight: '-1'
-    googleplus:
-      description: ''
-      weight: '0'
-      enabled: 0
-    vimeo:
+      weight: '-32'
+    instagram:
       enabled: '1'
       description: ''
-      weight: '1'
-    pinterest:
-      enabled: '1'
-      description: ''
-      weight: '2'
-    youtube:
-      enabled: '1'
-      description: ''
-      weight: '3'
-    slideshare:
-      enabled: '1'
-      description: ''
-      weight: '4'
+      weight: '-31'
     linkedin:
       enabled: '1'
       description: ''
-      weight: '5'
-    email:
-      description: ''
-      weight: '6'
-      enabled: 0
-    flickr:
+      weight: '-30'
+    xing:
       enabled: '1'
       description: ''
-      weight: '7'
-    rss:
+      weight: '-29'
+    pinterest:
+      enabled: '1'
       description: ''
-      weight: '8'
-      enabled: 0
+      weight: '-28'
+    vimeo:
+      enabled: '1'
+      description: ''
+      weight: '-27'
+    youtube:
+      enabled: '1'
+      description: ''
+      weight: '-26'
     youtube_channel:
       enabled: '1'
       description: ''
-      weight: '9'
+      weight: '-25'
+    tumblr:
+      enabled: '1'
+      description: ''
+      weight: '-24'
+    flickr:
+      enabled: '1'
+      description: ''
+      weight: '-23'
+    slideshare:
+      enabled: '1'
+      description: ''
+      weight: '-22'
+    behance:
+      enabled: '1'
+      description: ''
+      weight: '-21'
+    github:
+      enabled: '1'
+      description: ''
+      weight: '-20'
+    bitbucket:
+      enabled: '1'
+      description: ''
+      weight: '-19'
+    website:
+      description: ''
+      weight: '-18'
+      enabled: 0
+    whatsapp:
+      description: ''
+      weight: '-17'
+      enabled: 0
+    vkontakte:
+      description: ''
+      weight: '-16'
+      enabled: 0
+    drupal:
+      description: ''
+      weight: '-15'
+      enabled: 0
+    contact:
+      description: ''
+      weight: '-14'
+      enabled: 0
+    googleplus:
+      description: ''
+      weight: '-13'
+      enabled: 0
+    email:
+      description: ''
+      weight: '-12'
+      enabled: 0
+    rss:
+      description: ''
+      weight: '-11'
+      enabled: 0
 field_type: social_media_links_field

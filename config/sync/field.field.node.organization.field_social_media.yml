@@ -14,35 +14,41 @@ bundle: organization
 label: 'Social media'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     platform: null
     value: null
     platform_values:
-      github:
-        value: ''
-      bitbucket:
-        value: ''
       twitter:
-        value: ''
-      instagram:
         value: ''
       facebook:
         value: ''
-      vimeo:
-        value: ''
-      pinterest:
-        value: ''
-      youtube:
-        value: ''
-      slideshare:
+      instagram:
         value: ''
       linkedin:
         value: ''
-      flickr:
+      xing:
+        value: ''
+      pinterest:
+        value: ''
+      vimeo:
+        value: ''
+      youtube:
         value: ''
       youtube_channel:
+        value: ''
+      tumblr:
+        value: ''
+      flickr:
+        value: ''
+      slideshare:
+        value: ''
+      behance:
+        value: ''
+      github:
+        value: ''
+      bitbucket:
         value: ''
 default_value_callback: ''
 settings:

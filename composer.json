@@ -21,6 +21,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/address": "^1.7",
+        "drupal/address_formatter": "^2.0",
         "drupal/allowed_formats": "^1.2",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/cer": "^4.0@alpha",

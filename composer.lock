@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e61dc688e797c19d7ac897c450fe881e",
+    "content-hash": "6a946bbad1ae4eedc0ff34e6883c4e48",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2349,6 +2349,51 @@
             "homepage": "http://drupal.org/project/address",
             "support": {
                 "source": "https://git.drupalcode.org/project/address"
+            }
+        },
+        {
+            "name": "drupal/address_formatter",
+            "version": "2.0.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/address_formatter.git",
+                "reference": "8.x-2.0-alpha5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/address_formatter-8.x-2.0-alpha5.zip",
+                "reference": "8.x-2.0-alpha5",
+                "shasum": "761cd797254022175587e11d77642bde617cd09c"
+            },
+            "require": {
+                "drupal/address": "*",
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-alpha5",
+                    "datestamp": "1591040307",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "semjuel",
+                    "homepage": "https://www.drupal.org/user/2426534"
+                }
+            ],
+            "description": "Provides new formatter for address field.",
+            "homepage": "https://www.drupal.org/project/address_formatter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/address_formatter"
             }
         },
         {
@@ -5807,29 +5852,26 @@
         },
         {
             "name": "drupal/social_media_links",
-            "version": "2.6.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/social_media_links.git",
-                "reference": "8.x-2.6"
+                "reference": "8.x-2.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_media_links-8.x-2.6.zip",
-                "reference": "8.x-2.6",
-                "shasum": "53462cb307b104552ae5370b917e55ca50fba526"
+                "url": "https://ftp.drupal.org/files/projects/social_media_links-8.x-2.7.zip",
+                "reference": "8.x-2.7",
+                "shasum": "132db954d880c743bd6316f7fecd0b085bb73f91"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.6",
-                    "datestamp": "1510489384",
+                    "version": "8.x-2.7",
+                    "datestamp": "1595616928",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5838,9 +5880,14 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
                 {
                     "name": "cbeier",
                     "homepage": "https://www.drupal.org/user/1500710"

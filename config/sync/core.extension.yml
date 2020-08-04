@@ -1,5 +1,6 @@
 module:
   address: 0
+  address_formatter: 0
   allowed_formats: 0
   asset_injector: 0
   auto_entitylabel: 0
@@ -80,7 +81,6 @@ module:
   poll: 0
   prepopulate: 0
   profile: 0
-  quickedit: 0
   rdf: 0
   realname: 0
   redirect: 0

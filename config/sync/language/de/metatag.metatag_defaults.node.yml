@@ -1,2 +1,5 @@
 label: Inhalt
-tags: {  }
+tags:
+  title: '[node:field_title_html] | [site:name]'
+  description: '[node:summary]'
+  canonical_url: '[node:url]'

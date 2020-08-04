@@ -1,0 +1,29 @@
+uuid: f88c65c5-706c-49b5-af1a-1e0dcbbd0f26
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.teaser_picker
+    - field.storage.block_content.field_subheadline
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    restricted_html: restricted_html
+    basic_html: '0'
+    full_html: '0'
+    minimal_html: '0'
+    plain_text: '0'
+id: block_content.teaser_picker.field_subheadline
+field_name: field_subheadline
+entity_type: block_content
+bundle: teaser_picker
+label: 'Section title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

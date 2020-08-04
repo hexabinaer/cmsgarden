@@ -1,0 +1,37 @@
+uuid: faf2fda7-1cb4-4b43-a271-175d69e40092
+langcode: en
+status: true
+dependencies: {  }
+id: city_country
+label: 'City + Country'
+options:
+  DE-all:
+    country: DE
+    language: all
+    template:
+      value: "<p><span>%locality%, %country%</span></p>\r\n"
+      format: basic_html
+  AT-all:
+    country: AT
+    language: all
+    template:
+      value: "<p><span>%locality%, %country%</span></p>\r\n"
+      format: basic_html
+  CH-all:
+    country: CH
+    language: all
+    template:
+      value: "<p><span>%locality%, %country%</span></p>\r\n"
+      format: basic_html
+  GB-all:
+    country: GB
+    language: all
+    template:
+      value: "<p><span>%locality%, %administrative_area%, %country%</span></p>\r\n"
+      format: basic_html
+  RO-all:
+    country: RO
+    language: all
+    template:
+      value: "<p><span>%locality%, %administrative_area%, %country%</span></p>\r\n"
+      format: basic_html

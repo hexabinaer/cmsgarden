@@ -53,7 +53,6 @@ settings:
         -
           name: 'Entity embed'
           items:
-            - media_entity_embed
             - poll
             - glossary_ref
         -

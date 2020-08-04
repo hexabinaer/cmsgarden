@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.download
     - core.entity_view_mode.media.embedded
     - core.entity_view_mode.media.logo
     - core.entity_view_mode.media.teaser
@@ -62,13 +63,14 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_view_modes:
-        embedded: embedded
-        logo: logo
-        teaser: teaser
       allowed_media_types:
         audio: audio
         file: file
         image: image
         remote_video: remote_video
         video: video
+      allowed_view_modes:
+        download: download
+        embedded: embedded
+        logo: logo
+        teaser: teaser

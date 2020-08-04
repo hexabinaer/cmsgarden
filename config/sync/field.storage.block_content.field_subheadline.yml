@@ -1,4 +1,4 @@
-uuid: 4b98a5a8-7805-473b-a2c7-984d0e233d2e
+uuid: 3c846dcd-4f10-49ef-a99b-1f5124afbd15
 langcode: en
 status: true
 dependencies:
@@ -9,17 +9,16 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-_core:
-  default_config_hash: eS0snV_L3dx9shtWRTzm5eblwOJ7qKWC9IE-4GMTDFc
-id: block_content.body
-field_name: body
+id: block_content.field_subheadline
+field_name: field_subheadline
 entity_type: block_content
-type: text_with_summary
-settings: {  }
+type: text
+settings:
+  max_length: 255
 module: text
 locked: false
 cardinality: 1
 translatable: true
 indexes: {  }
-persist_with_no_fields: true
+persist_with_no_fields: false
 custom_storage: false

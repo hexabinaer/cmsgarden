@@ -1,0 +1,40 @@
+uuid: 2970ff8f-3169-4fff-85b4-799311d8f90b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.teaser_picker
+    - field.field.block_content.teaser_picker.body
+    - field.field.block_content.teaser_picker.field_subheadline
+    - field.field.block_content.teaser_picker.field_teasers
+  module:
+    - text
+id: block_content.teaser_picker.default
+targetEntityType: block_content
+bundle: teaser_picker
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_subheadline:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_teasers:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  langcode: true

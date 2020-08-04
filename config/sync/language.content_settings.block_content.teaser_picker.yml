@@ -1,0 +1,16 @@
+uuid: acfc9342-18c3-49c9-86a1-bffec9e4636a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.teaser_picker
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.teaser_picker
+target_entity_type_id: block_content
+target_bundle: teaser_picker
+default_langcode: current_interface
+language_alterable: true

@@ -22,14 +22,12 @@ dependencies:
     - field.field.node.date.field_user_ref
     - field.field.node.date.field_website
     - node.type.date
-    - views.view.cmsg_contextuals
   module:
     - date_range_formatter
     - layout_builder
     - layout_discovery
     - options
     - user
-    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -59,29 +57,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
-          8fb9ef11-14f9-4d4f-b0f7-ab082acaa6c1:
-            uuid: 8fb9ef11-14f9-4d4f-b0f7-ab082acaa6c1
-            region: content
-            configuration:
-              id: 'views_block:cmsg_contextuals-block_cmsg_onsite'
-              label: ''
-              provider: views
-              label_display: '0'
-              views_label: ''
-              items_per_page: none
-              offset: null
-              show_exposed_filters: null
-              dont_hide_if_unfiltered_empty: null
-              show_more_link: null
-              more_link_text: ''
-              pager_type: null
-              translatable_configuration:
-                '#en':
-                  use_more_text: null
-              link_url: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 3
           9d69e08c-9172-4829-ac8f-ef4bf66e15f6:
             uuid: 9d69e08c-9172-4829-ac8f-ef4bf66e15f6
             region: content

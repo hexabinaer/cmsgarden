@@ -3,7 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.download
+    - core.entity_view_mode.media.embedded
+    - core.entity_view_mode.media.logo
+    - core.entity_view_mode.media.teaser
     - entity_browser.browser.media_entity_browser
+    - media.type.audio
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
   module:
     - entity_embed
     - media
@@ -14,8 +23,17 @@ id: media_entity_embed
 type_id: entity
 type_settings:
   entity_type: media
-  bundles: {  }
-  display_plugins: {  }
+  bundles:
+    - audio
+    - file
+    - image
+    - remote_video
+    - video
+  display_plugins:
+    - 'view_mode:media.download'
+    - 'view_mode:media.embedded'
+    - 'view_mode:media.logo'
+    - 'view_mode:media.teaser'
   entity_browser: media_entity_browser
   entity_browser_settings:
     display_review: false

@@ -2,9 +2,15 @@ uuid: 89fd493c-320d-4459-8ccc-270bdb3df72c
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.download
+    - core.entity_view_mode.media.embedded
+    - core.entity_view_mode.media.logo
+    - core.entity_view_mode.media.teaser
   module:
     - editor
     - entity_embed
+    - media
 _core:
   default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
 name: 'Basic HTML'
@@ -62,3 +68,21 @@ filters:
     status: true
     weight: 10
     settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: embedded
+      allowed_media_types:
+        audio: audio
+        file: file
+        image: image
+        remote_video: remote_video
+        video: video
+      allowed_view_modes:
+        download: download
+        embedded: embedded
+        logo: logo
+        teaser: teaser

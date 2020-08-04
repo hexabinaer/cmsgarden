@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - address_formatter.options.city_country
     - core.entity_view_mode.node.location
     - field.field.node.location.field_archived
     - field.field.node.location.field_event_location
@@ -11,7 +12,7 @@ dependencies:
     - field.field.node.location.field_location_website
     - node.type.location
   module:
-    - address
+    - address_formatter
     - layout_builder
     - user
 third_party_settings:
@@ -25,10 +26,11 @@ mode: location
 content:
   field_event_location:
     weight: 1
-    label: above
-    settings: {  }
+    label: hidden
+    settings:
+      options: city_country
     third_party_settings: {  }
-    type: address_default
+    type: address_html
     region: content
 hidden:
   field_archived: true

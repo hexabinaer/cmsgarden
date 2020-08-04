@@ -1,0 +1,8 @@
+uuid: 5f57d0b2-dcf1-4a76-b1e9-246e39df5ea7
+langcode: en
+status: true
+dependencies: {  }
+id: teaser_picker
+label: 'Teaser picker'
+revision: 0
+description: 'Select content teasers'

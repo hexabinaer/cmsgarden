@@ -1,0 +1,28 @@
+uuid: 8d5303f0-6d61-4c4c-af14-73c38c0dc936
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.teaser_picker
+    - field.storage.block_content.field_teasers
+    - node.type.page
+id: block_content.teaser_picker.field_teasers
+field_name: field_teasers
+entity_type: block_content
+bundle: teaser_picker
+label: Teasers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

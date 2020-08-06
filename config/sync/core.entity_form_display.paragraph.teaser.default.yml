@@ -1,0 +1,36 @@
+uuid: 1f86b31e-2065-4e3b-93f9-7ea867892de4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.teaser.field_teaser_headline
+    - field.field.paragraph.teaser.field_teaser_ref
+    - paragraphs.paragraphs_type.teaser
+  module:
+    - text
+id: paragraph.teaser.default
+targetEntityType: paragraph
+bundle: teaser
+mode: default
+content:
+  field_teaser_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_teaser_ref:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

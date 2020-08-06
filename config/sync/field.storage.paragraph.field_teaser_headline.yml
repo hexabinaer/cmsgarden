@@ -1,0 +1,24 @@
+uuid: 62b16165-a27e-4456-9360-4ebb0200a607
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - paragraphs
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_teaser_headline
+field_name: field_teaser_headline
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

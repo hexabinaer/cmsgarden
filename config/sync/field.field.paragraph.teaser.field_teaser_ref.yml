@@ -1,0 +1,34 @@
+uuid: fd81f45f-bb73-470f-b6dc-cd8382664953
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_teaser_ref
+    - node.type.article
+    - node.type.blog_entry
+    - node.type.page
+    - node.type.project
+    - paragraphs.paragraphs_type.teaser
+id: paragraph.teaser.field_teaser_ref
+field_name: field_teaser_ref
+entity_type: paragraph
+bundle: teaser
+label: 'Target page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+      blog_entry: blog_entry
+      article: article
+      project: project
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: page
+field_type: entity_reference

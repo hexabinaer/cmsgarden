@@ -1,0 +1,38 @@
+uuid: b53707a2-1ab6-46b0-ad11-dce9eb09031b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.teaser.field_teaser_headline
+    - field.field.paragraph.teaser.field_teaser_ref
+    - paragraphs.paragraphs_type.teaser
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.teaser.preview
+targetEntityType: paragraph
+bundle: teaser
+mode: preview
+content:
+  field_teaser_headline:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_teaser_ref:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: label
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

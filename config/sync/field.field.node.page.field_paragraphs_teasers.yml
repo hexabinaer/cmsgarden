@@ -1,0 +1,37 @@
+uuid: fcacf50a-eddf-42d3-8b00-6f25ae8c245c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs_teasers
+    - node.type.page
+    - paragraphs.paragraphs_type.teaser
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraphs_teasers
+field_name: field_paragraphs_teasers
+entity_type: node
+bundle: page
+label: Teasers
+description: 'Select teasers other content pages by title (autocomplete) and set an individual teaser headline.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      teaser: teaser
+    target_bundles_drag_drop:
+      teaser:
+        enabled: true
+        weight: 4
+      text_with_image:
+        weight: 5
+        enabled: false
+      text_with_showcase:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

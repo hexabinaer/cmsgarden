@@ -57,6 +57,7 @@ settings:
           name: 'Entity embed'
           items:
             - DrupalMediaLibrary
+            - node
             - poll
             - glossary_ref
         -

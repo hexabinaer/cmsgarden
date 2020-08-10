@@ -1,2 +1,3 @@
 name: Blogbeitrag
-description: 'Hast du der CMS-Welt etwas mitzuteilen? Schreibe einen Beitrag für unseren Blog.'
+description: "Hast du der CMS-Welt etwas mitzuteilen? Schreibe einen Beitrag für unseren Blog.\r\nBitte halte dich an die <a href=\"/node/206\">Blog-Richtlinien</a>."
+help: 'Bitte halte dich an die <a href="/node/206">Blog-Richtlinien</a>.'

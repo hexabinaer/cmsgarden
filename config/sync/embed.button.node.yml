@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.chapter_illustration
     - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.teaser_text
+    - node.type.date
     - node.type.event
+    - node.type.organization
     - node.type.project
     - node.type.testimonial
   module:
@@ -17,12 +19,14 @@ type_id: entity
 type_settings:
   entity_type: node
   bundles:
+    - date
     - event
+    - organization
     - project
     - testimonial
   display_plugins:
-    - 'view_mode:node.chapter_illustration'
     - 'view_mode:node.teaser'
+    - 'view_mode:node.teaser_text'
   entity_browser: ''
   entity_browser_settings:
     display_review: false

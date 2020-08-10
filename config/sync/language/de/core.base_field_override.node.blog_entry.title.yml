@@ -1,1 +1,2 @@
 label: 'Administrativer Titel'
+description: 'Der administrative Titel wird als HTML-Titel und als Basis für den automatischen URL-Alias verwendet.'

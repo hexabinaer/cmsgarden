@@ -6,14 +6,14 @@ dependencies:
     - system
 id: admin_theme_fixes
 label: 'Admin theme fixes'
-code: "/* Adminimal fix\r\n.ui-accordion .ui-icon, \r\n.ui-accordion .ui-accordion-header a {\r\n  display: inline-block;\r\n} */\r\n\r\n\r\n/* Material Design: better accordion items */\r\n.ui-accordion .ui-accordion-header {\r\n  padding: 1em .5em 1em .7em;\r\n}\r\n.ui-state-active a:link {\r\n  color: #616161;\r\n  font-weight: bold;\r\n}\r\n\r\n#edit-actions .button--danger {\r\n  background-color: #fff;\r\n}\r\n\r\n/* unnecessary date fieldsets */\r\n\r\n.ui-accordion .ui-icon,\r\n.ui-accordion .ui-accordion-header a {\r\n display:inline-block;\r\n}\r\n\r\n.user-form .field--type-datetime fieldset {\r\n  padding: 0;\r\n  display: block;\r\n  background-color: #fff;\r\n  border: 0 none;\r\n}\r\n\r\n.user-form .field--type-datetime fieldset legend {\r\n  position: relative;\r\n  text-transform: none;\r\n  letter-spacing: normal;\r\n  margin: 0 0 0.2em;\r\n  top: 0;\r\n}\r\n\r\n.user-form .field--type-datetime fieldset .description {\r\n  margin-top: 0;\r\n}\r\n\r\n#edit-pass {\r\n  display: flex;\r\n  flex-flow: row wrap;\r\n}\r\n#edit-pass .form-type-password {\r\n  display: block;\r\n  flex: 1 1 50%;\r\n}\r\n#edit-pass .edit-pass--description {\r\n  flex: 1 1 100%;\r\n}\r\n\r\n/* inline entity forms */\r\n.ief-form {\r\n  border: 2px solid #666;\r\n  background: rgb(246,246,255);\r\n  padding: 1rem 2rem;\r\n  box-shadow: inset 0 0 6px 2px rgba(0,0,0,.4);\r\n}\r\n.geolocation-map-container {\r\n  background-color: #fff;\r\n}"
-media: screen
-preprocess: true
+code: "/* Adminimal fix\n.ui-accordion .ui-icon, \n.ui-accordion .ui-accordion-header a {\n  display: inline-block;\n} */\n\n\n/* Material Design: better accordion items */\n.ui-accordion .ui-accordion-header {\n  padding: 1em .5em 1em .7em;\n}\n.ui-state-active a:link {\n  color: #616161;\n  font-weight: bold;\n}\n\n#edit-actions .button--danger {\n  background-color: #fff;\n}\n\n/* unnecessary date fieldsets */\n\n.ui-accordion .ui-icon,\n.ui-accordion .ui-accordion-header a {\n display:inline-block;\n}\n\n.user-form .field--type-datetime fieldset {\n  padding: 0;\n  display: block;\n  background-color: #fff;\n  border: 0 none;\n}\n\n.user-form .field--type-datetime fieldset legend {\n  position: relative;\n  text-transform: none;\n  letter-spacing: normal;\n  margin: 0 0 0.2em;\n  top: 0;\n}\n\n.user-form .field--type-datetime fieldset .description {\n  margin-top: 0;\n}\n\n#edit-pass {\n  display: flex;\n  flex-flow: row wrap;\n}\n#edit-pass .form-type-password {\n  display: block;\n  flex: 1 1 50%;\n}\n#edit-pass .edit-pass--description {\n  flex: 1 1 100%;\n}\n\n/* inline entity forms */\n.ief-form {\n  border: 2px solid #666;\n  background: rgb(246,246,255);\n  padding: 1rem 2rem;\n  box-shadow: inset 0 0 6px 2px rgba(0,0,0,.4);\n}\n.geolocation-map-container {\n  background-color: #fff;\n}\n\n/* chosen sets multi-select user fields inline width to 21px, wtf! */\n\n.chosen-container {\n  min-width: 14rem !important;\n}\n.chosen-container-multi .chosen-choices li.search-field input[type=\"text\"] {\n    min-width: 12rem !important;\n}\n"
+conditions_require_all: true
 conditions:
   current_theme:
     id: current_theme
     theme:
       claro: claro
-      seven: seven
     negate: false
-conditions_require_all: true
+contexts: {  }
+media: screen
+preprocess: true

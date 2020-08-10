@@ -1,0 +1,107 @@
+uuid: 0921bf76-ec07-4520-b0e9-0e6870adae55
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_text
+    - field.field.node.project.body
+    - field.field.node.project.field_archived
+    - field.field.node.project.field_contact_ref
+    - field.field.node.project.field_date_end
+    - field.field.node.project.field_external_links
+    - field.field.node.project.field_media_image
+    - field.field.node.project.field_meta_tags
+    - field.field.node.project.field_org_ref
+    - field.field.node.project.field_project_type
+    - field.field.node.project.field_public_downloads
+    - field.field.node.project.field_publish_date
+    - field.field.node.project.field_title_html
+    - node.type.project
+  module:
+    - layout_builder
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.project.teaser_text
+targetEntityType: node
+bundle: project
+mode: teaser_text
+content:
+  body:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_contact_ref:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_external_links:
+    type: link
+    weight: 5
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_media_image:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: logo
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_org_ref:
+    type: entity_reference_entity_view
+    weight: 6
+    region: content
+    label: above
+    settings:
+      view_mode: logo
+      link: false
+    third_party_settings: {  }
+  field_public_downloads:
+    weight: 4
+    label: above
+    settings:
+      view_mode: download
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_title_html:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_archived: true
+  field_date_end: true
+  field_meta_tags: true
+  field_project_type: true
+  field_publish_date: true
+  langcode: true
+  links: true

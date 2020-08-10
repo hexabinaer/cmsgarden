@@ -38,7 +38,7 @@ type_settings:
     create_new_draft:
       label: 'Create New Draft'
       to: draft
-      weight: 0
+      weight: -2
       from:
         - draft
         - published
@@ -46,7 +46,7 @@ type_settings:
     publish:
       label: Publish
       to: published
-      weight: 1
+      weight: 0
       from:
         - draft
         - published
@@ -58,7 +58,7 @@ type_settings:
         - published
         - review
       to: review
-      weight: 2
+      weight: -1
   entity_types:
     node:
       - article

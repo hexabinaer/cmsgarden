@@ -25,7 +25,7 @@
         "drupal/allowed_formats": "^1.2",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/cer": "^4.0@alpha",
-        "drupal/chosen": "^2.9",
+        "drupal/chosen": "^3.0",
         "drupal/ckeditor_markdown": "^1.2",
         "drupal/coffee": "^1.0@beta",
         "drupal/config_split": "^1.4",
@@ -82,6 +82,8 @@
         "drupal/views_infinite_scroll": "^1.6",
         "drupal/webform": "^5.8",
         "drush/drush": "^9.0.0",
+        "harvesthq/chosen": "^1.8",
+        "oomphinc/composer-installers-extender": "^2.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
@@ -134,13 +136,15 @@
                 "[#3070681] Implement visibility options for 'Real name' field label": "https://www.drupal.org/files/issues/2020-01-26/3070681-13.patch"
             }
         },
+        "installer-types": ["library"],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/libraries/{$name}": ["type:drupal-library", "harvesthq/chosen"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/{$name}": ["type:drupal-drush"]
+            "drush/Commands/{$name}": ["type:drupal-drush"],
+            "vendor/{$vendor}/{$name}": ["type:library"]
         },
         "drupal-scaffold": {
             "initial": {

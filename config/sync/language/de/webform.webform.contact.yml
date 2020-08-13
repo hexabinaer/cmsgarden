@@ -1,12 +1,17 @@
 title: Kontakt
-description: ''
 elements: "name:\n  '#title': 'Ihr Name'\nemail:\n  '#title': 'Ihre E-Mail-Adresse'\nsubject_cmsg:\n  '#title': Betreff\n  '#options':\n    membership: Mitgliedschaft\n    involvement: 'Unterstützung für CMS Garden'\n    press: Presse-/-Medienkontakt\n    book: CMS-Gartenfibel\n    abroad: 'CMS Garden in unserem Land'\n    website: 'Problem mit der Website'\n  '#empty_option': '-- Bitte wählen Sie --'\nmessage:\n  '#title': Nachricht\n  '#test': 'Test - bitte ignorieren.'\nclevercaptcha:\n  '#title': 'Kein Roboter'\n  '#description': 'Helfen Sie uns, Spam zu reduzieren. Bitte tragen Sie den Namen unseres Projekts ein.'\nactions:\n  '#submit__label': 'Mail senden'\n"
 settings:
   confirmation_message: 'Ihre Nachricht wurde gesendet.'
 handlers:
   email_confirmation:
     label: 'Bestätigung via E-Mail'
-    settings: {  }
+    settings:
+      from_name: _default
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'
   email_notification:
     label: E-Mail-Benachrichtigung
-    settings: {  }
+    settings:
+      from_name: '[webform_submission:values:name:raw]'
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'

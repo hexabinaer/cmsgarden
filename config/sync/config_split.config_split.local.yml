@@ -8,13 +8,13 @@ description: ''
 folder: ../config/local
 module:
   devel: 0
-  environment_indicator: 0
   reroute_email: 0
   stage_file_proxy: 0
   webprofiler: 0
 theme: {  }
 blacklist: {  }
-graylist: {  }
+graylist:
+  - environment_indicator.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0

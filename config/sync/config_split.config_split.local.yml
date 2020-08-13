@@ -7,6 +7,8 @@ label: Local
 description: ''
 folder: ../config/local
 module:
+  dblog: 0
+  views_ui: 0
   devel: 0
   reroute_email: 0
   stage_file_proxy: 0

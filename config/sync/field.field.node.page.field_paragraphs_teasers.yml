@@ -12,8 +12,8 @@ id: node.page.field_paragraphs_teasers
 field_name: field_paragraphs_teasers
 entity_type: node
 bundle: page
-label: Teasers
-description: 'Select teasers other content pages by title (autocomplete) and set an individual teaser headline.'
+label: 'Teaser placement'
+description: 'Select teasers to other content pages by title (autocomplete) and set an individual teaser headline.'
 required: false
 translatable: false
 default_value: {  }

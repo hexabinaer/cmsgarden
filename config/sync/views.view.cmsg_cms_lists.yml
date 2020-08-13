@@ -278,7 +278,7 @@ display:
         groups:
           1: AND
       group_by: true
-      css_class: 'cms flex'
+      css_class: 'cms flexbox'
     cache_metadata:
       max-age: 0
       contexts:

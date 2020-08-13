@@ -16,6 +16,7 @@ dependencies:
   module:
     - field_group
     - layout_builder
+    - link
     - svg_image
     - text
 third_party_settings:
@@ -26,6 +27,8 @@ third_party_settings:
     group_copyright:
       children:
         - field_copyright_owner
+        - field_license
+        - field_copyright_link
       parent_name: ''
       weight: 1
       format_type: html_element
@@ -46,12 +49,36 @@ targetEntityType: media
 bundle: image
 mode: header_image
 content:
+  field_copyright_link:
+    type: link
+    weight: 11
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
   field_copyright_owner:
     type: text_default
     weight: 9
     region: content
-    label: above
+    label: visually_hidden
     settings: {  }
+    third_party_settings: {  }
+  field_license:
+    type: link
+    weight: 10
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
   field_media_image:
     type: image
@@ -70,8 +97,6 @@ hidden:
   created: true
   field_caption: true
   field_category: true
-  field_copyright_link: true
-  field_license: true
   field_longdesc: true
   filesize: true
   langcode: true

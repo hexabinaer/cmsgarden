@@ -138,25 +138,9 @@ third_party_settings:
           label: ''
           column_widths: 50-50
         components:
-          bfacce60-2c2d-4408-b460-0dac2bd4d216:
-            uuid: bfacce60-2c2d-4408-b460-0dac2bd4d216
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:project:field_public_downloads'
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            additional: {  }
-            weight: 0
           06432a32-7650-49f3-98b6-fdd9f1267511:
             uuid: 06432a32-7650-49f3-98b6-fdd9f1267511
-            region: second
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -172,6 +156,22 @@ third_party_settings:
                   target: ''
                 third_party_settings: {  }
                 type: link
+            additional: {  }
+            weight: 1
+          bfacce60-2c2d-4408-b460-0dac2bd4d216:
+            uuid: bfacce60-2c2d-4408-b460-0dac2bd4d216
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:project:field_public_downloads'
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
             additional: {  }
             weight: 0
         third_party_settings: {  }

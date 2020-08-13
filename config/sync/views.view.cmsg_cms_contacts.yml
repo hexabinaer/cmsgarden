@@ -440,6 +440,7 @@ display:
         groups:
           1: AND
       group_by: false
+      css_class: flexbox
     cache_metadata:
       max-age: -1
       contexts:
@@ -455,6 +456,7 @@ display:
         - 'config:core.entity_view_display.taxonomy_term.content_management_systems.logo'
         - 'config:core.entity_view_display.taxonomy_term.content_management_systems.logo_inverted'
         - 'config:core.entity_view_display.taxonomy_term.content_management_systems.logo_linked'
+        - 'config:core.entity_view_display.taxonomy_term.content_management_systems.teaser'
         - 'config:core.entity_view_display.taxonomy_term.faq.default'
         - 'config:field.storage.node.field_link'
         - 'config:field.storage.node.field_title_html'
@@ -482,6 +484,7 @@ display:
         - 'config:core.entity_view_display.taxonomy_term.content_management_systems.logo'
         - 'config:core.entity_view_display.taxonomy_term.content_management_systems.logo_inverted'
         - 'config:core.entity_view_display.taxonomy_term.content_management_systems.logo_linked'
+        - 'config:core.entity_view_display.taxonomy_term.content_management_systems.teaser'
         - 'config:core.entity_view_display.taxonomy_term.faq.default'
         - 'config:field.storage.node.field_link'
         - 'config:field.storage.node.field_title_html'
